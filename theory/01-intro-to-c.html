@@ -1,0 +1,1019 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="claude:viewport-fit-sides" content="cover"><title>Introduction to C Programming · Lecture 01 · Structured Programming</title><meta name="description" content="Program structure, compiling and linking, tokens, data types with real sizes, printf and scanf."><link rel="icon" href="data:image/webp;base64,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"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>/* Layout: sticky brand header, left section rail, wide main column; same visual system as nazrul-99.github.io/toc
+   (navy ink, orange accent, yellow highlight, IBM Plex). Deliberately single light theme for projectors. */
+:root{--ink:#14213d;--navy:#1f3a68;--accent:#f5892a;--accent-ink:#c8640f;--yellow:#f5f61c;--hl:#fff8b8;--hl2:#fffbe0;
+--line:#d9dee7;--soft:#f5f7fa;--soft2:#eef2f8;--muted:#5b6779;--green:#2e7d4f;--green-bg:#e6f4ea;--red:#b3261e;--red-bg:#fbe0e0;
+--bg:#ffffff;--term:#0f1b33;--term-ink:#e8edf5;--term-in:#ffb46b;--term-dim:#8fa0bd;
+--sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(90px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--navy)}a:hover{color:var(--accent-ink)}
+code,.mono,kbd{font-family:var(--mono)}
+code{background:var(--soft2);border-radius:4px;padding:1px 5px;font-size:.9em}
+h1,h2,h3{text-wrap:balance;color:var(--navy);line-height:1.2}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:24px;margin:34px 0 10px}h3{font-size:19px;margin:20px 0 8px}
+p,li{max-width:78ch}
+button{font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap;
+ padding-block:10px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));
+ border-bottom:6px solid;border-image:linear-gradient(90deg,var(--accent),var(--yellow)) 1}
+.ident{display:flex;align-items:center;gap:14px;margin-right:auto;min-width:0;text-decoration:none;color:inherit}
+.ident img{width:56px;height:56px;flex:none}
+.brand{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.brand b{font-size:20px;color:var(--navy)}.brand span{font-size:15px;color:var(--accent-ink);font-weight:600}
+.brand small{font-size:13px;color:var(--muted)}.brand small b{font-size:inherit;color:inherit}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav.tabs a{text-decoration:none;font-weight:600;font-size:15px;color:var(--navy);border:2px solid var(--line);border-radius:8px;padding:5px 12px}
+nav.tabs a:hover{border-color:var(--navy)}nav.tabs a.on{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* page layout */
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr)}
+aside.rail{border-right:1px solid var(--line);padding:14px 10px 40px;position:sticky;top:calc(82px + env(safe-area-inset-top,0px));height:calc(100vh - 82px - env(safe-area-inset-top,0px));overflow:auto}
+aside.rail .rh{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:8px 10px 6px}
+.navi{display:flex;gap:10px;width:100%;text-align:left;border:0;background:none;padding:6px 10px;border-radius:7px;color:var(--ink);font-size:15px;line-height:1.3;align-items:baseline;text-decoration:none}
+.navi:hover{background:var(--soft)}.navi.on{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.nid{font-family:var(--mono);font-weight:600;color:var(--accent-ink);min-width:30px;font-size:14px}
+main{padding-block:22px 60px;padding-left:max(30px,env(safe-area-inset-left,0px));padding-right:max(30px,env(safe-area-inset-right,0px));min-width:0;max-width:1240px;width:100%}
+.mainpad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
+.lead{font-size:19px;color:var(--ink);max-width:72ch}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+.pager a{text-decoration:none;border:2px solid var(--navy);border-radius:10px;padding:8px 14px;font-weight:600;max-width:48%}
+.pager a:hover{background:var(--navy);color:#fff}.pager small{display:block;font-weight:400;font-size:13px;opacity:.8}
+#navsel{display:none;font:inherit;font-size:16px;padding:6px;border:2px solid var(--navy);border-radius:8px;max-width:100%;margin:6px 0 12px;background:var(--bg);color:var(--ink)}
+footer.foot{color:var(--muted);font-size:14px;margin-top:36px;border-top:1px solid var(--line);padding-top:12px}
+
+/* building blocks */
+.btn{border:2px solid var(--navy);background:var(--bg);color:var(--navy);border-radius:8px;padding:5px 13px;font-weight:600;font-size:15px}
+.btn:hover:not(:disabled){background:var(--navy);color:#fff}.btn:disabled{opacity:.35;cursor:default}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--ink)}.btn.pri:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.btn.sm{padding:2px 9px;font-size:14px}
+.chip{font-family:var(--mono);font-size:14px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 9px;color:var(--ink)}
+.chip:hover{border-color:var(--navy)}.chip.on{background:var(--hl);border-color:var(--accent);font-weight:600}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0;background:var(--bg)}
+.idea{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:14px 0;max-width:80ch}
+.note{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit{background:#fdf0ef;border:1px solid #efb7b2;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit b:first-child,.note b:first-child{color:var(--navy)}
+.good{color:var(--green);font-weight:600}.bad{color:var(--red);font-weight:600}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}
+.tblwrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;font-size:16px}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft2);color:var(--navy)}
+pre.code{font-family:var(--mono);font-size:15px;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 14px;overflow-x:auto;line-height:1.5;margin:10px 0}
+.term{font-family:var(--mono);font-size:15px;background:var(--term);color:var(--term-ink);border-radius:8px;padding:10px 14px;white-space:pre-wrap;overflow-x:auto;margin:8px 0;min-height:44px;line-height:1.45}
+.term .in{color:var(--term-in);font-weight:600}
+details.hint{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:8px 14px;margin:10px 0}
+details.hint summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sol{border:1px solid var(--line);border-radius:10px;margin:12px 0;background:var(--bg)}
+details.sol>summary{cursor:pointer;font-weight:600;color:var(--navy);padding:10px 14px;list-style:none;display:flex;gap:10px;align-items:center}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▸";color:var(--accent-ink);transition:transform .15s}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol>.solbody{padding:0 14px 14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 7px;background:var(--soft2);color:var(--navy)}
+.tag.o{background:#fde7d3;color:#8a4307}.tag.g{background:var(--green-bg);color:#1d5a37}
+input.field,select.field,textarea.field{font:inherit;font-size:16px;padding:5px 10px;border:2px solid var(--navy);border-radius:8px;background:var(--bg);color:var(--ink)}
+input.field.mono{font-family:var(--mono)}
+.row{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.lbl{color:var(--muted);font-size:14px}
+.widget{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0;background:var(--bg)}
+.widget>h3:first-child{margin-top:0}
+.wsub{color:var(--muted);font-size:15px;margin:-4px 0 12px}
+
+/* trace viewer */
+.tv{border:1px solid var(--line);border-radius:12px;margin:18px 0;background:var(--bg);overflow:hidden}
+.tv-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line)}
+.tv-title{font-weight:600;color:var(--navy);margin-right:auto;font-size:17px}
+.tv-inputs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tv-ctrl{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tv-ctrl input[type=range]{flex:1 1 160px;accent-color:var(--accent);min-width:120px}
+.tv-count{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:110px}
+.tv-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.tv-code{position:relative;border-right:1px solid var(--line);overflow:auto;max-height:560px;font-family:var(--mono);font-size:14.5px;line-height:1.55;padding:6px 0;counter-reset:ln}
+.tv-code .ln{display:flex;white-space:pre;padding-right:12px}
+.tv-code .ln i{font-style:normal;color:#9aa5b8;min-width:42px;text-align:right;padding-right:12px;user-select:none;flex:none}
+.tv-code .ln.prev{background:var(--green-bg)}
+.tv-code .ln.cur{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.tv-code .ln.cur i{color:var(--accent-ink);font-weight:700}
+.tv-mem{position:relative;overflow:auto;max-height:560px;padding:10px 12px}
+.tv-mem svg.arrows{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.tv-explain{padding:9px 14px;background:var(--hl2);border-top:1px solid #f0d37a;font-size:16px;min-height:42px}
+.tv-explain b{color:var(--navy)}
+.tv-out{padding:8px 14px 12px;border-top:1px solid var(--line)}
+.tv-out .term{margin:4px 0 0;max-height:220px;overflow:auto}
+.tv-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:0 14px 10px}
+.tv-legend span{display:inline-flex;gap:6px;align-items:center}.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.fr{border:1.5px solid var(--navy);border-radius:10px;margin:0 0 10px;background:var(--bg)}
+.fr.old{border-color:#b6c0cf;opacity:.92}
+.fr-h{display:flex;justify-content:space-between;gap:8px;background:var(--navy);color:#fff;font-weight:600;font-size:14px;padding:3px 10px;border-radius:8px 8px 0 0;font-family:var(--mono)}
+.fr.old .fr-h{background:#8b97ab}
+.fr-b{padding:6px 10px;display:flex;flex-direction:column;gap:6px}
+.var{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.vn{font-family:var(--mono);font-size:14px;min-width:64px;padding-top:4px;color:var(--ink)}
+.vn small{display:block;color:var(--muted);font-size:11.5px;line-height:1.2}
+.vb{font-family:var(--mono);font-size:15px;border:1.5px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--bg);min-width:38px;text-align:center;font-variant-numeric:tabular-nums}
+.vb.ptr{border-color:var(--accent);background:#fff4e8}
+.vb.null{color:var(--muted)}
+.vb.chg,.cell.chg{animation:flash 1s ease-out;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+@keyframes flash{0%{background:var(--yellow)}100%{background:inherit}}
+.arr{display:flex;flex-wrap:wrap;gap:0}
+.cellw{display:flex;flex-direction:column;align-items:center}
+.cell{font-family:var(--mono);font-size:14.5px;border:1.5px solid var(--navy);min-width:36px;height:32px;padding:0 5px;display:flex;align-items:center;justify-content:center;margin-left:-1.5px;background:var(--bg);font-variant-numeric:tabular-nums}
+.cellw:first-child .cell{margin-left:0;border-radius:5px 0 0 5px}.cellw:last-child .cell{border-radius:0 5px 5px 0}
+.cell.nul{color:var(--muted);background:var(--soft)}
+.cell.tgt{background:#ffe4c7}
+.ci{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.grid2d{display:inline-grid;gap:0;border:1.5px solid var(--navy);border-radius:5px;overflow:hidden}
+.grid2d .g{font-family:var(--mono);font-size:13.5px;border:1px solid var(--line);min-width:34px;height:28px;display:flex;align-items:center;justify-content:center;padding:0 4px;background:var(--bg)}
+.grid2d .gh{background:var(--soft2);color:var(--muted);font-size:11px}
+.more{font-size:12px;color:var(--muted);align-self:center;padding-left:6px}
+.st{border:1.5px dashed var(--navy);border-radius:8px;padding:4px 8px;display:flex;flex-direction:column;gap:4px}
+.st .stn{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.addr{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.retchip{display:inline-block;background:var(--green-bg);color:#1d5a37;border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:14px;margin-left:6px}
+.tv-done{background:var(--green-bg)!important;border-top-color:#9fd1b0!important}
+.tv-opts{display:flex;gap:14px;align-items:center;font-size:14px;color:var(--muted)}
+.tv-opts label{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+
+@media (max-width:980px){header.top{position:relative;top:auto}html{scroll-padding-top:10px}.wrap{grid-template-columns:1fr}aside.rail{display:none}#navsel{display:block}main{padding-block:16px 50px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+@media (max-width:860px){.tv-body{grid-template-columns:1fr}.tv-code{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.tv-mem{max-height:none}}
+@media (max-width:560px){body{font-size:17px}h1{font-size:26px}.ident img{width:44px;height:44px}.brand b{font-size:17px}.brand small{display:none}
+ header.top{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}.pager a{max-width:100%}}
+</style><script>/* Structured Programming site: C syntax colouring, real-execution trace viewer, page chrome. */
+(function () {
+  'use strict';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- C syntax colouring ---------- */
+  const KW = new Set('auto break case char const continue default do double else enum extern float for goto if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while'.split(' '));
+  const LIB = new Set('printf scanf gets fgets puts fputs getchar putchar strlen strcpy strcat strcmp strrev sqrt pow abs fabs ceil floor fmod log log10 exp sin cos tan atoi atof fopen fclose fgetc fputc fprintf fscanf malloc free isdigit isalpha isalnum islower isupper tolower toupper isspace main NULL EOF stdin stdout FILE'.split(' '));
+  function hl(line) {
+    let out = '', i = 0;
+    const n = line.length;
+    while (i < n) {
+      const c = line[i];
+      if (c === '/' && line[i + 1] === '/') { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '/' && line[i + 1] === '*') { let j = line.indexOf('*/', i + 2); j = j < 0 ? n : j + 2; out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      if (c === '*' && /^\s*\*(\s|\/|$)/.test(line) && i === line.search(/\S/)) { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '#' && line.slice(0, i).trim() === '') { out += '<span style="color:#8a4fb8">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '"' || c === "'") {
+        let j = i + 1; while (j < n && line[j] !== c) { if (line[j] === '\\') j++; j++; }
+        out += '<span style="color:#0a7a4a">' + esc(line.slice(i, j + 1)) + '</span>'; i = j + 1; continue;
+      }
+      if (/[A-Za-z_]/.test(c)) {
+        let j = i; while (j < n && /\w/.test(line[j])) j++;
+        const w = line.slice(i, j);
+        if (KW.has(w)) out += '<span style="color:#1f3a68;font-weight:600">' + w + '</span>';
+        else if (LIB.has(w)) out += '<span style="color:#b35a00">' + w + '</span>';
+        else out += esc(w);
+        i = j; continue;
+      }
+      if (/[0-9]/.test(c)) { let j = i; while (j < n && /[0-9.xXa-fA-FuUlL]/.test(line[j])) j++; out += '<span style="color:#a3214a">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      out += esc(c); i++;
+    }
+    return out;
+  }
+  window.SPL = window.SPL || {};
+  SPL.hl = hl;
+  SPL.esc = esc;
+  SPL.hlBlock = code => code.replace(/\n$/, '').split('\n').map(hl).join('\n');
+
+  /* ---------- value formatting ---------- */
+  function chr(v) {
+    const m = { 0: "'\\0'", 10: "'\\n'", 9: "'\\t'", 32: "' '", 13: "'\\r'" };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return "'" + String.fromCharCode(v) + "'";
+    return String(v);
+  }
+  function cellChar(v) {
+    const m = { 0: '\\0', 10: '\\n', 9: '\\t', 32: '␣' };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return String.fromCharCode(v);
+    return '·';
+  }
+  function num(v) {
+    if (typeof v !== 'number') return String(v);
+    if (Number.isInteger(v) && Math.abs(v) < 1e15) return String(v);
+    let s = Number(v.toPrecision(6)).toString();
+    if (/e/.test(s)) s = v.toExponential(3);
+    return s;
+  }
+  const hex = a => '0x' + Number(a).toString(16);
+  SPL.fmt = { chr, num, hex };
+
+  function scal(v) {
+    if (v.k === 'c') return chr(v.v);
+    if (v.k === 'f') return num(v.v);
+    if (v.k === 'i') return v.s ? v.s : String(v.v);
+    if (v.k === 'p') return v.v === 0 ? 'NULL' : hex(v.v);
+    return String(v.v);
+  }
+
+  /* ---------- trace viewer ---------- */
+  function TraceViewer(el, data) {
+    this.el = el; this.data = data; this.ii = 0; this.si = 0; this.timer = null;
+    this.showAddr = el.dataset.addr === '1';
+    this.build();
+    this.load(0);
+  }
+  TraceViewer.prototype.build = function () {
+    const d = this.data, el = this.el;
+    const inputs = d.inputs.length > 1 || (d.inputs[0] && d.inputs[0].stdin)
+      ? '<div class="tv-inputs"><span class="lbl">Input:</span>' + d.inputs.map((inp, i) => '<button class="chip" data-i="' + i + '" title="' + esc(inp.stdin || 'no input') + '">' + esc(inp.label) + '</button>').join('') + '</div>' : '';
+    el.innerHTML =
+      '<div class="tv-head"><div class="tv-title">' + esc(d.title || 'Run it line by line') + '</div>' + inputs + '</div>' +
+      '<div class="tv-ctrl">' +
+      '<button class="btn sm" data-a="first" title="First step" aria-label="First step">⏮</button>' +
+      '<button class="btn sm" data-a="prev" title="Previous step (←)" aria-label="Previous step">◀ Back</button>' +
+      '<button class="btn sm pri" data-a="next" title="Next step (→)" aria-label="Next step">Next ▶</button>' +
+      '<button class="btn sm" data-a="last" title="Last step" aria-label="Last step">⏭</button>' +
+      '<button class="btn sm" data-a="play" aria-label="Play">▶▶ Play</button>' +
+      '<input type="range" min="0" value="0" aria-label="Step slider">' +
+      '<span class="tv-count"></span>' +
+      '<span class="tv-opts"><label><input type="checkbox" data-o="addr"' + (this.showAddr ? ' checked' : '') + '> addresses</label></span>' +
+      '</div>' +
+      '<div class="tv-body"><div class="tv-code" tabindex="0"></div><div class="tv-mem"></div></div>' +
+      '<div class="tv-explain"></div>' +
+      '<div class="tv-out"><span class="lbl">Console (output, with what the user typed in orange)</span><div class="term"></div></div>' +
+      '<div class="tv-legend"><span><i class="sw" style="background:var(--hl);border-color:var(--accent)"></i>line about to run</span><span><i class="sw" style="background:var(--green-bg)"></i>line that just ran</span><span><i class="sw" style="background:var(--yellow)"></i>value just changed</span><span><i class="sw" style="background:#fff4e8;border-color:var(--accent)"></i>pointer (arrow shows target)</span></div>';
+    this.$code = el.querySelector('.tv-code'); this.$mem = el.querySelector('.tv-mem');
+    this.$exp = el.querySelector('.tv-explain'); this.$term = el.querySelector('.term');
+    this.$range = el.querySelector('input[type=range]'); this.$count = el.querySelector('.tv-count');
+    const lines = d.code.replace(/\n$/, '').split('\n');
+    this.$code.innerHTML = lines.map((l, i) => '<div class="ln" data-l="' + (i + 1) + '"><i>' + (i + 1) + '</i><span>' + (hl(l) || ' ') + '</span></div>').join('');
+    el.querySelectorAll('.tv-inputs .chip').forEach(b => b.onclick = () => this.load(+b.dataset.i));
+    el.querySelectorAll('[data-a]').forEach(b => b.onclick = () => this.act(b.dataset.a));
+    this.$range.oninput = () => { this.stop(); this.go(+this.$range.value); };
+    el.querySelector('[data-o=addr]').onchange = e => { this.showAddr = e.target.checked; this.render(); };
+    el.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' && e.target.type !== 'range' && e.target.type !== 'checkbox') return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); this.act('next'); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); this.act('prev'); }
+    });
+    window.addEventListener('resize', () => this.drawArrows());
+  };
+  TraceViewer.prototype.load = function (ii) {
+    this.stop();
+    this.ii = ii;
+    const inp = this.data.inputs[ii];
+    this.el.querySelectorAll('.tv-inputs .chip').forEach(b => b.classList.toggle('on', +b.dataset.i === ii));
+    // rebuild cumulative state per step
+    const t = inp.trace, V = t.V;
+    let f = null, g = null, con = [];
+    this.states = t.steps.map(s => {
+      if (s.f) f = s.f;
+      if (s.g) g = s.g;
+      if (s.d) con = con.concat(s.d);
+      return { l: s.l, f, g, con, r: s.r };
+    });
+    this.V = V;
+    // how much of each big array is ever used: show that part (plus one cell) instead of a wall of garbage
+    const vis = {};
+    const seen = {};
+    const mark = (key, v, prevIdx) => {
+      if (!v || v.k !== 'a') return;
+      const o = prevIdx === undefined ? null : V[prevIdx];
+      const r = vis[key] || (vis[key] = [0, 0]);
+      v.it.forEach((x, i) => {
+        const ox = o && o.it ? o.it[i] : null;
+        if (x.k === 'a') {
+          x.it.forEach((y, j) => {
+            const oy = ox && ox.it ? ox.it[j] : null;
+            if (!oy || JSON.stringify(oy) !== JSON.stringify(y)) { if (o) { r[0] = Math.max(r[0], i + 1); r[1] = Math.max(r[1], j + 1); } }
+          });
+        } else if (o && JSON.stringify(ox) !== JSON.stringify(x)) r[0] = Math.max(r[0], i + 1);
+      });
+    };
+    this.states.forEach(s => {
+      s.f.forEach(fr => fr[2].forEach(v => { const key = fr[0] + ':' + v[0]; mark(key, V[v[3]], seen[key]); seen[key] = v[3]; }));
+    });
+    this.vis = vis;
+    this.$range.max = this.states.length; // last position = finished
+    this.go(0);
+  };
+  TraceViewer.prototype.act = function (a) {
+    if (a === 'play') { if (this.timer) this.stop(); else this.play(); return; }
+    this.stop();
+    const n = this.states.length;
+    if (a === 'first') this.go(0);
+    if (a === 'last') this.go(n);
+    if (a === 'next') this.go(Math.min(n, this.si + 1));
+    if (a === 'prev') this.go(Math.max(0, this.si - 1));
+  };
+  TraceViewer.prototype.play = function () {
+    const b = this.el.querySelector('[data-a=play]');
+    b.textContent = '❚❚ Pause';
+    if (this.si >= this.states.length) this.go(0);
+    this.timer = setInterval(() => {
+      if (this.si >= this.states.length) { this.stop(); return; }
+      this.go(this.si + 1);
+    }, 700);
+  };
+  TraceViewer.prototype.stop = function () {
+    if (this.timer) clearInterval(this.timer);
+    this.timer = null;
+    const b = this.el.querySelector('[data-a=play]');
+    if (b) b.textContent = '▶▶ Play';
+  };
+  TraceViewer.prototype.go = function (si) { this.si = si; this.render(); };
+
+  TraceViewer.prototype.render = function () {
+    const n = this.states.length, si = this.si, done = si >= n;
+    const st = done ? this.states[n - 1] : this.states[si];
+    const prevSt = si > 0 ? this.states[Math.min(si, n) - 1] : null;
+    const prevForDiff = done ? null : prevSt;
+    this.$range.value = si;
+    this.$count.textContent = done ? 'Finished' : 'Step ' + (si + 1) + ' of ' + n;
+    // code highlight
+    this.$code.querySelectorAll('.ln.cur,.ln.prev').forEach(x => x.classList.remove('cur', 'prev'));
+    if (!done) {
+      const cur = this.$code.querySelector('.ln[data-l="' + st.l + '"]');
+      if (cur) { cur.classList.add('cur'); this.scrollInto(cur); }
+    }
+    if (prevSt && (done || prevSt.l !== st.l)) {
+      const p = this.$code.querySelector('.ln[data-l="' + prevSt.l + '"]');
+      if (p) p.classList.add('prev');
+    }
+    // memory
+    this.renderMem(st, prevForDiff, done);
+    // console
+    const finalCon = done ? this.fullConsole() : st.con;
+    this.$term.innerHTML = finalCon.map(([k, s]) => k === 'i' ? '<span class="in">' + esc(s) + '</span>' : esc(s)).join('') || '<span style="color:var(--term-dim)">(nothing printed yet)</span>';
+    this.$term.scrollTop = this.$term.scrollHeight;
+    // explanation
+    this.$exp.classList.toggle('tv-done', done);
+    this.$exp.innerHTML = done ? '<b>Program finished.</b> The console shows the complete run. Press ⏮ or drag the slider to replay.' : this.explain(st, prevSt);
+    this.el.querySelector('[data-a=prev]').disabled = si === 0;
+    this.el.querySelector('[data-a=first]').disabled = si === 0;
+    this.el.querySelector('[data-a=next]').disabled = done;
+    this.el.querySelector('[data-a=last]').disabled = done;
+  };
+  TraceViewer.prototype.fullConsole = function () {
+    const t = this.data.inputs[this.ii].trace;
+    let con = [];
+    t.steps.forEach(s => { if (s.d) con = con.concat(s.d); });
+    return con;
+  };
+  TraceViewer.prototype.scrollInto = function (row) {
+    const c = this.$code, top = row.offsetTop, h = c.clientHeight;
+    if (top < c.scrollTop + 30 || top > c.scrollTop + h - 50) c.scrollTop = Math.max(0, top - h / 2);
+  };
+  TraceViewer.prototype.explain = function (st, prev) {
+    const parts = [];
+    const fnNow = st.f[st.f.length - 1][0];
+    if (!prev) {
+      parts.push('Execution starts in <b>main()</b>. The highlighted line ' + st.l + ' runs next.');
+      return parts.join(' ');
+    }
+    const pd = prev.f.length, cd = st.f.length;
+    if (cd > pd) {
+      const fr = st.f[cd - 1];
+      const args = fr[2].filter(v => v[2]).map(v => v[0] + ' = ' + this.short(this.V[v[3]]));
+      parts.push('<b>' + fr[0] + '()</b> is called' + (args.length ? ' with ' + args.join(', ') : '') + '. A new frame is pushed on the stack.');
+    } else if (st.r) {
+      parts.push('<b>' + st.r[0] + '()</b> returned' + (st.r[1] ? ' <span class="retchip">' + esc(this.short(st.r[1])) + '</span>' : ' (void)') + '; its frame is removed and control is back in <b>' + fnNow + '()</b>.');
+    }
+    // changed variables in the frames that exist in both
+    const ch = [];
+    const m = Math.min(pd, cd);
+    for (let i = 0; i < m; i++) {
+      if (st.f[i][0] !== prev.f[i][0]) continue;
+      const pv = {}; prev.f[i][2].forEach(v => pv[v[0]] = v[3]);
+      st.f[i][2].forEach(v => {
+        if (pv[v[0]] !== undefined && pv[v[0]] !== v[3]) ch.push('<code>' + esc(v[0]) + '</code> ' + this.delta(this.V[pv[v[0]]], this.V[v[3]]));
+      });
+    }
+    if (ch.length && cd <= pd) parts.push('Line ' + prev.l + ' changed ' + ch.slice(0, 4).join('; ') + (ch.length > 4 ? ' …' : '') + '.');
+    const newIn = st.con.length > prev.con.length ? st.con.slice(prev.con.length) : [];
+    if (newIn.some(x => x[0] === 'i')) parts.push('The program read the user\'s input.');
+    else if (newIn.some(x => x[0] === 'o')) parts.push('Something was printed to the console.');
+    if (!parts.length) parts.push(prev.l === st.l ? 'Line ' + st.l + ' runs again (loop test or next part of the line).' : 'Line ' + prev.l + ' ran; nothing visible changed.');
+    parts.push('<span class="lbl">Next: line ' + st.l + ' in ' + fnNow + '().</span>');
+    return parts.join(' ');
+  };
+  TraceViewer.prototype.short = function (v) {
+    if (!v) return '';
+    if (v.k === 'a') return '{' + v.it.slice(0, 6).map(x => this.short(x)).join(', ') + (v.n > 6 ? ', …' : '') + '}';
+    if (v.k === 's') return '{…}';
+    if (v.k === 'p') return v.to ? (v.to === 'NULL' ? 'NULL' : '&' + this.tname(v.to)) : scal(v);
+    return scal(v);
+  };
+  TraceViewer.prototype.tname = function (to) { return to.replace(/^(\d+|g):/, ''); };
+  TraceViewer.prototype.delta = function (a, b) {
+    if (a.k === 'a' && b.k === 'a') {
+      const idx = [];
+      b.it.forEach((x, i) => { if (JSON.stringify(x) !== JSON.stringify(a.it[i])) idx.push(i); });
+      if (idx.length === 1) { const i = idx[0]; return '[' + i + ']: ' + esc(this.short(a.it[i])) + ' → <b>' + esc(this.short(b.it[i])) + '</b>'; }
+      return '(' + idx.length + ' cells)';
+    }
+    if (a.k === 's') return '(a member changed)';
+    return esc(this.short(a)) + ' → <b>' + esc(this.short(b)) + '</b>';
+  };
+
+  TraceViewer.prototype.renderMem = function (st, prev, done) {
+    const V = this.V, sa = this.showAddr;
+    const prevMap = {};
+    if (prev) prev.f.forEach((fr, fi) => fr[2].forEach(v => prevMap[fi + ':' + fr[0] + ':' + v[0]] = v[3]));
+    const prevG = {};
+    if (prev && prev.g) prev.g.forEach(v => prevG[v[0]] = v[3]);
+    let html = '';
+    const self = this;
+    function varRow(path, v, val, changedFrom, fn) {
+      const name = v[0], type = v[1];
+      self._lim = fn ? self.vis[fn + ':' + name] : null;
+      let inner = self.valHTML(val, path, changedFrom === undefined ? null : V[changedFrom], true);
+      self._lim = null;
+      return '<div class="var"><div class="vn">' + esc(name) + '<small>' + esc(type) + (v[2] ? ' · parameter' : '') + '</small>' + (sa && val.a ? '<small class="addr">@' + hex(val.a) + '</small>' : '') + '</div>' + inner + '</div>';
+    }
+    if (st.g && st.g.length) {
+      html += '<div class="fr"><div class="fr-h"><span>global variables</span></div><div class="fr-b">' +
+        st.g.map(v => varRow('g:' + v[0], v, V[v[3]], prev && prevG[v[0]] !== undefined && prevG[v[0]] !== v[3] ? prevG[v[0]] : undefined)).join('') + '</div></div>';
+    }
+    const nf = st.f.length;
+    for (let fi = nf - 1; fi >= 0; fi--) {
+      const fr = st.f[fi];
+      const rows = fr[2].map(v => {
+        const k = fi + ':' + fr[0] + ':' + v[0];
+        const changed = prev && prevMap[k] !== undefined && prevMap[k] !== v[3] ? prevMap[k] : undefined;
+        return varRow(fi + ':' + v[0], v, V[v[3]], changed, fr[0]);
+      }).join('') || '<span class="lbl">no local variables</span>';
+      html += '<div class="fr' + (fi < nf - 1 ? ' old' : '') + '"><div class="fr-h"><span>' + esc(fr[0]) + '()' + (fi < nf - 1 ? ' — waiting at line ' + fr[1] : '') + '</span><span>' + (fi === nf - 1 ? 'active frame' : 'frame ' + (fi + 1)) + '</span></div><div class="fr-b">' + rows + '</div></div>';
+    }
+    html = '<div class="lbl" style="margin-bottom:6px">Stack (newest frame on top)</div>' + html;
+    this.$mem.innerHTML = html + '<svg class="arrows"></svg>';
+    this.drawArrows();
+  };
+  TraceViewer.prototype.valHTML = function (v, path, old, top) {
+    const self = this;
+    if (!v) return '<span class="vb">?</span>';
+    const chg = old && JSON.stringify(old) !== JSON.stringify(v);
+    if (v.k === 'a') {
+      const isChar = v.it.length && v.it[0].k === 'c';
+      if (v.it.length && v.it[0].k === 'a') {
+        // 2D array
+        const L = top && this._lim && this._lim[0] ? this._lim : null;
+        const rows = L ? Math.min(v.it.length, Math.max(L[0], 2)) : v.it.length;
+        const cols = L ? Math.min(v.it[0].it.length, Math.max(L[1], 2)) : v.it[0].it.length;
+        let g = '<div class="grid2d" data-p="' + esc(path) + '" style="grid-template-columns:auto repeat(' + cols + ',auto)"><div class="g gh"></div>';
+        for (let c = 0; c < cols; c++) g += '<div class="g gh">' + c + '</div>';
+        for (let r = 0; r < rows; r++) {
+          g += '<div class="g gh">' + r + '</div>';
+          for (let c = 0; c < cols; c++) {
+            const x = v.it[r].it[c], ox = old && old.it && old.it[r] && old.it[r].it ? old.it[r].it[c] : null;
+            const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+            g += '<div class="g cell' + (cc ? ' chg' : '') + '" style="margin:0;border-radius:0;height:28px;border-width:1px" data-p="' + esc(path + '[' + r + '][' + c + ']') + '">' + esc(x.k === 'c' ? cellChar(x.v) : scal(x)) + '</div>';
+          }
+        }
+        g += '</div>';
+        const more = (v.n > rows || v.it[0].n > cols) ? v.n + ' × ' + v.it[0].n : '';
+        return '<div>' + g + (more ? '<div class="more">declared size: ' + more + '; first ' + rows + '×' + cols + ' shown</div>' : '') + '</div>';
+      }
+      let s = '<div class="arr" data-p="' + esc(path) + '">';
+      const L1 = top && this._lim && v.it.length > 16 ? Math.min(v.it.length, Math.max(this._lim[0] + 1, 6)) : v.it.length;
+      v.it.slice(0, L1).forEach((x, i) => {
+        const ox = old && old.it ? old.it[i] : null;
+        const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+        let txt, cls = 'cell';
+        if (x.k === 'c') { txt = cellChar(x.v); if (x.v === 0) cls += ' nul'; }
+        else if (x.k === 's') { txt = '{…}'; }
+        else txt = scal(x);
+        if (x.k === 'p') { cls += ' ptr'; txt = x.to ? (x.to === 'NULL' ? 'NULL' : '•') : scal(x); }
+        s += '<div class="cellw"><div class="' + cls + (cc ? ' chg' : '') + '" data-p="' + esc(path + '[' + i + ']') + '"' + (x.k === 'p' && x.to && x.to !== 'NULL' ? ' data-to="' + esc(x.to) + '"' : '') + (x.k === 'c' ? ' title="ASCII ' + x.v + '"' : '') + '>' + esc(txt) + '</div><span class="ci">' + i + '</span></div>';
+      });
+      if (v.n > L1) s += '<span class="more">… ' + (v.n - L1) + ' more not used in this run (size ' + v.n + ')</span>';
+      s += '</div>';
+      if (isChar) {
+        let str = '', i = 0;
+        while (i < v.it.length && v.it[i].v !== 0) { str += String.fromCharCode(v.it[i].v); i++; }
+        if (i >= L1 && i < v.it.length) { /* string longer than the shown part */ }
+        if (i < v.it.length) s += '<div class="lbl" style="font-size:12.5px">as a string: <code>"' + esc(str) + '"</code> (' + i + ' characters before \\0)</div>';
+      }
+      return '<div>' + s + '</div>';
+    }
+    if (v.k === 's') {
+      return '<div class="st" data-p="' + esc(path) + '"><span class="stn">' + esc(v.tn) + '</span>' + v.f.map(f => {
+        const ov = old && old.f ? (old.f.find(x => x[0] === f[0]) || [])[1] : null;
+        return '<div class="var"><div class="vn">.' + esc(f[0]) + '</div>' + self.valHTML(f[1], path + '.' + f[0], ov, false) + '</div>';
+      }).join('') + '</div>';
+    }
+    if (v.k === 'p') {
+      let label;
+      if (v.v === 0) label = 'NULL';
+      else if (/FILE/.test(v.tt || '')) label = '→ FILE stream (open file)';
+      else if (v.to) label = '→ ' + esc(this.tname(v.to));
+      else label = hex(v.v) + ' <span class="lbl" style="font-size:12px">(' + (this.looksGarbage(v.v) ? 'not set yet' : 'outside the variables shown') + ')</span>';
+      return '<span class="vb ptr' + (v.v === 0 ? ' null' : '') + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '"' + (v.to && v.to !== 'NULL' ? ' data-to="' + esc(v.to) + '"' : '') + ' title="holds address ' + hex(v.v) + '">' + label + (this.showAddr && v.v ? ' <span class="addr">' + hex(v.v) + '</span>' : '') + '</span>';
+    }
+    let txt = scal(v);
+    if (v.k === 'c') txt += ' <span class="lbl" style="font-size:12px">(' + v.v + ')</span>';
+    return '<span class="vb' + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '">' + txt + '</span>';
+  };
+  TraceViewer.prototype.looksGarbage = function (a) { return a < 4096 || a > 0x7fffffffffff || a % 1 !== 0; };
+  TraceViewer.prototype.drawArrows = function () {
+    const mem = this.$mem, svg = mem.querySelector('svg.arrows');
+    if (!svg) return;
+    const ptrs = mem.querySelectorAll('[data-to]');
+    svg.setAttribute('width', mem.scrollWidth); svg.setAttribute('height', mem.scrollHeight);
+    mem.querySelectorAll('.cell.tgt').forEach(x => x.classList.remove('tgt'));
+    if (!ptrs.length) { svg.innerHTML = ''; return; }
+    const mr = mem.getBoundingClientRect();
+    const ox = mem.scrollLeft - mr.left, oy = mem.scrollTop - mr.top;
+    let out = '<defs><marker id="ah' + this.uid() + '" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#c8640f"/></marker></defs>';
+    const mid = 'ah' + this._uid;
+    ptrs.forEach(p => {
+      let to = p.dataset.to.replace(/\+\d+$/, '');
+      let t = mem.querySelector('[data-p="' + CSS.escape(to) + '"]');
+      if (!t) return;
+      if (t.classList.contains('cell')) t.classList.add('tgt');
+      const a = p.getBoundingClientRect(), b = t.getBoundingClientRect();
+      const x1 = a.right + ox, y1 = a.top + a.height / 2 + oy;
+      let x2 = b.left + ox + Math.min(14, b.width / 2), y2 = b.top + oy;
+      if (b.top > a.bottom) { y2 = b.top + oy; } else if (b.bottom < a.top) { y2 = b.bottom + oy; } else { x2 = b.left + ox; y2 = b.top + b.height / 2 + oy; }
+      const bend = Math.max(40, Math.abs(y2 - y1) * 0.3);
+      out += '<path d="M' + x1 + ',' + y1 + ' C' + (x1 + bend) + ',' + y1 + ' ' + (x2 + bend * 0.6) + ',' + (y2 + (y2 > y1 ? -30 : 30)) + ' ' + x2 + ',' + y2 + '" fill="none" stroke="#c8640f" stroke-width="2" marker-end="url(#' + mid + ')" opacity=".85"/>';
+    });
+    svg.innerHTML = out;
+  };
+  let UID = 0;
+  TraceViewer.prototype.uid = function () { if (!this._uid) this._uid = ++UID; return this._uid; };
+  SPL.TraceViewer = TraceViewer;
+
+  SPL.mountTraces = function (root) {
+    (root || document).querySelectorAll('.tv[data-tr]:not([data-mounted])').forEach(el => {
+      const src = document.getElementById('tr-' + el.dataset.tr);
+      if (!src) return;
+      const closed = el.closest('details:not([open])');
+      if (closed) return;
+      el.dataset.mounted = '1';
+      el._tv = new TraceViewer(el, JSON.parse(src.textContent));
+    });
+  };
+
+  /* ---------- page chrome ---------- */
+  function chrome() {
+    document.querySelectorAll('pre.code[data-hl]').forEach(p => { p.innerHTML = SPL.hlBlock(p.textContent); });
+    const sel = document.getElementById('navsel');
+    if (sel) sel.onchange = () => { if (sel.value) location.hash = sel.value; };
+    const links = [...document.querySelectorAll('aside.rail a.navi[href^="#"]')];
+    if (links.length && 'IntersectionObserver' in window) {
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(a => a.classList.remove('on'));
+            const a = map.get(e.target.id); if (a) a.classList.add('on');
+          }
+        });
+      }, { rootMargin: '-90px 0px -70% 0px' });
+      map.forEach((a, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+    }
+    SPL.mountTraces();
+    // re-draw arrows when a closed <details> opens
+    document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => { SPL.mountTraces(d); d.querySelectorAll('.tv').forEach(t => t._tv && t._tv.drawArrows()); }));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', chrome); else chrome();
+})();
+</script></head><body><header class="top"><a class="ident" href="../"><img alt="Southeast University logo" src="data:image/webp;base64,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"><span class="brand"><b>Structured Programming</b><span>Theory · Lecture 01</span><small>Prepared by: Md Nazrul Islam <b>[NI]</b>, Lecturer, Dept. of CSE, Southeast University</small></span></a><nav class="tabs" aria-label="Site"><a href="../">Home</a><a href="../theory/index.html" class="on">Theory</a><a href="../lab/index.html">Lab</a></nav></header><div class="wrap"><aside class="rail" aria-label="On this page"><div class="rh">Lecture 01</div><a class="navi" href="#why"><span class="nid">01</span><span class="nt">Why C</span></a><a class="navi" href="#structure"><span class="nid">02</span><span class="nt">The basic structure of a C program</span></a><a class="navi" href="#build"><span class="nid">03</span><span class="nt">From source file to running program</span></a><a class="navi" href="#rules"><span class="nid">04</span><span class="nt">Statements and rules</span></a><a class="navi" href="#tokens"><span class="nid">05</span><span class="nt">C tokens</span></a><a class="navi" href="#types"><span class="nid">06</span><span class="nt">Data types and how they are stored</span></a><a class="navi" href="#printf"><span class="nid">07</span><span class="nt">Output with printf()</span></a><a class="navi" href="#scanf"><span class="nid">08</span><span class="nt">Input with scanf()</span></a><a class="navi" href="#run"><span class="nid">09</span><span class="nt">Run the examples</span></a><a class="navi" href="#homework"><span class="nid">10</span><span class="nt">Homework, solved</span></a><a class="navi" href="#exercises"><span class="nid">11</span><span class="nt">Exercises with solutions</span></a></aside><main><div class="crumbs"><a href="../">Home</a> › <a href="index.html">Theory</a> › Lecture 01</div><h1>Introduction to C Programming</h1><p class="lead">What a C program is made of, how the compiler turns it into a running program, and how values of each data type are stored and printed.</p><select id="navsel" aria-label="Jump to section"><option value="">Jump to…</option><option value="why">01 Why C</option><option value="structure">02 The basic structure of a C program</option><option value="build">03 From source file to running program</option><option value="rules">04 Statements and rules</option><option value="tokens">05 C tokens</option><option value="types">06 Data types and how they are stored</option><option value="printf">07 Output with printf()</option><option value="scanf">08 Input with scanf()</option><option value="run">09 Run the examples</option><option value="homework">10 Homework, solved</option><option value="exercises">11 Exercises with solutions</option></select><div class="note"><b>Practise in the lab:</b> <a href="../lab/01-fundamentals.html">Lab 01 · Fundamentals, Bitwise and Ternary Operators</a></div>
+
+<h2 id="why">Why C</h2>
+<div class="grid2">
+<div><p>C programs are fast and small because C's data types and operators map almost directly onto what the machine does. C has only <b>32 keywords</b>; most of its power comes from library functions such as <code>printf()</code> and <code>sqrt()</code>, and you can extend that library with functions of your own.</p>
+<p>The slides give an example of the speed difference: counting a variable from 0 to 15000 takes about one second in C but more than 50 seconds in an interpreted BASIC.</p>
+<p>C is <b>portable</b> (the same source compiles on Windows, Linux and microcontrollers) and it suits <b>structured programming</b>: a program is split into functions, each with one job, which makes debugging, testing and maintenance easier.</p></div>
+<div class="card" style="margin:0"><b style="color:var(--navy)">The 32 keywords of C89</b>
+<div id="kwgrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:4px;margin-top:8px;font-family:var(--mono);font-size:14px"></div>
+<p class="lbl" style="margin:8px 0 0">Click a keyword to see which lecture uses it.</p><p id="kwinfo" style="margin:4px 0 0;font-size:15px;min-height:24px"></p></div>
+</div>
+
+<h2 id="structure">The basic structure of a C program</h2>
+<p>Every C program follows the same layout. Click a section on the left to see which lines of the real program belong to it.</p>
+<div class="widget" id="structw">
+<div class="grid2" style="align-items:start">
+<div id="secbtns" style="display:flex;flex-direction:column;gap:6px"></div>
+<pre class="code" id="structcode" style="margin:0"></pre>
+</div>
+<p id="secinfo" class="idea" style="margin-bottom:0"></p>
+</div>
+
+<h2 id="build">From source file to running program</h2>
+<p>On Linux the steps are: write <code>hello.c</code>, compile it to an object file with <code>gcc -c hello.c</code> (creates <code>hello.o</code>), link it with the library into an executable with <code>gcc hello.o</code> (creates <code>a.out</code>), and run it with <code>./a.out</code>. Code::Blocks does the same steps when you press <b>Build and run</b>.</p>
+<div class="widget" id="pipe">
+<h3>Follow one program through the toolchain</h3>
+<div class="row" id="pipesteps"></div>
+<div class="grid2" style="align-items:start">
+<div><span class="lbl" id="pipein">Input</span><pre class="code" id="pipeA" style="min-height:150px"></pre></div>
+<div><span class="lbl" id="pipeout">Output</span><pre class="code" id="pipeB" style="min-height:150px"></pre></div>
+</div>
+<p id="pipetext" class="idea" style="margin-bottom:0"></p>
+</div>
+<div class="note"><b>Preprocessor directives</b> start with <code>#</code> and are handled before compilation. <code>#include &lt;stdio.h&gt;</code> pastes in the declarations of the standard input/output functions; <code>#define PI 3.14159</code> replaces every <code>PI</code> with <code>3.14159</code>. Execution always starts at <code>main()</code>; a program without <code>main()</code> compiles but fails to link with <i>undefined reference to `main'</i>.</div>
+<h3>Program life cycle</h3>
+<p>Writing a program is a loop, not a straight line. A syntax error sends you back to the editor before the program can be linked; a logic or data error (wrong output) sends you back after it runs.</p>
+<div style="overflow-x:auto"><svg viewBox="0 0 640 520" style="width:100%;max-width:640px;display:block;margin:auto" role="img" aria-label="Program life cycle flowchart">
+<defs><marker id="lca" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#1f3a68"/></marker></defs>
+<g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#14213d" text-anchor="middle">
+<rect x="250" y="10" width="140" height="32" rx="6" fill="#fff8b8" stroke="#c8640f"/><text x="320" y="31">System ready</text>
+<rect x="250" y="62" width="140" height="32" rx="6" fill="#fff8b8" stroke="#c8640f"/><text x="320" y="83">Enter program</text>
+<rect x="250" y="114" width="140" height="32" rx="6" fill="#fff8b8" stroke="#c8640f"/><text x="320" y="135">Edit source</text>
+<rect x="250" y="166" width="140" height="32" rx="6" fill="#fff8b8" stroke="#c8640f"/><text x="320" y="187">Compile source</text>
+<polygon points="320,214 385,248 320,282 255,248" fill="#fde7d3" stroke="#c8640f"/><text x="320" y="245">Syntax</text><text x="320" y="260">errors?</text>
+<rect x="250" y="300" width="140" height="32" rx="6" fill="#fff8b8" stroke="#c8640f"/><text x="320" y="321">Link system library</text>
+<rect x="250" y="350" width="140" height="32" rx="6" fill="#fff8b8" stroke="#c8640f"/><text x="320" y="371">Execute the code</text>
+<polygon points="320,398 385,432 320,466 255,432" fill="#fde7d3" stroke="#c8640f"/><text x="320" y="429">Logic or data</text><text x="320" y="444">errors?</text>
+<rect x="430" y="416" width="110" height="32" rx="6" fill="#e6f4ea" stroke="#2e7d4f"/><text x="485" y="437">Correct output</text>
+<rect x="60" y="62" width="130" height="32" rx="6" fill="#f5f7fa" stroke="#8b97ab"/><text x="125" y="83">program code</text>
+<rect x="60" y="166" width="130" height="32" rx="6" fill="#f5f7fa" stroke="#8b97ab"/><text x="125" y="187">C compiler</text>
+<rect x="60" y="300" width="130" height="32" rx="6" fill="#f5f7fa" stroke="#8b97ab"/><text x="125" y="321">system library</text>
+</g>
+<g stroke="#1f3a68" stroke-width="1.6" fill="none" marker-end="url(#lca)">
+<path d="M320,42V62"/><path d="M320,94V114"/><path d="M320,146V166"/><path d="M320,198V214"/><path d="M320,282V300"/><path d="M320,332V350"/><path d="M320,382V398"/>
+<path d="M190,78H250"/><path d="M190,182H250"/><path d="M190,316H250"/><path d="M385,432H430"/>
+<path d="M385,248H460V130H390"/><path d="M320,466V500H600V130H390"/>
+</g>
+<g font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="#c8640f"><text x="400" y="242">YES</text><text x="330" y="295">NO</text><text x="395" y="426">NO</text><text x="332" y="488">YES</text></g>
+</svg></div>
+<h3>Four ways to write main()</h3>
+<div class="grid2">
+<pre class="code" data-hl>int main(void)
+{
+    return 0;
+}</pre>
+<pre class="code" data-hl>void main(void)
+{
+}</pre>
+<pre class="code" data-hl>main(void)
+{
+}</pre>
+<pre class="code" data-hl>main()
+{
+}</pre>
+</div>
+<p>All four appear in textbooks and old compilers accept them. Only <code>int main(void)</code> (or <code>int main()</code>) is standard C: <code>main</code> returns an <code>int</code> to the operating system, 0 meaning success. Leaving out the return type relies on the old "implicit int" rule that C99 removed, and <code>void main</code> is a compiler extension. <code>main</code> is an identifier; do not use the name for anything else. Try it yourself: rename <code>main</code> in a program and read the linker error.</p>
+
+<h2 id="rules">Statements and rules</h2>
+<ul>
+<li>A <b>declaration</b> tells the compiler how much memory a variable needs (<code>int count;</code>). An <b>executable statement</b> becomes machine instructions (<code>count = count + 1;</code>).</li>
+<li>Every statement ends with a semicolon. Missing one gives <code>error: expected ';' before 'return'</code>. Unlike Python, indentation does not change the meaning, but it keeps the code readable.</li>
+<li>Curly braces <code>{ }</code> mark the start and end of a function body or a block.</li>
+</ul>
+
+<h2 id="tokens">C tokens</h2>
+<p>The smallest units the compiler reads are <b>tokens</b>. There are six kinds: keywords, identifiers, constants, strings, operators and special symbols. Type any C statement and see how it splits.</p>
+<div class="widget">
+<div class="row"><label class="lbl" for="tokin">C code</label><input id="tokin" class="field mono" style="flex:1 1 300px" value='float area = 3.14 * r * r; printf("%f", area);'></div>
+<div id="tokout" style="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0"></div>
+<div id="toklegend" class="row" style="font-size:14px"></div>
+</div>
+<div class="tblwrap"><table><thead><tr><th>Token type</th><th>Examples</th></tr></thead><tbody>
+<tr><td>Keyword</td><td><code>void</code>, <code>int</code></td></tr><tr><td>Identifier</td><td><code>main</code>, <code>amount</code></td></tr>
+<tr><td>Constant</td><td><code>65</code>, <code>11.7</code></td></tr><tr><td>String</td><td><code>"abc"</code>, <code>"year"</code></td></tr>
+<tr><td>Operator</td><td><code>+</code>, <code>-</code>, <code>*</code></td></tr><tr><td>Special symbol</td><td><code>&amp;</code>, <code>#</code>, <code>;</code>, <code>{ }</code></td></tr>
+</tbody></table></div>
+<p><b>Keywords</b> have a fixed meaning and are the building blocks of statements. <b>Constants</b> are fixed values that do not change while the program runs.</p>
+<h3>Is it a valid identifier?</h3>
+<p>Identifiers name variables, functions and arrays. Rules: start with a letter or underscore, then letters, digits or underscores only; no spaces; not a keyword; upper and lower case are different. ANSI C guarantees that the first 31 characters are significant.</p>
+<p>A <b>variable</b> is a data name for a memory cell; its value may change while the program runs. Choose names that describe the value (<code>total_marks</code>, not <code>x</code>). The slides also advise keeping names to 8 characters, because some old compilers looked only at the first 8.</p>
+<div class="widget">
+<div class="row"><label class="lbl" for="idin">Name</label><input id="idin" class="field mono" value="total_marks"><span id="idres"></span></div>
+<div class="row" id="idex"></div>
+</div>
+
+<h2 id="types">Data types and how they are stored</h2>
+<p>ANSI C supports three classes of data types.</p>
+<div class="grid2">
+<div class="card" style="margin:0"><b style="color:var(--navy)">Primary (built-in)</b><ul style="margin:6px 0 0;font-size:16px">
+<li><code>char</code>: signed, unsigned</li>
+<li><code>int</code>: <code>short int</code>, <code>unsigned short int</code>, <code>int</code>, <code>unsigned int</code>, <code>long int</code>, <code>unsigned long int</code>, <code>long long int</code>, <code>unsigned long long int</code></li>
+<li><code>float</code>, <code>double</code>, <code>long double</code></li><li><code>void</code></li></ul></div>
+<div class="card" style="margin:0"><b style="color:var(--navy)">Derived</b><ul style="margin:6px 0 0;font-size:16px"><li>arrays (Lectures 05–07)</li><li>pointers (Lectures 10–11)</li><li>functions (Lectures 08–09)</li><li>structures and unions (Lecture 12)</li></ul>
+<b style="color:var(--navy);display:block;margin-top:10px">User-defined</b><ul style="margin:6px 0 0;font-size:16px"><li><code>typedef</code></li><li><code>enum</code></li></ul></div>
+</div>
+<h3>Integer types</h3>
+<p>Integers are whole numbers. An <code>int</code> usually occupies one <b>word</b> of the machine, and word sizes differ (16 bits, 32 bits). On Linux, <code>uname -a</code> shows the machine type and <code>getconf WORD_BIT</code> prints the word size. The slides' table is for a <b>16-bit machine</b> such as the original Turbo C:</p>
+<div class="tblwrap"><table><thead><tr><th>Type (16-bit machine)</th><th>Size (bits)</th><th>Range</th></tr></thead><tbody>
+<tr><td><code>char</code> or <code>signed char</code></td><td>8</td><td>−128 to 127</td></tr><tr><td><code>unsigned char</code></td><td>8</td><td>0 to 255</td></tr>
+<tr><td><code>int</code> or <code>signed int</code></td><td>16</td><td>−32,768 to 32,767</td></tr><tr><td><code>unsigned int</code></td><td>16</td><td>0 to 65,535</td></tr>
+<tr><td><code>short int</code> or <code>signed short int</code></td><td>16</td><td>−32,768 to 32,767</td></tr><tr><td><code>unsigned short int</code></td><td>16</td><td>0 to 65,535</td></tr>
+<tr><td><code>long int</code> or <code>signed long int</code></td><td>32</td><td>−2,147,483,648 to 2,147,483,647</td></tr><tr><td><code>unsigned long int</code></td><td>32</td><td>0 to 4,294,967,295</td></tr>
+</tbody></table></div>
+<h3>Floating-point types</h3>
+<div class="tblwrap"><table><thead><tr><th>Type</th><th>Size (bits)</th><th>Range</th><th>Precision</th></tr></thead><tbody>
+<tr><td><code>float</code></td><td>32</td><td>3.4E−38 to 3.4E+38</td><td>6 digits</td></tr>
+<tr><td><code>double</code></td><td>64</td><td>1.7E−308 to 1.7E+308</td><td>15 digits (the slide says 14)</td></tr>
+<tr><td><code>long double</code></td><td>80</td><td>3.4E−4932 to 1.1E+4932</td><td>18 digits</td></tr>
+</tbody></table></div>
+<h3>On today's compilers</h3>
+<p>The table below shows the sizes measured with GCC on a 64-bit Linux machine.</p>
+<div class="tblwrap"><table id="typetbl"><thead><tr><th>Type</th><th>Bytes</th><th>Range or precision</th><th>printf / scanf</th></tr></thead><tbody></tbody></table></div>
+<div class="note"><b>Are <code>long</code> and <code>long long</code> the same?</b> On 64-bit Linux and macOS they happen to be: both are 8 bytes with the same range. They are still different types, and elsewhere they differ. The C standard only guarantees that <code>long</code> has at least 32 bits and <code>long long</code> at least 64 bits. On Windows (Code::Blocks with MinGW, or Visual Studio) <code>long</code> stays 4 bytes, the same as <code>int</code>, while <code>long long</code> is 8. So when a value may exceed about 2.1 billion, use <code>long long</code>, and always print each type with its own specifier: <code>%ld</code> for <code>long</code>, <code>%lld</code> for <code>long long</code>.</div>
+<div class="note"><b>Sizes depend on the machine.</b> The slides use a 16-bit machine, where <code>int</code> is 2 bytes and holds −32768 to 32767 (that is −2<sup>15</sup> to 2<sup>15</sup>−1). Modern compilers use 4-byte <code>int</code>. <code>long</code> is 8 bytes on 64-bit Linux but 4 bytes on Windows (MinGW, used by Code::Blocks). Use <code>sizeof(type)</code> when you need to know.</div>
+<div class="widget" id="bitw">
+<h3>See the bits</h3>
+<p class="wsub">Pick a type and a value. The box shows the bit pattern stored in memory and what happens when the value does not fit.</p>
+<div class="row">
+<select id="btype" class="field" aria-label="Type"><option value="char">char (8 bits)</option><option value="uchar">unsigned char (8 bits)</option><option value="short">short (16 bits)</option><option value="ushort">unsigned short</option><option value="int" selected>int (32 bits)</option><option value="uint">unsigned int</option></select>
+<input id="bval" class="field mono" value="73" style="width:180px" aria-label="Value">
+<button class="btn sm" data-bv="'I'">'I'</button><button class="btn sm" data-bv="32767">32767</button><button class="btn sm" data-bv="2147483647">INT_MAX</button><button class="btn sm" data-bv="2147483648">INT_MAX+1</button><button class="btn sm" data-bv="-1">-1</button><button class="btn sm" data-bv="300">300</button>
+</div>
+<div id="bits" style="display:flex;flex-wrap:wrap;gap:3px;margin:12px 0;font-family:var(--mono)"></div>
+<p id="bitinfo" style="margin:0"></p>
+</div>
+<p><b>Characters are small integers.</b> <code>char ME = 'I';</code> stores the ASCII code 73 in 8 bits: <code>0100 1001</code>. A character constant goes inside single quotes. The full ASCII table (codes 32–126 with decimal, octal and hexadecimal values) is interactive in <a href="07-character-arrays-strings.html#chars">Lecture 07</a>.</p>
+<div class="tv" data-tr="t01-types"></div><script type="application/json" id="tr-t01-types">{"title":"Declaring a variable of every basic type (slide 15) and printing sizeof","code":"#include <stdio.h>\nint main()\n{\n    char charVal = 'A';\n    unsigned char uCharVal = 200;\n    short shortVal = -1200;\n    unsigned short uShortVal = 60000;\n    int intVal = 2000000000;\n    unsigned int uIntVal = 4000000000u;\n    long longVal = -9000000000L;\n    unsigned long uLongVal = 18000000000UL;\n    long long longLongVal = 9000000000000000000LL;\n    unsigned long long uLongLongVal = 18000000000000000000ULL;\n    float floatVal = 3.14159f;\n    double doubleVal = 2.718281828459045;\n    long double longDoubleVal = 1.41421356237309504880L;\n    printf(\"char %zu, short %zu, int %zu, long %zu, long long %zu bytes\\n\",\n           sizeof(charVal), sizeof(shortVal), sizeof(intVal), sizeof(longVal), sizeof(longLongVal));\n    printf(\"float %zu, double %zu, long double %zu bytes\\n\",\n           sizeof(floatVal), sizeof(doubleVal), sizeof(longDoubleVal));\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["charVal","char",0,0],["uCharVal","unsigned char",0,1],["shortVal","short",0,2],["uShortVal","unsigned short",0,3],["intVal","int",0,4],["uIntVal","unsigned int",0,5],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":5,"f":[["main",5,[["charVal","char",0,13],["uCharVal","unsigned char",0,1],["shortVal","short",0,2],["uShortVal","unsigned short",0,3],["intVal","int",0,4],["uIntVal","unsigned int",0,5],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":6,"f":[["main",6,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,2],["uShortVal","unsigned short",0,3],["intVal","int",0,4],["uIntVal","unsigned int",0,5],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":7,"f":[["main",7,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,3],["intVal","int",0,4],["uIntVal","unsigned int",0,5],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":8,"f":[["main",8,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,4],["uIntVal","unsigned int",0,5],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":9,"f":[["main",9,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,5],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":10,"f":[["main",10,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,6],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":11,"f":[["main",11,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,7],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":12,"f":[["main",12,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,8],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":13,"f":[["main",13,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,9],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":14,"f":[["main",14,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,10],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":15,"f":[["main",15,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,23],["doubleVal","double",0,11],["longDoubleVal","long double",0,12]]]]},{"l":16,"f":[["main",16,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,23],["doubleVal","double",0,24],["longDoubleVal","long double",0,12]]]]},{"l":17,"f":[["main",17,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,23],["doubleVal","double",0,24],["longDoubleVal","long double",0,25]]]]},{"l":19,"f":[["main",19,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,23],["doubleVal","double",0,24],["longDoubleVal","long double",0,25]]]],"d":[["o","char 1, short 2, int 4, long 8, long long 8 bytes\n"]]},{"l":21,"f":[["main",21,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,23],["doubleVal","double",0,24],["longDoubleVal","long double",0,25]]]],"d":[["o","float 4, double 8, long double 16 bytes\n"]]},{"l":22,"f":[["main",22,[["charVal","char",0,13],["uCharVal","unsigned char",0,14],["shortVal","short",0,15],["uShortVal","unsigned short",0,16],["intVal","int",0,17],["uIntVal","unsigned int",0,18],["longVal","long",0,19],["uLongVal","unsigned long",0,20],["longLongVal","long long",0,21],["uLongLongVal","unsigned long long",0,22],["floatVal","float",0,23],["doubleVal","double",0,24],["longDoubleVal","long double",0,25]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"c","v":0,"a":140737488314910},{"k":"i","v":32767,"a":140737488314908},{"k":"i","v":65535,"a":140737488314906},{"k":"i","v":32767,"a":140737488314900},{"k":"i","v":4158674368,"a":140737488314896},{"k":"i","v":140737354029808,"a":140737488314888},{"k":"i","v":0,"a":140737488314880},{"k":"i","v":0,"a":140737488314872},{"k":"i","v":0,"a":140737488314864},{"k":"f","v":0.0,"a":140737488314860},{"k":"f","v":0.0,"a":140737488314848},{"k":"f","v":0.0,"a":140737488314832},{"k":"c","v":65,"a":140737488314911},{"k":"c","v":200,"a":140737488314910},{"k":"i","v":-1200,"a":140737488314908},{"k":"i","v":60000,"a":140737488314906},{"k":"i","v":2000000000,"a":140737488314900},{"k":"i","v":4000000000,"a":140737488314896},{"k":"i","v":-9000000000,"a":140737488314888},{"k":"i","v":18000000000,"a":140737488314880},{"k":"i","v":9000000000000000000,"a":140737488314872},{"k":"i","v":18000000000000000000,"a":140737488314864},{"k":"f","v":3.14159,"a":140737488314860},{"k":"f","v":2.71828,"a":140737488314848},{"k":"f","v":1.41421,"a":140737488314832}]},"out":"char 1, short 2, int 4, long 8, long long 8 bytes\nfloat 4, double 8, long double 16 bytes\n","trunc":false}]}</script>
+<p><b>void</b> has no values; a function of type <code>void</code> returns nothing. <b>typedef</b> gives a type a new name: <code>typedef int marks; marks sub1, sub2;</code>. <b>enum</b> defines named integer constants: <code>enum day {SAT, SUN, MON};</code> makes <code>SAT</code> 0, <code>SUN</code> 1 and so on.</p>
+
+<h2 id="printf">Output with printf()</h2>
+<p><code>printf("total amount %d \n", sum);</code> prints the text and replaces the placeholder <code>%d</code> (conversion specifier) with the value of <code>sum</code>; <code>\n</code> is an escape sequence for a new line. Edit the format string and the values to see the output a C program would produce.</p>
+<div class="widget">
+<div class="row"><label class="lbl" for="pff">Format</label><input id="pff" class="field mono" style="flex:1 1 320px" value='Roll %d got %.2f (%c) in %s\n'></div>
+<div class="row"><label class="lbl" for="pfa">Values</label><input id="pfa" class="field mono" style="flex:1 1 320px" value="17, 3.756, 'A', &quot;CSE1201&quot;"></div>
+<div class="row" id="pfex"></div>
+<div class="term" id="pfout"></div>
+<p id="pferr" class="bad" style="margin:4px 0 0;font-size:15px"></p>
+</div>
+<h3>Conversion specifiers (placeholders)</h3>
+<p>A conversion specifier starts with <code>%</code> and ends with a <b>conversion letter</b> that names the kind of value. Between them may come a <b>length modifier</b> that names the size of the type:</p>
+<div class="tblwrap"><table><thead><tr><th>Length modifier</th><th>Means the value is</th><th>Example</th></tr></thead><tbody>
+<tr><td><code>hh</code></td><td><code>signed char</code> / <code>unsigned char</code> used as a number</td><td><code>%hhd</code>, <code>%hhu</code></td></tr>
+<tr><td><code>h</code></td><td><code>short</code> / <code>unsigned short</code></td><td><code>%hd</code>, <code>%hu</code></td></tr>
+<tr><td>(none)</td><td><code>int</code> / <code>unsigned int</code>; <code>double</code> for printf's <code>%f %e %g</code></td><td><code>%d</code>, <code>%f</code></td></tr>
+<tr><td><code>l</code> (letter el)</td><td><code>long</code> / <code>unsigned long</code>; <code>double</code> for scanf</td><td><code>%ld</code>, <code>%lf</code></td></tr>
+<tr><td><code>ll</code></td><td><code>long long</code> / <code>unsigned long long</code></td><td><code>%lld</code>, <code>%llu</code></td></tr>
+<tr><td><code>L</code></td><td><code>long double</code></td><td><code>%Lf</code></td></tr>
+<tr><td><code>z</code>, <code>t</code></td><td><code>size_t</code> (from <code>sizeof</code>), <code>ptrdiff_t</code> (pointer difference)</td><td><code>%zu</code>, <code>%td</code></td></tr>
+</tbody></table></div>
+<p>The full list, grouped by type. Every output in the last-but-one column was printed by GCC.</p>
+<div class="tblwrap"><table style="font-size:15px"><thead><tr><th>Type</th><th>printf</th><th>scanf</th><th>Example value</th><th>Output</th><th>Meaning</th></tr></thead><tbody>
+<tr><th colspan="6" style="background:var(--hl2);text-align:left">Characters</th></tr>
+<tr><td><code>char</code></td><td><code>%c</code></td><td><code>%c</code></td><td><code>&#x27;A&#x27;</code></td><td><code>A</code></td><td>one character</td></tr>
+<tr><td><code>char</code></td><td><code>%d</code></td><td><code>%c</code></td><td><code>&#x27;A&#x27;</code></td><td><code>65</code></td><td>the character&#x27;s code, as a number</td></tr>
+<tr><td><code>signed char</code></td><td><code>%hhd</code></td><td><code>%hhd</code></td><td><code>-100</code></td><td><code>-100</code></td><td>small signed integer</td></tr>
+<tr><td><code>unsigned char</code></td><td><code>%hhu</code></td><td><code>%hhu</code></td><td><code>200</code></td><td><code>200</code></td><td>small unsigned integer</td></tr>
+<tr><th colspan="6" style="background:var(--hl2);text-align:left">Integers</th></tr>
+<tr><td><code>short int</code></td><td><code>%hd</code></td><td><code>%hd</code></td><td><code>-1200</code></td><td><code>-1200</code></td><td>signed decimal</td></tr>
+<tr><td><code>unsigned short int</code></td><td><code>%hu</code></td><td><code>%hu</code></td><td><code>60000</code></td><td><code>60000</code></td><td>unsigned decimal</td></tr>
+<tr><td><code>int</code></td><td><code>%d</code></td><td><code>%d</code></td><td><code>-42</code></td><td><code>-42</code></td><td>signed decimal</td></tr>
+<tr><td><code>int</code></td><td><code>%i</code></td><td><code>%i</code></td><td><code>-42</code></td><td><code>-42</code></td><td>signed integer (scanf %i also accepts 0x1F and 017)</td></tr>
+<tr><td><code>unsigned int</code></td><td><code>%u</code></td><td><code>%u</code></td><td><code>4000000000</code></td><td><code>4000000000</code></td><td>unsigned decimal</td></tr>
+<tr><td><code>unsigned int</code></td><td><code>%o</code></td><td><code>%o</code></td><td><code>76</code></td><td><code>114</code></td><td>octal</td></tr>
+<tr><td><code>unsigned int</code></td><td><code>%x</code></td><td><code>%x</code></td><td><code>255</code></td><td><code>ff</code></td><td>hexadecimal, small letters</td></tr>
+<tr><td><code>unsigned int</code></td><td><code>%X</code></td><td><code>%X</code></td><td><code>255</code></td><td><code>FF</code></td><td>hexadecimal, capital letters</td></tr>
+<tr><td><code>unsigned int</code></td><td><code>%#x</code></td><td><code>%x</code></td><td><code>255</code></td><td><code>0xff</code></td><td>hexadecimal with 0x prefix</td></tr>
+<tr><td><code>unsigned int</code></td><td><code>%#o</code></td><td><code>%o</code></td><td><code>76</code></td><td><code>0114</code></td><td>octal with 0 prefix</td></tr>
+<tr><td><code>long int</code></td><td><code>%ld</code></td><td><code>%ld</code></td><td><code>-123456789</code></td><td><code>-123456789</code></td><td>signed decimal</td></tr>
+<tr><td><code>unsigned long int</code></td><td><code>%lu</code></td><td><code>%lu</code></td><td><code>3000000000</code></td><td><code>3000000000</code></td><td>unsigned decimal</td></tr>
+<tr><td><code>long int</code></td><td><code>%lx</code></td><td><code>%lx</code></td><td><code>255</code></td><td><code>ff</code></td><td>hexadecimal</td></tr>
+<tr><td><code>long long int</code></td><td><code>%lld</code></td><td><code>%lld</code></td><td><code>-9000000000000</code></td><td><code>-9000000000000</code></td><td>signed decimal</td></tr>
+<tr><td><code>unsigned long long int</code></td><td><code>%llu</code></td><td><code>%llu</code></td><td><code>18000000000000000000</code></td><td><code>18000000000000000000</code></td><td>unsigned decimal</td></tr>
+<tr><td><code>long long int</code></td><td><code>%llx</code></td><td><code>%llx</code></td><td><code>4095</code></td><td><code>fff</code></td><td>hexadecimal</td></tr>
+<tr><td><code>size_t (result of sizeof)</code></td><td><code>%zu</code></td><td><code>%zu</code></td><td><code>sizeof(double)</code></td><td><code>8</code></td><td>unsigned size</td></tr>
+<tr><td><code>ptrdiff_t (pointer difference)</code></td><td><code>%td</code></td><td><code>%td</code></td><td><code>&amp;a[7] - &amp;a[2]</code></td><td><code>5</code></td><td>signed difference</td></tr>
+<tr><th colspan="6" style="background:var(--hl2);text-align:left">Floating point</th></tr>
+<tr><td><code>float</code></td><td><code>%f</code></td><td><code>%f</code></td><td><code>3.14159</code></td><td><code>3.141590</code></td><td>decimal notation, 6 decimals</td></tr>
+<tr><td><code>double</code></td><td><code>%f or %lf</code></td><td><code>%lf</code></td><td><code>2.718281828</code></td><td><code>2.718282</code></td><td>decimal notation, 6 decimals</td></tr>
+<tr><td><code>double</code></td><td><code>%.2f</code></td><td><code>%lf</code></td><td><code>2.718281828</code></td><td><code>2.72</code></td><td>precision: 2 decimals (rounded)</td></tr>
+<tr><td><code>double</code></td><td><code>%e</code></td><td><code>%le</code></td><td><code>31415.9265</code></td><td><code>3.141593e+04</code></td><td>scientific notation, small e</td></tr>
+<tr><td><code>double</code></td><td><code>%E</code></td><td><code>%lE</code></td><td><code>31415.9265</code></td><td><code>3.141593E+04</code></td><td>scientific notation, capital E</td></tr>
+<tr><td><code>double</code></td><td><code>%g</code></td><td><code>%lg</code></td><td><code>0.0001234</code></td><td><code>0.0001234</code></td><td>shorter of %f and %e, no trailing zeros</td></tr>
+<tr><td><code>double</code></td><td><code>%G</code></td><td><code>%lG</code></td><td><code>0.00001234</code></td><td><code>1.234E-05</code></td><td>shorter of %f and %E</td></tr>
+<tr><td><code>double</code></td><td><code>%a</code></td><td><code>%la</code></td><td><code>1.0</code></td><td><code>0x1p+0</code></td><td>hexadecimal floating point (C99)</td></tr>
+<tr><td><code>long double</code></td><td><code>%Lf</code></td><td><code>%Lf</code></td><td><code>1.41421356237</code></td><td><code>1.414214</code></td><td>decimal notation</td></tr>
+<tr><td><code>long double</code></td><td><code>%Le</code></td><td><code>%Le</code></td><td><code>1.41421356237</code></td><td><code>1.414214e+00</code></td><td>scientific notation</td></tr>
+<tr><th colspan="6" style="background:var(--hl2);text-align:left">Strings and others</th></tr>
+<tr><td><code>char [] (string)</code></td><td><code>%s</code></td><td><code>%s</code></td><td><code>&quot;SEU&quot;</code></td><td><code>SEU</code></td><td>characters up to &#x27;\0&#x27;; scanf %s stops at white space</td></tr>
+<tr><td><code>char [] (string)</code></td><td><code>%.2s</code></td><td><code>%2s</code></td><td><code>&quot;SEU&quot;</code></td><td><code>SE</code></td><td>at most 2 characters (printf); read at most 2 (scanf)</td></tr>
+<tr><td><code>any pointer</code></td><td><code>%p</code></td><td><code>%p</code></td><td><code>&amp;x</code></td><td><span class="lbl">e.g. 0x7ffd5e8c3a4c</span></td><td>an address (changes from run to run)</td></tr>
+<tr><td><code>int *</code></td><td><code>%n</code></td><td><code>%n</code></td><td></td><td><span class="lbl">nothing; after <code>printf("SEU%n", &amp;n)</code>, n is 3</span></td><td>prints nothing; stores how many characters have been printed so far</td></tr>
+<tr><td><code>(none)</code></td><td><code>%%</code></td><td><code>%%</code></td><td></td><td><code>%</code></td><td>a literal percent sign</td></tr>
+<tr><td><code>char [] (scanf only)</code></td><td><code>—</code></td><td><code>%[^\n]</code></td><td></td><td></td><td>scanset: reads every character up to the newline, spaces included</td></tr>
+<tr><td><code>char [] (scanf only)</code></td><td><code>—</code></td><td><code>%[a-z]</code></td><td></td><td></td><td>scanset: reads only the listed characters</td></tr>
+</tbody></table></div>
+<div class="note"><b>printf and scanf differ for floating point.</b> In printf, a <code>float</code> is promoted to <code>double</code>, so <code>%f</code> prints both (<code>%lf</code> is also accepted). In scanf the specifier must match the variable exactly: <code>%f</code> for <code>float</code>, <code>%lf</code> for <code>double</code>, <code>%Lf</code> for <code>long double</code>. A wrong pair reads garbage, as in the rectangle program of Lab 01.</div>
+<p class="lbl">The slides' table lists the 13 most common specifiers (%d %i %o %u %x %X %f %e %E %g %G %c %s); they are all included above.</p>
+<div class="tv" data-tr="t01-spec"></div><script type="application/json" id="tr-t01-spec">{"title":"printf with every basic type","code":"#include <stdio.h>\nint main(void)\n{\n    char ch = 'A';\n    short s = -1200;\n    unsigned short us = 60000;\n    int i = 255;\n    unsigned int u = 4000000000u;\n    long l = -123456789L;\n    long long ll = -9000000000000LL;\n    unsigned long long ull = 18000000000000000000ULL;\n    float f = 3.14159f;\n    double d = 31415.9265;\n    long double ld = 1.41421356237L;\n    char str[] = \"SEU\";\n    printf(\"char:   %c %d %hhu\\n\", ch, ch, (unsigned char)200);\n    printf(\"short:  %hd %hu\\n\", s, us);\n    printf(\"int:    %d %i %o %x %X %#x\\n\", i, i, i, i, i, i);\n    printf(\"other:  %u %ld %lld %llu\\n\", u, l, ll, ull);\n    printf(\"float:  %f %.2f\\n\", f, f);\n    printf(\"double: %f %e %E %g\\n\", d, d, d, d);\n    printf(\"long double: %Lf\\n\", ld);\n    printf(\"string: %s %.2s %c%%\\n\", str, str, str[0]);\n    printf(\"sizeof(double) = %zu\\n\", sizeof(double));\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["ch","char",0,0],["s","short",0,1],["us","unsigned short",0,2],["i","int",0,3],["u","unsigned int",0,4],["l","long",0,5],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":5,"f":[["main",5,[["ch","char",0,12],["s","short",0,1],["us","unsigned short",0,2],["i","int",0,3],["u","unsigned int",0,4],["l","long",0,5],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":6,"f":[["main",6,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,2],["i","int",0,3],["u","unsigned int",0,4],["l","long",0,5],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":7,"f":[["main",7,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,3],["u","unsigned int",0,4],["l","long",0,5],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":8,"f":[["main",8,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,4],["l","long",0,5],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":9,"f":[["main",9,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,5],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":10,"f":[["main",10,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,6],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":11,"f":[["main",11,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,7],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":12,"f":[["main",12,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,8],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":13,"f":[["main",13,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,9],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":14,"f":[["main",14,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,10],["str","char [4]",0,11]]]]},{"l":15,"f":[["main",15,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,11]]]]},{"l":16,"f":[["main",16,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]]},{"l":17,"f":[["main",17,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","char:   A 65 200\n"]]},{"l":18,"f":[["main",18,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","short:  -1200 60000\n"]]},{"l":18,"d":[["o","int:    255 255 377 ff FF 0xff\n"]]},{"l":19,"f":[["main",19,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]]},{"l":20,"f":[["main",20,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","other:  4000000000 -123456789 -9000000000000 18000000000000000000\n"]]},{"l":21,"f":[["main",21,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","float:  3.141590 3.14\n"]]},{"l":22,"f":[["main",22,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","double: 31415.926500 3.141593e+04 3.141593E+04 31415.9\n"]]},{"l":22,"d":[["o","long double: 1.414214\n"]]},{"l":23,"f":[["main",23,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]]},{"l":24,"f":[["main",24,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","string: SEU SE S%\n"]]},{"l":25,"f":[["main",25,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]],"d":[["o","sizeof(double) = 8\n"]]},{"l":26,"f":[["main",26,[["ch","char",0,12],["s","short",0,13],["us","unsigned short",0,14],["i","int",0,15],["u","unsigned int",0,16],["l","long",0,17],["ll","long long",0,18],["ull","unsigned long long",0,19],["f","float",0,20],["d","double",0,21],["ld","long double",0,22],["str","char [4]",0,23]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"i","v":32767,"a":140737488314908},{"k":"i","v":65535,"a":140737488314906},{"k":"i","v":32767,"a":140737488314900},{"k":"i","v":4158674368,"a":140737488314896},{"k":"i","v":140737354029808,"a":140737488314888},{"k":"i","v":0,"a":140737488314880},{"k":"i","v":0,"a":140737488314872},{"k":"f","v":0.0,"a":140737488314868},{"k":"f","v":0.0,"a":140737488314856},{"k":"f","v":0.0,"a":140737488314832},{"k":"a","it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"a":140737488314828,"sz":4},{"k":"c","v":65,"a":140737488314911},{"k":"i","v":-1200,"a":140737488314908},{"k":"i","v":60000,"a":140737488314906},{"k":"i","v":255,"a":140737488314900},{"k":"i","v":4000000000,"a":140737488314896},{"k":"i","v":-123456789,"a":140737488314888},{"k":"i","v":-9000000000000,"a":140737488314880},{"k":"i","v":18000000000000000000,"a":140737488314872},{"k":"f","v":3.14159,"a":140737488314868},{"k":"f","v":31415.9,"a":140737488314856},{"k":"f","v":1.41421,"a":140737488314832},{"k":"a","it":[{"k":"c","v":83},{"k":"c","v":69},{"k":"c","v":85},{"k":"c","v":0}],"es":1,"a":140737488314828,"sz":4}]},"out":"char:   A 65 200\nshort:  -1200 60000\nint:    255 255 377 ff FF 0xff\nother:  4000000000 -123456789 -9000000000000 18000000000000000000\nfloat:  3.141590 3.14\ndouble: 31415.926500 3.141593e+04 3.141593E+04 31415.9\nlong double: 1.414214\nstring: SEU SE S%\nsizeof(double) = 8\n","trunc":false}]}</script>
+<div class="tv" data-tr="t01-scan"></div><script type="application/json" id="tr-t01-scan">{"title":"scanf with matching specifiers (%i accepts hexadecimal, %[^\\n] reads a whole line)","code":"#include <stdio.h>\nint main(void)\n{\n    char c, word[10], line[50];\n    short s;\n    int i;\n    unsigned long ul;\n    float f;\n    double d;\n    printf(\"Enter: char short int(any base) unsigned-long float double word\\n\");\n    scanf(\"%c %hd %i %lu %f %lf %9s\", &c, &s, &i, &ul, &f, &d, word);\n    printf(\"Enter a line with spaces: \");\n    scanf(\" %49[^\\n]\", line);\n    printf(\"c = %c, s = %hd, i = %d, ul = %lu\\n\", c, s, i, ul);\n    printf(\"f = %f, d = %f, word = %s\\n\", f, d, word);\n    printf(\"line = %s\\n\", line);\n    return 0;\n}\n","inputs":[{"label":"sample input","stdin":"A -1200 0x1F 3000000000 2.5 9.75 SEU\nhello world in C\n","trace":{"steps":[{"l":10,"f":[["main",10,[["c","char",0,0],["word","char [10]",0,1],["line","char [50]",0,2],["s","short",0,3],["i","int",0,4],["ul","unsigned long",0,5],["f","float",0,6],["d","double",0,7]]]]},{"l":11,"f":[["main",11,[["c","char",0,0],["word","char [10]",0,1],["line","char [50]",0,2],["s","short",0,3],["i","int",0,4],["ul","unsigned long",0,5],["f","float",0,6],["d","double",0,7]]]],"d":[["o","Enter: char short int(any base) unsigned-long float double word\n"]]},{"l":11,"f":[["main",11,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,2],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]],"d":[["i","A -1200 0x1F 3000000000 2.5 9.75 SEU\n"]]},{"l":12,"f":[["main",12,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,2],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]]},{"l":13,"f":[["main",13,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,2],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]],"d":[["o","Enter a line with spaces: "]]},{"l":14,"f":[["main",14,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,15],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]],"d":[["i","hello world in C\n"]]},{"l":15,"f":[["main",15,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,15],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]],"d":[["o","c = A, s = -1200, i = 31, ul = 3000000000\n"]]},{"l":16,"f":[["main",16,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,15],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]],"d":[["o","f = 2.500000, d = 9.750000, word = SEU\n"]]},{"l":17,"f":[["main",17,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,15],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]],"d":[["o","line = hello world in C\n"]]},{"l":18,"f":[["main",18,[["c","char",0,8],["word","char [10]",0,9],["line","char [50]",0,15],["s","short",0,10],["i","int",0,11],["ul","unsigned long",0,12],["f","float",0,13],["d","double",0,14]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"a","it":[{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":72},{"k":"c","v":99},{"k":"c","v":-1},{"k":"c","v":-1},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0}],"es":1,"a":140737488314901,"sz":10},{"k":"a","it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85}],"es":1,"a":140737488314848,"sz":50},{"k":"i","v":0,"a":140737488314846},{"k":"i","v":0,"a":140737488314840},{"k":"i","v":0,"a":140737488314832},{"k":"f","v":0.0,"a":140737488314828},{"k":"f","v":4.39253e-312,"a":140737488314816},{"k":"c","v":65,"a":140737488314911},{"k":"a","it":[{"k":"c","v":83},{"k":"c","v":69},{"k":"c","v":85},{"k":"c","v":0},{"k":"c","v":99},{"k":"c","v":-1},{"k":"c","v":-1},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0}],"es":1,"a":140737488314901,"sz":10},{"k":"i","v":-1200,"a":140737488314846},{"k":"i","v":31,"a":140737488314840},{"k":"i","v":3000000000,"a":140737488314832},{"k":"f","v":2.5,"a":140737488314828},{"k":"f","v":9.75,"a":140737488314816},{"k":"a","it":[{"k":"c","v":104},{"k":"c","v":101},{"k":"c","v":108},{"k":"c","v":108},{"k":"c","v":111},{"k":"c","v":32},{"k":"c","v":119},{"k":"c","v":111},{"k":"c","v":114},{"k":"c","v":108},{"k":"c","v":100},{"k":"c","v":32},{"k":"c","v":105},{"k":"c","v":110},{"k":"c","v":32},{"k":"c","v":67},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85}],"es":1,"a":140737488314848,"sz":50}]},"out":"Enter: char short int(any base) unsigned-long float double word\nEnter a line with spaces: c = A, s = -1200, i = 31, ul = 3000000000\nf = 2.500000, d = 9.750000, word = SEU\nline = hello world in C\n","trunc":false}]}</script>
+<h3>Field width</h3>
+<p>A number between <code>%</code> and the letter sets the minimum width; the value is right-aligned and padded with spaces (shown as ·). If the value is wider, the whole value is printed anyway.</p>
+<div class="grid2">
+<div class="tblwrap"><table style="font-family:var(--mono)"><thead><tr><th>Value</th><th>Format</th><th>Displayed</th></tr></thead><tbody>
+<tr><td>234</td><td>%4d</td><td>·234</td></tr><tr><td>234</td><td>%5d</td><td>··234</td></tr><tr><td>234</td><td>%6d</td><td>···234</td></tr><tr><td>234</td><td>%1d</td><td>234</td></tr></tbody></table></div>
+<div class="tblwrap"><table style="font-family:var(--mono)"><thead><tr><th>Value</th><th>Format</th><th>Displayed</th></tr></thead><tbody>
+<tr><td>−234</td><td>%4d</td><td>-234</td></tr><tr><td>−234</td><td>%5d</td><td>·-234</td></tr><tr><td>−234</td><td>%6d</td><td>··-234</td></tr><tr><td>−234</td><td>%2d</td><td>-234</td></tr></tbody></table></div>
+</div>
+<h3>Escape sequences</h3>
+<div class="tblwrap"><table><thead><tr><th>Escape</th><th>Effect</th><th>Escape</th><th>Effect</th></tr></thead><tbody>
+<tr><td><code>\a</code></td><td>alert (beep sound)</td><td><code>\v</code></td><td>vertical tab</td></tr>
+<tr><td><code>\b</code></td><td>backspace</td><td><code>\\</code></td><td>backslash</td></tr>
+<tr><td><code>\f</code></td><td>form feed (new page on a printer)</td><td><code>\"</code></td><td>double quote</td></tr>
+<tr><td><code>\n</code></td><td>new line</td><td><code>\'</code></td><td>single quote</td></tr>
+<tr><td><code>\r</code></td><td>carriage return</td><td><code>\ooo</code></td><td>character with octal code ooo, e.g. <code>\101</code> is 'A'</td></tr>
+<tr><td><code>\t</code></td><td>horizontal tab</td><td><code>\xhh</code></td><td>character with hexadecimal code hh, e.g. <code>\x41</code> is 'A'</td></tr>
+<tr><td colspan="2"></td><td><code>\0</code></td><td>null character (value 0); it ends every string</td></tr>
+</tbody></table></div>
+
+<h2 id="scanf">Input with scanf()</h2>
+<p><code>scanf("%f%f", &amp;H, &amp;W);</code> reads two numbers and stores them in <code>H</code> and <code>W</code>. The <code>&amp;</code> (address-of operator) passes the <i>address</i> of each variable, so scanf knows where in memory to put the value. Without <code>&amp;</code>, scanf receives the current (garbage) value instead of a location and the program usually crashes. Lecture 10 explains addresses in detail.</p>
+<div class="tblwrap"><table><thead><tr><th>Type</th><th>printf</th><th>scanf</th></tr></thead><tbody>
+<tr><td><code>int</code></td><td><code>%d</code></td><td><code>%d</code></td></tr><tr><td><code>float</code></td><td><code>%f</code></td><td><code>%f</code></td></tr>
+<tr><td><code>double</code></td><td><code>%lf</code> (or <code>%f</code>)</td><td><code>%lf</code> (must be <code>%lf</code>)</td></tr>
+<tr><td><code>char</code></td><td><code>%c</code></td><td><code>%c</code></td></tr><tr><td>string</td><td><code>%s</code></td><td><code>%s</code> (no <code>&amp;</code>)</td></tr>
+</tbody></table></div>
+<p>The other I/O functions in <code>&lt;stdio.h&gt;</code> are <code>getchar()</code> (read one character) and <code>putchar()</code> (print one character).</p>
+
+<h2 id="run">Run the examples</h2>
+<p>These programs were compiled with GCC and executed. Press <b>Next ▶</b> to run one line at a time. The yellow line runs next; the memory panel shows every variable of <code>main()</code>.</p>
+<div class="tv" data-tr="t01-hello"></div><script type="application/json" id="tr-t01-hello">{"title":"Hello World (slide 3)","code":"#include <stdio.h>\n\n// Hello World........\nint main ()\n{\n    /* This is our first program */\n\n    printf(\"Hello world\\n\");\n\n    /* Printing is done */\n\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":8,"f":[["main",8,[]]]},{"l":12,"f":[["main",12,[]]],"d":[["o","Hello world\n"]]},{"l":13,"f":[["main",13,[]]]}],"V":[]},"out":"Hello world\n","trunc":false}]}</script>
+<div class="tv" data-tr="t01-sample"></div><script type="application/json" id="tr-t01-sample">{"title":"A sample program: pounds to kilograms (slide 28)","code":"/* Converts Pound(lbs) To Kilograms(kg) */\n\n#include <stdio.h>          // header file\n#define KG_PER_LBS 0.453592 // conversion constant\n\n// Begining of the main function...\nint main ()\n{\n    float lbs,  // input  - weight in pound\n          KG;   // output - weight in KG\n\n    // Get the weight in pound\n    printf(\"Enter weight in pounds: \");\n    scanf(\"%f\", &lbs);\n\n    // Conversion in KG\n    KG = KG_PER_LBS * lbs;\n\n    // Display the weight in kilograms.\n    printf(\"Convert Output in Kilogram: %.5f(kg)\\n\", KG );\n\n    return 0;\n}\n","inputs":[{"label":"150 lbs","stdin":"150\n","trace":{"steps":[{"l":13,"f":[["main",13,[["lbs","float",0,0],["KG","float",0,1]]]]},{"l":14,"f":[["main",14,[["lbs","float",0,0],["KG","float",0,1]]]],"d":[["o","Enter weight in pounds: "]]},{"l":17,"f":[["main",17,[["lbs","float",0,2],["KG","float",0,1]]]],"d":[["i","150\n"]]},{"l":20,"f":[["main",20,[["lbs","float",0,2],["KG","float",0,3]]]]},{"l":22,"f":[["main",22,[["lbs","float",0,2],["KG","float",0,3]]]],"d":[["o","Convert Output in Kilogram: 68.03880(kg)\n"]]},{"l":23,"f":[["main",23,[["lbs","float",0,2],["KG","float",0,3]]]]}],"V":[{"k":"f","v":"nan","a":140737488314904},{"k":"f","v":4.59163e-41,"a":140737488314908},{"k":"f","v":150.0,"a":140737488314904},{"k":"f","v":68.0388,"a":140737488314908}]},"out":"Enter weight in pounds: Convert Output in Kilogram: 68.03880(kg)\n","trunc":false},{"label":"2.5 lbs","stdin":"2.5\n","trace":{"steps":[{"l":13,"f":[["main",13,[["lbs","float",0,0],["KG","float",0,1]]]]},{"l":14,"f":[["main",14,[["lbs","float",0,0],["KG","float",0,1]]]],"d":[["o","Enter weight in pounds: "]]},{"l":17,"f":[["main",17,[["lbs","float",0,2],["KG","float",0,1]]]],"d":[["i","2.5\n"]]},{"l":20,"f":[["main",20,[["lbs","float",0,2],["KG","float",0,3]]]]},{"l":22,"f":[["main",22,[["lbs","float",0,2],["KG","float",0,3]]]],"d":[["o","Convert Output in Kilogram: 1.13398(kg)\n"]]},{"l":23,"f":[["main",23,[["lbs","float",0,2],["KG","float",0,3]]]]}],"V":[{"k":"f","v":"nan","a":140737488314904},{"k":"f","v":4.59163e-41,"a":140737488314908},{"k":"f","v":2.5,"a":140737488314904},{"k":"f","v":1.13398,"a":140737488314908}]},"out":"Enter weight in pounds: Convert Output in Kilogram: 1.13398(kg)\n","trunc":false}]}</script>
+<p class="lbl">Parts to spot: the preprocessor directives <code>#include</code> and <code>#define</code>, the keywords <code>int</code> and <code>float</code>, and the library functions <code>printf()</code> and <code>scanf()</code>.</p>
+<div class="tv" data-tr="t01-range"></div><script type="application/json" id="tr-t01-range">{"title":"DataRange.c: what happens at the limits","code":"#include <stdio.h>\n#include <limits.h>\nint main()\n{\n    char ch = 'I';\n    short s = 32767;\n    int i = INT_MAX;\n    unsigned int u = 0;\n    printf(\"ch = %c, as a number %d\\n\", ch, ch);\n    s = s + 1;          /* 32768 does not fit in 16 bits */\n    printf(\"32767 + 1 in a short = %d\\n\", s);\n    i = i + 1;          /* signed overflow: undefined behaviour, wraps on GCC */\n    printf(\"INT_MAX + 1 = %d\\n\", i);\n    u = u - 1;          /* unsigned arithmetic wraps around by rule */\n    printf(\"0u - 1 = %u\\n\", u);\n    printf(\"sizeof(int) = %zu bytes\\n\", sizeof(int));\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":5,"f":[["main",5,[["ch","char",0,0],["s","short",0,1],["i","int",0,2],["u","unsigned int",0,3]]]]},{"l":6,"f":[["main",6,[["ch","char",0,4],["s","short",0,1],["i","int",0,2],["u","unsigned int",0,3]]]]},{"l":7,"f":[["main",7,[["ch","char",0,4],["s","short",0,1],["i","int",0,2],["u","unsigned int",0,3]]]]},{"l":8,"f":[["main",8,[["ch","char",0,4],["s","short",0,1],["i","int",0,5],["u","unsigned int",0,3]]]]},{"l":9,"f":[["main",9,[["ch","char",0,4],["s","short",0,1],["i","int",0,5],["u","unsigned int",0,6]]]]},{"l":10,"f":[["main",10,[["ch","char",0,4],["s","short",0,1],["i","int",0,5],["u","unsigned int",0,6]]]],"d":[["o","ch = I, as a number 73\n"]]},{"l":11,"f":[["main",11,[["ch","char",0,4],["s","short",0,7],["i","int",0,5],["u","unsigned int",0,6]]]]},{"l":12,"f":[["main",12,[["ch","char",0,4],["s","short",0,7],["i","int",0,5],["u","unsigned int",0,6]]]],"d":[["o","32767 + 1 in a short = -32768\n"]]},{"l":13,"f":[["main",13,[["ch","char",0,4],["s","short",0,7],["i","int",0,8],["u","unsigned int",0,6]]]]},{"l":14,"f":[["main",14,[["ch","char",0,4],["s","short",0,7],["i","int",0,8],["u","unsigned int",0,6]]]],"d":[["o","INT_MAX + 1 = -2147483648\n"]]},{"l":15,"f":[["main",15,[["ch","char",0,4],["s","short",0,7],["i","int",0,8],["u","unsigned int",0,9]]]]},{"l":16,"f":[["main",16,[["ch","char",0,4],["s","short",0,7],["i","int",0,8],["u","unsigned int",0,9]]]],"d":[["o","0u - 1 = 4294967295\n"]]},{"l":17,"f":[["main",17,[["ch","char",0,4],["s","short",0,7],["i","int",0,8],["u","unsigned int",0,9]]]],"d":[["o","sizeof(int) = 4 bytes\n"]]},{"l":18,"f":[["main",18,[["ch","char",0,4],["s","short",0,7],["i","int",0,8],["u","unsigned int",0,9]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"i","v":32767,"a":140737488314908},{"k":"i","v":-40120,"a":140737488314904},{"k":"i","v":32767,"a":140737488314900},{"k":"c","v":73,"a":140737488314911},{"k":"i","v":2147483647,"a":140737488314904},{"k":"i","v":0,"a":140737488314900},{"k":"i","v":-32768,"a":140737488314908},{"k":"i","v":-2147483648,"a":140737488314904},{"k":"i","v":4294967295,"a":140737488314900}]},"out":"ch = I, as a number 73\n32767 + 1 in a short = -32768\nINT_MAX + 1 = -2147483648\n0u - 1 = 4294967295\nsizeof(int) = 4 bytes\n","trunc":false}]}</script>
+
+<h2 id="homework">Homework, solved</h2>
+<p>Try each one first. Then open the solution and step through it.</p>
+<h3>1. ASCII value of a character</h3>
+<details class="hint"><summary>Hint</summary><p>A <code>char</code> is stored as its ASCII code. Print the same variable with <code>%c</code> and with <code>%d</code>.</p></details>
+<details class="sol"><summary>Solution</summary><div class="solbody">
+<div class="tv" data-tr="t01-hw1"></div><script type="application/json" id="tr-t01-hw1">{"title":"ASCII value of a character","code":"#include <stdio.h>\nint main()\n{\n    char c;\n    printf(\"Enter a character: \");\n    scanf(\"%c\", &c);\n    printf(\"ASCII value of %c = %d\\n\", c, c);\n    return 0;\n}\n","inputs":[{"label":"A","stdin":"A\n","trace":{"steps":[{"l":5,"f":[["main",5,[["c","char",0,0]]]]},{"l":6,"f":[["main",6,[["c","char",0,0]]]],"d":[["o","Enter a character: "]]},{"l":7,"f":[["main",7,[["c","char",0,1]]]],"d":[["i","A\n"]]},{"l":8,"f":[["main",8,[["c","char",0,1]]]],"d":[["o","ASCII value of A = 65\n"]]},{"l":9,"f":[["main",9,[["c","char",0,1]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"c","v":65,"a":140737488314911}]},"out":"Enter a character: ASCII value of A = 65\n","trunc":false},{"label":"a","stdin":"a\n","trace":{"steps":[{"l":5,"f":[["main",5,[["c","char",0,0]]]]},{"l":6,"f":[["main",6,[["c","char",0,0]]]],"d":[["o","Enter a character: "]]},{"l":7,"f":[["main",7,[["c","char",0,1]]]],"d":[["i","a\n"]]},{"l":8,"f":[["main",8,[["c","char",0,1]]]],"d":[["o","ASCII value of a = 97\n"]]},{"l":9,"f":[["main",9,[["c","char",0,1]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"c","v":97,"a":140737488314911}]},"out":"Enter a character: ASCII value of a = 97\n","trunc":false},{"label":"7","stdin":"7\n","trace":{"steps":[{"l":5,"f":[["main",5,[["c","char",0,0]]]]},{"l":6,"f":[["main",6,[["c","char",0,0]]]],"d":[["o","Enter a character: "]]},{"l":7,"f":[["main",7,[["c","char",0,1]]]],"d":[["i","7\n"]]},{"l":8,"f":[["main",8,[["c","char",0,1]]]],"d":[["o","ASCII value of 7 = 55\n"]]},{"l":9,"f":[["main",9,[["c","char",0,1]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"c","v":55,"a":140737488314911}]},"out":"Enter a character: ASCII value of 7 = 55\n","trunc":false}]}</script></div></details>
+<h3>2. Area of a triangle from its three sides</h3>
+<details class="hint"><summary>Hint</summary><p>Heron's formula: s = (a + b + c) / 2 and area = √(s(s−a)(s−b)(s−c)). Include <code>&lt;math.h&gt;</code> for <code>sqrt()</code>.</p></details>
+<details class="sol"><summary>Solution</summary><div class="solbody">
+<div class="tv" data-tr="t01-hw2"></div><script type="application/json" id="tr-t01-hw2">{"title":"Area of a triangle (Heron's formula)","code":"#include <stdio.h>\n#include <math.h>\nint main()\n{\n    float a, b, c, s, area;\n    printf(\"Enter three sides: \");\n    scanf(\"%f%f%f\", &a, &b, &c);\n    s = (a + b + c) / 2;\n    area = sqrt(s * (s - a) * (s - b) * (s - c));\n    printf(\"Area = %.2f\\n\", area);\n    return 0;\n}\n","inputs":[{"label":"3, 4, 5","stdin":"3 4 5\n","trace":{"steps":[{"l":6,"f":[["main",6,[["a","float",0,0],["b","float",0,1],["c","float",0,2],["s","float",0,3],["area","float",0,4]]]]},{"l":7,"f":[["main",7,[["a","float",0,0],["b","float",0,1],["c","float",0,2],["s","float",0,3],["area","float",0,4]]]],"d":[["o","Enter three sides: "]]},{"l":8,"f":[["main",8,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,3],["area","float",0,4]]]],"d":[["i","3 4 5\n"]]},{"l":9,"f":[["main",9,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,4]]]]},{"l":9},{"l":10,"f":[["main",10,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,9]]]]},{"l":11,"f":[["main",11,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,9]]]],"d":[["o","Area = 6.00\n"]]},{"l":12,"f":[["main",12,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,9]]]]}],"V":[{"k":"f","v":4.59163e-41,"a":140737488314900},{"k":"f","v":-9.100107132307145e+33,"a":140737488314896},{"k":"f","v":4.59163e-41,"a":140737488314892},{"k":"f","v":4.59163e-41,"a":140737488314908},{"k":"f","v":"nan","a":140737488314904},{"k":"f","v":3.0,"a":140737488314900},{"k":"f","v":4.0,"a":140737488314896},{"k":"f","v":5.0,"a":140737488314892},{"k":"f","v":6.0,"a":140737488314908},{"k":"f","v":6.0,"a":140737488314904}]},"out":"Enter three sides: Area = 6.00\n","trunc":false},{"label":"7, 8, 9","stdin":"7 8 9\n","trace":{"steps":[{"l":6,"f":[["main",6,[["a","float",0,0],["b","float",0,1],["c","float",0,2],["s","float",0,3],["area","float",0,4]]]]},{"l":7,"f":[["main",7,[["a","float",0,0],["b","float",0,1],["c","float",0,2],["s","float",0,3],["area","float",0,4]]]],"d":[["o","Enter three sides: "]]},{"l":8,"f":[["main",8,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,3],["area","float",0,4]]]],"d":[["i","7 8 9\n"]]},{"l":9,"f":[["main",9,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,4]]]]},{"l":9},{"l":10,"f":[["main",10,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,9]]]]},{"l":11,"f":[["main",11,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,9]]]],"d":[["o","Area = 26.83\n"]]},{"l":12,"f":[["main",12,[["a","float",0,5],["b","float",0,6],["c","float",0,7],["s","float",0,8],["area","float",0,9]]]]}],"V":[{"k":"f","v":4.59163e-41,"a":140737488314900},{"k":"f","v":-9.100107132307145e+33,"a":140737488314896},{"k":"f","v":4.59163e-41,"a":140737488314892},{"k":"f","v":4.59163e-41,"a":140737488314908},{"k":"f","v":"nan","a":140737488314904},{"k":"f","v":7.0,"a":140737488314900},{"k":"f","v":8.0,"a":140737488314896},{"k":"f","v":9.0,"a":140737488314892},{"k":"f","v":12.0,"a":140737488314908},{"k":"f","v":26.8328,"a":140737488314904}]},"out":"Enter three sides: Area = 26.83\n","trunc":false}]}</script></div></details>
+<h3>3. Area of a polygon from its corner points</h3>
+<p>The slide's figure uses the quadrilateral A(4, 10), B(9, 7), C(11, 2), D(2, 2). List the points in order around the shape and repeat the first one at the end. Multiply crosswise, x<sub>1</sub>y<sub>2</sub> − y<sub>1</sub>x<sub>2</sub>, for every neighbouring pair, add the results and halve:</p>
+<p class="mono" style="font-size:16px">area = | (x<sub>1</sub>y<sub>2</sub> − y<sub>1</sub>x<sub>2</sub>) + (x<sub>2</sub>y<sub>3</sub> − y<sub>2</sub>x<sub>3</sub>) + … + (x<sub>n</sub>y<sub>1</sub> − y<sub>n</sub>x<sub>1</sub>) | / 2</p>
+<div class="tblwrap"><table style="font-family:var(--mono)"><thead><tr><th>Pair</th><th>x<sub>i</sub>y<sub>i+1</sub> − y<sub>i</sub>x<sub>i+1</sub></th></tr></thead><tbody>
+<tr><td>A → B</td><td>4·7 − 10·9 = 28 − 90 = −62</td></tr><tr><td>B → C</td><td>9·2 − 7·11 = 18 − 77 = −59</td></tr>
+<tr><td>C → D</td><td>11·2 − 2·2 = 22 − 4 = 18</td></tr><tr><td>D → A</td><td>2·10 − 2·4 = 20 − 8 = 12</td></tr>
+<tr><td><b>Total</b></td><td><b>−91</b>, so area = |−91| / 2 = <b>45.5</b></td></tr></tbody></table></div>
+<details class="hint"><summary>Hint</summary><p>This homework comes before loops, so for four points you can write the four products out. With a loop (Lecture 04) the same program works for any number of points.</p></details>
+<details class="sol"><summary>Solution</summary><div class="solbody">
+<div class="tv" data-tr="t01-hw3"></div><script type="application/json" id="tr-t01-hw3">{"title":"Area of a quadrilateral by the cross-multiplication (shoelace) formula","code":"#include <stdio.h>\nint main()\n{\n    float x1, y1, x2, y2, x3, y3, x4, y4, sum, area;\n    printf(\"Enter 4 points (x y) in order: \");\n    scanf(\"%f%f%f%f%f%f%f%f\", &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);\n    sum = (x1 * y2 - y1 * x2) + (x2 * y3 - y2 * x3)\n        + (x3 * y4 - y3 * x4) + (x4 * y1 - y4 * x1);\n    if (sum < 0)\n        sum = -sum;\n    area = sum / 2;\n    printf(\"Area = %.2f\\n\", area);\n    return 0;\n}\n","inputs":[{"label":"the slide’s points A, B, C, D","stdin":"4 10\n9 7\n11 2\n2 2\n","trace":{"steps":[{"l":5,"f":[["main",5,[["x1","float",0,0],["y1","float",0,1],["x2","float",0,2],["y2","float",0,3],["x3","float",0,4],["y3","float",0,5],["x4","float",0,6],["y4","float",0,7],["sum","float",0,8],["area","float",0,9]]]]},{"l":6,"f":[["main",6,[["x1","float",0,0],["y1","float",0,1],["x2","float",0,2],["y2","float",0,3],["x3","float",0,4],["y3","float",0,5],["x4","float",0,6],["y4","float",0,7],["sum","float",0,8],["area","float",0,9]]]],"d":[["o","Enter 4 points (x y) in order: "]]},{"l":6,"f":[["main",6,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,8],["area","float",0,9]]]],"d":[["i","4 10\n9 7\n11 2\n2 2\n"]]},{"l":7,"f":[["main",7,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,8],["area","float",0,9]]]]},{"l":8,"f":[["main",8,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,8],["area","float",0,9]]]]},{"l":7,"f":[["main",7,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,8],["area","float",0,9]]]]},{"l":9,"f":[["main",9,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,18],["area","float",0,9]]]]},{"l":10,"f":[["main",10,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,18],["area","float",0,9]]]]},{"l":11,"f":[["main",11,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,19],["area","float",0,9]]]]},{"l":12,"f":[["main",12,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,19],["area","float",0,20]]]]},{"l":13,"f":[["main",13,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,19],["area","float",0,20]]]],"d":[["o","Area = 45.50\n"]]},{"l":14,"f":[["main",14,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,16],["y4","float",0,17],["sum","float",0,19],["area","float",0,20]]]]}],"V":[{"k":"f","v":4.59163e-41,"a":140737488314900},{"k":"f","v":-9.100107132307145e+33,"a":140737488314896},{"k":"f","v":4.59163e-41,"a":140737488314892},{"k":"f","v":-1.031787370071233e+34,"a":140737488314888},{"k":"f","v":0.0,"a":140737488314884},{"k":"f","v":0.0,"a":140737488314880},{"k":"f","v":0.0,"a":140737488314876},{"k":"f","v":0.0,"a":140737488314872},{"k":"f","v":4.59163e-41,"a":140737488314908},{"k":"f","v":"nan","a":140737488314904},{"k":"f","v":4.0,"a":140737488314900},{"k":"f","v":10.0,"a":140737488314896},{"k":"f","v":9.0,"a":140737488314892},{"k":"f","v":7.0,"a":140737488314888},{"k":"f","v":11.0,"a":140737488314884},{"k":"f","v":2.0,"a":140737488314880},{"k":"f","v":2.0,"a":140737488314876},{"k":"f","v":2.0,"a":140737488314872},{"k":"f","v":-91.0,"a":140737488314908},{"k":"f","v":91.0,"a":140737488314908},{"k":"f","v":45.5,"a":140737488314904}]},"out":"Enter 4 points (x y) in order: Area = 45.50\n","trunc":false},{"label":"a 4 × 3 rectangle","stdin":"0 0\n4 0\n4 3\n0 3\n","trace":{"steps":[{"l":5,"f":[["main",5,[["x1","float",0,0],["y1","float",0,1],["x2","float",0,2],["y2","float",0,3],["x3","float",0,4],["y3","float",0,5],["x4","float",0,6],["y4","float",0,7],["sum","float",0,8],["area","float",0,9]]]]},{"l":6,"f":[["main",6,[["x1","float",0,0],["y1","float",0,1],["x2","float",0,2],["y2","float",0,3],["x3","float",0,4],["y3","float",0,5],["x4","float",0,6],["y4","float",0,7],["sum","float",0,8],["area","float",0,9]]]],"d":[["o","Enter 4 points (x y) in order: "]]},{"l":6,"f":[["main",6,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,8],["area","float",0,9]]]],"d":[["i","0 0\n4 0\n4 3\n0 3\n"]]},{"l":7,"f":[["main",7,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,8],["area","float",0,9]]]]},{"l":8,"f":[["main",8,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,8],["area","float",0,9]]]]},{"l":7,"f":[["main",7,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,8],["area","float",0,9]]]]},{"l":9,"f":[["main",9,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,17],["area","float",0,9]]]]},{"l":11,"f":[["main",11,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,17],["area","float",0,9]]]]},{"l":12,"f":[["main",12,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,17],["area","float",0,18]]]]},{"l":13,"f":[["main",13,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,17],["area","float",0,18]]]],"d":[["o","Area = 12.00\n"]]},{"l":14,"f":[["main",14,[["x1","float",0,10],["y1","float",0,11],["x2","float",0,12],["y2","float",0,13],["x3","float",0,14],["y3","float",0,15],["x4","float",0,6],["y4","float",0,16],["sum","float",0,17],["area","float",0,18]]]]}],"V":[{"k":"f","v":4.59163e-41,"a":140737488314900},{"k":"f","v":-9.100107132307145e+33,"a":140737488314896},{"k":"f","v":4.59163e-41,"a":140737488314892},{"k":"f","v":-1.031787370071233e+34,"a":140737488314888},{"k":"f","v":0.0,"a":140737488314884},{"k":"f","v":0.0,"a":140737488314880},{"k":"f","v":0.0,"a":140737488314876},{"k":"f","v":0.0,"a":140737488314872},{"k":"f","v":4.59163e-41,"a":140737488314908},{"k":"f","v":"nan","a":140737488314904},{"k":"f","v":0.0,"a":140737488314900},{"k":"f","v":0.0,"a":140737488314896},{"k":"f","v":4.0,"a":140737488314892},{"k":"f","v":0.0,"a":140737488314888},{"k":"f","v":4.0,"a":140737488314884},{"k":"f","v":3.0,"a":140737488314880},{"k":"f","v":3.0,"a":140737488314872},{"k":"f","v":24.0,"a":140737488314908},{"k":"f","v":12.0,"a":140737488314904}]},"out":"Enter 4 points (x y) in order: Area = 12.00\n","trunc":false}]}</script></div></details>
+
+<script>
+(function(){
+const KW='auto break case char const continue default do double else enum extern float for goto if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while'.split(' ');
+const KWL={int:'01 data types',char:'01, 07',float:'01',double:'01',void:'01, 08',short:'01',long:'01',signed:'01',unsigned:'01',if:'03',else:'03',switch:'03',case:'03',default:'03',break:'03, 04',goto:'03',while:'04',do:'04',for:'04',continue:'04',return:'08',struct:'12',typedef:'01, 12',enum:'01',sizeof:'02, 11',union:'(not covered: like struct, members share memory)',static:'(storage class, not covered)',extern:'(storage class, not covered)',auto:'(storage class, default for locals)',register:'(storage class, not covered)',const:'(type qualifier: value cannot change)',volatile:'(type qualifier, not covered)'};
+const g=document.getElementById('kwgrid');
+KW.forEach(k=>{const b=document.createElement('button');b.className='chip';b.textContent=k;b.onclick=()=>{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('kwinfo').innerHTML='<code>'+k+'</code>: Lecture '+KWL[k]};g.appendChild(b)});
+
+// structure explorer
+const code=['/* Program: area of a circle',' * Author : NI           */','#include <stdio.h>','#define PI 3.14159','','float area(float r);      /* global declaration */','int count = 0;','','int main()','{','    float r, a;','    printf("Radius: ");','    scanf("%f", &r);','    a = area(r);','    printf("Area = %.2f\\n", a);','    return 0;','}','','float area(float r)','{','    count++;','    return PI * r * r;','}'];
+const secs=[['Documentation section',[1,2],'Comments that describe the program: its name, author and purpose. The compiler ignores them.'],
+['Link section',[3],'Links header files from the C library. <code>stdio.h</code> declares printf() and scanf().'],
+['Definition section',[4],'Symbolic constants with <code>#define</code>. The preprocessor replaces PI with 3.14159 everywhere.'],
+['Global declaration section',[6,7],'Function prototypes and global variables, visible in every function below.'],
+['main() function: declaration part',[9,10,11],'Every program has exactly one main(). Its body starts with the declaration part (variables).'],
+['main() function: executable part',[12,13,14,15,16,17],'Statements that do the work, each ending with a semicolon.'],
+['Subprogram section',[19,20,21,22,23],'User-defined functions called from main(). Lecture 08 covers them.']];
+const pre=document.getElementById('structcode'), bx=document.getElementById('secbtns');
+function draw(sel){pre.innerHTML=code.map((l,i)=>'<div style="padding:0 6px;border-radius:4px;'+(sel&&sel.includes(i+1)?'background:var(--hl);box-shadow:inset 3px 0 0 var(--accent)':'')+'">'+(SPL.hl(l)||' ')+'</div>').join('')}
+secs.forEach((s,i)=>{const b=document.createElement('button');b.className='btn';b.style.textAlign='left';b.textContent=s[0];b.onclick=()=>{bx.querySelectorAll('.btn').forEach(x=>x.classList.remove('pri'));b.classList.add('pri');draw(s[1]);document.getElementById('secinfo').innerHTML='<b>'+s[0]+'.</b> '+s[2]};bx.appendChild(b)});
+bx.firstChild.click();
+
+// toolchain
+const src='#include <stdio.h>\n#define PI 3.14159\n\nint main()\n{\n    float r = 2;\n    printf("%f\\n", PI * r * r);\n    return 0;\n}';
+const pp='/* ...about 800 lines from stdio.h,\n   including: */\nextern int printf(const char *format, ...);\n\nint main()\n{\n    float r = 2;\n    printf("%f\\n", 3.14159 * r * r);\n    return 0;\n}';
+const asm='main:\n    push   rbp\n    mov    rbp, rsp\n    sub    rsp, 16\n    movss  xmm0, DWORD PTR .LC0[rip]\n    movss  DWORD PTR [rbp-4], xmm0\n    ...\n    call   printf        # address not known yet\n    mov    eax, 0\n    leave\n    ret';
+const obj='hello.o (object file, machine code)\n55 48 89 e5 48 83 ec 10 f3 0f 10 05\n00 00 00 00 f3 0f 11 45 fc ...\ne8 00 00 00 00   <- call printf: hole to fill\n\nSymbols: main (defined), printf (UNDEFINED)';
+const exe='a.out (executable)\nhello.o  +  libc (the C library: printf, scanf, sqrt...)\n\ne8 1b fe ff ff   <- call printf: hole filled\n\nNow every function has an address.';
+const run='$ ./a.out\n12.566360';
+const st=[['Source file','hello.c',src,'Preprocessor (cpp)',pp,'You write <code>hello.c</code>. The preprocessor handles every line starting with #: <code>#include</code> pastes the header in and <code>#define</code> replaces PI by its value. Comments are removed.'],
+['Compiler','preprocessed code',pp,'Assembly (gcc -S)',asm,'The compiler checks syntax and types (this is where <i>expected ;</i> errors come from) and translates C into assembly instructions for the processor.'],
+['Assembler','assembly',asm,'Object file hello.o (gcc -c)',obj,'The assembler turns assembly into binary machine code. The call to printf still has an empty address, because printf lives in the library.'],
+['Linker','hello.o + library',obj,'Executable a.out (gcc hello.o)',exe,'The linker joins your object file with the C library and fills every missing address. A missing main() or a misspelt function name is reported here as <i>undefined reference</i>.'],
+['Loader / run','./a.out',exe,'Program output',run,'The operating system loads a.out into memory and starts it at main(). printf finally writes to the screen.']];
+const ps=document.getElementById('pipesteps');
+st.forEach((s,i)=>{const b=document.createElement('button');b.className='btn sm';b.textContent=(i+1)+'. '+s[0];b.onclick=()=>{ps.querySelectorAll('.btn').forEach(x=>x.classList.remove('pri'));b.classList.add('pri');document.getElementById('pipein').textContent='Input: '+s[1];document.getElementById('pipeA').innerHTML=i<2?SPL.hlBlock(s[2]):SPL.esc(s[2]);document.getElementById('pipeout').textContent='Output: '+s[3];document.getElementById('pipeB').innerHTML=i<1?SPL.hlBlock(s[4]):SPL.esc(s[4]);document.getElementById('pipetext').innerHTML=s[5]};ps.appendChild(b)});
+ps.firstChild.click();
+
+// tokens
+const TK={keyword:['#1f3a68','#e3e9f3'],identifier:['#14213d','#f5f7fa'],constant:['#a3214a','#fbe6ec'],string:['#0a7a4a','#e6f4ea'],operator:['#c8640f','#fde7d3'],'special symbol':['#5b6779','#eef0f3']};
+document.getElementById('toklegend').innerHTML=Object.keys(TK).map(k=>'<span style="display:inline-flex;gap:5px;align-items:center"><i class="sw" style="background:'+TK[k][1]+';border-color:'+TK[k][0]+'"></i>'+k+'</span>').join('');
+function tokenize(s){const out=[];let i=0;const ops=['<<=','>>=','++','--','->','<=','>=','==','!=','&&','||','+=','-=','*=','/=','%=','&=','|=','^=','<<','>>','+','-','*','/','%','=','<','>','!','&','|','^','~','?',':','.'];
+while(i<s.length){const c=s[i];if(/\s/.test(c)){i++;continue}
+if(c==='"'){let j=i+1;while(j<s.length&&s[j]!=='"'){if(s[j]==='\\')j++;j++}out.push(['string',s.slice(i,j+1)]);i=j+1;continue}
+if(c==="'"){let j=i+1;while(j<s.length&&s[j]!=="'"){if(s[j]==='\\')j++;j++}out.push(['constant',s.slice(i,j+1)]);i=j+1;continue}
+if(/[A-Za-z_]/.test(c)){let j=i;while(j<s.length&&/\w/.test(s[j]))j++;const w=s.slice(i,j);out.push([KW.includes(w)?'keyword':'identifier',w]);i=j;continue}
+if(/[0-9]/.test(c)||(c==='.'&&/[0-9]/.test(s[i+1]))){let j=i;while(j<s.length&&/[0-9.eExXa-fA-FuUlL]/.test(s[j]))j++;out.push(['constant',s.slice(i,j)]);i=j;continue}
+const op=ops.find(o=>s.startsWith(o,i));if(op){out.push(['operator',op]);i+=op.length;continue}
+out.push(['special symbol',c]);i++}return out}
+const ti=document.getElementById('tokin');
+function tok(){const t=tokenize(ti.value);document.getElementById('tokout').innerHTML=t.map(([k,w])=>'<span title="'+k+'" style="font-family:var(--mono);font-size:15px;padding:3px 8px;border-radius:6px;border:1.5px solid '+TK[k][0]+';background:'+TK[k][1]+';color:'+TK[k][0]+'">'+SPL.esc(w)+'</span>').join('')+'<span class="lbl" style="align-self:center">'+t.length+' tokens</span>'}
+ti.oninput=tok;tok();
+
+// identifiers
+const ii=document.getElementById('idin');
+function idchk(){const v=ii.value;let msg;
+if(!v)msg='<span class="lbl">type a name</span>';
+else if(/\s/.test(v))msg='<span class="bad">✗ contains white space</span>';
+else if(/^[0-9]/.test(v))msg='<span class="bad">✗ starts with a digit</span>';
+else if(!/^[A-Za-z_]\w*$/.test(v))msg='<span class="bad">✗ only letters, digits and _ are allowed</span>';
+else if(KW.includes(v))msg='<span class="bad">✗ '+v+' is a keyword</span>';
+else if(v==='main')msg='<span class="good">✓ valid, but main is reserved for the main function</span>';
+else msg='<span class="good">✓ valid identifier</span>'+(v.length>31?' <span class="lbl">(only the first 31 characters are guaranteed significant)</span>':'');
+document.getElementById('idres').innerHTML=msg}
+ii.oninput=idchk;idchk();
+const ex=['total_marks','2ndRoll','_temp','roll no','float','Sum','sum','price$','studentName'];
+document.getElementById('idex').innerHTML='<span class="lbl">Try:</span>'+ex.map(e=>'<button class="chip">'+e+'</button>').join('');
+document.querySelectorAll('#idex .chip').forEach(b=>b.onclick=()=>{ii.value=b.textContent;idchk()});
+
+// type table
+const T=[['char',1,'−128 to 127 (one character, e.g. \'A\' = 65)','%c'],['unsigned char',1,'0 to 255','%c / %hhu'],['short int',2,'−32,768 to 32,767','%hd'],['unsigned short',2,'0 to 65,535','%hu'],['int',4,'−2,147,483,648 to 2,147,483,647','%d'],['unsigned int',4,'0 to 4,294,967,295','%u'],['long int','8<br><span class="lbl">(4 on Windows)</span>','64-bit Linux/macOS: −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807<br>Windows (Code::Blocks, Visual Studio): −2,147,483,648 to 2,147,483,647','%ld'],['long long int','8','−9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 on every modern compiler','%lld'],['float',4,'about 1.2 × 10<sup>−38</sup> to 3.4 × 10<sup>38</sup>, 6 significant digits','%f'],['double',8,'about 2.2 × 10<sup>−308</sup> to 1.8 × 10<sup>308</sup>, 15 digits','%lf (scanf), %f (printf)'],['long double',16,'18 significant digits on x86-64','%Lf']];
+document.querySelector('#typetbl tbody').innerHTML=T.map(r=>'<tr><td><code>'+r[0]+'</code></td><td style="text-align:center">'+r[1]+'</td><td>'+r[2]+'</td><td><code>'+r[3]+'</code></td></tr>').join('');
+
+// bits
+const BT={char:[8,true],uchar:[8,false],short:[16,true],ushort:[16,false],int:[32,true],uint:[32,false]};
+const bt=document.getElementById('btype'),bv=document.getElementById('bval');
+function bits(){const [n,sg]=BT[bt.value];let s=bv.value.trim(),v;
+if(/^'.'$/.test(s))v=BigInt(s.charCodeAt(1));else{try{v=BigInt(s)}catch(e){document.getElementById('bitinfo').innerHTML='<span class="bad">Type a whole number or a character in single quotes.</span>';return}}
+const mod=1n<<BigInt(n);let w=((v%mod)+mod)%mod;let stored=w;if(sg&&w>=(mod>>1n))stored=w-mod;
+const min=sg?-(mod>>1n):0n,max=sg?(mod>>1n)-1n:mod-1n;
+const b=w.toString(2).padStart(n,'0');
+document.getElementById('bits').innerHTML=b.split('').map((x,i)=>'<span style="width:'+(n>16?22:28)+'px;height:30px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--navy);border-radius:4px;'+(x==='1'?'background:var(--navy);color:#fff;':'')+(i===0&&sg?'outline:2px solid var(--accent);outline-offset:1px;':'')+((i+1)%8===0&&i<n-1?'margin-right:8px;':'')+'">'+x+'</span>').join('');
+let info='Stored value: <b class="mono">'+stored+'</b>';
+if(n===8&&stored>=32n&&stored<127n)info+=' = character <code>\''+String.fromCharCode(Number(stored))+'\'</code>';
+if(v<min||v>max)info+=' <span class="bad">· '+v+' does not fit ('+min+' to '+max+'), so only the lowest '+n+' bits are kept and the value wraps around.</span>';
+else info+=' <span class="good">· fits</span>';
+if(sg)info+=' <span class="lbl">The outlined left bit is the sign bit (two\'s complement).</span>';
+document.getElementById('bitinfo').innerHTML=info}
+bt.onchange=bits;bv.oninput=bits;document.querySelectorAll('[data-bv]').forEach(b=>b.onclick=()=>{bv.value=b.dataset.bv;bits()});bits();
+
+// printf emulator
+function parseArgs(s){const out=[];let i=0;while(i<s.length){while(s[i]===' '||s[i]===',')i++;if(i>=s.length)break;
+if(s[i]==='"'){let j=i+1,t='';while(j<s.length&&s[j]!=='"'){t+=s[j];j++}out.push({s:t});i=j+1}
+else if(s[i]==="'"){out.push({c:s[i+1]});i+=3}
+else{let j=i;while(j<s.length&&s[j]!==',')j++;const t=s.slice(i,j).trim();out.push({n:t});i=j}}return out}
+function cfmt(f,args){let out='',ai=0,err='';f=f.replace(/\\n/g,'\n').replace(/\\t/g,'\t').replace(/\\"/g,'"').replace(/\\\\/g,'\\');
+const re=/%([-+ 0#]*)(\d+)?(?:\.(\d+))?(hh|h|ll|l|L|z)?([diufFeEgGxXocsp%])/g;let last=0,m;
+while((m=re.exec(f))){out+=f.slice(last,m.index);last=re.lastIndex;const [all,flags,w,prec,len,cv]=m;if(cv==='%'){out+='%';continue}
+const a=args[ai++];if(!a){err='Not enough values for '+all+': C would print garbage here.';out+='?';continue}
+let s='';const num=a.n!==undefined?Number(a.n):(a.c!==undefined?a.c.charCodeAt(0):NaN);
+if('di'.includes(cv)){if(a.s!==undefined){err='%'+cv+' given a string';s='?'}else{s=String(Math.trunc(num));if(a.n&&/\./.test(a.n))err='Passing '+a.n+' (a double) to %'+cv+' is undefined behaviour in C; a real program prints a garbage integer.'}}
+else if(cv==='u'){s=String(Math.trunc(num)>>>0)}
+else if('fF'.includes(cv)){s=num.toFixed(prec===undefined?6:+prec);if(a.n&&!/\./.test(a.n)&&!isNaN(num))err='Passing the int '+a.n+' to %f is undefined behaviour; write '+a.n+'.0 or cast it.'}
+else if('eE'.includes(cv)){s=num.toExponential(prec===undefined?6:+prec).replace(/e([+-])(\d)$/,'e$10$2');if(cv==='E')s=s.toUpperCase()}
+else if('gG'.includes(cv)){s=String(Number(num.toPrecision(prec===undefined?6:+prec||1)))}
+else if('xX'.includes(cv)){s=(Math.trunc(num)>>>0).toString(16);if(cv==='X')s=s.toUpperCase()}
+else if(cv==='o'){s=(Math.trunc(num)>>>0).toString(8)}
+else if(cv==='c'){s=a.c!==undefined?a.c:String.fromCharCode(num)}
+else if(cv==='s'){s=a.s!==undefined?a.s:'?';if(a.s===undefined)err='%s needs a string; C would crash or print garbage.';if(prec!==undefined)s=s.slice(0,+prec)}
+else if(cv==='p'){s='0x7ffd5e8c3a4c'}
+if(w&&s.length<+w){const pad=(flags.includes('0')&&!flags.includes('-')&&!'cs'.includes(cv)?'0':' ').repeat(+w-s.length);s=flags.includes('-')?s+pad:(pad[0]==='0'&&s[0]==='-'?'-'+pad+s.slice(1):pad+s)}
+if(flags.includes('+')&&'difeEgG'.includes(cv)&&num>=0)s='+'+s;out+=s}
+out+=f.slice(last);if(ai<args.length&&!err)err='Extra values are ignored.';return [out,err]}
+const pf=document.getElementById('pff'),pa=document.getElementById('pfa');
+function pfr(){const [o,e]=cfmt(pf.value,parseArgs(pa.value));document.getElementById('pfout').textContent=o;document.getElementById('pferr').textContent=e}
+pf.oninput=pfr;pa.oninput=pfr;pfr();
+const pex=[['%5d|%-5d|','42, 42'],['%.2f %e','3.14159, 31415.9'],['%x %o %X','255, 8, 255'],['%c%c%c','67, 83, 69'],['Marks: %d%%','85'],['%d','3.7'],['%f','5']];
+document.getElementById('pfex').innerHTML='<span class="lbl">Try:</span>'+pex.map((p,i)=>'<button class="chip" data-i="'+i+'">'+SPL.esc(p[0])+'</button>').join('');
+document.querySelectorAll('#pfex .chip').forEach(b=>b.onclick=()=>{pf.value=pex[b.dataset.i][0];pa.value=pex[b.dataset.i][1];pfr()});
+})();
+</script>
+<h2 id="exercises">Exercises with solutions</h2><p>7 exercises on this lecture: 4 easy, 2 medium, 1 hard. Each is tagged with its course outcome (CO) and Bloom's cognitive level (BCL). Try it on paper or in Code::Blocks first, then open the solution and run it line by line. Every solution and every output quoted here was checked by compiling and running it with GCC.</p><div class="row" id="exfilter"><span class="lbl">Show:</span><button class="chip on" data-f="all">all</button><button class="chip" data-f="Easy">easy</button><button class="chip" data-f="Medium">medium</button><button class="chip" data-f="Hard">hard</button></div><section class="exq" id="ex1" data-level="Easy"><h3><span class="pnum">E1</span>Field widths and format specifiers</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Predict the output</span> <span class="tag">CO1 · BCL L-2 Understand</span></div><p>What does this program print? Mark every space.</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int a = 7;
+    float b = 2.5;
+    char c = &#x27;K&#x27;;
+    printf(&quot;%d|%5d|%-5d|\n&quot;, a, a, a);
+    printf(&quot;%.2f %c %d\n&quot;, b, c, c);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>%5d</code> pads on the left to 5 characters, <code>%-5d</code> pads on the right. <code>%d</code> applied to a <code>char</code> prints its ASCII code.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output:</p><pre class="term">7|    7|7    |
+2.50 K 75</pre><p><code>%5d</code> right-aligns 7 in five columns, <code>%-5d</code> left-aligns it. <code>%.2f</code> keeps two decimals. <code>'K'</code> printed with <code>%d</code> is its code, 75.</p><div class="tv" data-tr="t01-e1"></div><script type="application/json" id="tr-t01-e1">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int a = 7;\n    float b = 2.5;\n    char c = 'K';\n    printf(\"%d|%5d|%-5d|\\n\", a, a, a);\n    printf(\"%.2f %c %d\\n\", b, c, c);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int",0,0],["b","float",0,1],["c","char",0,2]]]]},{"l":5,"f":[["main",5,[["a","int",0,3],["b","float",0,1],["c","char",0,2]]]]},{"l":6,"f":[["main",6,[["a","int",0,3],["b","float",0,4],["c","char",0,2]]]]},{"l":7,"f":[["main",7,[["a","int",0,3],["b","float",0,4],["c","char",0,5]]]]},{"l":8,"f":[["main",8,[["a","int",0,3],["b","float",0,4],["c","char",0,5]]]],"d":[["o","7|    7|7    |\n"]]},{"l":9,"f":[["main",9,[["a","int",0,3],["b","float",0,4],["c","char",0,5]]]],"d":[["o","2.50 K 75\n"]]},{"l":10,"f":[["main",10,[["a","int",0,3],["b","float",0,4],["c","char",0,5]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"f","v":"nan","a":140737488314936},{"k":"c","v":0,"a":140737488314935},{"k":"i","v":7,"a":140737488314940},{"k":"f","v":2.5,"a":140737488314936},{"k":"c","v":75,"a":140737488314935}]},"out":"7|    7|7    |\n2.50 K 75\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex2" data-level="Easy"><h3><span class="pnum">E2</span>Valid identifiers</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Classify</span> <span class="tag">CO1 · BCL L-2 Understand</span></div><p>Which of these are valid C identifiers? Give the reason for each invalid one.</p><p><code>roll_no</code> &nbsp; <code>2nd_term</code> &nbsp; <code>_total</code> &nbsp; <code>float</code> &nbsp; <code>Float</code> &nbsp; <code>my name</code> &nbsp; <code>price$</code> &nbsp; <code>MAX_SIZE</code></p><details class="hint"><summary>Hint</summary><p>Check the four rules: first character a letter or underscore; only letters, digits and underscores; no spaces; not a keyword. The identifier checker in the Tokens section above can confirm your answers.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tblwrap"><table><thead><tr><th>Name</th><th>Valid?</th><th>Reason</th></tr></thead><tbody>
+<tr><td><code>roll_no</code></td><td class="good">yes</td><td></td></tr>
+<tr><td><code>2nd_term</code></td><td class="bad">no</td><td>starts with a digit</td></tr>
+<tr><td><code>_total</code></td><td class="good">yes</td><td>an underscore may come first</td></tr>
+<tr><td><code>float</code></td><td class="bad">no</td><td>keyword</td></tr>
+<tr><td><code>Float</code></td><td class="good">yes</td><td>C is case-sensitive, so this is not the keyword (but it is confusing)</td></tr>
+<tr><td><code>my name</code></td><td class="bad">no</td><td>contains a space</td></tr>
+<tr><td><code>price$</code></td><td class="bad">no</td><td><code>$</code> is not allowed by the standard (some compilers accept it as an extension)</td></tr>
+<tr><td><code>MAX_SIZE</code></td><td class="good">yes</td><td>by convention, capitals are used for <code>#define</code> constants</td></tr>
+</tbody></table></div></div></details></section><section class="exq" id="ex3" data-level="Medium"><h3><span class="pnum">E3</span>A program that reads nothing correctly</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Find the bug</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>The program should read an age and a CGPA and print them. Find every error.</p>
+<pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int age;
+    float cgpa;
+    printf("Enter age and CGPA: ");
+    scanf("%d %d", age, &amp;cgpa);
+    printf("Age %d, CGPA %.2f\n", age, cgpa);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p>Look at each argument of <code>scanf()</code>: does it give an address, and does the specifier match the variable's type?</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Two errors, both in <code>scanf</code>: <code>age</code> is passed without <code>&amp;</code>, so scanf receives a garbage value instead of an address (the program usually crashes); and <code>cgpa</code> is a <code>float</code> but is read with <code>%d</code>, which stores integer bits into it. The corrected call is <code>scanf("%d %f", &amp;age, &amp;cgpa);</code>.</p><div class="tv" data-tr="t01-e3"></div><script type="application/json" id="tr-t01-e3">{"title":"Corrected program","code":"#include <stdio.h>\nint main()\n{\n    int age;\n    float cgpa;\n    printf(\"Enter age and CGPA: \");\n    scanf(\"%d %f\", &age, &cgpa);\n    printf(\"Age %d, CGPA %.2f\\n\", age, cgpa);\n    return 0;\n}\n","inputs":[{"label":"19 and 3.75","stdin":"19 3.75\n","trace":{"steps":[{"l":6,"f":[["main",6,[["age","int",0,0],["cgpa","float",0,1]]]]},{"l":7,"f":[["main",7,[["age","int",0,0],["cgpa","float",0,1]]]],"d":[["o","Enter age and CGPA: "]]},{"l":8,"f":[["main",8,[["age","int",0,2],["cgpa","float",0,3]]]],"d":[["i","19 3.75\n"]]},{"l":9,"f":[["main",9,[["age","int",0,2],["cgpa","float",0,3]]]],"d":[["o","Age 19, CGPA 3.75\n"]]},{"l":10,"f":[["main",10,[["age","int",0,2],["cgpa","float",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"f","v":"nan","a":140737488314936},{"k":"i","v":19,"a":140737488314940},{"k":"f","v":3.75,"a":140737488314936}]},"out":"Enter age and CGPA: Age 19, CGPA 3.75\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex4" data-level="Easy"><h3><span class="pnum">E4</span>Seconds to hours, minutes and seconds</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Write a program</span> <span class="tag">CO2 · BCL L-3 Apply</span></div><p>Read a number of seconds and print it as hours, minutes and seconds. Input 3725 should print <code>3725 seconds = 1 h 2 m 5 s</code>.</p><details class="hint"><summary>Hint</summary><p>Integer division and remainder do all the work: one hour is 3600 seconds and one minute is 60.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Divide by 3600 for hours, take the remainder, then divide that by 60 for minutes; the last remainder is the seconds.</p><div class="tv" data-tr="t01-e4"></div><script type="application/json" id="tr-t01-e4">{"title":"Solution","code":"#include <stdio.h>\nint main()\n{\n    int total, h, m, s;\n    printf(\"Enter seconds: \");\n    scanf(\"%d\", &total);\n    h = total / 3600;\n    m = (total % 3600) / 60;\n    s = total % 60;\n    printf(\"%d seconds = %d h %d m %d s\\n\", total, h, m, s);\n    return 0;\n}\n","inputs":[{"label":"3725","stdin":"3725\n","trace":{"steps":[{"l":5,"f":[["main",5,[["total","int",0,0],["h","int",0,1],["m","int",0,2],["s","int",0,3]]]]},{"l":6,"f":[["main",6,[["total","int",0,0],["h","int",0,1],["m","int",0,2],["s","int",0,3]]]],"d":[["o","Enter seconds: "]]},{"l":7,"f":[["main",7,[["total","int",0,4],["h","int",0,1],["m","int",0,2],["s","int",0,3]]]],"d":[["i","3725\n"]]},{"l":8,"f":[["main",8,[["total","int",0,4],["h","int",0,5],["m","int",0,2],["s","int",0,3]]]]},{"l":9,"f":[["main",9,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,3]]]]},{"l":10,"f":[["main",10,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,7]]]]},{"l":11,"f":[["main",11,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,7]]]],"d":[["o","3725 seconds = 1 h 2 m 5 s\n"]]},{"l":12,"f":[["main",12,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,7]]]]}],"V":[{"k":"i","v":-136292928,"a":140737488314928},{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":32767,"a":140737488314932},{"k":"i","v":3725,"a":140737488314928},{"k":"i","v":1,"a":140737488314940},{"k":"i","v":2,"a":140737488314936},{"k":"i","v":5,"a":140737488314932}]},"out":"Enter seconds: 3725 seconds = 1 h 2 m 5 s\n","trunc":false},{"label":"86399","stdin":"86399\n","trace":{"steps":[{"l":5,"f":[["main",5,[["total","int",0,0],["h","int",0,1],["m","int",0,2],["s","int",0,3]]]]},{"l":6,"f":[["main",6,[["total","int",0,0],["h","int",0,1],["m","int",0,2],["s","int",0,3]]]],"d":[["o","Enter seconds: "]]},{"l":7,"f":[["main",7,[["total","int",0,4],["h","int",0,1],["m","int",0,2],["s","int",0,3]]]],"d":[["i","86399\n"]]},{"l":8,"f":[["main",8,[["total","int",0,4],["h","int",0,5],["m","int",0,2],["s","int",0,3]]]]},{"l":9,"f":[["main",9,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,3]]]]},{"l":10,"f":[["main",10,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,7]]]]},{"l":11,"f":[["main",11,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,7]]]],"d":[["o","86399 seconds = 23 h 59 m 59 s\n"]]},{"l":12,"f":[["main",12,[["total","int",0,4],["h","int",0,5],["m","int",0,6],["s","int",0,7]]]]}],"V":[{"k":"i","v":-136292928,"a":140737488314928},{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":32767,"a":140737488314932},{"k":"i","v":86399,"a":140737488314928},{"k":"i","v":23,"a":140737488314940},{"k":"i","v":59,"a":140737488314936},{"k":"i","v":59,"a":140737488314932}]},"out":"Enter seconds: 86399 seconds = 23 h 59 m 59 s\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex5" data-level="Medium"><h3><span class="pnum">E5</span>Going past the limit</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>Each variable is already at the largest value its type can hold. What does the program print? (GCC, 8-bit <code>char</code>, 16-bit <code>short</code>.)</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    char c = 127;
+    unsigned char u = 255;
+    short s = 32767;
+    c = c + 1;
+    u = u + 1;
+    s = s + 1;
+    printf(&quot;%d %d %d\n&quot;, c, u, s);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p>Use the "See the bits" tool above: add 1 to the largest value of each type and see where the bit pattern lands.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>-128 0 -32768</code>. 127 + 1 needs 8 bits that read as −128 in a signed <code>char</code>; 255 + 1 wraps to 0 in an <code>unsigned char</code>; 32767 + 1 becomes −32768 in a <code>short</code>. Unsigned wrap-around is defined by the C standard; for the signed types the result is implementation-defined and GCC wraps.</p><div class="tv" data-tr="t01-e5"></div><script type="application/json" id="tr-t01-e5">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    char c = 127;\n    unsigned char u = 255;\n    short s = 32767;\n    c = c + 1;\n    u = u + 1;\n    s = s + 1;\n    printf(\"%d %d %d\\n\", c, u, s);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["c","char",0,0],["u","unsigned char",0,1],["s","short",0,2]]]]},{"l":5,"f":[["main",5,[["c","char",0,3],["u","unsigned char",0,1],["s","short",0,2]]]]},{"l":6,"f":[["main",6,[["c","char",0,3],["u","unsigned char",0,4],["s","short",0,2]]]]},{"l":7,"f":[["main",7,[["c","char",0,3],["u","unsigned char",0,4],["s","short",0,2]]]]},{"l":8,"f":[["main",8,[["c","char",0,5],["u","unsigned char",0,4],["s","short",0,2]]]]},{"l":9,"f":[["main",9,[["c","char",0,5],["u","unsigned char",0,1],["s","short",0,2]]]]},{"l":10,"f":[["main",10,[["c","char",0,5],["u","unsigned char",0,1],["s","short",0,6]]]]},{"l":11,"f":[["main",11,[["c","char",0,5],["u","unsigned char",0,1],["s","short",0,6]]]],"d":[["o","-128 0 -32768\n"]]},{"l":12,"f":[["main",12,[["c","char",0,5],["u","unsigned char",0,1],["s","short",0,6]]]]}],"V":[{"k":"c","v":0,"a":140737488314943},{"k":"c","v":0,"a":140737488314942},{"k":"i","v":32767,"a":140737488314940},{"k":"c","v":127,"a":140737488314943},{"k":"c","v":255,"a":140737488314942},{"k":"c","v":-128,"a":140737488314943},{"k":"i","v":-32768,"a":140737488314940}]},"out":"-128 0 -32768\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex6" data-level="Easy"><h3><span class="pnum">E6</span>A character, its code and its neighbour</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Write a program</span> <span class="tag">CO2 · BCL L-3 Apply</span></div><p>Read one character and print its ASCII code and the character that comes after it. Input <code>a</code> should print <code>'a' = 97, next is 'b'</code>.</p><details class="hint"><summary>Hint</summary><p>A <code>char</code> is a small integer, so <code>ch + 1</code> is the next code. Print it with <code>%c</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t01-e6"></div><script type="application/json" id="tr-t01-e6">{"title":"Solution","code":"#include <stdio.h>\nint main()\n{\n    char ch;\n    printf(\"Enter a character: \");\n    scanf(\"%c\", &ch);\n    printf(\"'%c' = %d, next is '%c'\\n\", ch, ch, ch + 1);\n    return 0;\n}\n","inputs":[{"label":"a","stdin":"a\n","trace":{"steps":[{"l":5,"f":[["main",5,[["ch","char",0,0]]]]},{"l":6,"f":[["main",6,[["ch","char",0,0]]]],"d":[["o","Enter a character: "]]},{"l":7,"f":[["main",7,[["ch","char",0,1]]]],"d":[["i","a\n"]]},{"l":8,"f":[["main",8,[["ch","char",0,1]]]],"d":[["o","'a' = 97, next is 'b'\n"]]},{"l":9,"f":[["main",9,[["ch","char",0,1]]]]}],"V":[{"k":"c","v":0,"a":140737488314943},{"k":"c","v":97,"a":140737488314943}]},"out":"Enter a character: 'a' = 97, next is 'b'\n","trunc":false},{"label":"Z","stdin":"Z\n","trace":{"steps":[{"l":5,"f":[["main",5,[["ch","char",0,0]]]]},{"l":6,"f":[["main",6,[["ch","char",0,0]]]],"d":[["o","Enter a character: "]]},{"l":7,"f":[["main",7,[["ch","char",0,1]]]],"d":[["i","Z\n"]]},{"l":8,"f":[["main",8,[["ch","char",0,1]]]],"d":[["o","'Z' = 90, next is '['\n"]]},{"l":9,"f":[["main",9,[["ch","char",0,1]]]]}],"V":[{"k":"c","v":0,"a":140737488314943},{"k":"c","v":90,"a":140737488314943}]},"out":"Enter a character: 'Z' = 90, next is '['\n","trunc":false},{"label":"7","stdin":"7\n","trace":{"steps":[{"l":5,"f":[["main",5,[["ch","char",0,0]]]]},{"l":6,"f":[["main",6,[["ch","char",0,0]]]],"d":[["o","Enter a character: "]]},{"l":7,"f":[["main",7,[["ch","char",0,1]]]],"d":[["i","7\n"]]},{"l":8,"f":[["main",8,[["ch","char",0,1]]]],"d":[["o","'7' = 55, next is '8'\n"]]},{"l":9,"f":[["main",9,[["ch","char",0,1]]]]}],"V":[{"k":"c","v":0,"a":140737488314943},{"k":"c","v":55,"a":140737488314943}]},"out":"Enter a character: '7' = 55, next is '8'\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex7" data-level="Hard"><h3><span class="pnum">E7</span>Swap without a third variable</h3><div class="extags"><span class="tag o">Hard</span> <span class="tag">Write a program</span> <span class="tag">CO2 · BCL L-3 Apply</span></div><p>Read two integers and swap them using only arithmetic, without a temporary variable. Print the values before and after.</p><details class="hint"><summary>Hint</summary><p>After <code>a = a + b;</code> the sum holds both values. How can you get the old <code>a</code> back out of it?</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p><code>a = a + b; b = a - b; a = a - b;</code>. After the first line <code>a</code> holds the sum; subtracting the old <code>b</code> gives the old <code>a</code>, and so on. Watch both variables change in the memory panel. A limitation to mention in an exam answer: if the sum exceeds the <code>int</code> range the method overflows, so the temporary-variable swap is safer in real programs.</p><div class="tv" data-tr="t01-e7"></div><script type="application/json" id="tr-t01-e7">{"title":"Solution","code":"#include <stdio.h>\nint main()\n{\n    int a, b;\n    printf(\"Enter two numbers: \");\n    scanf(\"%d%d\", &a, &b);\n    printf(\"Before: a = %d, b = %d\\n\", a, b);\n    a = a + b;\n    b = a - b;\n    a = a - b;\n    printf(\"After:  a = %d, b = %d\\n\", a, b);\n    return 0;\n}\n","inputs":[{"label":"22 and 65","stdin":"22 65\n","trace":{"steps":[{"l":5,"f":[["main",5,[["a","int",0,0],["b","int",0,1]]]]},{"l":6,"f":[["main",6,[["a","int",0,0],["b","int",0,1]]]],"d":[["o","Enter two numbers: "]]},{"l":7,"f":[["main",7,[["a","int",0,2],["b","int",0,3]]]],"d":[["i","22 65\n"]]},{"l":8,"f":[["main",8,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","Before: a = 22, b = 65\n"]]},{"l":9,"f":[["main",9,[["a","int",0,4],["b","int",0,3]]]]},{"l":10,"f":[["main",10,[["a","int",0,4],["b","int",0,5]]]]},{"l":11,"f":[["main",11,[["a","int",0,6],["b","int",0,5]]]]},{"l":12,"f":[["main",12,[["a","int",0,6],["b","int",0,5]]]],"d":[["o","After:  a = 65, b = 22\n"]]},{"l":13,"f":[["main",13,[["a","int",0,6],["b","int",0,5]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":22,"a":140737488314940},{"k":"i","v":65,"a":140737488314936},{"k":"i","v":87,"a":140737488314940},{"k":"i","v":22,"a":140737488314936},{"k":"i","v":65,"a":140737488314940}]},"out":"Enter two numbers: Before: a = 22, b = 65\nAfter:  a = 65, b = 22\n","trunc":false},{"label":"-4 and 9","stdin":"-4 9\n","trace":{"steps":[{"l":5,"f":[["main",5,[["a","int",0,0],["b","int",0,1]]]]},{"l":6,"f":[["main",6,[["a","int",0,0],["b","int",0,1]]]],"d":[["o","Enter two numbers: "]]},{"l":7,"f":[["main",7,[["a","int",0,2],["b","int",0,3]]]],"d":[["i","-4 9\n"]]},{"l":8,"f":[["main",8,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","Before: a = -4, b = 9\n"]]},{"l":9,"f":[["main",9,[["a","int",0,4],["b","int",0,3]]]]},{"l":10,"f":[["main",10,[["a","int",0,4],["b","int",0,5]]]]},{"l":11,"f":[["main",11,[["a","int",0,6],["b","int",0,5]]]]},{"l":12,"f":[["main",12,[["a","int",0,6],["b","int",0,5]]]],"d":[["o","After:  a = 9, b = -4\n"]]},{"l":13,"f":[["main",13,[["a","int",0,6],["b","int",0,5]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":-4,"a":140737488314940},{"k":"i","v":9,"a":140737488314936},{"k":"i","v":5,"a":140737488314940},{"k":"i","v":-4,"a":140737488314936},{"k":"i","v":9,"a":140737488314940}]},"out":"Enter two numbers: Before: a = -4, b = 9\nAfter:  a = 9, b = -4\n","trunc":false}]}</script></div></details></section><script>(function(){const f=document.getElementById("exfilter");if(!f)return;f.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{f.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".exq").forEach(s=>{s.hidden=b.dataset.f!=="all"&&s.dataset.level!==b.dataset.f})})})();</script><style>.exq{border-top:1px solid var(--line);padding:4px 0 10px}.exq h3{display:flex;gap:10px;align-items:baseline;font-size:19px;margin:18px 0 6px}.exq .pnum{font-family:var(--mono);background:var(--accent);color:var(--ink);border-radius:7px;padding:1px 8px;font-size:14px;flex:none}.extags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}</style><nav class="pager" aria-label="Lectures"><span></span><a href="02-operators-expressions.html" style="text-align:right"><small>Lecture 02 →</small>Operators and Expressions</a></nav><footer class="foot">© 2026 Md Nazrul Islam <b>[NI]</b>. All rights reserved. Shared with students for study purposes only. Do not modify, republish or redistribute without the author's permission.</footer></main></div></body></html>

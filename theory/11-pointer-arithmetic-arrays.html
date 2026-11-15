@@ -1,0 +1,687 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="claude:viewport-fit-sides" content="cover"><title>Pointer Arithmetic, Arrays and Pointers · Lecture 11 · Structured Programming</title><meta name="description" content="Pointer increment, addition, subtraction and comparison scaled by the type size, and why A[i] means *(A + i)."><link rel="icon" href="data:image/webp;base64,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"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>/* Layout: sticky brand header, left section rail, wide main column; same visual system as nazrul-99.github.io/toc
+   (navy ink, orange accent, yellow highlight, IBM Plex). Deliberately single light theme for projectors. */
+:root{--ink:#14213d;--navy:#1f3a68;--accent:#f5892a;--accent-ink:#c8640f;--yellow:#f5f61c;--hl:#fff8b8;--hl2:#fffbe0;
+--line:#d9dee7;--soft:#f5f7fa;--soft2:#eef2f8;--muted:#5b6779;--green:#2e7d4f;--green-bg:#e6f4ea;--red:#b3261e;--red-bg:#fbe0e0;
+--bg:#ffffff;--term:#0f1b33;--term-ink:#e8edf5;--term-in:#ffb46b;--term-dim:#8fa0bd;
+--sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(90px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--navy)}a:hover{color:var(--accent-ink)}
+code,.mono,kbd{font-family:var(--mono)}
+code{background:var(--soft2);border-radius:4px;padding:1px 5px;font-size:.9em}
+h1,h2,h3{text-wrap:balance;color:var(--navy);line-height:1.2}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:24px;margin:34px 0 10px}h3{font-size:19px;margin:20px 0 8px}
+p,li{max-width:78ch}
+button{font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap;
+ padding-block:10px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));
+ border-bottom:6px solid;border-image:linear-gradient(90deg,var(--accent),var(--yellow)) 1}
+.ident{display:flex;align-items:center;gap:14px;margin-right:auto;min-width:0;text-decoration:none;color:inherit}
+.ident img{width:56px;height:56px;flex:none}
+.brand{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.brand b{font-size:20px;color:var(--navy)}.brand span{font-size:15px;color:var(--accent-ink);font-weight:600}
+.brand small{font-size:13px;color:var(--muted)}.brand small b{font-size:inherit;color:inherit}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav.tabs a{text-decoration:none;font-weight:600;font-size:15px;color:var(--navy);border:2px solid var(--line);border-radius:8px;padding:5px 12px}
+nav.tabs a:hover{border-color:var(--navy)}nav.tabs a.on{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* page layout */
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr)}
+aside.rail{border-right:1px solid var(--line);padding:14px 10px 40px;position:sticky;top:calc(82px + env(safe-area-inset-top,0px));height:calc(100vh - 82px - env(safe-area-inset-top,0px));overflow:auto}
+aside.rail .rh{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:8px 10px 6px}
+.navi{display:flex;gap:10px;width:100%;text-align:left;border:0;background:none;padding:6px 10px;border-radius:7px;color:var(--ink);font-size:15px;line-height:1.3;align-items:baseline;text-decoration:none}
+.navi:hover{background:var(--soft)}.navi.on{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.nid{font-family:var(--mono);font-weight:600;color:var(--accent-ink);min-width:30px;font-size:14px}
+main{padding-block:22px 60px;padding-left:max(30px,env(safe-area-inset-left,0px));padding-right:max(30px,env(safe-area-inset-right,0px));min-width:0;max-width:1240px;width:100%}
+.mainpad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
+.lead{font-size:19px;color:var(--ink);max-width:72ch}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+.pager a{text-decoration:none;border:2px solid var(--navy);border-radius:10px;padding:8px 14px;font-weight:600;max-width:48%}
+.pager a:hover{background:var(--navy);color:#fff}.pager small{display:block;font-weight:400;font-size:13px;opacity:.8}
+#navsel{display:none;font:inherit;font-size:16px;padding:6px;border:2px solid var(--navy);border-radius:8px;max-width:100%;margin:6px 0 12px;background:var(--bg);color:var(--ink)}
+footer.foot{color:var(--muted);font-size:14px;margin-top:36px;border-top:1px solid var(--line);padding-top:12px}
+
+/* building blocks */
+.btn{border:2px solid var(--navy);background:var(--bg);color:var(--navy);border-radius:8px;padding:5px 13px;font-weight:600;font-size:15px}
+.btn:hover:not(:disabled){background:var(--navy);color:#fff}.btn:disabled{opacity:.35;cursor:default}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--ink)}.btn.pri:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.btn.sm{padding:2px 9px;font-size:14px}
+.chip{font-family:var(--mono);font-size:14px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 9px;color:var(--ink)}
+.chip:hover{border-color:var(--navy)}.chip.on{background:var(--hl);border-color:var(--accent);font-weight:600}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0;background:var(--bg)}
+.idea{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:14px 0;max-width:80ch}
+.note{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit{background:#fdf0ef;border:1px solid #efb7b2;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit b:first-child,.note b:first-child{color:var(--navy)}
+.good{color:var(--green);font-weight:600}.bad{color:var(--red);font-weight:600}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}
+.tblwrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;font-size:16px}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft2);color:var(--navy)}
+pre.code{font-family:var(--mono);font-size:15px;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 14px;overflow-x:auto;line-height:1.5;margin:10px 0}
+.term{font-family:var(--mono);font-size:15px;background:var(--term);color:var(--term-ink);border-radius:8px;padding:10px 14px;white-space:pre-wrap;overflow-x:auto;margin:8px 0;min-height:44px;line-height:1.45}
+.term .in{color:var(--term-in);font-weight:600}
+details.hint{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:8px 14px;margin:10px 0}
+details.hint summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sol{border:1px solid var(--line);border-radius:10px;margin:12px 0;background:var(--bg)}
+details.sol>summary{cursor:pointer;font-weight:600;color:var(--navy);padding:10px 14px;list-style:none;display:flex;gap:10px;align-items:center}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▸";color:var(--accent-ink);transition:transform .15s}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol>.solbody{padding:0 14px 14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 7px;background:var(--soft2);color:var(--navy)}
+.tag.o{background:#fde7d3;color:#8a4307}.tag.g{background:var(--green-bg);color:#1d5a37}
+input.field,select.field,textarea.field{font:inherit;font-size:16px;padding:5px 10px;border:2px solid var(--navy);border-radius:8px;background:var(--bg);color:var(--ink)}
+input.field.mono{font-family:var(--mono)}
+.row{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.lbl{color:var(--muted);font-size:14px}
+.widget{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0;background:var(--bg)}
+.widget>h3:first-child{margin-top:0}
+.wsub{color:var(--muted);font-size:15px;margin:-4px 0 12px}
+
+/* trace viewer */
+.tv{border:1px solid var(--line);border-radius:12px;margin:18px 0;background:var(--bg);overflow:hidden}
+.tv-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line)}
+.tv-title{font-weight:600;color:var(--navy);margin-right:auto;font-size:17px}
+.tv-inputs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tv-ctrl{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tv-ctrl input[type=range]{flex:1 1 160px;accent-color:var(--accent);min-width:120px}
+.tv-count{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:110px}
+.tv-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.tv-code{position:relative;border-right:1px solid var(--line);overflow:auto;max-height:560px;font-family:var(--mono);font-size:14.5px;line-height:1.55;padding:6px 0;counter-reset:ln}
+.tv-code .ln{display:flex;white-space:pre;padding-right:12px}
+.tv-code .ln i{font-style:normal;color:#9aa5b8;min-width:42px;text-align:right;padding-right:12px;user-select:none;flex:none}
+.tv-code .ln.prev{background:var(--green-bg)}
+.tv-code .ln.cur{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.tv-code .ln.cur i{color:var(--accent-ink);font-weight:700}
+.tv-mem{position:relative;overflow:auto;max-height:560px;padding:10px 12px}
+.tv-mem svg.arrows{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.tv-explain{padding:9px 14px;background:var(--hl2);border-top:1px solid #f0d37a;font-size:16px;min-height:42px}
+.tv-explain b{color:var(--navy)}
+.tv-out{padding:8px 14px 12px;border-top:1px solid var(--line)}
+.tv-out .term{margin:4px 0 0;max-height:220px;overflow:auto}
+.tv-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:0 14px 10px}
+.tv-legend span{display:inline-flex;gap:6px;align-items:center}.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.fr{border:1.5px solid var(--navy);border-radius:10px;margin:0 0 10px;background:var(--bg)}
+.fr.old{border-color:#b6c0cf;opacity:.92}
+.fr-h{display:flex;justify-content:space-between;gap:8px;background:var(--navy);color:#fff;font-weight:600;font-size:14px;padding:3px 10px;border-radius:8px 8px 0 0;font-family:var(--mono)}
+.fr.old .fr-h{background:#8b97ab}
+.fr-b{padding:6px 10px;display:flex;flex-direction:column;gap:6px}
+.var{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.vn{font-family:var(--mono);font-size:14px;min-width:64px;padding-top:4px;color:var(--ink)}
+.vn small{display:block;color:var(--muted);font-size:11.5px;line-height:1.2}
+.vb{font-family:var(--mono);font-size:15px;border:1.5px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--bg);min-width:38px;text-align:center;font-variant-numeric:tabular-nums}
+.vb.ptr{border-color:var(--accent);background:#fff4e8}
+.vb.null{color:var(--muted)}
+.vb.chg,.cell.chg{animation:flash 1s ease-out;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+@keyframes flash{0%{background:var(--yellow)}100%{background:inherit}}
+.arr{display:flex;flex-wrap:wrap;gap:0}
+.cellw{display:flex;flex-direction:column;align-items:center}
+.cell{font-family:var(--mono);font-size:14.5px;border:1.5px solid var(--navy);min-width:36px;height:32px;padding:0 5px;display:flex;align-items:center;justify-content:center;margin-left:-1.5px;background:var(--bg);font-variant-numeric:tabular-nums}
+.cellw:first-child .cell{margin-left:0;border-radius:5px 0 0 5px}.cellw:last-child .cell{border-radius:0 5px 5px 0}
+.cell.nul{color:var(--muted);background:var(--soft)}
+.cell.tgt{background:#ffe4c7}
+.ci{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.grid2d{display:inline-grid;gap:0;border:1.5px solid var(--navy);border-radius:5px;overflow:hidden}
+.grid2d .g{font-family:var(--mono);font-size:13.5px;border:1px solid var(--line);min-width:34px;height:28px;display:flex;align-items:center;justify-content:center;padding:0 4px;background:var(--bg)}
+.grid2d .gh{background:var(--soft2);color:var(--muted);font-size:11px}
+.more{font-size:12px;color:var(--muted);align-self:center;padding-left:6px}
+.st{border:1.5px dashed var(--navy);border-radius:8px;padding:4px 8px;display:flex;flex-direction:column;gap:4px}
+.st .stn{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.addr{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.retchip{display:inline-block;background:var(--green-bg);color:#1d5a37;border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:14px;margin-left:6px}
+.tv-done{background:var(--green-bg)!important;border-top-color:#9fd1b0!important}
+.tv-opts{display:flex;gap:14px;align-items:center;font-size:14px;color:var(--muted)}
+.tv-opts label{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+
+@media (max-width:980px){header.top{position:relative;top:auto}html{scroll-padding-top:10px}.wrap{grid-template-columns:1fr}aside.rail{display:none}#navsel{display:block}main{padding-block:16px 50px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+@media (max-width:860px){.tv-body{grid-template-columns:1fr}.tv-code{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.tv-mem{max-height:none}}
+@media (max-width:560px){body{font-size:17px}h1{font-size:26px}.ident img{width:44px;height:44px}.brand b{font-size:17px}.brand small{display:none}
+ header.top{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}.pager a{max-width:100%}}
+</style><script>/* Structured Programming site: C syntax colouring, real-execution trace viewer, page chrome. */
+(function () {
+  'use strict';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- C syntax colouring ---------- */
+  const KW = new Set('auto break case char const continue default do double else enum extern float for goto if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while'.split(' '));
+  const LIB = new Set('printf scanf gets fgets puts fputs getchar putchar strlen strcpy strcat strcmp strrev sqrt pow abs fabs ceil floor fmod log log10 exp sin cos tan atoi atof fopen fclose fgetc fputc fprintf fscanf malloc free isdigit isalpha isalnum islower isupper tolower toupper isspace main NULL EOF stdin stdout FILE'.split(' '));
+  function hl(line) {
+    let out = '', i = 0;
+    const n = line.length;
+    while (i < n) {
+      const c = line[i];
+      if (c === '/' && line[i + 1] === '/') { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '/' && line[i + 1] === '*') { let j = line.indexOf('*/', i + 2); j = j < 0 ? n : j + 2; out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      if (c === '*' && /^\s*\*(\s|\/|$)/.test(line) && i === line.search(/\S/)) { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '#' && line.slice(0, i).trim() === '') { out += '<span style="color:#8a4fb8">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '"' || c === "'") {
+        let j = i + 1; while (j < n && line[j] !== c) { if (line[j] === '\\') j++; j++; }
+        out += '<span style="color:#0a7a4a">' + esc(line.slice(i, j + 1)) + '</span>'; i = j + 1; continue;
+      }
+      if (/[A-Za-z_]/.test(c)) {
+        let j = i; while (j < n && /\w/.test(line[j])) j++;
+        const w = line.slice(i, j);
+        if (KW.has(w)) out += '<span style="color:#1f3a68;font-weight:600">' + w + '</span>';
+        else if (LIB.has(w)) out += '<span style="color:#b35a00">' + w + '</span>';
+        else out += esc(w);
+        i = j; continue;
+      }
+      if (/[0-9]/.test(c)) { let j = i; while (j < n && /[0-9.xXa-fA-FuUlL]/.test(line[j])) j++; out += '<span style="color:#a3214a">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      out += esc(c); i++;
+    }
+    return out;
+  }
+  window.SPL = window.SPL || {};
+  SPL.hl = hl;
+  SPL.esc = esc;
+  SPL.hlBlock = code => code.replace(/\n$/, '').split('\n').map(hl).join('\n');
+
+  /* ---------- value formatting ---------- */
+  function chr(v) {
+    const m = { 0: "'\\0'", 10: "'\\n'", 9: "'\\t'", 32: "' '", 13: "'\\r'" };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return "'" + String.fromCharCode(v) + "'";
+    return String(v);
+  }
+  function cellChar(v) {
+    const m = { 0: '\\0', 10: '\\n', 9: '\\t', 32: '␣' };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return String.fromCharCode(v);
+    return '·';
+  }
+  function num(v) {
+    if (typeof v !== 'number') return String(v);
+    if (Number.isInteger(v) && Math.abs(v) < 1e15) return String(v);
+    let s = Number(v.toPrecision(6)).toString();
+    if (/e/.test(s)) s = v.toExponential(3);
+    return s;
+  }
+  const hex = a => '0x' + Number(a).toString(16);
+  SPL.fmt = { chr, num, hex };
+
+  function scal(v) {
+    if (v.k === 'c') return chr(v.v);
+    if (v.k === 'f') return num(v.v);
+    if (v.k === 'i') return v.s ? v.s : String(v.v);
+    if (v.k === 'p') return v.v === 0 ? 'NULL' : hex(v.v);
+    return String(v.v);
+  }
+
+  /* ---------- trace viewer ---------- */
+  function TraceViewer(el, data) {
+    this.el = el; this.data = data; this.ii = 0; this.si = 0; this.timer = null;
+    this.showAddr = el.dataset.addr === '1';
+    this.build();
+    this.load(0);
+  }
+  TraceViewer.prototype.build = function () {
+    const d = this.data, el = this.el;
+    const inputs = d.inputs.length > 1 || (d.inputs[0] && d.inputs[0].stdin)
+      ? '<div class="tv-inputs"><span class="lbl">Input:</span>' + d.inputs.map((inp, i) => '<button class="chip" data-i="' + i + '" title="' + esc(inp.stdin || 'no input') + '">' + esc(inp.label) + '</button>').join('') + '</div>' : '';
+    el.innerHTML =
+      '<div class="tv-head"><div class="tv-title">' + esc(d.title || 'Run it line by line') + '</div>' + inputs + '</div>' +
+      '<div class="tv-ctrl">' +
+      '<button class="btn sm" data-a="first" title="First step" aria-label="First step">⏮</button>' +
+      '<button class="btn sm" data-a="prev" title="Previous step (←)" aria-label="Previous step">◀ Back</button>' +
+      '<button class="btn sm pri" data-a="next" title="Next step (→)" aria-label="Next step">Next ▶</button>' +
+      '<button class="btn sm" data-a="last" title="Last step" aria-label="Last step">⏭</button>' +
+      '<button class="btn sm" data-a="play" aria-label="Play">▶▶ Play</button>' +
+      '<input type="range" min="0" value="0" aria-label="Step slider">' +
+      '<span class="tv-count"></span>' +
+      '<span class="tv-opts"><label><input type="checkbox" data-o="addr"' + (this.showAddr ? ' checked' : '') + '> addresses</label></span>' +
+      '</div>' +
+      '<div class="tv-body"><div class="tv-code" tabindex="0"></div><div class="tv-mem"></div></div>' +
+      '<div class="tv-explain"></div>' +
+      '<div class="tv-out"><span class="lbl">Console (output, with what the user typed in orange)</span><div class="term"></div></div>' +
+      '<div class="tv-legend"><span><i class="sw" style="background:var(--hl);border-color:var(--accent)"></i>line about to run</span><span><i class="sw" style="background:var(--green-bg)"></i>line that just ran</span><span><i class="sw" style="background:var(--yellow)"></i>value just changed</span><span><i class="sw" style="background:#fff4e8;border-color:var(--accent)"></i>pointer (arrow shows target)</span></div>';
+    this.$code = el.querySelector('.tv-code'); this.$mem = el.querySelector('.tv-mem');
+    this.$exp = el.querySelector('.tv-explain'); this.$term = el.querySelector('.term');
+    this.$range = el.querySelector('input[type=range]'); this.$count = el.querySelector('.tv-count');
+    const lines = d.code.replace(/\n$/, '').split('\n');
+    this.$code.innerHTML = lines.map((l, i) => '<div class="ln" data-l="' + (i + 1) + '"><i>' + (i + 1) + '</i><span>' + (hl(l) || ' ') + '</span></div>').join('');
+    el.querySelectorAll('.tv-inputs .chip').forEach(b => b.onclick = () => this.load(+b.dataset.i));
+    el.querySelectorAll('[data-a]').forEach(b => b.onclick = () => this.act(b.dataset.a));
+    this.$range.oninput = () => { this.stop(); this.go(+this.$range.value); };
+    el.querySelector('[data-o=addr]').onchange = e => { this.showAddr = e.target.checked; this.render(); };
+    el.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' && e.target.type !== 'range' && e.target.type !== 'checkbox') return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); this.act('next'); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); this.act('prev'); }
+    });
+    window.addEventListener('resize', () => this.drawArrows());
+  };
+  TraceViewer.prototype.load = function (ii) {
+    this.stop();
+    this.ii = ii;
+    const inp = this.data.inputs[ii];
+    this.el.querySelectorAll('.tv-inputs .chip').forEach(b => b.classList.toggle('on', +b.dataset.i === ii));
+    // rebuild cumulative state per step
+    const t = inp.trace, V = t.V;
+    let f = null, g = null, con = [];
+    this.states = t.steps.map(s => {
+      if (s.f) f = s.f;
+      if (s.g) g = s.g;
+      if (s.d) con = con.concat(s.d);
+      return { l: s.l, f, g, con, r: s.r };
+    });
+    this.V = V;
+    // how much of each big array is ever used: show that part (plus one cell) instead of a wall of garbage
+    const vis = {};
+    const seen = {};
+    const mark = (key, v, prevIdx) => {
+      if (!v || v.k !== 'a') return;
+      const o = prevIdx === undefined ? null : V[prevIdx];
+      const r = vis[key] || (vis[key] = [0, 0]);
+      v.it.forEach((x, i) => {
+        const ox = o && o.it ? o.it[i] : null;
+        if (x.k === 'a') {
+          x.it.forEach((y, j) => {
+            const oy = ox && ox.it ? ox.it[j] : null;
+            if (!oy || JSON.stringify(oy) !== JSON.stringify(y)) { if (o) { r[0] = Math.max(r[0], i + 1); r[1] = Math.max(r[1], j + 1); } }
+          });
+        } else if (o && JSON.stringify(ox) !== JSON.stringify(x)) r[0] = Math.max(r[0], i + 1);
+      });
+    };
+    this.states.forEach(s => {
+      s.f.forEach(fr => fr[2].forEach(v => { const key = fr[0] + ':' + v[0]; mark(key, V[v[3]], seen[key]); seen[key] = v[3]; }));
+    });
+    this.vis = vis;
+    this.$range.max = this.states.length; // last position = finished
+    this.go(0);
+  };
+  TraceViewer.prototype.act = function (a) {
+    if (a === 'play') { if (this.timer) this.stop(); else this.play(); return; }
+    this.stop();
+    const n = this.states.length;
+    if (a === 'first') this.go(0);
+    if (a === 'last') this.go(n);
+    if (a === 'next') this.go(Math.min(n, this.si + 1));
+    if (a === 'prev') this.go(Math.max(0, this.si - 1));
+  };
+  TraceViewer.prototype.play = function () {
+    const b = this.el.querySelector('[data-a=play]');
+    b.textContent = '❚❚ Pause';
+    if (this.si >= this.states.length) this.go(0);
+    this.timer = setInterval(() => {
+      if (this.si >= this.states.length) { this.stop(); return; }
+      this.go(this.si + 1);
+    }, 700);
+  };
+  TraceViewer.prototype.stop = function () {
+    if (this.timer) clearInterval(this.timer);
+    this.timer = null;
+    const b = this.el.querySelector('[data-a=play]');
+    if (b) b.textContent = '▶▶ Play';
+  };
+  TraceViewer.prototype.go = function (si) { this.si = si; this.render(); };
+
+  TraceViewer.prototype.render = function () {
+    const n = this.states.length, si = this.si, done = si >= n;
+    const st = done ? this.states[n - 1] : this.states[si];
+    const prevSt = si > 0 ? this.states[Math.min(si, n) - 1] : null;
+    const prevForDiff = done ? null : prevSt;
+    this.$range.value = si;
+    this.$count.textContent = done ? 'Finished' : 'Step ' + (si + 1) + ' of ' + n;
+    // code highlight
+    this.$code.querySelectorAll('.ln.cur,.ln.prev').forEach(x => x.classList.remove('cur', 'prev'));
+    if (!done) {
+      const cur = this.$code.querySelector('.ln[data-l="' + st.l + '"]');
+      if (cur) { cur.classList.add('cur'); this.scrollInto(cur); }
+    }
+    if (prevSt && (done || prevSt.l !== st.l)) {
+      const p = this.$code.querySelector('.ln[data-l="' + prevSt.l + '"]');
+      if (p) p.classList.add('prev');
+    }
+    // memory
+    this.renderMem(st, prevForDiff, done);
+    // console
+    const finalCon = done ? this.fullConsole() : st.con;
+    this.$term.innerHTML = finalCon.map(([k, s]) => k === 'i' ? '<span class="in">' + esc(s) + '</span>' : esc(s)).join('') || '<span style="color:var(--term-dim)">(nothing printed yet)</span>';
+    this.$term.scrollTop = this.$term.scrollHeight;
+    // explanation
+    this.$exp.classList.toggle('tv-done', done);
+    this.$exp.innerHTML = done ? '<b>Program finished.</b> The console shows the complete run. Press ⏮ or drag the slider to replay.' : this.explain(st, prevSt);
+    this.el.querySelector('[data-a=prev]').disabled = si === 0;
+    this.el.querySelector('[data-a=first]').disabled = si === 0;
+    this.el.querySelector('[data-a=next]').disabled = done;
+    this.el.querySelector('[data-a=last]').disabled = done;
+  };
+  TraceViewer.prototype.fullConsole = function () {
+    const t = this.data.inputs[this.ii].trace;
+    let con = [];
+    t.steps.forEach(s => { if (s.d) con = con.concat(s.d); });
+    return con;
+  };
+  TraceViewer.prototype.scrollInto = function (row) {
+    const c = this.$code, top = row.offsetTop, h = c.clientHeight;
+    if (top < c.scrollTop + 30 || top > c.scrollTop + h - 50) c.scrollTop = Math.max(0, top - h / 2);
+  };
+  TraceViewer.prototype.explain = function (st, prev) {
+    const parts = [];
+    const fnNow = st.f[st.f.length - 1][0];
+    if (!prev) {
+      parts.push('Execution starts in <b>main()</b>. The highlighted line ' + st.l + ' runs next.');
+      return parts.join(' ');
+    }
+    const pd = prev.f.length, cd = st.f.length;
+    if (cd > pd) {
+      const fr = st.f[cd - 1];
+      const args = fr[2].filter(v => v[2]).map(v => v[0] + ' = ' + this.short(this.V[v[3]]));
+      parts.push('<b>' + fr[0] + '()</b> is called' + (args.length ? ' with ' + args.join(', ') : '') + '. A new frame is pushed on the stack.');
+    } else if (st.r) {
+      parts.push('<b>' + st.r[0] + '()</b> returned' + (st.r[1] ? ' <span class="retchip">' + esc(this.short(st.r[1])) + '</span>' : ' (void)') + '; its frame is removed and control is back in <b>' + fnNow + '()</b>.');
+    }
+    // changed variables in the frames that exist in both
+    const ch = [];
+    const m = Math.min(pd, cd);
+    for (let i = 0; i < m; i++) {
+      if (st.f[i][0] !== prev.f[i][0]) continue;
+      const pv = {}; prev.f[i][2].forEach(v => pv[v[0]] = v[3]);
+      st.f[i][2].forEach(v => {
+        if (pv[v[0]] !== undefined && pv[v[0]] !== v[3]) ch.push('<code>' + esc(v[0]) + '</code> ' + this.delta(this.V[pv[v[0]]], this.V[v[3]]));
+      });
+    }
+    if (ch.length && cd <= pd) parts.push('Line ' + prev.l + ' changed ' + ch.slice(0, 4).join('; ') + (ch.length > 4 ? ' …' : '') + '.');
+    const newIn = st.con.length > prev.con.length ? st.con.slice(prev.con.length) : [];
+    if (newIn.some(x => x[0] === 'i')) parts.push('The program read the user\'s input.');
+    else if (newIn.some(x => x[0] === 'o')) parts.push('Something was printed to the console.');
+    if (!parts.length) parts.push(prev.l === st.l ? 'Line ' + st.l + ' runs again (loop test or next part of the line).' : 'Line ' + prev.l + ' ran; nothing visible changed.');
+    parts.push('<span class="lbl">Next: line ' + st.l + ' in ' + fnNow + '().</span>');
+    return parts.join(' ');
+  };
+  TraceViewer.prototype.short = function (v) {
+    if (!v) return '';
+    if (v.k === 'a') return '{' + v.it.slice(0, 6).map(x => this.short(x)).join(', ') + (v.n > 6 ? ', …' : '') + '}';
+    if (v.k === 's') return '{…}';
+    if (v.k === 'p') return v.to ? (v.to === 'NULL' ? 'NULL' : '&' + this.tname(v.to)) : scal(v);
+    return scal(v);
+  };
+  TraceViewer.prototype.tname = function (to) { return to.replace(/^(\d+|g):/, ''); };
+  TraceViewer.prototype.delta = function (a, b) {
+    if (a.k === 'a' && b.k === 'a') {
+      const idx = [];
+      b.it.forEach((x, i) => { if (JSON.stringify(x) !== JSON.stringify(a.it[i])) idx.push(i); });
+      if (idx.length === 1) { const i = idx[0]; return '[' + i + ']: ' + esc(this.short(a.it[i])) + ' → <b>' + esc(this.short(b.it[i])) + '</b>'; }
+      return '(' + idx.length + ' cells)';
+    }
+    if (a.k === 's') return '(a member changed)';
+    return esc(this.short(a)) + ' → <b>' + esc(this.short(b)) + '</b>';
+  };
+
+  TraceViewer.prototype.renderMem = function (st, prev, done) {
+    const V = this.V, sa = this.showAddr;
+    const prevMap = {};
+    if (prev) prev.f.forEach((fr, fi) => fr[2].forEach(v => prevMap[fi + ':' + fr[0] + ':' + v[0]] = v[3]));
+    const prevG = {};
+    if (prev && prev.g) prev.g.forEach(v => prevG[v[0]] = v[3]);
+    let html = '';
+    const self = this;
+    function varRow(path, v, val, changedFrom, fn) {
+      const name = v[0], type = v[1];
+      self._lim = fn ? self.vis[fn + ':' + name] : null;
+      let inner = self.valHTML(val, path, changedFrom === undefined ? null : V[changedFrom], true);
+      self._lim = null;
+      return '<div class="var"><div class="vn">' + esc(name) + '<small>' + esc(type) + (v[2] ? ' · parameter' : '') + '</small>' + (sa && val.a ? '<small class="addr">@' + hex(val.a) + '</small>' : '') + '</div>' + inner + '</div>';
+    }
+    if (st.g && st.g.length) {
+      html += '<div class="fr"><div class="fr-h"><span>global variables</span></div><div class="fr-b">' +
+        st.g.map(v => varRow('g:' + v[0], v, V[v[3]], prev && prevG[v[0]] !== undefined && prevG[v[0]] !== v[3] ? prevG[v[0]] : undefined)).join('') + '</div></div>';
+    }
+    const nf = st.f.length;
+    for (let fi = nf - 1; fi >= 0; fi--) {
+      const fr = st.f[fi];
+      const rows = fr[2].map(v => {
+        const k = fi + ':' + fr[0] + ':' + v[0];
+        const changed = prev && prevMap[k] !== undefined && prevMap[k] !== v[3] ? prevMap[k] : undefined;
+        return varRow(fi + ':' + v[0], v, V[v[3]], changed, fr[0]);
+      }).join('') || '<span class="lbl">no local variables</span>';
+      html += '<div class="fr' + (fi < nf - 1 ? ' old' : '') + '"><div class="fr-h"><span>' + esc(fr[0]) + '()' + (fi < nf - 1 ? ' — waiting at line ' + fr[1] : '') + '</span><span>' + (fi === nf - 1 ? 'active frame' : 'frame ' + (fi + 1)) + '</span></div><div class="fr-b">' + rows + '</div></div>';
+    }
+    html = '<div class="lbl" style="margin-bottom:6px">Stack (newest frame on top)</div>' + html;
+    this.$mem.innerHTML = html + '<svg class="arrows"></svg>';
+    this.drawArrows();
+  };
+  TraceViewer.prototype.valHTML = function (v, path, old, top) {
+    const self = this;
+    if (!v) return '<span class="vb">?</span>';
+    const chg = old && JSON.stringify(old) !== JSON.stringify(v);
+    if (v.k === 'a') {
+      const isChar = v.it.length && v.it[0].k === 'c';
+      if (v.it.length && v.it[0].k === 'a') {
+        // 2D array
+        const L = top && this._lim && this._lim[0] ? this._lim : null;
+        const rows = L ? Math.min(v.it.length, Math.max(L[0], 2)) : v.it.length;
+        const cols = L ? Math.min(v.it[0].it.length, Math.max(L[1], 2)) : v.it[0].it.length;
+        let g = '<div class="grid2d" data-p="' + esc(path) + '" style="grid-template-columns:auto repeat(' + cols + ',auto)"><div class="g gh"></div>';
+        for (let c = 0; c < cols; c++) g += '<div class="g gh">' + c + '</div>';
+        for (let r = 0; r < rows; r++) {
+          g += '<div class="g gh">' + r + '</div>';
+          for (let c = 0; c < cols; c++) {
+            const x = v.it[r].it[c], ox = old && old.it && old.it[r] && old.it[r].it ? old.it[r].it[c] : null;
+            const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+            g += '<div class="g cell' + (cc ? ' chg' : '') + '" style="margin:0;border-radius:0;height:28px;border-width:1px" data-p="' + esc(path + '[' + r + '][' + c + ']') + '">' + esc(x.k === 'c' ? cellChar(x.v) : scal(x)) + '</div>';
+          }
+        }
+        g += '</div>';
+        const more = (v.n > rows || v.it[0].n > cols) ? v.n + ' × ' + v.it[0].n : '';
+        return '<div>' + g + (more ? '<div class="more">declared size: ' + more + '; first ' + rows + '×' + cols + ' shown</div>' : '') + '</div>';
+      }
+      let s = '<div class="arr" data-p="' + esc(path) + '">';
+      const L1 = top && this._lim && v.it.length > 16 ? Math.min(v.it.length, Math.max(this._lim[0] + 1, 6)) : v.it.length;
+      v.it.slice(0, L1).forEach((x, i) => {
+        const ox = old && old.it ? old.it[i] : null;
+        const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+        let txt, cls = 'cell';
+        if (x.k === 'c') { txt = cellChar(x.v); if (x.v === 0) cls += ' nul'; }
+        else if (x.k === 's') { txt = '{…}'; }
+        else txt = scal(x);
+        if (x.k === 'p') { cls += ' ptr'; txt = x.to ? (x.to === 'NULL' ? 'NULL' : '•') : scal(x); }
+        s += '<div class="cellw"><div class="' + cls + (cc ? ' chg' : '') + '" data-p="' + esc(path + '[' + i + ']') + '"' + (x.k === 'p' && x.to && x.to !== 'NULL' ? ' data-to="' + esc(x.to) + '"' : '') + (x.k === 'c' ? ' title="ASCII ' + x.v + '"' : '') + '>' + esc(txt) + '</div><span class="ci">' + i + '</span></div>';
+      });
+      if (v.n > L1) s += '<span class="more">… ' + (v.n - L1) + ' more not used in this run (size ' + v.n + ')</span>';
+      s += '</div>';
+      if (isChar) {
+        let str = '', i = 0;
+        while (i < v.it.length && v.it[i].v !== 0) { str += String.fromCharCode(v.it[i].v); i++; }
+        if (i >= L1 && i < v.it.length) { /* string longer than the shown part */ }
+        if (i < v.it.length) s += '<div class="lbl" style="font-size:12.5px">as a string: <code>"' + esc(str) + '"</code> (' + i + ' characters before \\0)</div>';
+      }
+      return '<div>' + s + '</div>';
+    }
+    if (v.k === 's') {
+      return '<div class="st" data-p="' + esc(path) + '"><span class="stn">' + esc(v.tn) + '</span>' + v.f.map(f => {
+        const ov = old && old.f ? (old.f.find(x => x[0] === f[0]) || [])[1] : null;
+        return '<div class="var"><div class="vn">.' + esc(f[0]) + '</div>' + self.valHTML(f[1], path + '.' + f[0], ov, false) + '</div>';
+      }).join('') + '</div>';
+    }
+    if (v.k === 'p') {
+      let label;
+      if (v.v === 0) label = 'NULL';
+      else if (/FILE/.test(v.tt || '')) label = '→ FILE stream (open file)';
+      else if (v.to) label = '→ ' + esc(this.tname(v.to));
+      else label = hex(v.v) + ' <span class="lbl" style="font-size:12px">(' + (this.looksGarbage(v.v) ? 'not set yet' : 'outside the variables shown') + ')</span>';
+      return '<span class="vb ptr' + (v.v === 0 ? ' null' : '') + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '"' + (v.to && v.to !== 'NULL' ? ' data-to="' + esc(v.to) + '"' : '') + ' title="holds address ' + hex(v.v) + '">' + label + (this.showAddr && v.v ? ' <span class="addr">' + hex(v.v) + '</span>' : '') + '</span>';
+    }
+    let txt = scal(v);
+    if (v.k === 'c') txt += ' <span class="lbl" style="font-size:12px">(' + v.v + ')</span>';
+    return '<span class="vb' + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '">' + txt + '</span>';
+  };
+  TraceViewer.prototype.looksGarbage = function (a) { return a < 4096 || a > 0x7fffffffffff || a % 1 !== 0; };
+  TraceViewer.prototype.drawArrows = function () {
+    const mem = this.$mem, svg = mem.querySelector('svg.arrows');
+    if (!svg) return;
+    const ptrs = mem.querySelectorAll('[data-to]');
+    svg.setAttribute('width', mem.scrollWidth); svg.setAttribute('height', mem.scrollHeight);
+    mem.querySelectorAll('.cell.tgt').forEach(x => x.classList.remove('tgt'));
+    if (!ptrs.length) { svg.innerHTML = ''; return; }
+    const mr = mem.getBoundingClientRect();
+    const ox = mem.scrollLeft - mr.left, oy = mem.scrollTop - mr.top;
+    let out = '<defs><marker id="ah' + this.uid() + '" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#c8640f"/></marker></defs>';
+    const mid = 'ah' + this._uid;
+    ptrs.forEach(p => {
+      let to = p.dataset.to.replace(/\+\d+$/, '');
+      let t = mem.querySelector('[data-p="' + CSS.escape(to) + '"]');
+      if (!t) return;
+      if (t.classList.contains('cell')) t.classList.add('tgt');
+      const a = p.getBoundingClientRect(), b = t.getBoundingClientRect();
+      const x1 = a.right + ox, y1 = a.top + a.height / 2 + oy;
+      let x2 = b.left + ox + Math.min(14, b.width / 2), y2 = b.top + oy;
+      if (b.top > a.bottom) { y2 = b.top + oy; } else if (b.bottom < a.top) { y2 = b.bottom + oy; } else { x2 = b.left + ox; y2 = b.top + b.height / 2 + oy; }
+      const bend = Math.max(40, Math.abs(y2 - y1) * 0.3);
+      out += '<path d="M' + x1 + ',' + y1 + ' C' + (x1 + bend) + ',' + y1 + ' ' + (x2 + bend * 0.6) + ',' + (y2 + (y2 > y1 ? -30 : 30)) + ' ' + x2 + ',' + y2 + '" fill="none" stroke="#c8640f" stroke-width="2" marker-end="url(#' + mid + ')" opacity=".85"/>';
+    });
+    svg.innerHTML = out;
+  };
+  let UID = 0;
+  TraceViewer.prototype.uid = function () { if (!this._uid) this._uid = ++UID; return this._uid; };
+  SPL.TraceViewer = TraceViewer;
+
+  SPL.mountTraces = function (root) {
+    (root || document).querySelectorAll('.tv[data-tr]:not([data-mounted])').forEach(el => {
+      const src = document.getElementById('tr-' + el.dataset.tr);
+      if (!src) return;
+      const closed = el.closest('details:not([open])');
+      if (closed) return;
+      el.dataset.mounted = '1';
+      el._tv = new TraceViewer(el, JSON.parse(src.textContent));
+    });
+  };
+
+  /* ---------- page chrome ---------- */
+  function chrome() {
+    document.querySelectorAll('pre.code[data-hl]').forEach(p => { p.innerHTML = SPL.hlBlock(p.textContent); });
+    const sel = document.getElementById('navsel');
+    if (sel) sel.onchange = () => { if (sel.value) location.hash = sel.value; };
+    const links = [...document.querySelectorAll('aside.rail a.navi[href^="#"]')];
+    if (links.length && 'IntersectionObserver' in window) {
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(a => a.classList.remove('on'));
+            const a = map.get(e.target.id); if (a) a.classList.add('on');
+          }
+        });
+      }, { rootMargin: '-90px 0px -70% 0px' });
+      map.forEach((a, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+    }
+    SPL.mountTraces();
+    // re-draw arrows when a closed <details> opens
+    document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => { SPL.mountTraces(d); d.querySelectorAll('.tv').forEach(t => t._tv && t._tv.drawArrows()); }));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', chrome); else chrome();
+})();
+</script></head><body><header class="top"><a class="ident" href="../"><img alt="Southeast University logo" src="data:image/webp;base64,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"><span class="brand"><b>Structured Programming</b><span>Theory · Lecture 11</span><small>Prepared by: Md Nazrul Islam <b>[NI]</b>, Lecturer, Dept. of CSE, Southeast University</small></span></a><nav class="tabs" aria-label="Site"><a href="../">Home</a><a href="../theory/index.html" class="on">Theory</a><a href="../lab/index.html">Lab</a></nav></header><div class="wrap"><aside class="rail" aria-label="On this page"><div class="rh">Lecture 11</div><a class="navi" href="#rules"><span class="nid">01</span><span class="nt">What arithmetic is allowed on pointers</span></a><a class="navi" href="#viz"><span class="nid">02</span><span class="nt">See the scaling</span></a><a class="navi" href="#subtract"><span class="nid">03</span><span class="nt">Subtracting two pointers</span></a><a class="navi" href="#arrays"><span class="nid">04</span><span class="nt">Arrays and pointers</span></a><a class="navi" href="#videos"><span class="nid">05</span><span class="nt">Video summaries from the slides</span></a><a class="navi" href="#exercises"><span class="nid">06</span><span class="nt">Exercises with solutions</span></a></aside><main><div class="crumbs"><a href="../">Home</a> › <a href="index.html">Theory</a> › Lecture 11</div><h1>Pointer Arithmetic, Arrays and Pointers</h1><p class="lead">Adding 1 to a pointer moves it to the next element, not the next byte. That one rule explains how arrays and pointers work together.</p><select id="navsel" aria-label="Jump to section"><option value="">Jump to…</option><option value="rules">01 What arithmetic is allowed on pointers</option><option value="viz">02 See the scaling</option><option value="subtract">03 Subtracting two pointers</option><option value="arrays">04 Arrays and pointers</option><option value="videos">05 Video summaries from the slides</option><option value="exercises">06 Exercises with solutions</option></select><div class="note"><b>Practise in the lab:</b> <a href="../lab/09-pointers.html">Lab 09 · Pointers</a></div>
+
+<h2 id="rules">What arithmetic is allowed on pointers</h2>
+<p>A pointer holds an address, so only a few operations make sense: <b>increment/decrement</b> (<code>p++</code>, <code>p--</code>), <b>adding or subtracting an integer</b> (<code>p + k</code>, <code>p - k</code>), <b>subtracting two pointers</b> of the same type, and <b>comparing</b> pointers (<code>p &lt; q</code>, <code>p == q</code>). Adding two pointers, or multiplying them, is not allowed.</p>
+<p>The key rule: the integer is <b>scaled by the size of the pointed-to type</b>. If <code>p</code> is an <code>int *</code> holding 1000, then <code>p + 1</code> is 1004, because an <code>int</code> takes 4 bytes. For a <code>char *</code> it would be 1001, for a <code>double *</code> 1008.</p>
+
+<h2 id="viz">See the scaling</h2>
+<div class="widget" id="pa">
+<div class="row"><span class="lbl">Pointer type</span><span id="patypes"></span><label class="lbl" for="pak">k =</label><input id="pak" type="number" class="field mono" value="3" style="width:70px"></div>
+<div class="row"><button class="btn sm" data-op="inc">p++</button><button class="btn sm" data-op="dec">p--</button><button class="btn sm" data-op="add">p = p + k</button><button class="btn sm" data-op="sub">p = p - k</button><button class="btn sm" data-op="q">q = p</button><button class="btn sm" data-op="reset">reset p to 1000</button></div>
+<div style="overflow-x:auto"><svg id="pasvg" style="display:block"></svg></div>
+<p id="pamsg" class="mono" style="font-size:16px;margin:4px 0 0"></p>
+<p id="padiff" style="margin:4px 0 0"></p>
+</div>
+<div class="grid2">
+<div class="tv" data-tr="t11-cinc"></div><script type="application/json" id="tr-t11-cinc">{"title":"char pointer: ++ adds 1 byte","code":"#include <stdio.h>\nint main()\n{\n    char c = 'a';\n    char *r = &c;\n    printf(\"r   = %p\\n\", (void *)r);\n    r++;\n    printf(\"r++ = %p   (+1 byte)\\n\", (void *)r);\n    r--;\n    printf(\"r-- = %p   (back again)\\n\", (void *)r);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["c","char",0,0],["r","char *",0,1]]]]},{"l":5,"f":[["main",5,[["c","char",0,2],["r","char *",0,1]]]]},{"l":6,"f":[["main",6,[["c","char",0,2],["r","char *",0,3]]]]},{"l":7,"f":[["main",7,[["c","char",0,2],["r","char *",0,3]]]],"d":[["o","r   = 0x7fffffff6227\n"]]},{"l":8,"f":[["main",8,[["c","char",0,2],["r","char *",0,4]]]]},{"l":9,"f":[["main",9,[["c","char",0,2],["r","char *",0,4]]]],"d":[["o","r++ = 0x7fffffff6228   (+1 byte)\n"]]},{"l":10,"f":[["main",10,[["c","char",0,2],["r","char *",0,3]]]]},{"l":11,"f":[["main",11,[["c","char",0,2],["r","char *",0,3]]]],"d":[["o","r-- = 0x7fffffff6227   (back again)\n"]]},{"l":12,"f":[["main",12,[["c","char",0,2],["r","char *",0,3]]]]}],"V":[{"k":"c","v":0,"a":140737488314919},{"k":"p","v":140737488315224,"tt":"char","ts":1,"a":140737488314920},{"k":"c","v":97,"a":140737488314919},{"k":"p","v":140737488314919,"tt":"char","ts":1,"a":140737488314920,"to":"0:c"},{"k":"p","v":140737488314920,"tt":"char","ts":1,"a":140737488314920,"to":"0:r"}]},"out":"r   = 0x7ffd7fc79687\nr++ = 0x7ffd7fc79688   (+1 byte)\nr-- = 0x7ffd7fc79687   (back again)\n","trunc":false}]}</script>
+<div class="tv" data-tr="t11-iinc"></div><script type="application/json" id="tr-t11-iinc">{"title":"int pointer: ++ adds 4 bytes","code":"#include <stdio.h>\nint main()\n{\n    int a = 22;\n    int *p = &a;\n    printf(\"p   = %p\\n\", (void *)p);\n    p++;\n    printf(\"p++ = %p   (+4 bytes)\\n\", (void *)p);\n    p--;\n    printf(\"p-- = %p   (back again)\\n\", (void *)p);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int",0,0],["p","int *",0,1]]]]},{"l":5,"f":[["main",5,[["a","int",0,2],["p","int *",0,1]]]]},{"l":6,"f":[["main",6,[["a","int",0,2],["p","int *",0,3]]]]},{"l":7,"f":[["main",7,[["a","int",0,2],["p","int *",0,3]]]],"d":[["o","p   = 0x7fffffff6224\n"]]},{"l":8,"f":[["main",8,[["a","int",0,2],["p","int *",0,4]]]]},{"l":9,"f":[["main",9,[["a","int",0,2],["p","int *",0,4]]]],"d":[["o","p++ = 0x7fffffff6228   (+4 bytes)\n"]]},{"l":10,"f":[["main",10,[["a","int",0,2],["p","int *",0,3]]]]},{"l":11,"f":[["main",11,[["a","int",0,2],["p","int *",0,3]]]],"d":[["o","p-- = 0x7fffffff6224   (back again)\n"]]},{"l":12,"f":[["main",12,[["a","int",0,2],["p","int *",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314916},{"k":"p","v":140737488315224,"tt":"int","ts":4,"a":140737488314920},{"k":"i","v":22,"a":140737488314916},{"k":"p","v":140737488314916,"tt":"int","ts":4,"a":140737488314920,"to":"0:a"},{"k":"p","v":140737488314920,"tt":"int","ts":4,"a":140737488314920,"to":"0:p"}]},"out":"p   = 0x7ffd11c1bd74\np++ = 0x7ffd11c1bd78   (+4 bytes)\np-- = 0x7ffd11c1bd74   (back again)\n","trunc":false}]}</script>
+</div>
+<div class="note"><b>Two notes on the slides' examples.</b> They print pointers with <code>%u</code>; use <code>%p</code>, since a 64-bit address does not fit in an <code>unsigned int</code>. The addition example prints <code>ptr2</code> before it has been given any value, so it shows a garbage address.</div>
+
+<h2 id="subtract">Subtracting two pointers</h2>
+<p><code>q - p</code> gives the number of <b>elements</b> between them, not bytes: the byte difference divided by the element size. It is meaningful only when both point into the same array.</p>
+<div class="tv" data-tr="t11-psub"></div><script type="application/json" id="tr-t11-psub">{"title":"Pointer subtraction inside one array","code":"#include <stdio.h>\nint main()\n{\n    int arr[5] = {10, 20, 30, 40, 50};\n    int *ptr1 = &arr[1];\n    int *ptr2 = &arr[4];\n    int gap = ptr2 - ptr1;\n    printf(\"ptr1 = %p, ptr2 = %p\\n\", (void *)ptr1, (void *)ptr2);\n    printf(\"ptr2 - ptr1 = %d elements (%d bytes apart)\\n\", gap, (int)((char *)ptr2 - (char *)ptr1));\n    if (ptr1 < ptr2)\n        printf(\"ptr1 comes before ptr2 in memory\\n\");\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["arr","int [5]",0,0],["ptr1","int *",0,1],["ptr2","int *",0,2],["gap","int",0,3]]]]},{"l":5,"f":[["main",5,[["arr","int [5]",0,4],["ptr1","int *",0,1],["ptr2","int *",0,2],["gap","int",0,3]]]]},{"l":6,"f":[["main",6,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,2],["gap","int",0,3]]]]},{"l":7,"f":[["main",7,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,3]]]]},{"l":8,"f":[["main",8,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,7]]]]},{"l":9,"f":[["main",9,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,7]]]],"d":[["o","ptr1 = 0x7fffffff6204, ptr2 = 0x7fffffff6210\n"]]},{"l":10,"f":[["main",10,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,7]]]],"d":[["o","ptr2 - ptr1 = 3 elements (12 bytes apart)\n"]]},{"l":11,"f":[["main",11,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,7]]]]},{"l":12,"f":[["main",12,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,7]]]],"d":[["o","ptr1 comes before ptr2 in memory\n"]]},{"l":13,"f":[["main",13,[["arr","int [5]",0,4],["ptr1","int *",0,5],["ptr2","int *",0,6],["gap","int",0,7]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0}],"es":4,"a":140737488314880,"sz":20},{"k":"p","v":140737488315224,"tt":"int","ts":4,"a":140737488314920},{"k":"p","v":140737352062400,"tt":"int","ts":4,"a":140737488314912},{"k":"i","v":32767,"a":140737488314908},{"k":"a","it":[{"k":"i","v":10},{"k":"i","v":20},{"k":"i","v":30},{"k":"i","v":40},{"k":"i","v":50}],"es":4,"a":140737488314880,"sz":20},{"k":"p","v":140737488314884,"tt":"int","ts":4,"a":140737488314920,"to":"0:arr[1]"},{"k":"p","v":140737488314896,"tt":"int","ts":4,"a":140737488314912,"to":"0:arr[4]"},{"k":"i","v":3,"a":140737488314908}]},"out":"ptr1 = 0x7fffe629e6e4, ptr2 = 0x7fffe629e6f0\nptr2 - ptr1 = 3 elements (12 bytes apart)\nptr1 comes before ptr2 in memory\n","trunc":false}]}</script>
+<p class="lbl">The slide subtracts pointers to two separate variables, <code>N</code> and <code>x</code>. That compiles, but C defines the result only within one array; the "1" it prints depends on how the compiler happened to place the variables.</p>
+
+<h2 id="arrays">Arrays and pointers</h2>
+<p>An array name used in an expression turns into the address of its first element. So after <code>char str[5] = {'H','E','L','L','O'};</code> and <code>char *ptr = &amp;str[0];</code>, printing <code>ptr</code> and <code>str</code> gives the same address. Because of the scaling rule, <code>str[i]</code> is exactly <code>*(str + i)</code>: base address plus i elements.</p>
+<div class="widget" id="eq">
+<div class="row"><span class="lbl">Array</span><button class="chip on" data-arr="c">char str[6] = "HELLO";</button><button class="chip" data-arr="i">int A[3] = {3, 1, 8};</button><label class="lbl" for="eqi">index i</label><input id="eqi" type="range" min="0" max="5" value="2" style="accent-color:var(--accent)"><span id="eqiv" class="mono">2</span></div>
+<div style="overflow-x:auto"><div id="eqcells" style="display:flex;margin:10px 0;min-width:max-content"></div></div>
+<p id="eqmsg" class="mono" style="font-size:16px;margin:0"></p>
+</div>
+<div class="note"><b>Array name versus pointer variable.</b> The slides describe the array name as a pointer that holds the start address. It behaves like one in expressions, but it is not a variable: <code>str = str + 1;</code> is an error, while <code>ptr = ptr + 1;</code> is fine. Also <code>sizeof(str)</code> is the whole array (6 bytes) while <code>sizeof(ptr)</code> is the size of an address (8 bytes).</div>
+<div class="tv" data-tr="t11-strptr"></div><script type="application/json" id="tr-t11-strptr">{"title":"A pointer into a string","code":"#include <stdio.h>\nint main(void)\n{\n    char str[6] = \"HELLO\";\n    char *ptr = str;          /* same as &str[0] */\n    ptr[2] = 'l';             /* same as str[2] = 'l' */\n    ptr = ptr + 2;            /* now points to str[2] */\n    printf(\"%c %c\\n\", *ptr, ptr[1]);\n    printf(\"%s\\n\", str);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["str","char [6]",0,0],["ptr","char *",0,1]]]]},{"l":5,"f":[["main",5,[["str","char [6]",0,2],["ptr","char *",0,1]]]]},{"l":6,"f":[["main",6,[["str","char [6]",0,2],["ptr","char *",0,3]]]]},{"l":7,"f":[["main",7,[["str","char [6]",0,4],["ptr","char *",0,3]]]]},{"l":8,"f":[["main",8,[["str","char [6]",0,4],["ptr","char *",0,5]]]]},{"l":9,"f":[["main",9,[["str","char [6]",0,4],["ptr","char *",0,5]]]],"d":[["o","l L\n"]]},{"l":10,"f":[["main",10,[["str","char [6]",0,4],["ptr","char *",0,5]]]],"d":[["o","HElLO\n"]]},{"l":11,"f":[["main",11,[["str","char [6]",0,4],["ptr","char *",0,5]]]]}],"V":[{"k":"a","it":[{"k":"c","v":-32},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"a":140737488314914,"sz":6},{"k":"p","v":140737488315224,"tt":"char","ts":1,"a":140737488314920},{"k":"a","it":[{"k":"c","v":72},{"k":"c","v":69},{"k":"c","v":76},{"k":"c","v":76},{"k":"c","v":79},{"k":"c","v":0}],"es":1,"a":140737488314914,"sz":6},{"k":"p","v":140737488314914,"tt":"char","ts":1,"a":140737488314920,"to":"0:str[0]"},{"k":"a","it":[{"k":"c","v":72},{"k":"c","v":69},{"k":"c","v":108},{"k":"c","v":76},{"k":"c","v":79},{"k":"c","v":0}],"es":1,"a":140737488314914,"sz":6},{"k":"p","v":140737488314916,"tt":"char","ts":1,"a":140737488314920,"to":"0:str[2]"}]},"out":"l L\nHElLO\n","trunc":false}]}</script>
+<div class="tv" data-tr="t11-walk"></div><script type="application/json" id="tr-t11-walk">{"title":"Walking an int array with a pointer","code":"#include <stdio.h>\nint main(void)\n{\n    int A[3] = {3, 1, 8};\n    int *ptr = A;\n    int i;\n    for (i = 0; i < 3; i++)\n    {\n        printf(\"A[%d] = %d, *(ptr + %d) = %d\\n\", i, A[i], i, *(ptr + i));\n    }\n    ptr = ptr + 2;\n    printf(\"after ptr = ptr + 2, *ptr = %d\\n\", *ptr);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["A","int [3]",0,0],["ptr","int *",0,1],["i","int",0,2]]]]},{"l":5,"f":[["main",5,[["A","int [3]",0,3],["ptr","int *",0,1],["i","int",0,2]]]]},{"l":7,"f":[["main",7,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,2]]]]},{"l":9,"f":[["main",9,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,5]]]]},{"l":7,"f":[["main",7,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,5]]]],"d":[["o","A[0] = 3, *(ptr + 0) = 3\n"]]},{"l":9,"f":[["main",9,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,6]]]]},{"l":7,"f":[["main",7,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,6]]]],"d":[["o","A[1] = 1, *(ptr + 1) = 1\n"]]},{"l":9,"f":[["main",9,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,7]]]]},{"l":7,"f":[["main",7,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,7]]]],"d":[["o","A[2] = 8, *(ptr + 2) = 8\n"]]},{"l":11,"f":[["main",11,[["A","int [3]",0,3],["ptr","int *",0,4],["i","int",0,8]]]]},{"l":12,"f":[["main",12,[["A","int [3]",0,3],["ptr","int *",0,9],["i","int",0,8]]]]},{"l":13,"f":[["main",13,[["A","int [3]",0,3],["ptr","int *",0,9],["i","int",0,8]]]],"d":[["o","after ptr = ptr + 2, *ptr = 8\n"]]},{"l":14,"f":[["main",14,[["A","int [3]",0,3],["ptr","int *",0,9],["i","int",0,8]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":-134325520},{"k":"i","v":32767}],"es":4,"a":140737488314900,"sz":12},{"k":"p","v":140737352062400,"tt":"int","ts":4,"a":140737488314912},{"k":"i","v":32767,"a":140737488314924},{"k":"a","it":[{"k":"i","v":3},{"k":"i","v":1},{"k":"i","v":8}],"es":4,"a":140737488314900,"sz":12},{"k":"p","v":140737488314900,"tt":"int","ts":4,"a":140737488314912,"to":"0:A[0]"},{"k":"i","v":0,"a":140737488314924},{"k":"i","v":1,"a":140737488314924},{"k":"i","v":2,"a":140737488314924},{"k":"i","v":3,"a":140737488314924},{"k":"p","v":140737488314908,"tt":"int","ts":4,"a":140737488314912,"to":"0:A[2]"}]},"out":"A[0] = 3, *(ptr + 0) = 3\nA[1] = 1, *(ptr + 1) = 1\nA[2] = 8, *(ptr + 2) = 8\nafter ptr = ptr + 2, *ptr = 8\n","trunc":false}]}</script>
+
+<h2 id="videos">Video summaries from the slides</h2>
+<ul><li>Pointers and arrays: <a href="https://www.youtube.com/watch?v=sHcnvZA2u88" target="_blank" rel="noopener">youtube.com/watch?v=sHcnvZA2u88</a></li></ul>
+
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const T={'char':1,'int':4,'float':4,'double':8};let ty='int',p=1000,q=null;
+$('patypes').innerHTML=Object.keys(T).map(t=>'<button class="chip'+(t===ty?' on':'')+'" data-t="'+t+'">'+t+' * ('+T[t]+' B)</button>').join(' ');
+$('patypes').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{ty=b.dataset.t;p=1000;q=null;$('patypes').querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));$('pamsg').textContent='p = 1000';draw()});
+document.querySelectorAll('[data-op]').forEach(b=>b.onclick=()=>{const s=T[ty],k=parseInt($('pak').value)||0;const old=p;let msg;
+if(b.dataset.op==='inc'){p+=s;msg='p++ : '+old+' + 1 × sizeof('+ty+') = '+old+' + '+s+' = '+p}
+else if(b.dataset.op==='dec'){p-=s;msg='p-- : '+old+' − 1 × '+s+' = '+p}
+else if(b.dataset.op==='add'){p+=k*s;msg='p + '+k+' : '+old+' + '+k+' × '+s+' = '+p}
+else if(b.dataset.op==='sub'){p-=k*s;msg='p − '+k+' : '+old+' − '+k+' × '+s+' = '+p}
+else if(b.dataset.op==='q'){q=p;msg='q = p = '+p+'. Now move p and compare.'}
+else{p=1000;q=null;msg='p = 1000'}$('pamsg').textContent=msg;draw()});
+function draw(){const s=T[ty];const lo=Math.min(976,p-8,q??p),hi=Math.max(1032,p+s+8,(q??p)+s);const bytes=hi-lo;const BW=Math.max(9,Math.min(16,900/bytes));
+const W=bytes*BW+40,H=118;let svg='';
+for(let a=lo;a<hi;a++){const x=20+(a-lo)*BW;svg+='<rect x="'+x+'" y="40" width="'+BW+'" height="26" fill="#ffffff" stroke="#d9dee7"/>';if(a%s===0){const elem=(a-1000)/s;svg+='<rect x="'+x+'" y="40" width="'+(s*BW)+'" height="26" fill="'+(a===p?'#fff8b8':a===q?'#e6f4ea':'#f5f7fa')+'" stroke="#1f3a68" stroke-width="1.4" rx="3"/>';svg+='<text x="'+(x+s*BW/2)+'" y="58" text-anchor="middle" font-size="11" font-family="IBM Plex Mono, monospace" fill="#5b6779">'+(s>=4?'['+elem+']':'')+'</text>';svg+='<text x="'+x+'" y="82" font-size="10" font-family="IBM Plex Mono, monospace" fill="#5b6779" transform="rotate(35 '+x+' 82)">'+a+'</text>'}}
+const xp=20+(p-lo)*BW;svg+='<path d="M'+xp+',10 L'+xp+',38" stroke="#c8640f" stroke-width="2.5" marker-end="url(#pam)"/><text x="'+(xp+4)+'" y="16" font-size="13" font-weight="700" font-family="IBM Plex Mono, monospace" fill="#c8640f">p = '+p+'</text>';
+if(q!==null){const xq=20+(q-lo)*BW;svg+='<path d="M'+xq+',10 L'+xq+',38" stroke="#2e7d4f" stroke-width="2.5" marker-end="url(#pam2)"/><text x="'+(xq+4)+'" y="'+(q===p?30:16)+'" font-size="13" font-weight="700" font-family="IBM Plex Mono, monospace" fill="#2e7d4f">q = '+q+'</text>'}
+svg='<defs><marker id="pam" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,0L5,10z" fill="#c8640f" transform="rotate(-90 5 5)"/></marker><marker id="pam2" viewBox="0 0 10 10" refX="5" refY="9" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,0L5,10z" fill="#2e7d4f" transform="rotate(-90 5 5)"/></marker></defs>'+svg;
+const e=$('pasvg');e.setAttribute('viewBox','0 0 '+W+' '+H);e.setAttribute('width',W);e.setAttribute('height',H);e.innerHTML=svg;
+$('padiff').innerHTML=q===null?'<span class="lbl">Each outlined box is one '+ty+' ('+s+' byte'+(s>1?'s':'')+'); thin cells are bytes. Press <b>q = p</b>, move p, and the difference appears here.</span>':'p − q = ('+p+' − '+q+') / '+s+' = <b>'+((p-q)/s)+'</b> element'+(Math.abs((p-q)/s)===1?'':'s')+' · p '+(p<q?'&lt;':p>q?'&gt;':'==')+' q'}
+draw();
+/* equivalence */
+let arr='c';
+function eq(){const isC=arr==='c';const vals=isC?['H','E','L','L','O','\\0']:[3,1,8];const s=isC?1:4;const base=isC?0x180A96F3:0x180A96F3;$('eqi').max=vals.length-1;let i=Math.min(+$('eqi').value,vals.length-1);$('eqi').value=i;$('eqiv').textContent=i;const nm=isC?'str':'A';
+$('eqcells').innerHTML=vals.map((v,k)=>'<div class="cellw"><div class="cell'+(v==='\\0'?' nul':'')+'" style="min-width:'+(isC?44:80)+'px;height:40px;'+(k===i?'background:var(--accent);':'')+'">'+(isC&&v!=='\\0'?"'"+v+"'":v)+'</div><span class="ci">'+nm+'['+k+']</span><span class="addr">0x'+(base+k*s).toString(16).toUpperCase()+'</span></div>').join('');
+$('eqmsg').innerHTML=nm+'['+i+'] ≡ *('+nm+' + '+i+') → address 0x'+base.toString(16).toUpperCase()+' + '+i+' × '+s+' = 0x'+(base+i*s).toString(16).toUpperCase()+' → value '+(isC?(vals[i]==='\\0'?"'\\0'":"'"+vals[i]+"'"):vals[i])}
+document.querySelectorAll('[data-arr]').forEach(b=>b.onclick=()=>{arr=b.dataset.arr;document.querySelectorAll('[data-arr]').forEach(x=>x.classList.toggle('on',x===b));eq()});$('eqi').oninput=eq;eq();
+})();
+</script>
+<h2 id="exercises">Exercises with solutions</h2><p>7 exercises on this lecture: 2 easy, 4 medium, 1 hard. Each is tagged with its course outcome (CO) and Bloom's cognitive level (BCL). Try it on paper or in Code::Blocks first, then open the solution and run it line by line. Every solution and every output quoted here was checked by compiling and running it with GCC.</p><div class="row" id="exfilter"><span class="lbl">Show:</span><button class="chip on" data-f="all">all</button><button class="chip" data-f="Easy">easy</button><button class="chip" data-f="Medium">medium</button><button class="chip" data-f="Hard">hard</button></div><section class="exq" id="ex1" data-level="Easy"><h3><span class="pnum">E1</span>*(p + 3) versus *p + 3</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>What is printed?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int *p = a;
+    printf(&quot;%d %d %d\n&quot;, *p, *(p + 3), *p + 3);
+    p += 2;
+    printf(&quot;%d %d\n&quot;, *p, p[1]);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>*</code> binds tighter than <code>+</code>: <code>*p + 3</code> is <code>(*p) + 3</code>. <code>p[1]</code> means <code>*(p + 1)</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><pre class="term">10 40 13
+30 40</pre><p><code>*(p + 3)</code> is the element three places on (40); <code>*p + 3</code> adds 3 to the value 10. After <code>p += 2</code>, p points to a[2] (30), and <code>p[1]</code> is a[3] (40).</p><div class="tv" data-tr="t11-e1"></div><script type="application/json" id="tr-t11-e1">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int a[5] = {10, 20, 30, 40, 50};\n    int *p = a;\n    printf(\"%d %d %d\\n\", *p, *(p + 3), *p + 3);\n    p += 2;\n    printf(\"%d %d\\n\", *p, p[1]);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int [5]",0,0],["p","int *",0,1]]]]},{"l":5,"f":[["main",5,[["a","int [5]",0,2],["p","int *",0,1]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,2],["p","int *",0,3]]]]},{"l":7,"f":[["main",7,[["a","int [5]",0,2],["p","int *",0,3]]]],"d":[["o","10 40 13\n"]]},{"l":8,"f":[["main",8,[["a","int [5]",0,2],["p","int *",0,4]]]]},{"l":9,"f":[["main",9,[["a","int [5]",0,2],["p","int *",0,4]]]],"d":[["o","30 40\n"]]},{"l":10,"f":[["main",10,[["a","int [5]",0,2],["p","int *",0,4]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":-134325520},{"k":"i","v":32767},{"k":"i","v":-136292928}],"es":4,"a":140737488314912,"sz":20},{"k":"p","v":140737488315240,"tt":"int","ts":4,"a":140737488314936},{"k":"a","it":[{"k":"i","v":10},{"k":"i","v":20},{"k":"i","v":30},{"k":"i","v":40},{"k":"i","v":50}],"es":4,"a":140737488314912,"sz":20},{"k":"p","v":140737488314912,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[0]"},{"k":"p","v":140737488314920,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[2]"}]},"out":"10 40 13\n30 40\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex2" data-level="Medium"><h3><span class="pnum">E2</span>Pointer difference and writing through a pointer</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>What is printed?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int a[] = {5, 1, 7, 3};
+    int *p = a, *q = &amp;a[3];
+    printf(&quot;%d %d\n&quot;, (int)(q - p), *q - *p);
+    p++;
+    *p = *p * 10;
+    printf(&quot;%d %d\n&quot;, a[1], *(a + 1) + 1);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>q - p</code> counts elements, not bytes. After <code>p++</code>, writing <code>*p</code> changes <code>a[1]</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><pre class="term">3 -2
+10 11</pre><p>q points three elements after p, so <code>q - p</code> is 3; <code>*q - *p</code> is 3 − 5 = −2. Then p moves to a[1] and multiplies it by 10, so a[1] is 10 and <code>*(a + 1) + 1</code> is 11.</p><div class="tv" data-tr="t11-e2"></div><script type="application/json" id="tr-t11-e2">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int a[] = {5, 1, 7, 3};\n    int *p = a, *q = &a[3];\n    printf(\"%d %d\\n\", (int)(q - p), *q - *p);\n    p++;\n    *p = *p * 10;\n    printf(\"%d %d\\n\", a[1], *(a + 1) + 1);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int [4]",0,0],["p","int *",0,1],["q","int *",0,2]]]]},{"l":5,"f":[["main",5,[["a","int [4]",0,3],["p","int *",0,1],["q","int *",0,2]]]]},{"l":6,"f":[["main",6,[["a","int [4]",0,3],["p","int *",0,4],["q","int *",0,5]]]]},{"l":7,"f":[["main",7,[["a","int [4]",0,3],["p","int *",0,4],["q","int *",0,5]]]],"d":[["o","3 -2\n"]]},{"l":8,"f":[["main",8,[["a","int [4]",0,3],["p","int *",0,6],["q","int *",0,5]]]]},{"l":9,"f":[["main",9,[["a","int [4]",0,7],["p","int *",0,6],["q","int *",0,5]]]]},{"l":10,"f":[["main",10,[["a","int [4]",0,7],["p","int *",0,6],["q","int *",0,5]]]],"d":[["o","10 11\n"]]},{"l":11,"f":[["main",11,[["a","int [4]",0,7],["p","int *",0,6],["q","int *",0,5]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":-134325520},{"k":"i","v":32767}],"es":4,"a":140737488314912,"sz":16},{"k":"p","v":140737488315240,"tt":"int","ts":4,"a":140737488314936},{"k":"p","v":140737352062400,"tt":"int","ts":4,"a":140737488314928},{"k":"a","it":[{"k":"i","v":5},{"k":"i","v":1},{"k":"i","v":7},{"k":"i","v":3}],"es":4,"a":140737488314912,"sz":16},{"k":"p","v":140737488314912,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[0]"},{"k":"p","v":140737488314924,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[3]"},{"k":"p","v":140737488314916,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[1]"},{"k":"a","it":[{"k":"i","v":5},{"k":"i","v":10},{"k":"i","v":7},{"k":"i","v":3}],"es":4,"a":140737488314912,"sz":16}]},"out":"3 -2\n10 11\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex3" data-level="Medium"><h3><span class="pnum">E3</span>A char pointer into a word</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>What is printed?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    char s[] = &quot;POINTER&quot;;
+    char *p = s + 2;
+    printf(&quot;%c %c %s\n&quot;, *p, *(p + 3), p + 4);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p>Write the indexes under P O I N T E R. <code>%s</code> with a pointer prints from that position to <code>'\0'</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>I E R</code>. p points to s[2] ('I'); <code>*(p + 3)</code> is s[5] ('E'); <code>p + 4</code> is the address of s[6], so <code>%s</code> prints the rest of the string, "R".</p><div class="tv" data-tr="t11-e3"></div><script type="application/json" id="tr-t11-e3">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    char s[] = \"POINTER\";\n    char *p = s + 2;\n    printf(\"%c %c %s\\n\", *p, *(p + 3), p + 4);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["s","char [8]",0,0],["p","char *",0,1]]]]},{"l":5,"f":[["main",5,[["s","char [8]",0,2],["p","char *",0,1]]]]},{"l":6,"f":[["main",6,[["s","char [8]",0,2],["p","char *",0,3]]]]},{"l":7,"f":[["main",7,[["s","char [8]",0,2],["p","char *",0,3]]]],"d":[["o","I E R\n"]]},{"l":8,"f":[["main",8,[["s","char [8]",0,2],["p","char *",0,3]]]]}],"V":[{"k":"a","it":[{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"a":140737488314928,"sz":8},{"k":"p","v":140737488315240,"tt":"char","ts":1,"a":140737488314936},{"k":"a","it":[{"k":"c","v":80},{"k":"c","v":79},{"k":"c","v":73},{"k":"c","v":78},{"k":"c","v":84},{"k":"c","v":69},{"k":"c","v":82},{"k":"c","v":0}],"es":1,"a":140737488314928,"sz":8},{"k":"p","v":140737488314930,"tt":"char","ts":1,"a":140737488314936,"to":"0:s[2]"}]},"out":"I E R\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex4" data-level="Easy"><h3><span class="pnum">E4</span>Sum of an array without square brackets</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Add up the elements of an array using only a pointer: no <code>[ ]</code> after the declaration.</p><details class="hint"><summary>Hint</summary><p>Start with <code>p = a</code>, add <code>*p</code>, then <code>p++</code>, until p reaches <code>a + n</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t11-e4"></div><script type="application/json" id="tr-t11-e4">{"title":"Solution","code":"#include <stdio.h>\nint main()\n{\n    int a[5] = {10, 20, 30, 40, 50};\n    int *p, sum = 0;\n    for (p = a; p < a + 5; p++)\n        sum += *p;\n    printf(\"Sum = %d\\n\", sum);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int [5]",0,0],["p","int *",0,1],["sum","int",0,2]]]]},{"l":5,"f":[["main",5,[["a","int [5]",0,3],["p","int *",0,1],["sum","int",0,2]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,3],["p","int *",0,1],["sum","int",0,4]]]]},{"l":7,"f":[["main",7,[["a","int [5]",0,3],["p","int *",0,5],["sum","int",0,4]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,3],["p","int *",0,5],["sum","int",0,6]]]]},{"l":7,"f":[["main",7,[["a","int [5]",0,3],["p","int *",0,7],["sum","int",0,6]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,3],["p","int *",0,7],["sum","int",0,8]]]]},{"l":7,"f":[["main",7,[["a","int [5]",0,3],["p","int *",0,9],["sum","int",0,8]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,3],["p","int *",0,9],["sum","int",0,10]]]]},{"l":7,"f":[["main",7,[["a","int [5]",0,3],["p","int *",0,11],["sum","int",0,10]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,3],["p","int *",0,11],["sum","int",0,12]]]]},{"l":7,"f":[["main",7,[["a","int [5]",0,3],["p","int *",0,13],["sum","int",0,12]]]]},{"l":6,"f":[["main",6,[["a","int [5]",0,3],["p","int *",0,13],["sum","int",0,14]]]]},{"l":8,"f":[["main",8,[["a","int [5]",0,3],["p","int *",0,15],["sum","int",0,14]]]]},{"l":9,"f":[["main",9,[["a","int [5]",0,3],["p","int *",0,15],["sum","int",0,14]]]],"d":[["o","Sum = 150\n"]]},{"l":10,"f":[["main",10,[["a","int [5]",0,3],["p","int *",0,15],["sum","int",0,14]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":-134325520},{"k":"i","v":32767},{"k":"i","v":-136292928}],"es":4,"a":140737488314912,"sz":20},{"k":"p","v":140737488315240,"tt":"int","ts":4,"a":140737488314936},{"k":"i","v":32767,"a":140737488314932},{"k":"a","it":[{"k":"i","v":10},{"k":"i","v":20},{"k":"i","v":30},{"k":"i","v":40},{"k":"i","v":50}],"es":4,"a":140737488314912,"sz":20},{"k":"i","v":0,"a":140737488314932},{"k":"p","v":140737488314912,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[0]"},{"k":"i","v":10,"a":140737488314932},{"k":"p","v":140737488314916,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[1]"},{"k":"i","v":30,"a":140737488314932},{"k":"p","v":140737488314920,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[2]"},{"k":"i","v":60,"a":140737488314932},{"k":"p","v":140737488314924,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[3]"},{"k":"i","v":100,"a":140737488314932},{"k":"p","v":140737488314928,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[4]"},{"k":"i","v":150,"a":140737488314932},{"k":"p","v":140737488314932,"tt":"int","ts":4,"a":140737488314936,"to":"0:sum"}]},"out":"Sum = 150\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex5" data-level="Medium"><h3><span class="pnum">E5</span>Reverse an array with two pointers</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Reverse an array in place using two pointers, one starting at the first element and one at the last.</p><details class="hint"><summary>Hint</summary><p>While <code>left &lt; right</code>: swap <code>*left</code> and <code>*right</code>, then move left forward and right back. Comparing pointers is allowed because both point into the same array.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t11-e5"></div><script type="application/json" id="tr-t11-e5">{"title":"Solution","code":"#include <stdio.h>\nint main()\n{\n    int a[6] = {1, 2, 3, 4, 5, 6};\n    int *left = a, *right = a + 5, t, i;\n    while (left < right)\n    {\n        t = *left;\n        *left = *right;\n        *right = t;\n        left++;\n        right--;\n    }\n    for (i = 0; i < 6; i++)\n        printf(\"%d \", a[i]);\n    printf(\"\\n\");\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int [6]",0,0],["left","int *",0,1],["right","int *",0,2],["t","int",0,3],["i","int",0,4]]]]},{"l":5,"f":[["main",5,[["a","int [6]",0,5],["left","int *",0,1],["right","int *",0,2],["t","int",0,3],["i","int",0,4]]]]},{"l":6,"f":[["main",6,[["a","int [6]",0,5],["left","int *",0,6],["right","int *",0,7],["t","int",0,3],["i","int",0,4]]]]},{"l":8,"f":[["main",8,[["a","int [6]",0,5],["left","int *",0,6],["right","int *",0,7],["t","int",0,3],["i","int",0,4]]]]},{"l":9,"f":[["main",9,[["a","int [6]",0,5],["left","int *",0,6],["right","int *",0,7],["t","int",0,8],["i","int",0,4]]]]},{"l":10,"f":[["main",10,[["a","int [6]",0,9],["left","int *",0,6],["right","int *",0,7],["t","int",0,8],["i","int",0,4]]]]},{"l":11,"f":[["main",11,[["a","int [6]",0,10],["left","int *",0,6],["right","int *",0,7],["t","int",0,8],["i","int",0,4]]]]},{"l":12,"f":[["main",12,[["a","int [6]",0,10],["left","int *",0,11],["right","int *",0,7],["t","int",0,8],["i","int",0,4]]]]},{"l":6,"f":[["main",6,[["a","int [6]",0,10],["left","int *",0,11],["right","int *",0,12],["t","int",0,8],["i","int",0,4]]]]},{"l":8,"f":[["main",8,[["a","int [6]",0,10],["left","int *",0,11],["right","int *",0,12],["t","int",0,8],["i","int",0,4]]]]},{"l":9,"f":[["main",9,[["a","int [6]",0,10],["left","int *",0,11],["right","int *",0,12],["t","int",0,13],["i","int",0,4]]]]},{"l":10,"f":[["main",10,[["a","int [6]",0,14],["left","int *",0,11],["right","int *",0,12],["t","int",0,13],["i","int",0,4]]]]},{"l":11,"f":[["main",11,[["a","int [6]",0,15],["left","int *",0,11],["right","int *",0,12],["t","int",0,13],["i","int",0,4]]]]},{"l":12,"f":[["main",12,[["a","int [6]",0,15],["left","int *",0,16],["right","int *",0,12],["t","int",0,13],["i","int",0,4]]]]},{"l":6,"f":[["main",6,[["a","int [6]",0,15],["left","int *",0,16],["right","int *",0,17],["t","int",0,13],["i","int",0,4]]]]},{"l":8,"f":[["main",8,[["a","int [6]",0,15],["left","int *",0,16],["right","int *",0,17],["t","int",0,13],["i","int",0,4]]]]},{"l":9,"f":[["main",9,[["a","int [6]",0,15],["left","int *",0,16],["right","int *",0,17],["t","int",0,18],["i","int",0,4]]]]},{"l":10,"f":[["main",10,[["a","int [6]",0,19],["left","int *",0,16],["right","int *",0,17],["t","int",0,18],["i","int",0,4]]]]},{"l":11,"f":[["main",11,[["a","int [6]",0,20],["left","int *",0,16],["right","int *",0,17],["t","int",0,18],["i","int",0,4]]]]},{"l":12,"f":[["main",12,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,17],["t","int",0,18],["i","int",0,4]]]]},{"l":6,"f":[["main",6,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,4]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,4]]]]},{"l":15,"f":[["main",15,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,23]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,23]]]],"d":[["o","6 "]]},{"l":15,"f":[["main",15,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,24]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,24]]]],"d":[["o","5 "]]},{"l":15,"f":[["main",15,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,25]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,25]]]],"d":[["o","4 "]]},{"l":15,"f":[["main",15,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,26]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,26]]]],"d":[["o","3 "]]},{"l":15,"f":[["main",15,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,27]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,27]]]],"d":[["o","2 "]]},{"l":15,"f":[["main",15,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,28]]]]},{"l":14,"f":[["main",14,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,28]]]],"d":[["o","1 "]]},{"l":16,"f":[["main",16,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,29]]]]},{"l":17,"f":[["main",17,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,29]]]],"d":[["o","\n"]]},{"l":18,"f":[["main",18,[["a","int [6]",0,20],["left","int *",0,21],["right","int *",0,22],["t","int",0,18],["i","int",0,29]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":0}],"es":4,"a":140737488314896,"sz":24},{"k":"p","v":140737488315240,"tt":"int","ts":4,"a":140737488314936},{"k":"p","v":140737352062400,"tt":"int","ts":4,"a":140737488314928},{"k":"i","v":-134325520,"a":140737488314920},{"k":"i","v":32767,"a":140737488314924},{"k":"a","it":[{"k":"i","v":1},{"k":"i","v":2},{"k":"i","v":3},{"k":"i","v":4},{"k":"i","v":5},{"k":"i","v":6}],"es":4,"a":140737488314896,"sz":24},{"k":"p","v":140737488314896,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[0]"},{"k":"p","v":140737488314916,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[5]"},{"k":"i","v":1,"a":140737488314920},{"k":"a","it":[{"k":"i","v":6},{"k":"i","v":2},{"k":"i","v":3},{"k":"i","v":4},{"k":"i","v":5},{"k":"i","v":6}],"es":4,"a":140737488314896,"sz":24},{"k":"a","it":[{"k":"i","v":6},{"k":"i","v":2},{"k":"i","v":3},{"k":"i","v":4},{"k":"i","v":5},{"k":"i","v":1}],"es":4,"a":140737488314896,"sz":24},{"k":"p","v":140737488314900,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[1]"},{"k":"p","v":140737488314912,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[4]"},{"k":"i","v":2,"a":140737488314920},{"k":"a","it":[{"k":"i","v":6},{"k":"i","v":5},{"k":"i","v":3},{"k":"i","v":4},{"k":"i","v":5},{"k":"i","v":1}],"es":4,"a":140737488314896,"sz":24},{"k":"a","it":[{"k":"i","v":6},{"k":"i","v":5},{"k":"i","v":3},{"k":"i","v":4},{"k":"i","v":2},{"k":"i","v":1}],"es":4,"a":140737488314896,"sz":24},{"k":"p","v":140737488314904,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[2]"},{"k":"p","v":140737488314908,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[3]"},{"k":"i","v":3,"a":140737488314920},{"k":"a","it":[{"k":"i","v":6},{"k":"i","v":5},{"k":"i","v":4},{"k":"i","v":4},{"k":"i","v":2},{"k":"i","v":1}],"es":4,"a":140737488314896,"sz":24},{"k":"a","it":[{"k":"i","v":6},{"k":"i","v":5},{"k":"i","v":4},{"k":"i","v":3},{"k":"i","v":2},{"k":"i","v":1}],"es":4,"a":140737488314896,"sz":24},{"k":"p","v":140737488314908,"tt":"int","ts":4,"a":140737488314936,"to":"0:a[3]"},{"k":"p","v":140737488314904,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[2]"},{"k":"i","v":0,"a":140737488314924},{"k":"i","v":1,"a":140737488314924},{"k":"i","v":2,"a":140737488314924},{"k":"i","v":3,"a":140737488314924},{"k":"i","v":4,"a":140737488314924},{"k":"i","v":5,"a":140737488314924},{"k":"i","v":6,"a":140737488314924}]},"out":"6 5 4 3 2 1 \n","trunc":false}]}</script></div></details></section><section class="exq" id="ex6" data-level="Hard"><h3><span class="pnum">E6</span>Your own strlen and strcpy</h3><div class="extags"><span class="tag o">Hard</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Write <code>int myStrlen(char *s)</code> and <code>void myStrcpy(char *dest, char *src)</code> using pointers only, then test them.</p><details class="hint"><summary>Hint</summary><p><code>myStrlen</code>: move a pointer to the <code>'\0'</code> and return the pointer difference. <code>myStrcpy</code>: copy characters until you have copied the <code>'\0'</code> too.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t11-e6"></div><script type="application/json" id="tr-t11-e6">{"title":"Solution","code":"#include <stdio.h>\nint myStrlen(char *s)\n{\n    char *p = s;\n    while (*p != '\\0')\n        p++;\n    return p - s;\n}\nvoid myStrcpy(char *dest, char *src)\n{\n    while (*src != '\\0')\n    {\n        *dest = *src;\n        dest++;\n        src++;\n    }\n    *dest = '\\0';\n}\nint main()\n{\n    char city[] = \"Dhaka\";\n    char copy[20];\n    myStrcpy(copy, city);\n    printf(\"length of \\\"%s\\\" = %d, copy = %s\\n\", city, myStrlen(city), copy);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":21,"f":[["main",21,[["city","char [6]",0,0],["copy","char [20]",0,1]]]]},{"l":23,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,1]]]]},{"l":11,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,1]]],["myStrcpy",11,[["dest","char *",1,3],["src","char *",1,4]]]]},{"l":13,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,1]]],["myStrcpy",13,[["dest","char *",1,3],["src","char *",1,4]]]]},{"l":14,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,5]]],["myStrcpy",14,[["dest","char *",1,3],["src","char *",1,4]]]]},{"l":15,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,5]]],["myStrcpy",15,[["dest","char *",1,6],["src","char *",1,4]]]]},{"l":11,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,5]]],["myStrcpy",11,[["dest","char *",1,6],["src","char *",1,7]]]]},{"l":13,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,5]]],["myStrcpy",13,[["dest","char *",1,6],["src","char *",1,7]]]]},{"l":14,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,8]]],["myStrcpy",14,[["dest","char *",1,6],["src","char *",1,7]]]]},{"l":15,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,8]]],["myStrcpy",15,[["dest","char *",1,9],["src","char *",1,7]]]]},{"l":11,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,8]]],["myStrcpy",11,[["dest","char *",1,9],["src","char *",1,10]]]]},{"l":13,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,8]]],["myStrcpy",13,[["dest","char *",1,9],["src","char *",1,10]]]]},{"l":14,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,11]]],["myStrcpy",14,[["dest","char *",1,9],["src","char *",1,10]]]]},{"l":15,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,11]]],["myStrcpy",15,[["dest","char *",1,12],["src","char *",1,10]]]]},{"l":11,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,11]]],["myStrcpy",11,[["dest","char *",1,12],["src","char *",1,13]]]]},{"l":13,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,11]]],["myStrcpy",13,[["dest","char *",1,12],["src","char *",1,13]]]]},{"l":14,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,14]]],["myStrcpy",14,[["dest","char *",1,12],["src","char *",1,13]]]]},{"l":15,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,14]]],["myStrcpy",15,[["dest","char *",1,15],["src","char *",1,13]]]]},{"l":11,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,14]]],["myStrcpy",11,[["dest","char *",1,15],["src","char *",1,16]]]]},{"l":13,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,14]]],["myStrcpy",13,[["dest","char *",1,15],["src","char *",1,16]]]]},{"l":14,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrcpy",14,[["dest","char *",1,15],["src","char *",1,16]]]]},{"l":15,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrcpy",15,[["dest","char *",1,18],["src","char *",1,16]]]]},{"l":11,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrcpy",11,[["dest","char *",1,18],["src","char *",1,19]]]]},{"l":17,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrcpy",17,[["dest","char *",1,18],["src","char *",1,19]]]]},{"l":18,"f":[["main",23,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrcpy",18,[["dest","char *",1,18],["src","char *",1,19]]]]},{"l":24,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]]],"r":["myStrcpy",null]},{"l":4,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",4,[["s","char *",1,20],["p","char *",0,18]]]]},{"l":5,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",5,[["s","char *",1,20],["p","char *",0,21]]]]},{"l":6,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",6,[["s","char *",1,20],["p","char *",0,21]]]]},{"l":5,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",5,[["s","char *",1,20],["p","char *",0,22]]]]},{"l":6,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",6,[["s","char *",1,20],["p","char *",0,22]]]]},{"l":5,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",5,[["s","char *",1,20],["p","char *",0,23]]]]},{"l":6,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",6,[["s","char *",1,20],["p","char *",0,23]]]]},{"l":5,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",5,[["s","char *",1,20],["p","char *",0,24]]]]},{"l":6,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",6,[["s","char *",1,20],["p","char *",0,24]]]]},{"l":5,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",5,[["s","char *",1,20],["p","char *",0,25]]]]},{"l":6,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",6,[["s","char *",1,20],["p","char *",0,25]]]]},{"l":5,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",5,[["s","char *",1,20],["p","char *",0,26]]]]},{"l":7,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",7,[["s","char *",1,20],["p","char *",0,26]]]]},{"l":8,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]],["myStrlen",8,[["s","char *",1,20],["p","char *",0,26]]]]},{"l":24,"f":[["main",24,[["city","char [6]",0,2],["copy","char [20]",0,17]]]],"r":["myStrlen",{"k":"i","v":5}]},{"l":25,"f":[["main",25,[["city","char [6]",0,2],["copy","char [20]",0,17]]]],"d":[["o","length of \"Dhaka\" = 5, copy = Dhaka\n"]]},{"l":26,"f":[["main",26,[["city","char [6]",0,2],["copy","char [20]",0,17]]]]}],"V":[{"k":"a","it":[{"k":"c","v":-1},{"k":"c","v":-1},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"a":140737488314938,"sz":6},{"k":"a","it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9}],"es":1,"a":140737488314912,"sz":20},{"k":"a","it":[{"k":"c","v":68},{"k":"c","v":104},{"k":"c","v":97},{"k":"c","v":107},{"k":"c","v":97},{"k":"c","v":0}],"es":1,"a":140737488314938,"sz":6},{"k":"p","v":140737488314912,"tt":"char","ts":1,"a":140737488314888,"to":"0:copy[0]"},{"k":"p","v":140737488314938,"tt":"char","ts":1,"a":140737488314880,"to":"0:city[0]"},{"k":"a","it":[{"k":"c","v":68},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9}],"es":1,"a":140737488314912,"sz":20},{"k":"p","v":140737488314913,"tt":"char","ts":1,"a":140737488314888,"to":"0:copy[1]"},{"k":"p","v":140737488314939,"tt":"char","ts":1,"a":140737488314880,"to":"0:city[1]"},{"k":"a","it":[{"k":"c","v":68},{"k":"c","v":104},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9}],"es":1,"a":140737488314912,"sz":20},{"k":"p","v":140737488314914,"tt":"char","ts":1,"a":140737488314888,"to":"0:copy[2]"},{"k":"p","v":140737488314940,"tt":"char","ts":1,"a":140737488314880,"to":"0:city[2]"},{"k":"a","it":[{"k":"c","v":68},{"k":"c","v":104},{"k":"c","v":97},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9}],"es":1,"a":140737488314912,"sz":20},{"k":"p","v":140737488314915,"tt":"char","ts":1,"a":140737488314888,"to":"0:copy[3]"},{"k":"p","v":140737488314941,"tt":"char","ts":1,"a":140737488314880,"to":"0:city[3]"},{"k":"a","it":[{"k":"c","v":68},{"k":"c","v":104},{"k":"c","v":97},{"k":"c","v":107},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9}],"es":1,"a":140737488314912,"sz":20},{"k":"p","v":140737488314916,"tt":"char","ts":1,"a":140737488314888,"to":"0:copy[4]"},{"k":"p","v":140737488314942,"tt":"char","ts":1,"a":140737488314880,"to":"0:city[4]"},{"k":"a","it":[{"k":"c","v":68},{"k":"c","v":104},{"k":"c","v":97},{"k":"c","v":107},{"k":"c","v":97},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9},{"k":"c","v":-1},{"k":"c","v":127},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":85},{"k":"c","v":-32},{"k":"c","v":-9}],"es":1,"a":140737488314912,"sz":20},{"k":"p","v":140737488314917,"tt":"char","ts":1,"a":140737488314888,"to":"0:copy[5]"},{"k":"p","v":140737488314943,"tt":"char","ts":1,"a":140737488314880,"to":"0:city[5]"},{"k":"p","v":140737488314938,"tt":"char","ts":1,"a":140737488314872,"to":"0:city[0]"},{"k":"p","v":140737488314938,"tt":"char","ts":1,"a":140737488314888,"to":"0:city[0]"},{"k":"p","v":140737488314939,"tt":"char","ts":1,"a":140737488314888,"to":"0:city[1]"},{"k":"p","v":140737488314940,"tt":"char","ts":1,"a":140737488314888,"to":"0:city[2]"},{"k":"p","v":140737488314941,"tt":"char","ts":1,"a":140737488314888,"to":"0:city[3]"},{"k":"p","v":140737488314942,"tt":"char","ts":1,"a":140737488314888,"to":"0:city[4]"},{"k":"p","v":140737488314943,"tt":"char","ts":1,"a":140737488314888,"to":"0:city[5]"}]},"out":"length of \"Dhaka\" = 5, copy = Dhaka\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex7" data-level="Medium"><h3><span class="pnum">E7</span>Moving the array name</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Find the bug</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>Why does this not compile, and how do you fix it?</p>
+<pre class="code" data-hl>int a[4] = {1, 2, 3, 4};
+int sum = 0;
+while (a &lt; &amp;a[4]) {
+    sum += *a;
+    a++;
+}</pre><details class="hint"><summary>Hint</summary><p>Lecture 11 explains the difference between an array name and a pointer variable.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>An array name is not a variable: it cannot be assigned or incremented. GCC reports <i>lvalue required as increment operand</i> for <code>a++</code>. Copy the address into a real pointer variable and move that instead.</p><div class="tv" data-tr="t11-e7"></div><script type="application/json" id="tr-t11-e7">{"title":"Fixed","code":"#include <stdio.h>\nint main()\n{\n    int a[4] = {1, 2, 3, 4};\n    int sum = 0;\n    int *p = a;\n    while (p < &a[4])\n    {\n        sum += *p;\n        p++;\n    }\n    printf(\"%d\\n\", sum);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int [4]",0,0],["sum","int",0,1],["p","int *",0,2]]]]},{"l":5,"f":[["main",5,[["a","int [4]",0,3],["sum","int",0,1],["p","int *",0,2]]]]},{"l":6,"f":[["main",6,[["a","int [4]",0,3],["sum","int",0,4],["p","int *",0,2]]]]},{"l":7,"f":[["main",7,[["a","int [4]",0,3],["sum","int",0,4],["p","int *",0,5]]]]},{"l":9,"f":[["main",9,[["a","int [4]",0,3],["sum","int",0,4],["p","int *",0,5]]]]},{"l":10,"f":[["main",10,[["a","int [4]",0,3],["sum","int",0,6],["p","int *",0,5]]]]},{"l":7,"f":[["main",7,[["a","int [4]",0,3],["sum","int",0,6],["p","int *",0,7]]]]},{"l":9,"f":[["main",9,[["a","int [4]",0,3],["sum","int",0,6],["p","int *",0,7]]]]},{"l":10,"f":[["main",10,[["a","int [4]",0,3],["sum","int",0,8],["p","int *",0,7]]]]},{"l":7,"f":[["main",7,[["a","int [4]",0,3],["sum","int",0,8],["p","int *",0,9]]]]},{"l":9,"f":[["main",9,[["a","int [4]",0,3],["sum","int",0,8],["p","int *",0,9]]]]},{"l":10,"f":[["main",10,[["a","int [4]",0,3],["sum","int",0,10],["p","int *",0,9]]]]},{"l":7,"f":[["main",7,[["a","int [4]",0,3],["sum","int",0,10],["p","int *",0,11]]]]},{"l":9,"f":[["main",9,[["a","int [4]",0,3],["sum","int",0,10],["p","int *",0,11]]]]},{"l":10,"f":[["main",10,[["a","int [4]",0,3],["sum","int",0,12],["p","int *",0,11]]]]},{"l":7,"f":[["main",7,[["a","int [4]",0,3],["sum","int",0,12],["p","int *",0,13]]]]},{"l":12,"f":[["main",12,[["a","int [4]",0,3],["sum","int",0,12],["p","int *",0,13]]]]},{"l":13,"f":[["main",13,[["a","int [4]",0,3],["sum","int",0,12],["p","int *",0,13]]]],"d":[["o","10\n"]]},{"l":14,"f":[["main",14,[["a","int [4]",0,3],["sum","int",0,12],["p","int *",0,13]]]]}],"V":[{"k":"a","it":[{"k":"i","v":0},{"k":"i","v":0},{"k":"i","v":-134325520},{"k":"i","v":32767}],"es":4,"a":140737488314912,"sz":16},{"k":"i","v":32767,"a":140737488314940},{"k":"p","v":140737352062400,"tt":"int","ts":4,"a":140737488314928},{"k":"a","it":[{"k":"i","v":1},{"k":"i","v":2},{"k":"i","v":3},{"k":"i","v":4}],"es":4,"a":140737488314912,"sz":16},{"k":"i","v":0,"a":140737488314940},{"k":"p","v":140737488314912,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[0]"},{"k":"i","v":1,"a":140737488314940},{"k":"p","v":140737488314916,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[1]"},{"k":"i","v":3,"a":140737488314940},{"k":"p","v":140737488314920,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[2]"},{"k":"i","v":6,"a":140737488314940},{"k":"p","v":140737488314924,"tt":"int","ts":4,"a":140737488314928,"to":"0:a[3]"},{"k":"i","v":10,"a":140737488314940},{"k":"p","v":140737488314928,"tt":"int","ts":4,"a":140737488314928,"to":"0:p"}]},"out":"10\n","trunc":false}]}</script></div></details></section><script>(function(){const f=document.getElementById("exfilter");if(!f)return;f.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{f.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".exq").forEach(s=>{s.hidden=b.dataset.f!=="all"&&s.dataset.level!==b.dataset.f})})})();</script><style>.exq{border-top:1px solid var(--line);padding:4px 0 10px}.exq h3{display:flex;gap:10px;align-items:baseline;font-size:19px;margin:18px 0 6px}.exq .pnum{font-family:var(--mono);background:var(--accent);color:var(--ink);border-radius:7px;padding:1px 8px;font-size:14px;flex:none}.extags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}</style><nav class="pager" aria-label="Lectures"><a href="10-pointers.html"><small>← Lecture 10</small>Pointers</a><a href="12-structures.html" style="text-align:right"><small>Lecture 12 →</small>Structures</a></nav><footer class="foot">© 2026 Md Nazrul Islam <b>[NI]</b>. All rights reserved. Shared with students for study purposes only. Do not modify, republish or redistribute without the author's permission.</footer></main></div></body></html>

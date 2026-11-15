@@ -1,0 +1,941 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="claude:viewport-fit-sides" content="cover"><title>Operators and Expressions · Lecture 02 · Structured Programming</title><meta name="description" content="All C operator families, an expression evaluator that shows precedence step by step, bitwise operations and type conversion."><link rel="icon" href="data:image/webp;base64,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"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>/* Layout: sticky brand header, left section rail, wide main column; same visual system as nazrul-99.github.io/toc
+   (navy ink, orange accent, yellow highlight, IBM Plex). Deliberately single light theme for projectors. */
+:root{--ink:#14213d;--navy:#1f3a68;--accent:#f5892a;--accent-ink:#c8640f;--yellow:#f5f61c;--hl:#fff8b8;--hl2:#fffbe0;
+--line:#d9dee7;--soft:#f5f7fa;--soft2:#eef2f8;--muted:#5b6779;--green:#2e7d4f;--green-bg:#e6f4ea;--red:#b3261e;--red-bg:#fbe0e0;
+--bg:#ffffff;--term:#0f1b33;--term-ink:#e8edf5;--term-in:#ffb46b;--term-dim:#8fa0bd;
+--sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(90px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--navy)}a:hover{color:var(--accent-ink)}
+code,.mono,kbd{font-family:var(--mono)}
+code{background:var(--soft2);border-radius:4px;padding:1px 5px;font-size:.9em}
+h1,h2,h3{text-wrap:balance;color:var(--navy);line-height:1.2}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:24px;margin:34px 0 10px}h3{font-size:19px;margin:20px 0 8px}
+p,li{max-width:78ch}
+button{font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap;
+ padding-block:10px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));
+ border-bottom:6px solid;border-image:linear-gradient(90deg,var(--accent),var(--yellow)) 1}
+.ident{display:flex;align-items:center;gap:14px;margin-right:auto;min-width:0;text-decoration:none;color:inherit}
+.ident img{width:56px;height:56px;flex:none}
+.brand{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.brand b{font-size:20px;color:var(--navy)}.brand span{font-size:15px;color:var(--accent-ink);font-weight:600}
+.brand small{font-size:13px;color:var(--muted)}.brand small b{font-size:inherit;color:inherit}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav.tabs a{text-decoration:none;font-weight:600;font-size:15px;color:var(--navy);border:2px solid var(--line);border-radius:8px;padding:5px 12px}
+nav.tabs a:hover{border-color:var(--navy)}nav.tabs a.on{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* page layout */
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr)}
+aside.rail{border-right:1px solid var(--line);padding:14px 10px 40px;position:sticky;top:calc(82px + env(safe-area-inset-top,0px));height:calc(100vh - 82px - env(safe-area-inset-top,0px));overflow:auto}
+aside.rail .rh{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:8px 10px 6px}
+.navi{display:flex;gap:10px;width:100%;text-align:left;border:0;background:none;padding:6px 10px;border-radius:7px;color:var(--ink);font-size:15px;line-height:1.3;align-items:baseline;text-decoration:none}
+.navi:hover{background:var(--soft)}.navi.on{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.nid{font-family:var(--mono);font-weight:600;color:var(--accent-ink);min-width:30px;font-size:14px}
+main{padding-block:22px 60px;padding-left:max(30px,env(safe-area-inset-left,0px));padding-right:max(30px,env(safe-area-inset-right,0px));min-width:0;max-width:1240px;width:100%}
+.mainpad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
+.lead{font-size:19px;color:var(--ink);max-width:72ch}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+.pager a{text-decoration:none;border:2px solid var(--navy);border-radius:10px;padding:8px 14px;font-weight:600;max-width:48%}
+.pager a:hover{background:var(--navy);color:#fff}.pager small{display:block;font-weight:400;font-size:13px;opacity:.8}
+#navsel{display:none;font:inherit;font-size:16px;padding:6px;border:2px solid var(--navy);border-radius:8px;max-width:100%;margin:6px 0 12px;background:var(--bg);color:var(--ink)}
+footer.foot{color:var(--muted);font-size:14px;margin-top:36px;border-top:1px solid var(--line);padding-top:12px}
+
+/* building blocks */
+.btn{border:2px solid var(--navy);background:var(--bg);color:var(--navy);border-radius:8px;padding:5px 13px;font-weight:600;font-size:15px}
+.btn:hover:not(:disabled){background:var(--navy);color:#fff}.btn:disabled{opacity:.35;cursor:default}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--ink)}.btn.pri:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.btn.sm{padding:2px 9px;font-size:14px}
+.chip{font-family:var(--mono);font-size:14px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 9px;color:var(--ink)}
+.chip:hover{border-color:var(--navy)}.chip.on{background:var(--hl);border-color:var(--accent);font-weight:600}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0;background:var(--bg)}
+.idea{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:14px 0;max-width:80ch}
+.note{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit{background:#fdf0ef;border:1px solid #efb7b2;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit b:first-child,.note b:first-child{color:var(--navy)}
+.good{color:var(--green);font-weight:600}.bad{color:var(--red);font-weight:600}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}
+.tblwrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;font-size:16px}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft2);color:var(--navy)}
+pre.code{font-family:var(--mono);font-size:15px;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 14px;overflow-x:auto;line-height:1.5;margin:10px 0}
+.term{font-family:var(--mono);font-size:15px;background:var(--term);color:var(--term-ink);border-radius:8px;padding:10px 14px;white-space:pre-wrap;overflow-x:auto;margin:8px 0;min-height:44px;line-height:1.45}
+.term .in{color:var(--term-in);font-weight:600}
+details.hint{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:8px 14px;margin:10px 0}
+details.hint summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sol{border:1px solid var(--line);border-radius:10px;margin:12px 0;background:var(--bg)}
+details.sol>summary{cursor:pointer;font-weight:600;color:var(--navy);padding:10px 14px;list-style:none;display:flex;gap:10px;align-items:center}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▸";color:var(--accent-ink);transition:transform .15s}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol>.solbody{padding:0 14px 14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 7px;background:var(--soft2);color:var(--navy)}
+.tag.o{background:#fde7d3;color:#8a4307}.tag.g{background:var(--green-bg);color:#1d5a37}
+input.field,select.field,textarea.field{font:inherit;font-size:16px;padding:5px 10px;border:2px solid var(--navy);border-radius:8px;background:var(--bg);color:var(--ink)}
+input.field.mono{font-family:var(--mono)}
+.row{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.lbl{color:var(--muted);font-size:14px}
+.widget{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0;background:var(--bg)}
+.widget>h3:first-child{margin-top:0}
+.wsub{color:var(--muted);font-size:15px;margin:-4px 0 12px}
+
+/* trace viewer */
+.tv{border:1px solid var(--line);border-radius:12px;margin:18px 0;background:var(--bg);overflow:hidden}
+.tv-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line)}
+.tv-title{font-weight:600;color:var(--navy);margin-right:auto;font-size:17px}
+.tv-inputs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tv-ctrl{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tv-ctrl input[type=range]{flex:1 1 160px;accent-color:var(--accent);min-width:120px}
+.tv-count{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:110px}
+.tv-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.tv-code{position:relative;border-right:1px solid var(--line);overflow:auto;max-height:560px;font-family:var(--mono);font-size:14.5px;line-height:1.55;padding:6px 0;counter-reset:ln}
+.tv-code .ln{display:flex;white-space:pre;padding-right:12px}
+.tv-code .ln i{font-style:normal;color:#9aa5b8;min-width:42px;text-align:right;padding-right:12px;user-select:none;flex:none}
+.tv-code .ln.prev{background:var(--green-bg)}
+.tv-code .ln.cur{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.tv-code .ln.cur i{color:var(--accent-ink);font-weight:700}
+.tv-mem{position:relative;overflow:auto;max-height:560px;padding:10px 12px}
+.tv-mem svg.arrows{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.tv-explain{padding:9px 14px;background:var(--hl2);border-top:1px solid #f0d37a;font-size:16px;min-height:42px}
+.tv-explain b{color:var(--navy)}
+.tv-out{padding:8px 14px 12px;border-top:1px solid var(--line)}
+.tv-out .term{margin:4px 0 0;max-height:220px;overflow:auto}
+.tv-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:0 14px 10px}
+.tv-legend span{display:inline-flex;gap:6px;align-items:center}.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.fr{border:1.5px solid var(--navy);border-radius:10px;margin:0 0 10px;background:var(--bg)}
+.fr.old{border-color:#b6c0cf;opacity:.92}
+.fr-h{display:flex;justify-content:space-between;gap:8px;background:var(--navy);color:#fff;font-weight:600;font-size:14px;padding:3px 10px;border-radius:8px 8px 0 0;font-family:var(--mono)}
+.fr.old .fr-h{background:#8b97ab}
+.fr-b{padding:6px 10px;display:flex;flex-direction:column;gap:6px}
+.var{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.vn{font-family:var(--mono);font-size:14px;min-width:64px;padding-top:4px;color:var(--ink)}
+.vn small{display:block;color:var(--muted);font-size:11.5px;line-height:1.2}
+.vb{font-family:var(--mono);font-size:15px;border:1.5px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--bg);min-width:38px;text-align:center;font-variant-numeric:tabular-nums}
+.vb.ptr{border-color:var(--accent);background:#fff4e8}
+.vb.null{color:var(--muted)}
+.vb.chg,.cell.chg{animation:flash 1s ease-out;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+@keyframes flash{0%{background:var(--yellow)}100%{background:inherit}}
+.arr{display:flex;flex-wrap:wrap;gap:0}
+.cellw{display:flex;flex-direction:column;align-items:center}
+.cell{font-family:var(--mono);font-size:14.5px;border:1.5px solid var(--navy);min-width:36px;height:32px;padding:0 5px;display:flex;align-items:center;justify-content:center;margin-left:-1.5px;background:var(--bg);font-variant-numeric:tabular-nums}
+.cellw:first-child .cell{margin-left:0;border-radius:5px 0 0 5px}.cellw:last-child .cell{border-radius:0 5px 5px 0}
+.cell.nul{color:var(--muted);background:var(--soft)}
+.cell.tgt{background:#ffe4c7}
+.ci{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.grid2d{display:inline-grid;gap:0;border:1.5px solid var(--navy);border-radius:5px;overflow:hidden}
+.grid2d .g{font-family:var(--mono);font-size:13.5px;border:1px solid var(--line);min-width:34px;height:28px;display:flex;align-items:center;justify-content:center;padding:0 4px;background:var(--bg)}
+.grid2d .gh{background:var(--soft2);color:var(--muted);font-size:11px}
+.more{font-size:12px;color:var(--muted);align-self:center;padding-left:6px}
+.st{border:1.5px dashed var(--navy);border-radius:8px;padding:4px 8px;display:flex;flex-direction:column;gap:4px}
+.st .stn{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.addr{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.retchip{display:inline-block;background:var(--green-bg);color:#1d5a37;border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:14px;margin-left:6px}
+.tv-done{background:var(--green-bg)!important;border-top-color:#9fd1b0!important}
+.tv-opts{display:flex;gap:14px;align-items:center;font-size:14px;color:var(--muted)}
+.tv-opts label{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+
+@media (max-width:980px){header.top{position:relative;top:auto}html{scroll-padding-top:10px}.wrap{grid-template-columns:1fr}aside.rail{display:none}#navsel{display:block}main{padding-block:16px 50px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+@media (max-width:860px){.tv-body{grid-template-columns:1fr}.tv-code{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.tv-mem{max-height:none}}
+@media (max-width:560px){body{font-size:17px}h1{font-size:26px}.ident img{width:44px;height:44px}.brand b{font-size:17px}.brand small{display:none}
+ header.top{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}.pager a{max-width:100%}}
+</style><script>/* Structured Programming site: C syntax colouring, real-execution trace viewer, page chrome. */
+(function () {
+  'use strict';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- C syntax colouring ---------- */
+  const KW = new Set('auto break case char const continue default do double else enum extern float for goto if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while'.split(' '));
+  const LIB = new Set('printf scanf gets fgets puts fputs getchar putchar strlen strcpy strcat strcmp strrev sqrt pow abs fabs ceil floor fmod log log10 exp sin cos tan atoi atof fopen fclose fgetc fputc fprintf fscanf malloc free isdigit isalpha isalnum islower isupper tolower toupper isspace main NULL EOF stdin stdout FILE'.split(' '));
+  function hl(line) {
+    let out = '', i = 0;
+    const n = line.length;
+    while (i < n) {
+      const c = line[i];
+      if (c === '/' && line[i + 1] === '/') { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '/' && line[i + 1] === '*') { let j = line.indexOf('*/', i + 2); j = j < 0 ? n : j + 2; out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      if (c === '*' && /^\s*\*(\s|\/|$)/.test(line) && i === line.search(/\S/)) { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '#' && line.slice(0, i).trim() === '') { out += '<span style="color:#8a4fb8">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '"' || c === "'") {
+        let j = i + 1; while (j < n && line[j] !== c) { if (line[j] === '\\') j++; j++; }
+        out += '<span style="color:#0a7a4a">' + esc(line.slice(i, j + 1)) + '</span>'; i = j + 1; continue;
+      }
+      if (/[A-Za-z_]/.test(c)) {
+        let j = i; while (j < n && /\w/.test(line[j])) j++;
+        const w = line.slice(i, j);
+        if (KW.has(w)) out += '<span style="color:#1f3a68;font-weight:600">' + w + '</span>';
+        else if (LIB.has(w)) out += '<span style="color:#b35a00">' + w + '</span>';
+        else out += esc(w);
+        i = j; continue;
+      }
+      if (/[0-9]/.test(c)) { let j = i; while (j < n && /[0-9.xXa-fA-FuUlL]/.test(line[j])) j++; out += '<span style="color:#a3214a">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      out += esc(c); i++;
+    }
+    return out;
+  }
+  window.SPL = window.SPL || {};
+  SPL.hl = hl;
+  SPL.esc = esc;
+  SPL.hlBlock = code => code.replace(/\n$/, '').split('\n').map(hl).join('\n');
+
+  /* ---------- value formatting ---------- */
+  function chr(v) {
+    const m = { 0: "'\\0'", 10: "'\\n'", 9: "'\\t'", 32: "' '", 13: "'\\r'" };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return "'" + String.fromCharCode(v) + "'";
+    return String(v);
+  }
+  function cellChar(v) {
+    const m = { 0: '\\0', 10: '\\n', 9: '\\t', 32: '␣' };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return String.fromCharCode(v);
+    return '·';
+  }
+  function num(v) {
+    if (typeof v !== 'number') return String(v);
+    if (Number.isInteger(v) && Math.abs(v) < 1e15) return String(v);
+    let s = Number(v.toPrecision(6)).toString();
+    if (/e/.test(s)) s = v.toExponential(3);
+    return s;
+  }
+  const hex = a => '0x' + Number(a).toString(16);
+  SPL.fmt = { chr, num, hex };
+
+  function scal(v) {
+    if (v.k === 'c') return chr(v.v);
+    if (v.k === 'f') return num(v.v);
+    if (v.k === 'i') return v.s ? v.s : String(v.v);
+    if (v.k === 'p') return v.v === 0 ? 'NULL' : hex(v.v);
+    return String(v.v);
+  }
+
+  /* ---------- trace viewer ---------- */
+  function TraceViewer(el, data) {
+    this.el = el; this.data = data; this.ii = 0; this.si = 0; this.timer = null;
+    this.showAddr = el.dataset.addr === '1';
+    this.build();
+    this.load(0);
+  }
+  TraceViewer.prototype.build = function () {
+    const d = this.data, el = this.el;
+    const inputs = d.inputs.length > 1 || (d.inputs[0] && d.inputs[0].stdin)
+      ? '<div class="tv-inputs"><span class="lbl">Input:</span>' + d.inputs.map((inp, i) => '<button class="chip" data-i="' + i + '" title="' + esc(inp.stdin || 'no input') + '">' + esc(inp.label) + '</button>').join('') + '</div>' : '';
+    el.innerHTML =
+      '<div class="tv-head"><div class="tv-title">' + esc(d.title || 'Run it line by line') + '</div>' + inputs + '</div>' +
+      '<div class="tv-ctrl">' +
+      '<button class="btn sm" data-a="first" title="First step" aria-label="First step">⏮</button>' +
+      '<button class="btn sm" data-a="prev" title="Previous step (←)" aria-label="Previous step">◀ Back</button>' +
+      '<button class="btn sm pri" data-a="next" title="Next step (→)" aria-label="Next step">Next ▶</button>' +
+      '<button class="btn sm" data-a="last" title="Last step" aria-label="Last step">⏭</button>' +
+      '<button class="btn sm" data-a="play" aria-label="Play">▶▶ Play</button>' +
+      '<input type="range" min="0" value="0" aria-label="Step slider">' +
+      '<span class="tv-count"></span>' +
+      '<span class="tv-opts"><label><input type="checkbox" data-o="addr"' + (this.showAddr ? ' checked' : '') + '> addresses</label></span>' +
+      '</div>' +
+      '<div class="tv-body"><div class="tv-code" tabindex="0"></div><div class="tv-mem"></div></div>' +
+      '<div class="tv-explain"></div>' +
+      '<div class="tv-out"><span class="lbl">Console (output, with what the user typed in orange)</span><div class="term"></div></div>' +
+      '<div class="tv-legend"><span><i class="sw" style="background:var(--hl);border-color:var(--accent)"></i>line about to run</span><span><i class="sw" style="background:var(--green-bg)"></i>line that just ran</span><span><i class="sw" style="background:var(--yellow)"></i>value just changed</span><span><i class="sw" style="background:#fff4e8;border-color:var(--accent)"></i>pointer (arrow shows target)</span></div>';
+    this.$code = el.querySelector('.tv-code'); this.$mem = el.querySelector('.tv-mem');
+    this.$exp = el.querySelector('.tv-explain'); this.$term = el.querySelector('.term');
+    this.$range = el.querySelector('input[type=range]'); this.$count = el.querySelector('.tv-count');
+    const lines = d.code.replace(/\n$/, '').split('\n');
+    this.$code.innerHTML = lines.map((l, i) => '<div class="ln" data-l="' + (i + 1) + '"><i>' + (i + 1) + '</i><span>' + (hl(l) || ' ') + '</span></div>').join('');
+    el.querySelectorAll('.tv-inputs .chip').forEach(b => b.onclick = () => this.load(+b.dataset.i));
+    el.querySelectorAll('[data-a]').forEach(b => b.onclick = () => this.act(b.dataset.a));
+    this.$range.oninput = () => { this.stop(); this.go(+this.$range.value); };
+    el.querySelector('[data-o=addr]').onchange = e => { this.showAddr = e.target.checked; this.render(); };
+    el.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' && e.target.type !== 'range' && e.target.type !== 'checkbox') return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); this.act('next'); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); this.act('prev'); }
+    });
+    window.addEventListener('resize', () => this.drawArrows());
+  };
+  TraceViewer.prototype.load = function (ii) {
+    this.stop();
+    this.ii = ii;
+    const inp = this.data.inputs[ii];
+    this.el.querySelectorAll('.tv-inputs .chip').forEach(b => b.classList.toggle('on', +b.dataset.i === ii));
+    // rebuild cumulative state per step
+    const t = inp.trace, V = t.V;
+    let f = null, g = null, con = [];
+    this.states = t.steps.map(s => {
+      if (s.f) f = s.f;
+      if (s.g) g = s.g;
+      if (s.d) con = con.concat(s.d);
+      return { l: s.l, f, g, con, r: s.r };
+    });
+    this.V = V;
+    // how much of each big array is ever used: show that part (plus one cell) instead of a wall of garbage
+    const vis = {};
+    const seen = {};
+    const mark = (key, v, prevIdx) => {
+      if (!v || v.k !== 'a') return;
+      const o = prevIdx === undefined ? null : V[prevIdx];
+      const r = vis[key] || (vis[key] = [0, 0]);
+      v.it.forEach((x, i) => {
+        const ox = o && o.it ? o.it[i] : null;
+        if (x.k === 'a') {
+          x.it.forEach((y, j) => {
+            const oy = ox && ox.it ? ox.it[j] : null;
+            if (!oy || JSON.stringify(oy) !== JSON.stringify(y)) { if (o) { r[0] = Math.max(r[0], i + 1); r[1] = Math.max(r[1], j + 1); } }
+          });
+        } else if (o && JSON.stringify(ox) !== JSON.stringify(x)) r[0] = Math.max(r[0], i + 1);
+      });
+    };
+    this.states.forEach(s => {
+      s.f.forEach(fr => fr[2].forEach(v => { const key = fr[0] + ':' + v[0]; mark(key, V[v[3]], seen[key]); seen[key] = v[3]; }));
+    });
+    this.vis = vis;
+    this.$range.max = this.states.length; // last position = finished
+    this.go(0);
+  };
+  TraceViewer.prototype.act = function (a) {
+    if (a === 'play') { if (this.timer) this.stop(); else this.play(); return; }
+    this.stop();
+    const n = this.states.length;
+    if (a === 'first') this.go(0);
+    if (a === 'last') this.go(n);
+    if (a === 'next') this.go(Math.min(n, this.si + 1));
+    if (a === 'prev') this.go(Math.max(0, this.si - 1));
+  };
+  TraceViewer.prototype.play = function () {
+    const b = this.el.querySelector('[data-a=play]');
+    b.textContent = '❚❚ Pause';
+    if (this.si >= this.states.length) this.go(0);
+    this.timer = setInterval(() => {
+      if (this.si >= this.states.length) { this.stop(); return; }
+      this.go(this.si + 1);
+    }, 700);
+  };
+  TraceViewer.prototype.stop = function () {
+    if (this.timer) clearInterval(this.timer);
+    this.timer = null;
+    const b = this.el.querySelector('[data-a=play]');
+    if (b) b.textContent = '▶▶ Play';
+  };
+  TraceViewer.prototype.go = function (si) { this.si = si; this.render(); };
+
+  TraceViewer.prototype.render = function () {
+    const n = this.states.length, si = this.si, done = si >= n;
+    const st = done ? this.states[n - 1] : this.states[si];
+    const prevSt = si > 0 ? this.states[Math.min(si, n) - 1] : null;
+    const prevForDiff = done ? null : prevSt;
+    this.$range.value = si;
+    this.$count.textContent = done ? 'Finished' : 'Step ' + (si + 1) + ' of ' + n;
+    // code highlight
+    this.$code.querySelectorAll('.ln.cur,.ln.prev').forEach(x => x.classList.remove('cur', 'prev'));
+    if (!done) {
+      const cur = this.$code.querySelector('.ln[data-l="' + st.l + '"]');
+      if (cur) { cur.classList.add('cur'); this.scrollInto(cur); }
+    }
+    if (prevSt && (done || prevSt.l !== st.l)) {
+      const p = this.$code.querySelector('.ln[data-l="' + prevSt.l + '"]');
+      if (p) p.classList.add('prev');
+    }
+    // memory
+    this.renderMem(st, prevForDiff, done);
+    // console
+    const finalCon = done ? this.fullConsole() : st.con;
+    this.$term.innerHTML = finalCon.map(([k, s]) => k === 'i' ? '<span class="in">' + esc(s) + '</span>' : esc(s)).join('') || '<span style="color:var(--term-dim)">(nothing printed yet)</span>';
+    this.$term.scrollTop = this.$term.scrollHeight;
+    // explanation
+    this.$exp.classList.toggle('tv-done', done);
+    this.$exp.innerHTML = done ? '<b>Program finished.</b> The console shows the complete run. Press ⏮ or drag the slider to replay.' : this.explain(st, prevSt);
+    this.el.querySelector('[data-a=prev]').disabled = si === 0;
+    this.el.querySelector('[data-a=first]').disabled = si === 0;
+    this.el.querySelector('[data-a=next]').disabled = done;
+    this.el.querySelector('[data-a=last]').disabled = done;
+  };
+  TraceViewer.prototype.fullConsole = function () {
+    const t = this.data.inputs[this.ii].trace;
+    let con = [];
+    t.steps.forEach(s => { if (s.d) con = con.concat(s.d); });
+    return con;
+  };
+  TraceViewer.prototype.scrollInto = function (row) {
+    const c = this.$code, top = row.offsetTop, h = c.clientHeight;
+    if (top < c.scrollTop + 30 || top > c.scrollTop + h - 50) c.scrollTop = Math.max(0, top - h / 2);
+  };
+  TraceViewer.prototype.explain = function (st, prev) {
+    const parts = [];
+    const fnNow = st.f[st.f.length - 1][0];
+    if (!prev) {
+      parts.push('Execution starts in <b>main()</b>. The highlighted line ' + st.l + ' runs next.');
+      return parts.join(' ');
+    }
+    const pd = prev.f.length, cd = st.f.length;
+    if (cd > pd) {
+      const fr = st.f[cd - 1];
+      const args = fr[2].filter(v => v[2]).map(v => v[0] + ' = ' + this.short(this.V[v[3]]));
+      parts.push('<b>' + fr[0] + '()</b> is called' + (args.length ? ' with ' + args.join(', ') : '') + '. A new frame is pushed on the stack.');
+    } else if (st.r) {
+      parts.push('<b>' + st.r[0] + '()</b> returned' + (st.r[1] ? ' <span class="retchip">' + esc(this.short(st.r[1])) + '</span>' : ' (void)') + '; its frame is removed and control is back in <b>' + fnNow + '()</b>.');
+    }
+    // changed variables in the frames that exist in both
+    const ch = [];
+    const m = Math.min(pd, cd);
+    for (let i = 0; i < m; i++) {
+      if (st.f[i][0] !== prev.f[i][0]) continue;
+      const pv = {}; prev.f[i][2].forEach(v => pv[v[0]] = v[3]);
+      st.f[i][2].forEach(v => {
+        if (pv[v[0]] !== undefined && pv[v[0]] !== v[3]) ch.push('<code>' + esc(v[0]) + '</code> ' + this.delta(this.V[pv[v[0]]], this.V[v[3]]));
+      });
+    }
+    if (ch.length && cd <= pd) parts.push('Line ' + prev.l + ' changed ' + ch.slice(0, 4).join('; ') + (ch.length > 4 ? ' …' : '') + '.');
+    const newIn = st.con.length > prev.con.length ? st.con.slice(prev.con.length) : [];
+    if (newIn.some(x => x[0] === 'i')) parts.push('The program read the user\'s input.');
+    else if (newIn.some(x => x[0] === 'o')) parts.push('Something was printed to the console.');
+    if (!parts.length) parts.push(prev.l === st.l ? 'Line ' + st.l + ' runs again (loop test or next part of the line).' : 'Line ' + prev.l + ' ran; nothing visible changed.');
+    parts.push('<span class="lbl">Next: line ' + st.l + ' in ' + fnNow + '().</span>');
+    return parts.join(' ');
+  };
+  TraceViewer.prototype.short = function (v) {
+    if (!v) return '';
+    if (v.k === 'a') return '{' + v.it.slice(0, 6).map(x => this.short(x)).join(', ') + (v.n > 6 ? ', …' : '') + '}';
+    if (v.k === 's') return '{…}';
+    if (v.k === 'p') return v.to ? (v.to === 'NULL' ? 'NULL' : '&' + this.tname(v.to)) : scal(v);
+    return scal(v);
+  };
+  TraceViewer.prototype.tname = function (to) { return to.replace(/^(\d+|g):/, ''); };
+  TraceViewer.prototype.delta = function (a, b) {
+    if (a.k === 'a' && b.k === 'a') {
+      const idx = [];
+      b.it.forEach((x, i) => { if (JSON.stringify(x) !== JSON.stringify(a.it[i])) idx.push(i); });
+      if (idx.length === 1) { const i = idx[0]; return '[' + i + ']: ' + esc(this.short(a.it[i])) + ' → <b>' + esc(this.short(b.it[i])) + '</b>'; }
+      return '(' + idx.length + ' cells)';
+    }
+    if (a.k === 's') return '(a member changed)';
+    return esc(this.short(a)) + ' → <b>' + esc(this.short(b)) + '</b>';
+  };
+
+  TraceViewer.prototype.renderMem = function (st, prev, done) {
+    const V = this.V, sa = this.showAddr;
+    const prevMap = {};
+    if (prev) prev.f.forEach((fr, fi) => fr[2].forEach(v => prevMap[fi + ':' + fr[0] + ':' + v[0]] = v[3]));
+    const prevG = {};
+    if (prev && prev.g) prev.g.forEach(v => prevG[v[0]] = v[3]);
+    let html = '';
+    const self = this;
+    function varRow(path, v, val, changedFrom, fn) {
+      const name = v[0], type = v[1];
+      self._lim = fn ? self.vis[fn + ':' + name] : null;
+      let inner = self.valHTML(val, path, changedFrom === undefined ? null : V[changedFrom], true);
+      self._lim = null;
+      return '<div class="var"><div class="vn">' + esc(name) + '<small>' + esc(type) + (v[2] ? ' · parameter' : '') + '</small>' + (sa && val.a ? '<small class="addr">@' + hex(val.a) + '</small>' : '') + '</div>' + inner + '</div>';
+    }
+    if (st.g && st.g.length) {
+      html += '<div class="fr"><div class="fr-h"><span>global variables</span></div><div class="fr-b">' +
+        st.g.map(v => varRow('g:' + v[0], v, V[v[3]], prev && prevG[v[0]] !== undefined && prevG[v[0]] !== v[3] ? prevG[v[0]] : undefined)).join('') + '</div></div>';
+    }
+    const nf = st.f.length;
+    for (let fi = nf - 1; fi >= 0; fi--) {
+      const fr = st.f[fi];
+      const rows = fr[2].map(v => {
+        const k = fi + ':' + fr[0] + ':' + v[0];
+        const changed = prev && prevMap[k] !== undefined && prevMap[k] !== v[3] ? prevMap[k] : undefined;
+        return varRow(fi + ':' + v[0], v, V[v[3]], changed, fr[0]);
+      }).join('') || '<span class="lbl">no local variables</span>';
+      html += '<div class="fr' + (fi < nf - 1 ? ' old' : '') + '"><div class="fr-h"><span>' + esc(fr[0]) + '()' + (fi < nf - 1 ? ' — waiting at line ' + fr[1] : '') + '</span><span>' + (fi === nf - 1 ? 'active frame' : 'frame ' + (fi + 1)) + '</span></div><div class="fr-b">' + rows + '</div></div>';
+    }
+    html = '<div class="lbl" style="margin-bottom:6px">Stack (newest frame on top)</div>' + html;
+    this.$mem.innerHTML = html + '<svg class="arrows"></svg>';
+    this.drawArrows();
+  };
+  TraceViewer.prototype.valHTML = function (v, path, old, top) {
+    const self = this;
+    if (!v) return '<span class="vb">?</span>';
+    const chg = old && JSON.stringify(old) !== JSON.stringify(v);
+    if (v.k === 'a') {
+      const isChar = v.it.length && v.it[0].k === 'c';
+      if (v.it.length && v.it[0].k === 'a') {
+        // 2D array
+        const L = top && this._lim && this._lim[0] ? this._lim : null;
+        const rows = L ? Math.min(v.it.length, Math.max(L[0], 2)) : v.it.length;
+        const cols = L ? Math.min(v.it[0].it.length, Math.max(L[1], 2)) : v.it[0].it.length;
+        let g = '<div class="grid2d" data-p="' + esc(path) + '" style="grid-template-columns:auto repeat(' + cols + ',auto)"><div class="g gh"></div>';
+        for (let c = 0; c < cols; c++) g += '<div class="g gh">' + c + '</div>';
+        for (let r = 0; r < rows; r++) {
+          g += '<div class="g gh">' + r + '</div>';
+          for (let c = 0; c < cols; c++) {
+            const x = v.it[r].it[c], ox = old && old.it && old.it[r] && old.it[r].it ? old.it[r].it[c] : null;
+            const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+            g += '<div class="g cell' + (cc ? ' chg' : '') + '" style="margin:0;border-radius:0;height:28px;border-width:1px" data-p="' + esc(path + '[' + r + '][' + c + ']') + '">' + esc(x.k === 'c' ? cellChar(x.v) : scal(x)) + '</div>';
+          }
+        }
+        g += '</div>';
+        const more = (v.n > rows || v.it[0].n > cols) ? v.n + ' × ' + v.it[0].n : '';
+        return '<div>' + g + (more ? '<div class="more">declared size: ' + more + '; first ' + rows + '×' + cols + ' shown</div>' : '') + '</div>';
+      }
+      let s = '<div class="arr" data-p="' + esc(path) + '">';
+      const L1 = top && this._lim && v.it.length > 16 ? Math.min(v.it.length, Math.max(this._lim[0] + 1, 6)) : v.it.length;
+      v.it.slice(0, L1).forEach((x, i) => {
+        const ox = old && old.it ? old.it[i] : null;
+        const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+        let txt, cls = 'cell';
+        if (x.k === 'c') { txt = cellChar(x.v); if (x.v === 0) cls += ' nul'; }
+        else if (x.k === 's') { txt = '{…}'; }
+        else txt = scal(x);
+        if (x.k === 'p') { cls += ' ptr'; txt = x.to ? (x.to === 'NULL' ? 'NULL' : '•') : scal(x); }
+        s += '<div class="cellw"><div class="' + cls + (cc ? ' chg' : '') + '" data-p="' + esc(path + '[' + i + ']') + '"' + (x.k === 'p' && x.to && x.to !== 'NULL' ? ' data-to="' + esc(x.to) + '"' : '') + (x.k === 'c' ? ' title="ASCII ' + x.v + '"' : '') + '>' + esc(txt) + '</div><span class="ci">' + i + '</span></div>';
+      });
+      if (v.n > L1) s += '<span class="more">… ' + (v.n - L1) + ' more not used in this run (size ' + v.n + ')</span>';
+      s += '</div>';
+      if (isChar) {
+        let str = '', i = 0;
+        while (i < v.it.length && v.it[i].v !== 0) { str += String.fromCharCode(v.it[i].v); i++; }
+        if (i >= L1 && i < v.it.length) { /* string longer than the shown part */ }
+        if (i < v.it.length) s += '<div class="lbl" style="font-size:12.5px">as a string: <code>"' + esc(str) + '"</code> (' + i + ' characters before \\0)</div>';
+      }
+      return '<div>' + s + '</div>';
+    }
+    if (v.k === 's') {
+      return '<div class="st" data-p="' + esc(path) + '"><span class="stn">' + esc(v.tn) + '</span>' + v.f.map(f => {
+        const ov = old && old.f ? (old.f.find(x => x[0] === f[0]) || [])[1] : null;
+        return '<div class="var"><div class="vn">.' + esc(f[0]) + '</div>' + self.valHTML(f[1], path + '.' + f[0], ov, false) + '</div>';
+      }).join('') + '</div>';
+    }
+    if (v.k === 'p') {
+      let label;
+      if (v.v === 0) label = 'NULL';
+      else if (/FILE/.test(v.tt || '')) label = '→ FILE stream (open file)';
+      else if (v.to) label = '→ ' + esc(this.tname(v.to));
+      else label = hex(v.v) + ' <span class="lbl" style="font-size:12px">(' + (this.looksGarbage(v.v) ? 'not set yet' : 'outside the variables shown') + ')</span>';
+      return '<span class="vb ptr' + (v.v === 0 ? ' null' : '') + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '"' + (v.to && v.to !== 'NULL' ? ' data-to="' + esc(v.to) + '"' : '') + ' title="holds address ' + hex(v.v) + '">' + label + (this.showAddr && v.v ? ' <span class="addr">' + hex(v.v) + '</span>' : '') + '</span>';
+    }
+    let txt = scal(v);
+    if (v.k === 'c') txt += ' <span class="lbl" style="font-size:12px">(' + v.v + ')</span>';
+    return '<span class="vb' + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '">' + txt + '</span>';
+  };
+  TraceViewer.prototype.looksGarbage = function (a) { return a < 4096 || a > 0x7fffffffffff || a % 1 !== 0; };
+  TraceViewer.prototype.drawArrows = function () {
+    const mem = this.$mem, svg = mem.querySelector('svg.arrows');
+    if (!svg) return;
+    const ptrs = mem.querySelectorAll('[data-to]');
+    svg.setAttribute('width', mem.scrollWidth); svg.setAttribute('height', mem.scrollHeight);
+    mem.querySelectorAll('.cell.tgt').forEach(x => x.classList.remove('tgt'));
+    if (!ptrs.length) { svg.innerHTML = ''; return; }
+    const mr = mem.getBoundingClientRect();
+    const ox = mem.scrollLeft - mr.left, oy = mem.scrollTop - mr.top;
+    let out = '<defs><marker id="ah' + this.uid() + '" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#c8640f"/></marker></defs>';
+    const mid = 'ah' + this._uid;
+    ptrs.forEach(p => {
+      let to = p.dataset.to.replace(/\+\d+$/, '');
+      let t = mem.querySelector('[data-p="' + CSS.escape(to) + '"]');
+      if (!t) return;
+      if (t.classList.contains('cell')) t.classList.add('tgt');
+      const a = p.getBoundingClientRect(), b = t.getBoundingClientRect();
+      const x1 = a.right + ox, y1 = a.top + a.height / 2 + oy;
+      let x2 = b.left + ox + Math.min(14, b.width / 2), y2 = b.top + oy;
+      if (b.top > a.bottom) { y2 = b.top + oy; } else if (b.bottom < a.top) { y2 = b.bottom + oy; } else { x2 = b.left + ox; y2 = b.top + b.height / 2 + oy; }
+      const bend = Math.max(40, Math.abs(y2 - y1) * 0.3);
+      out += '<path d="M' + x1 + ',' + y1 + ' C' + (x1 + bend) + ',' + y1 + ' ' + (x2 + bend * 0.6) + ',' + (y2 + (y2 > y1 ? -30 : 30)) + ' ' + x2 + ',' + y2 + '" fill="none" stroke="#c8640f" stroke-width="2" marker-end="url(#' + mid + ')" opacity=".85"/>';
+    });
+    svg.innerHTML = out;
+  };
+  let UID = 0;
+  TraceViewer.prototype.uid = function () { if (!this._uid) this._uid = ++UID; return this._uid; };
+  SPL.TraceViewer = TraceViewer;
+
+  SPL.mountTraces = function (root) {
+    (root || document).querySelectorAll('.tv[data-tr]:not([data-mounted])').forEach(el => {
+      const src = document.getElementById('tr-' + el.dataset.tr);
+      if (!src) return;
+      const closed = el.closest('details:not([open])');
+      if (closed) return;
+      el.dataset.mounted = '1';
+      el._tv = new TraceViewer(el, JSON.parse(src.textContent));
+    });
+  };
+
+  /* ---------- page chrome ---------- */
+  function chrome() {
+    document.querySelectorAll('pre.code[data-hl]').forEach(p => { p.innerHTML = SPL.hlBlock(p.textContent); });
+    const sel = document.getElementById('navsel');
+    if (sel) sel.onchange = () => { if (sel.value) location.hash = sel.value; };
+    const links = [...document.querySelectorAll('aside.rail a.navi[href^="#"]')];
+    if (links.length && 'IntersectionObserver' in window) {
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(a => a.classList.remove('on'));
+            const a = map.get(e.target.id); if (a) a.classList.add('on');
+          }
+        });
+      }, { rootMargin: '-90px 0px -70% 0px' });
+      map.forEach((a, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+    }
+    SPL.mountTraces();
+    // re-draw arrows when a closed <details> opens
+    document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => { SPL.mountTraces(d); d.querySelectorAll('.tv').forEach(t => t._tv && t._tv.drawArrows()); }));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', chrome); else chrome();
+})();
+</script></head><body><header class="top"><a class="ident" href="../"><img alt="Southeast University logo" src="data:image/webp;base64,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"><span class="brand"><b>Structured Programming</b><span>Theory · Lecture 02</span><small>Prepared by: Md Nazrul Islam <b>[NI]</b>, Lecturer, Dept. of CSE, Southeast University</small></span></a><nav class="tabs" aria-label="Site"><a href="../">Home</a><a href="../theory/index.html" class="on">Theory</a><a href="../lab/index.html">Lab</a></nav></header><div class="wrap"><aside class="rail" aria-label="On this page"><div class="rh">Lecture 02</div><a class="navi" href="#families"><span class="nid">01</span><span class="nt">Eight families of operators</span></a><a class="navi" href="#evaluator"><span class="nid">02</span><span class="nt">Expression evaluator</span></a><a class="navi" href="#division"><span class="nid">03</span><span class="nt">Division and remainder</span></a><a class="navi" href="#incdec"><span class="nid">04</span><span class="nt">Increment and decrement</span></a><a class="navi" href="#ternary"><span class="nid">05</span><span class="nt">The conditional operator ?:</span></a><a class="navi" href="#bitwise"><span class="nid">06</span><span class="nt">Bitwise operators</span></a><a class="navi" href="#expressions"><span class="nid">07</span><span class="nt">Arithmetic expressions</span></a><a class="navi" href="#precedence"><span class="nid">08</span><span class="nt">Precedence and associativity</span></a><a class="navi" href="#conversion"><span class="nid">09</span><span class="nt">Type conversion</span></a><a class="navi" href="#math"><span class="nid">10</span><span class="nt">The &lt;math.h&gt; library</span></a><a class="navi" href="#exercises"><span class="nid">11</span><span class="nt">Exercises with solutions</span></a></aside><main><div class="crumbs"><a href="../">Home</a> › <a href="index.html">Theory</a> › Lecture 02</div><h1>Operators and Expressions</h1><p class="lead">How C evaluates an expression: which operator runs first, what integer division does, how ++ differs before and after a variable, and how values are converted between types.</p><select id="navsel" aria-label="Jump to section"><option value="">Jump to…</option><option value="families">01 Eight families of operators</option><option value="evaluator">02 Expression evaluator</option><option value="division">03 Division and remainder</option><option value="incdec">04 Increment and decrement</option><option value="ternary">05 The conditional operator ?:</option><option value="bitwise">06 Bitwise operators</option><option value="expressions">07 Arithmetic expressions</option><option value="precedence">08 Precedence and associativity</option><option value="conversion">09 Type conversion</option><option value="math">10 The &lt;math.h&gt; library</option><option value="exercises">11 Exercises with solutions</option></select><div class="note"><b>Practise in the lab:</b> <a href="../lab/01-fundamentals.html">Lab 01 · Fundamentals, Bitwise and Ternary Operators</a></div>
+
+<h2 id="families">Eight families of operators</h2>
+<div class="tblwrap"><table>
+<thead><tr><th>Family</th><th>Operators</th><th>Example (a = 10, b = 24)</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Arithmetic</td><td><code>+ - * / %</code></td><td><code>b / 12</code>, <code>b % 20</code></td><td>2, 4</td></tr>
+<tr><td>Relational</td><td><code>&lt; &gt; &lt;= &gt;= == !=</code></td><td><code>a &lt; b</code></td><td>1 (true)</td></tr>
+<tr><td>Logical</td><td><code>&amp;&amp; || !</code></td><td><code>a &gt; 5 &amp;&amp; b &lt; 20</code></td><td>0 (false)</td></tr>
+<tr><td>Assignment</td><td><code>= += -= *= /= %=</code></td><td><code>a += 10</code></td><td>a becomes 20</td></tr>
+<tr><td>Increment / decrement</td><td><code>++ --</code></td><td><code>y = a++</code></td><td>y = 10, a = 11</td></tr>
+<tr><td>Conditional</td><td><code>? :</code></td><td><code>x = (a &gt; b) ? a : b</code></td><td>x = 24</td></tr>
+<tr><td>Bitwise</td><td><code>&amp; | ^ ~ &lt;&lt; &gt;&gt;</code></td><td><code>a &amp; 6</code></td><td>2</td></tr>
+<tr><td>Special</td><td><code>, sizeof &amp; * . -&gt;</code></td><td><code>sizeof(int)</code></td><td>4</td></tr>
+</tbody></table></div>
+<p>C has no boolean type in the classic sense: a relational or logical operator produces the <code>int</code> 1 for true and 0 for false, and any non-zero value counts as true.</p>
+
+<h3>Relational operators</h3>
+<p>Relational operators compare two quantities so the program can decide what to do next. <code>10 &lt; 20</code> is true.</p>
+<div class="tblwrap"><table><thead><tr><th>Operator</th><th>Meaning</th><th>Example</th><th>Result</th></tr></thead><tbody>
+<tr><td><code>&lt;</code></td><td>less than</td><td><code>5 &lt; 3</code></td><td>false (0)</td></tr>
+<tr><td><code>&gt;</code></td><td>greater than</td><td><code>5 &gt; 3</code></td><td>true (1)</td></tr>
+<tr><td><code>&lt;=</code></td><td>less than or equal to</td><td><code>5 &lt;= 2</code></td><td>false (0)</td></tr>
+<tr><td><code>&gt;=</code></td><td>greater than or equal to</td><td><code>5 &gt;= 2</code></td><td>true (1)</td></tr>
+<tr><td><code>==</code></td><td>equal to</td><td><code>5 == 2</code></td><td>false (0)</td></tr>
+<tr><td><code>!=</code></td><td>not equal to</td><td><code>5 != 2</code></td><td>true (1)</td></tr>
+</tbody></table></div>
+<div class="tv" data-tr="t02-rel"></div><script type="application/json" id="tr-t02-rel">{"title":"Relational operators (slide 11)","code":"#include <stdio.h>\nint main()\n{\n    int op1 = 5;\n    int op2 = 3;\n    printf(\"op1: %d op2: %d op1 < op2: %d\\n\", op1, op2, op1 < op2);\n    printf(\"op1: %d op2: %d op1 > op2: %d\\n\", op1, op2, op1 > op2);\n    printf(\"op1: %d op2: %d op1 <= op2: %d\\n\", op1, op2, op1 <= op2);\n    printf(\"op1: %d op2: %d op1 >= op2: %d\\n\", op1, op2, op1 >= op2);\n    printf(\"op1: %d op2: %d op1 == op2: %d\\n\", op1, op2, op1 == op2);\n    printf(\"op1: %d op2: %d op1 != op2: %d\\n\", op1, op2, op1 != op2);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["op1","int",0,0],["op2","int",0,1]]]]},{"l":5,"f":[["main",5,[["op1","int",0,2],["op2","int",0,1]]]]},{"l":6,"f":[["main",6,[["op1","int",0,2],["op2","int",0,3]]]]},{"l":7,"f":[["main",7,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 op1 < op2: 0\n"]]},{"l":8,"f":[["main",8,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 op1 > op2: 1\n"]]},{"l":9,"f":[["main",9,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 op1 <= op2: 0\n"]]},{"l":10,"f":[["main",10,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 op1 >= op2: 1\n"]]},{"l":11,"f":[["main",11,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 op1 == op2: 0\n"]]},{"l":12,"f":[["main",12,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 op1 != op2: 1\n"]]},{"l":13,"f":[["main",13,[["op1","int",0,2],["op2","int",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314908},{"k":"i","v":-40120,"a":140737488314904},{"k":"i","v":5,"a":140737488314908},{"k":"i","v":3,"a":140737488314904}]},"out":"op1: 5 op2: 3 op1 < op2: 0\nop1: 5 op2: 3 op1 > op2: 1\nop1: 5 op2: 3 op1 <= op2: 0\nop1: 5 op2: 3 op1 >= op2: 1\nop1: 5 op2: 3 op1 == op2: 0\nop1: 5 op2: 3 op1 != op2: 1\n","trunc":false}]}</script>
+<h3>Logical operators</h3>
+<p><code>&amp;&amp;</code> (logical AND), <code>||</code> (logical OR) and <code>!</code> (logical NOT) combine conditions.</p>
+<div class="tblwrap"><table style="text-align:center"><thead><tr><th>A</th><th>B</th><th>A &amp;&amp; B</th><th>A || B</th><th>!(A &amp;&amp; B)</th><th>!(A || B)</th></tr></thead><tbody>
+<tr><td>true</td><td>true</td><td>true</td><td>true</td><td>false</td><td>false</td></tr>
+<tr><td>true</td><td>false</td><td>false</td><td>true</td><td>true</td><td>false</td></tr>
+<tr><td>false</td><td>true</td><td>false</td><td>true</td><td>true</td><td>false</td></tr>
+<tr><td>false</td><td>false</td><td>false</td><td>false</td><td>true</td><td>true</td></tr>
+</tbody></table></div>
+<div class="tv" data-tr="t02-logic"></div><script type="application/json" id="tr-t02-logic">{"title":"Logical OR (slide 13)","code":"#include <stdio.h>\nint main()\n{\n    int op1 = 5;\n    int op2 = 3;\n    printf(\"op1: %d op2: %d (op1 < op2) || (op1 > op2): %d\\n\", op1, op2, (op1 < op2) || (op1 > op2));\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["op1","int",0,0],["op2","int",0,1]]]]},{"l":5,"f":[["main",5,[["op1","int",0,2],["op2","int",0,1]]]]},{"l":6,"f":[["main",6,[["op1","int",0,2],["op2","int",0,3]]]]},{"l":7,"f":[["main",7,[["op1","int",0,2],["op2","int",0,3]]]],"d":[["o","op1: 5 op2: 3 (op1 < op2) || (op1 > op2): 1\n"]]},{"l":8,"f":[["main",8,[["op1","int",0,2],["op2","int",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314908},{"k":"i","v":-40120,"a":140737488314904},{"k":"i","v":5,"a":140737488314908},{"k":"i","v":3,"a":140737488314904}]},"out":"op1: 5 op2: 3 (op1 < op2) || (op1 > op2): 1\n","trunc":false}]}</script>
+<h3>Assignment operators</h3>
+<p>The shorthand <code>v op= exp;</code> means <code>v = v op (exp);</code>. In the table each line starts again from <code>c = 9</code>.</p>
+<div class="tblwrap"><table><thead><tr><th>Operator</th><th>Example</th><th>Equivalent statement</th><th>Value of c (starting from 9)</th></tr></thead><tbody>
+<tr><td><code>+=</code></td><td><code>c += 7</code></td><td><code>c = c + 7</code></td><td>16</td></tr>
+<tr><td><code>-=</code></td><td><code>c -= 8</code></td><td><code>c = c - 8</code></td><td>1</td></tr>
+<tr><td><code>*=</code></td><td><code>c *= 10</code></td><td><code>c = c * 10</code></td><td>90</td></tr>
+<tr><td><code>/=</code></td><td><code>c /= 5</code></td><td><code>c = c / 5</code></td><td>1</td></tr>
+<tr><td><code>%=</code></td><td><code>c %= 5</code></td><td><code>c = c % 5</code></td><td>4</td></tr>
+</tbody></table></div>
+
+<h2 id="evaluator">Expression evaluator</h2>
+<p>Type a C expression using the variables below. The evaluator builds the expression tree that the compiler builds (precedence and associativity decide its shape) and then evaluates it one operator at a time. Integer division, <code>%</code>, short-circuit <code>&amp;&amp;</code> and <code>||</code>, prefix and postfix <code>++</code>, casts and assignments all behave as in C.</p>
+<div class="widget" id="ev">
+<div class="row"><label class="lbl" for="evvars">Variables</label><input id="evvars" class="field mono" style="flex:1 1 320px" value="int a = 10, b = 3, m = 5; double x = 2.5;"></div>
+<div class="row"><label class="lbl" for="evexpr">Expression</label><input id="evexpr" class="field mono" style="flex:1 1 320px" value="a + b * 2 - a / b % 2"></div>
+<div class="row" id="evex"></div>
+<div id="everr" class="bad" style="font-size:15px"></div>
+<div class="row"><button class="btn sm" id="evfirst">⏮</button><button class="btn sm" id="evprev">◀ Back</button><button class="btn sm pri" id="evnext">Next ▶</button><button class="btn sm" id="evall">Show all</button><span class="tv-count" id="evcount"></span></div>
+<div class="row"><span class="lbl">Fully bracketed:</span><code id="evparen" style="font-size:16px"></code></div>
+<div style="overflow-x:auto"><svg id="evtree" style="display:block;min-width:300px"></svg></div>
+<div class="tv-explain" id="evstep" style="border:1px solid #f0d37a;border-radius:8px"></div>
+<div class="row" id="evvarsout" style="font-family:var(--mono);font-size:15px"></div>
+</div>
+
+<h2 id="division">Division and remainder</h2>
+<p>If both operands of <code>/</code> are integers (<code>int</code> or <code>char</code>), the result is an integer and the fraction is thrown away (truncated toward zero). If either operand is <code>float</code> or <code>double</code>, the result is a floating-point number. <code>%</code> gives the remainder and works only on integers.</p>
+<div class="widget">
+<div class="row"><label class="lbl" for="dva">a</label><input id="dva" class="field mono" type="number" value="7" style="width:110px"><label class="lbl" for="dvb">b</label><input id="dvb" class="field mono" type="number" value="2" style="width:110px"></div>
+<div class="tblwrap"><table id="dvt" style="font-family:var(--mono)"></table></div>
+<p class="lbl" style="margin:0">Since C99 the quotient is truncated toward zero, so <code>-7 / 2</code> is <code>-3</code> and <code>-7 % 2</code> is <code>-1</code>. The rule <code>(a / b) * b + a % b == a</code> always holds.</p>
+</div>
+
+<h2 id="incdec">Increment and decrement</h2>
+<p><code>m++</code> and <code>++m</code> both add 1 to <code>m</code>. They differ only when the expression's value is used: postfix gives the <i>old</i> value, prefix gives the <i>new</i> value.</p>
+<div class="widget">
+<div class="row"><span class="lbl">Start with m = 5, then run</span>
+<button class="chip on" data-inc="y = m++;">y = m++;</button><button class="chip" data-inc="y = ++m;">y = ++m;</button><button class="chip" data-inc="y = m--;">y = m--;</button><button class="chip" data-inc="y = --m;">y = --m;</button><button class="chip" data-inc="y = m++ + 10;">y = m++ + 10;</button></div>
+<div id="incsteps" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px"></div>
+</div>
+<div class="pit"><b>Undefined behaviour.</b> Do not change a variable twice, or change it and read it again, in one expression without a sequence point: <code>i = i++;</code>, <code>a[i] = i++;</code> and <code>printf("%d %d", i, i++);</code> give different results on different compilers. (The slide's <code>a[i++] = 10;</code> is fine: it stores into <code>a[i]</code> and then increments <code>i</code>.)</div>
+
+<h2 id="ternary">The conditional operator ?:</h2>
+<p><code>exp1 ? exp2 : exp3</code> evaluates <code>exp1</code>; if it is non-zero the value is <code>exp2</code>, otherwise <code>exp3</code>. Only one of <code>exp2</code> and <code>exp3</code> is evaluated. <code>x = (a &gt; b) ? a : b;</code> is a one-line version of <code>if (a &gt; b) x = a; else x = b;</code>.</p>
+<div class="tv" data-tr="t02-tern"></div><script type="application/json" id="tr-t02-tern">{"title":"Maximum with the conditional operator","code":"#include <stdio.h>\nint main()\n{\n    int num1, num2, max;\n    printf(\"Enter two numbers: \");\n    scanf(\"%d%d\", &num1, &num2);\n    /* If num1 > num2 then assign num1 to max, else assign num2 */\n    max = (num1 > num2) ? num1 : num2;\n    printf(\"Maximum between %d and %d is %d\\n\", num1, num2, max);\n    return 0;\n}\n","inputs":[{"label":"10, 15","stdin":"10 15\n","trace":{"steps":[{"l":5,"f":[["main",5,[["num1","int",0,0],["num2","int",0,1],["max","int",0,2]]]]},{"l":6,"f":[["main",6,[["num1","int",0,0],["num2","int",0,1],["max","int",0,2]]]],"d":[["o","Enter two numbers: "]]},{"l":8,"f":[["main",8,[["num1","int",0,3],["num2","int",0,4],["max","int",0,2]]]],"d":[["i","10 15\n"]]},{"l":9,"f":[["main",9,[["num1","int",0,3],["num2","int",0,4],["max","int",0,5]]]]},{"l":10,"f":[["main",10,[["num1","int",0,3],["num2","int",0,4],["max","int",0,5]]]],"d":[["o","Maximum between 10 and 15 is 15\n"]]},{"l":11,"f":[["main",11,[["num1","int",0,3],["num2","int",0,4],["max","int",0,5]]]]}],"V":[{"k":"i","v":-40104,"a":140737488314920},{"k":"i","v":32767,"a":140737488314916},{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":10,"a":140737488314920},{"k":"i","v":15,"a":140737488314916},{"k":"i","v":15,"a":140737488314924}]},"out":"Enter two numbers: Maximum between 10 and 15 is 15\n","trunc":false},{"label":"40, 12","stdin":"40 12\n","trace":{"steps":[{"l":5,"f":[["main",5,[["num1","int",0,0],["num2","int",0,1],["max","int",0,2]]]]},{"l":6,"f":[["main",6,[["num1","int",0,0],["num2","int",0,1],["max","int",0,2]]]],"d":[["o","Enter two numbers: "]]},{"l":8,"f":[["main",8,[["num1","int",0,3],["num2","int",0,4],["max","int",0,2]]]],"d":[["i","40 12\n"]]},{"l":9,"f":[["main",9,[["num1","int",0,3],["num2","int",0,4],["max","int",0,5]]]]},{"l":10,"f":[["main",10,[["num1","int",0,3],["num2","int",0,4],["max","int",0,5]]]],"d":[["o","Maximum between 40 and 12 is 40\n"]]},{"l":11,"f":[["main",11,[["num1","int",0,3],["num2","int",0,4],["max","int",0,5]]]]}],"V":[{"k":"i","v":-40104,"a":140737488314920},{"k":"i","v":32767,"a":140737488314916},{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":40,"a":140737488314920},{"k":"i","v":12,"a":140737488314916},{"k":"i","v":40,"a":140737488314924}]},"out":"Enter two numbers: Maximum between 40 and 12 is 40\n","trunc":false}]}</script>
+
+<h2 id="bitwise">Bitwise operators</h2>
+<p>Bitwise operators work on the individual bits of integers; they may not be applied to <code>float</code> or <code>double</code>.</p>
+<div class="tblwrap"><table><thead><tr><th>Operator</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>&amp;</code></td><td>bitwise AND</td></tr><tr><td><code>|</code></td><td>bitwise OR</td></tr><tr><td><code>^</code></td><td>bitwise XOR (exclusive OR)</td></tr>
+<tr><td><code>~</code></td><td>one's complement (flip every bit)</td></tr><tr><td><code>&lt;&lt;</code></td><td>shift left</td></tr><tr><td><code>&gt;&gt;</code></td><td>shift right</td></tr>
+</tbody></table></div>
+<p>Click the bits to change the operands.</p>
+<div class="widget" id="bw">
+<div class="row"><span class="lbl">Operator</span><span id="bwops"></span><label class="lbl" for="bwsh">shift by</label><input id="bwsh" type="number" min="0" max="7" value="1" class="field mono" style="width:70px"></div>
+<div id="bwgrid" style="font-family:var(--mono);overflow-x:auto"></div>
+<p id="bwinfo" style="margin:6px 0 0"></p>
+</div>
+<div class="tblwrap"><table style="font-family:var(--mono);text-align:center"><thead><tr><th>p</th><th>q</th><th>p &amp; q</th><th>p | q</th><th>p ^ q</th><th>~p</th></tr></thead>
+<tbody><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></tbody></table></div>
+<h3>A 32-bit example (slide 21)</h3>
+<p>With <code>a = 33333</code> and <code>b = -77777</code> stored as 32-bit <code>int</code>s (negative numbers in two's complement):</p>
+<div class="tblwrap"><table style="font-family:var(--mono);font-size:15px"><thead><tr><th>Expression</th><th>Bits</th><th>Value</th></tr></thead><tbody>
+<tr><td>a</td><td>00000000 00000000 10000010 00110101</td><td>33333</td></tr>
+<tr><td>b</td><td>11111111 11111110 11010000 00101111</td><td>-77777</td></tr>
+<tr><td>a &amp; b</td><td>00000000 00000000 10000000 00100101</td><td>32805</td></tr>
+<tr><td>a ^ b</td><td>11111111 11111110 01010010 00011010</td><td>-110054</td></tr>
+<tr><td>a | b</td><td>11111111 11111110 11010010 00111111</td><td>-77249</td></tr>
+<tr><td>~(a | b)</td><td>00000000 00000001 00101101 11000000</td><td>77248</td></tr>
+<tr><td>~a &amp; ~b</td><td>00000000 00000001 00101101 11000000</td><td>77248</td></tr>
+</tbody></table></div>
+<p>The last two rows are equal: De Morgan's rule (Lecture 03) also holds bit by bit.</p>
+<div class="tv" data-tr="t02-bw32"></div><script type="application/json" id="tr-t02-bw32">{"title":"The same values computed by C","code":"#include <stdio.h>\nint main()\n{\n    int a = 33333, b = -77777;\n    printf(\"a&b = %d\\n\", a & b);\n    printf(\"a^b = %d\\n\", a ^ b);\n    printf(\"a|b = %d\\n\", a | b);\n    printf(\"~(a|b) = %d, ~a&~b = %d\\n\", ~(a | b), ~a & ~b);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int",0,0],["b","int",0,1]]]]},{"l":5,"f":[["main",5,[["a","int",0,2],["b","int",0,3]]]]},{"l":6,"f":[["main",6,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","a&b = 32805\n"]]},{"l":7,"f":[["main",7,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","a^b = -110054\n"]]},{"l":8,"f":[["main",8,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","a|b = -77249\n"]]},{"l":9,"f":[["main",9,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","~(a|b) = 77248, ~a&~b = 77248\n"]]},{"l":10,"f":[["main",10,[["a","int",0,2],["b","int",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314908},{"k":"i","v":-40120,"a":140737488314904},{"k":"i","v":33333,"a":140737488314908},{"k":"i","v":-77777,"a":140737488314904}]},"out":"a&b = 32805\na^b = -110054\na|b = -77249\n~(a|b) = 77248, ~a&~b = 77248\n","trunc":false}]}</script>
+<h3>Shift examples (slide 22)</h3>
+<div class="grid2">
+<div class="tblwrap"><table style="font-family:var(--mono)"><thead><tr><th>Statement</th><th>8-bit form</th><th>Value</th></tr></thead><tbody>
+<tr><td>x = 7;</td><td>00000111</td><td>7</td></tr><tr><td>x = x &lt;&lt; 1;</td><td>00001110</td><td>14</td></tr>
+<tr><td>x = x &lt;&lt; 3;</td><td>01110000</td><td>112</td></tr><tr><td>x = x &lt;&lt; 2;</td><td>11000000</td><td>192</td></tr></tbody></table></div>
+<div class="tblwrap"><table style="font-family:var(--mono)"><thead><tr><th>Statement</th><th>8-bit form</th><th>Value</th></tr></thead><tbody>
+<tr><td>x = 192;</td><td>11000000</td><td>192</td></tr><tr><td>x = x &gt;&gt; 1;</td><td>01100000</td><td>96</td></tr>
+<tr><td>x = x &gt;&gt; 2;</td><td>00011000</td><td>24</td></tr><tr><td>x = x &gt;&gt; 3;</td><td>00000011</td><td>3</td></tr></tbody></table></div>
+</div>
+<p>Each left shift by k multiplies by 2<sup>k</sup> and each right shift divides by 2<sup>k</sup>, until bits fall off the end: 112 &lt;&lt; 2 would be 448, but in 8 bits the top bit is lost and 192 remains. The program uses an <code>unsigned char</code> so the 8-bit behaviour is real.</p>
+<div class="tv" data-tr="t02-shift"></div><script type="application/json" id="tr-t02-shift">{"title":"Shifting an 8-bit value","code":"#include <stdio.h>\nint main()\n{\n    unsigned char x = 7;\n    printf(\"%d \", x);\n    x = x << 1;\n    printf(\"%d \", x);\n    x = x << 3;\n    printf(\"%d \", x);\n    x = x << 2;              /* 448 does not fit in 8 bits: 192 is kept */\n    printf(\"%d\\n\", x);\n    x = 192;\n    printf(\"%d \", x);\n    x = x >> 1;\n    printf(\"%d \", x);\n    x = x >> 2;\n    printf(\"%d \", x);\n    x = x >> 3;\n    printf(\"%d\\n\", x);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["x","unsigned char",0,0]]]]},{"l":5,"f":[["main",5,[["x","unsigned char",0,1]]]]},{"l":6,"f":[["main",6,[["x","unsigned char",0,1]]]],"d":[["o","7 "]]},{"l":7,"f":[["main",7,[["x","unsigned char",0,2]]]]},{"l":8,"f":[["main",8,[["x","unsigned char",0,2]]]],"d":[["o","14 "]]},{"l":9,"f":[["main",9,[["x","unsigned char",0,3]]]]},{"l":10,"f":[["main",10,[["x","unsigned char",0,3]]]],"d":[["o","112 "]]},{"l":11,"f":[["main",11,[["x","unsigned char",0,4]]]]},{"l":12,"f":[["main",12,[["x","unsigned char",0,4]]]],"d":[["o","192\n"]]},{"l":13,"f":[["main",13,[["x","unsigned char",0,4]]]]},{"l":14,"f":[["main",14,[["x","unsigned char",0,4]]]],"d":[["o","192 "]]},{"l":15,"f":[["main",15,[["x","unsigned char",0,5]]]]},{"l":16,"f":[["main",16,[["x","unsigned char",0,5]]]],"d":[["o","96 "]]},{"l":17,"f":[["main",17,[["x","unsigned char",0,6]]]]},{"l":18,"f":[["main",18,[["x","unsigned char",0,6]]]],"d":[["o","24 "]]},{"l":19,"f":[["main",19,[["x","unsigned char",0,7]]]]},{"l":20,"f":[["main",20,[["x","unsigned char",0,7]]]],"d":[["o","3\n"]]},{"l":21,"f":[["main",21,[["x","unsigned char",0,7]]]]}],"V":[{"k":"c","v":0,"a":140737488314911},{"k":"c","v":7,"a":140737488314911},{"k":"c","v":14,"a":140737488314911},{"k":"c","v":112,"a":140737488314911},{"k":"c","v":192,"a":140737488314911},{"k":"c","v":96,"a":140737488314911},{"k":"c","v":24,"a":140737488314911},{"k":"c","v":3,"a":140737488314911}]},"out":"7 14 112 192\n192 96 24 3\n","trunc":false}]}</script>
+<p>Common uses: <code>n &amp; 1</code> is 1 for odd numbers (the lowest bit is set); <code>n | (1 &lt;&lt; k)</code> sets bit k; <code>n ^ (1 &lt;&lt; k)</code> flips bit k; <code>n &lt;&lt; 1</code> doubles n and <code>n &gt;&gt; 1</code> halves it.</p>
+<div class="tv" data-tr="t02-lsb"></div><script type="application/json" id="tr-t02-lsb">{"title":"Is the lowest bit set?","code":"#include <stdio.h>\nint main()\n{\n    int num;\n    printf(\"Enter any number: \");\n    scanf(\"%d\", &num);\n    if ((num & 1) == 1)\n        printf(\"LSB of %d is set (1).\\n\", num);\n    else\n        printf(\"LSB of %d is unset (0).\\n\", num);\n    return 0;\n}\n","inputs":[{"label":"11","stdin":"11\n","trace":{"steps":[{"l":5,"f":[["main",5,[["num","int",0,0]]]]},{"l":6,"f":[["main",6,[["num","int",0,0]]]],"d":[["o","Enter any number: "]]},{"l":7,"f":[["main",7,[["num","int",0,1]]]],"d":[["i","11\n"]]},{"l":8,"f":[["main",8,[["num","int",0,1]]]]},{"l":8,"d":[["o","LSB of 11 is set (1).\n"]]},{"l":11,"f":[["main",11,[["num","int",0,1]]]]},{"l":12,"f":[["main",12,[["num","int",0,1]]]]}],"V":[{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":11,"a":140737488314924}]},"out":"Enter any number: LSB of 11 is set (1).\n","trunc":false},{"label":"12","stdin":"12\n","trace":{"steps":[{"l":5,"f":[["main",5,[["num","int",0,0]]]]},{"l":6,"f":[["main",6,[["num","int",0,0]]]],"d":[["o","Enter any number: "]]},{"l":7,"f":[["main",7,[["num","int",0,1]]]],"d":[["i","12\n"]]},{"l":10,"f":[["main",10,[["num","int",0,1]]]]},{"l":11,"f":[["main",11,[["num","int",0,1]]]],"d":[["o","LSB of 12 is unset (0).\n"]]},{"l":12,"f":[["main",12,[["num","int",0,1]]]]}],"V":[{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":12,"a":140737488314924}]},"out":"Enter any number: LSB of 12 is unset (0).\n","trunc":false}]}</script>
+<div class="note"><b>Brackets matter here.</b> The slide writes <code>if(num &amp; 1 == 1)</code>. Because <code>==</code> has higher precedence than <code>&amp;</code>, the compiler reads it as <code>num &amp; (1 == 1)</code>, which is <code>num &amp; 1</code>. The answer is right only by coincidence; type it into the evaluator above to see the tree. GCC warns: <i>suggest parentheses around comparison in operand of '&amp;'</i>.</div>
+
+<h2 id="expressions">Arithmetic expressions</h2>
+<p>An expression combines variables, constants and operators according to the syntax of the language: <code>a = b * c;</code> has three operands and two operators (<code>*</code> and <code>=</code>). The number of operands an operator takes is its <b>arity</b>: unary operators take one (<code>-x</code>, <code>!x</code>, <code>++x</code>), binary operators take two (<code>a + b</code>), and the only ternary operator, <code>?:</code>, takes three. <code>* / %</code> have higher priority than <code>+ -</code>. Algebra written on paper must be rewritten with explicit operators and brackets:</p>
+<div class="tblwrap"><table><thead><tr><th>Algebraic expression</th><th>C expression</th></tr></thead><tbody>
+<tr><td>a × b − c</td><td><code>a * b - c</code></td></tr>
+<tr><td>(m + n)(x + y)</td><td><code>(m + n) * (x + y)</code></td></tr>
+<tr><td>ab / c</td><td><code>a * b / c</code></td></tr>
+<tr><td>3x² + 2x + 1</td><td><code>3 * x * x + 2 * x + 1</code></td></tr>
+<tr><td>a / b</td><td><code>a / b</code></td></tr>
+<tr><td>S = (a + b + c) / 2</td><td><code>S = (a + b + c) / 2</code></td></tr>
+</tbody></table></div>
+<p class="lbl">Brackets matter: <code>a + b + c / 2</code> would divide only c. If a, b and c are integers, <code>(a + b + c) / 2</code> also truncates; write <code>/ 2.0</code> for a fractional result.</p>
+
+<h2 id="precedence">Precedence and associativity</h2>
+<p>When an expression has several operators, higher precedence binds first. Operators on the same level are grouped by associativity: most go left to right, but unary operators, <code>?:</code> and assignments go right to left (so <code>a = b = 5</code> means <code>a = (b = 5)</code>).</p>
+<div class="row"><input id="prq" class="field" placeholder="Filter, e.g. shift, &&, assignment" aria-label="Filter the precedence table" style="width:min(360px,100%)"></div>
+<div class="tblwrap"><table id="prt"><thead><tr><th>Level</th><th>Operators</th><th>Description</th><th>Associativity</th></tr></thead><tbody></tbody></table></div>
+
+<h2 id="conversion">Type conversion</h2>
+<p>In a mixed expression the lower type is converted to the higher type before the operation (<b>implicit conversion</b>). The type conversion hierarchy, from lowest to highest, is <code>char</code>/<code>short</code> → <code>int</code> → <code>unsigned int</code> → <code>long int</code> → <code>unsigned long int</code> → <code>float</code> → <code>double</code> → <code>long double</code>. Going down the ladder against this direction needs a cast. A <b>cast</b> forces a conversion (<b>explicit conversion</b>): <code>(float)num1 / num2</code> converts <code>num1</code> first, so the division is done in floating point.</p>
+<div class="widget">
+<div id="ladder" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--mono)"></div>
+<div class="row" style="margin-top:12px"><select id="cva" class="field" aria-label="Left operand type"></select><select id="cvop" class="field mono" aria-label="Operator"><option>+</option><option>*</option><option>/</option></select><select id="cvb" class="field" aria-label="Right operand type"></select></div>
+<p id="cvout" style="margin:0"></p>
+</div>
+<p>Assigning a wider value to a narrower variable also converts it: <code>int i = 3.99;</code> stores 3 (the fraction is dropped), and <code>char c = 300;</code> keeps only the low 8 bits (44).</p>
+<div class="tv" data-tr="t02-arith"></div><script type="application/json" id="tr-t02-arith">{"title":"All arithmetic operations (with a cast for division)","code":"#include <stdio.h>\nint main()\n{\n    int num1, num2;\n    int sum, sub, mult, mod;\n    float div;\n    printf(\"Enter any two numbers: \");\n    scanf(\"%d%d\", &num1, &num2);\n    sum = num1 + num2;\n    sub = num1 - num2;\n    mult = num1 * num2;\n    div = (float)num1 / num2;\n    mod = num1 % num2;\n    printf(\"SUM = %d\\n\", sum);\n    printf(\"DIFFERENCE = %d\\n\", sub);\n    printf(\"PRODUCT = %d\\n\", mult);\n    printf(\"QUOTIENT = %f\\n\", div);\n    printf(\"MODULUS = %d\\n\", mod);\n    return 0;\n}\n","inputs":[{"label":"17 and 5","stdin":"17 5\n","trace":{"steps":[{"l":7,"f":[["main",7,[["num1","int",0,0],["num2","int",0,1],["sum","int",0,2],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]]},{"l":8,"f":[["main",8,[["num1","int",0,0],["num2","int",0,1],["sum","int",0,2],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]],"d":[["o","Enter any two numbers: "]]},{"l":9,"f":[["main",9,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,2],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]],"d":[["i","17 5\n"]]},{"l":10,"f":[["main",10,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]]},{"l":11,"f":[["main",11,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]]},{"l":12,"f":[["main",12,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,5],["div","float",0,6]]]]},{"l":13,"f":[["main",13,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,5],["div","float",0,12]]]]},{"l":14,"f":[["main",14,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]]},{"l":15,"f":[["main",15,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","SUM = 22\n"]]},{"l":16,"f":[["main",16,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","DIFFERENCE = 12\n"]]},{"l":17,"f":[["main",17,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","PRODUCT = 85\n"]]},{"l":18,"f":[["main",18,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","QUOTIENT = 3.400000\n"]]},{"l":19,"f":[["main",19,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","MODULUS = 2\n"]]},{"l":20,"f":[["main",20,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]]}],"V":[{"k":"i","v":-134325520,"a":140737488314904},{"k":"i","v":0,"a":140737488314900},{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":-40104,"a":140737488314920},{"k":"i","v":32767,"a":140737488314916},{"k":"i","v":32767,"a":140737488314908},{"k":"f","v":-9.100107132307145e+33,"a":140737488314912},{"k":"i","v":17,"a":140737488314904},{"k":"i","v":5,"a":140737488314900},{"k":"i","v":22,"a":140737488314924},{"k":"i","v":12,"a":140737488314920},{"k":"i","v":85,"a":140737488314916},{"k":"f","v":3.4,"a":140737488314912},{"k":"i","v":2,"a":140737488314908}]},"out":"Enter any two numbers: SUM = 22\nDIFFERENCE = 12\nPRODUCT = 85\nQUOTIENT = 3.400000\nMODULUS = 2\n","trunc":false},{"label":"-7 and 2","stdin":"-7 2\n","trace":{"steps":[{"l":7,"f":[["main",7,[["num1","int",0,0],["num2","int",0,1],["sum","int",0,2],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]]},{"l":8,"f":[["main",8,[["num1","int",0,0],["num2","int",0,1],["sum","int",0,2],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]],"d":[["o","Enter any two numbers: "]]},{"l":9,"f":[["main",9,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,2],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]],"d":[["i","-7 2\n"]]},{"l":10,"f":[["main",10,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,3],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]]},{"l":11,"f":[["main",11,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,4],["mod","int",0,5],["div","float",0,6]]]]},{"l":12,"f":[["main",12,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,5],["div","float",0,6]]]]},{"l":13,"f":[["main",13,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,5],["div","float",0,12]]]]},{"l":14,"f":[["main",14,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]]},{"l":15,"f":[["main",15,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","SUM = -5\n"]]},{"l":16,"f":[["main",16,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","DIFFERENCE = -9\n"]]},{"l":17,"f":[["main",17,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","PRODUCT = -14\n"]]},{"l":18,"f":[["main",18,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","QUOTIENT = -3.500000\n"]]},{"l":19,"f":[["main",19,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]],"d":[["o","MODULUS = -1\n"]]},{"l":20,"f":[["main",20,[["num1","int",0,7],["num2","int",0,8],["sum","int",0,9],["sub","int",0,10],["mult","int",0,11],["mod","int",0,13],["div","float",0,12]]]]}],"V":[{"k":"i","v":-134325520,"a":140737488314904},{"k":"i","v":0,"a":140737488314900},{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":-40104,"a":140737488314920},{"k":"i","v":32767,"a":140737488314916},{"k":"i","v":32767,"a":140737488314908},{"k":"f","v":-9.100107132307145e+33,"a":140737488314912},{"k":"i","v":-7,"a":140737488314904},{"k":"i","v":2,"a":140737488314900},{"k":"i","v":-5,"a":140737488314924},{"k":"i","v":-9,"a":140737488314920},{"k":"i","v":-14,"a":140737488314916},{"k":"f","v":-3.5,"a":140737488314912},{"k":"i","v":-1,"a":140737488314908}]},"out":"Enter any two numbers: SUM = -5\nDIFFERENCE = -9\nPRODUCT = -14\nQUOTIENT = -3.500000\nMODULUS = -1\n","trunc":false}]}</script>
+<div class="tv" data-tr="t02-assign"></div><script type="application/json" id="tr-t02-assign">{"title":"Compound assignment operators","code":"#include <stdio.h>\nint main()\n{\n    int a = 10;\n    printf(\"Value of a is %d\\n\", a);\n    a += 10;\n    printf(\"Value of a is %d\\n\", a);\n    a -= 10;\n    printf(\"Value of a is %d\\n\", a);\n    a *= 10;\n    printf(\"Value of a is %d\\n\", a);\n    a /= 10;\n    printf(\"Value of a is %d\\n\", a);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int",0,0]]]]},{"l":5,"f":[["main",5,[["a","int",0,1]]]]},{"l":6,"f":[["main",6,[["a","int",0,1]]]],"d":[["o","Value of a is 10\n"]]},{"l":7,"f":[["main",7,[["a","int",0,2]]]]},{"l":8,"f":[["main",8,[["a","int",0,2]]]],"d":[["o","Value of a is 20\n"]]},{"l":9,"f":[["main",9,[["a","int",0,1]]]]},{"l":10,"f":[["main",10,[["a","int",0,1]]]],"d":[["o","Value of a is 10\n"]]},{"l":11,"f":[["main",11,[["a","int",0,3]]]]},{"l":12,"f":[["main",12,[["a","int",0,3]]]],"d":[["o","Value of a is 100\n"]]},{"l":13,"f":[["main",13,[["a","int",0,1]]]]},{"l":14,"f":[["main",14,[["a","int",0,1]]]],"d":[["o","Value of a is 10\n"]]},{"l":15,"f":[["main",15,[["a","int",0,1]]]]}],"V":[{"k":"i","v":32767,"a":140737488314924},{"k":"i","v":10,"a":140737488314924},{"k":"i","v":20,"a":140737488314924},{"k":"i","v":100,"a":140737488314924}]},"out":"Value of a is 10\nValue of a is 20\nValue of a is 10\nValue of a is 100\nValue of a is 10\n","trunc":false}]}</script>
+
+<h2 id="math">The &lt;math.h&gt; library</h2>
+<div class="tblwrap"><table><thead><tr><th>Function</th><th>Purpose</th><th>Example</th><th>Result</th></tr></thead><tbody>
+<tr><td><code>sqrt(x)</code></td><td>square root</td><td><code>sqrt(25)</code></td><td>5.0</td></tr>
+<tr><td><code>pow(x, y)</code></td><td>x to the power y</td><td><code>pow(2, 3)</code></td><td>8.0</td></tr>
+<tr><td><code>abs(x)</code></td><td>absolute value of an int (declared in <code>stdlib.h</code>)</td><td><code>abs(-50)</code></td><td>50</td></tr>
+<tr><td><code>fabs(x)</code></td><td>absolute value of a double</td><td><code>fabs(-3.5)</code></td><td>3.5</td></tr>
+<tr><td><code>fmod(x, y)</code></td><td>floating-point remainder</td><td><code>fmod(7.5, 2)</code></td><td>1.5</td></tr>
+<tr><td><code>ceil(x)</code> / <code>floor(x)</code></td><td>round up / down</td><td><code>ceil(3.2)</code>, <code>floor(3.8)</code></td><td>4.0, 3.0</td></tr>
+<tr><td><code>log(x)</code> / <code>log10(x)</code></td><td>natural / base-10 logarithm</td><td><code>log10(100)</code></td><td>2.0</td></tr>
+<tr><td><code>exp(x)</code></td><td>e<sup>x</sup></td><td><code>exp(1)</code></td><td>2.718…</td></tr>
+<tr><td><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code></td><td>trigonometry, x in radians</td><td><code>sin(M_PI/2)</code></td><td>1.0</td></tr>
+</tbody></table></div>
+<p>With GCC on Linux, add <code>-lm</code> when compiling a program that uses <code>&lt;math.h&gt;</code>: <code>gcc prog.c -lm</code>.</p>
+<div class="tv" data-tr="t02-math"></div><script type="application/json" id="tr-t02-math">{"title":"math.h functions","code":"#include <stdio.h>\n#include <math.h>\nint main()\n{\n    double a = 25.0, b = 3.0, c = 2.0;\n    double angle = M_PI / 4; /* 45 degrees */\n    double result_sq = sqrt(a);\n    double result_pw = pow(c, b);\n    printf(\"Square root of %.2f = %.2f\\n\", a, result_sq);\n    printf(\"%.2f raised to %.2f = %.2f\\n\", c, b, result_pw);\n    printf(\"Absolute value of -3.14 = %.2f\\n\", fabs(-3.14));\n    printf(\"Ceil of 3.2 = %.2f, floor of 3.8 = %.2f\\n\", ceil(3.2), floor(3.8));\n    printf(\"Remainder of %.2f / %.2f = %.2f\\n\", a, b, fmod(a, b));\n    printf(\"sin(45) = %.2f, log10(1000) = %.2f\\n\", sin(angle), log10(1000));\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":5,"f":[["main",5,[["a","double",0,0],["b","double",0,1],["c","double",0,2],["angle","double",0,3],["result_sq","double",0,4],["result_pw","double",0,5]]]]},{"l":6,"f":[["main",6,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,3],["result_sq","double",0,4],["result_pw","double",0,5]]]]},{"l":7,"f":[["main",7,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,4],["result_pw","double",0,5]]]]},{"l":7},{"l":8,"f":[["main",8,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,5]]]]},{"l":9,"f":[["main",9,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]]},{"l":10,"f":[["main",10,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]],"d":[["o","Square root of 25.00 = 5.00\n"]]},{"l":11,"f":[["main",11,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]],"d":[["o","2.00 raised to 3.00 = 8.00\n"]]},{"l":12,"f":[["main",12,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]],"d":[["o","Absolute value of -3.14 = 3.14\n"]]},{"l":13,"f":[["main",13,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]],"d":[["o","Ceil of 3.2 = 4.00, floor of 3.8 = 3.00\n"]]},{"l":13},{"l":14,"f":[["main",14,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]],"d":[["o","Remainder of 25.00 / 3.00 = 1.00\n"]]},{"l":14},{"l":15,"f":[["main",15,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]],"d":[["o","sin(45) = 0.71, log10(1000) = 3.00\n"]]},{"l":16,"f":[["main",16,[["a","double",0,6],["b","double",0,7],["c","double",0,8],["angle","double",0,9],["result_sq","double",0,10],["result_pw","double",0,11]]]]}],"V":[{"k":"f","v":6.95336e-310,"a":140737488314920},{"k":"f","v":6.95335e-310,"a":140737488314912},{"k":"f","v":6.95335e-310,"a":140737488314904},{"k":"f","v":0.0,"a":140737488314896},{"k":"f","v":0.0,"a":140737488314888},{"k":"f","v":0.0,"a":140737488314880},{"k":"f","v":25.0,"a":140737488314920},{"k":"f","v":3.0,"a":140737488314912},{"k":"f","v":2.0,"a":140737488314904},{"k":"f","v":0.785398,"a":140737488314896},{"k":"f","v":5.0,"a":140737488314888},{"k":"f","v":8.0,"a":140737488314880}]},"out":"Square root of 25.00 = 5.00\n2.00 raised to 3.00 = 8.00\nAbsolute value of -3.14 = 3.14\nCeil of 3.2 = 4.00, floor of 3.8 = 3.00\nRemainder of 25.00 / 3.00 = 1.00\nsin(45) = 0.71, log10(1000) = 3.00\n","trunc":false}]}</script>
+
+<script>
+(function(){
+/* ---------------- expression evaluator ---------------- */
+const PREC={',':1,'=':2,'+=':2,'-=':2,'*=':2,'/=':2,'%=':2,'&=':2,'|=':2,'^=':2,'<<=':2,'>>=':2,'?':3,'||':4,'&&':5,'|':6,'^':7,'&':8,'==':9,'!=':9,'<':10,'<=':10,'>':10,'>=':10,'<<':11,'>>':11,'+':12,'-':12,'*':13,'/':13,'%':13};
+const RIGHT=new Set(['=','+=','-=','*=','/=','%=','&=','|=','^=','<<=','>>=','?']);
+const OPS=['<<=','>>=','++','--','<=','>=','==','!=','&&','||','+=','-=','*=','/=','%=','&=','|=','^=','<<','>>','+','-','*','/','%','=','<','>','!','&','|','^','~','?',':','(',')',','];
+function lex(s){const t=[];let i=0;while(i<s.length){const c=s[i];if(/\s/.test(c)){i++;continue}
+if(/[0-9.]/.test(c)){let j=i;while(j<s.length&&/[0-9.eE]/.test(s[j]))j++;const txt=s.slice(i,j);t.push({k:'num',v:txt.includes('.')||/e/i.test(txt)?{t:'double',v:parseFloat(txt)}:{t:'int',v:parseInt(txt,10)},txt});i=j;continue}
+if(c==="'"){const ch=s[i+1]==='\\'?({n:10,t:9,'0':0}[s[i+2]]):s.charCodeAt(i+1);const len=s[i+1]==='\\'?4:3;t.push({k:'num',v:{t:'int',v:ch},txt:s.slice(i,i+len)});i+=len;continue}
+if(/[A-Za-z_]/.test(c)){let j=i;while(j<s.length&&/\w/.test(s[j]))j++;t.push({k:'id',v:s.slice(i,j)});i=j;continue}
+const op=OPS.find(o=>s.startsWith(o,i));if(!op)throw Error('Unexpected character '+c);t.push({k:'op',v:op});i+=op.length}return t}
+function parse(src){const t=lex(src);let p=0;const peek=()=>t[p],nx=()=>t[p++];
+function primary(){const k=nx();if(!k)throw Error('Expression ends too early');
+if(k.k==='num')return{type:'num',val:k.v,txt:k.txt};
+if(k.k==='id'){if(['int','double','float','char'].includes(k.v))throw Error('Type name '+k.v+' must be inside a cast like (double)a');let n={type:'var',name:k.v};return postfix(n)}
+if(k.v==='('){const q=peek();if(q&&q.k==='id'&&['int','double','float','char'].includes(q.v)){nx();if(!peek()||peek().v!==')')throw Error('Missing ) after cast');nx();return{type:'cast',to:q.v==='float'?'double':q.v==='char'?'int':q.v,label:'('+q.v+')',a:unary()}}
+const e=expr(0);if(!peek()||peek().v!==')')throw Error('Missing )');nx();return postfix({type:'paren',a:e})}
+if(['-','+','!','~'].includes(k.v))return{type:'un',op:k.v,a:unary()};
+if(k.v==='++'||k.v==='--'){const a=unary();if(a.type!=='var')throw Error(k.v+' needs a variable (an lvalue)');return{type:'pre',op:k.v,a}}
+throw Error('Unexpected '+k.v)}
+function postfix(n){while(peek()&&(peek().v==='++'||peek().v==='--')){const o=nx().v;if(n.type!=='var')throw Error(o+' needs a variable');n={type:'post',op:o,a:n}}return n}
+function unary(){return primary()}
+function expr(minp){let left=unary();for(;;){const o=peek();if(!o||o.k!=='op'||!(o.v in PREC))break;const pr=PREC[o.v];if(pr<minp)break;nx();
+if(o.v==='?'){const mid=expr(0);if(!peek()||peek().v!==':')throw Error('?: needs a colon');nx();const right=expr(pr);left={type:'cond',c:left,a:mid,b:right};continue}
+const right=expr(RIGHT.has(o.v)?pr:pr+1);
+if(PREC[o.v]===2&&left.type!=='var')throw Error('Left side of '+o.v+' must be a variable');
+left={type:o.v===','?'comma':(PREC[o.v]===2?'asg':'bin'),op:o.v,a:left,b:right}}return left}
+const e=expr(0);if(p<t.length)throw Error('Unexpected '+t[p].v);return e}
+function strip(n){if(!n)return n;if(n.type==='paren')return strip(n.a);for(const k of['a','b','c'])if(n[k])n[k]=strip(n[k]);return n}
+function paren(n,top){switch(n.type){case'num':return n.txt;case'var':return n.name;case'cast':return '('+n.label+' '+paren(n.a)+')';case'un':return '('+n.op+paren(n.a)+')';case'pre':return '('+n.op+paren(n.a)+')';case'post':return '('+paren(n.a)+n.op+')';case'cond':return '('+paren(n.c)+' ? '+paren(n.a)+' : '+paren(n.b)+')';default:const s=paren(n.a)+' '+n.op+' '+paren(n.b);return top?s:'('+s+')'}}
+function fmt(v){if(v.t==='double'){let s=Number(v.v.toPrecision(10)).toString();if(!s.includes('.')&&!/e/.test(s))s+='.0';return s}return String(v.v)}
+function toInt(x){return x<0?Math.ceil(x):Math.floor(x)}
+function wrap(x){return ((x%4294967296)+6442450944)%4294967296-2147483648}
+function evaluate(root,vars){const steps=[];let id=0;function label(n){n.id=n.id||++id;(n.a)&&label(n.a);(n.b)&&label(n.b);(n.c)&&label(n.c)}label(root);
+const vals={};const skipped=new Set();
+function ev(n){let r,txt;switch(n.type){
+case'num':r=n.val;vals[n.id]=r;return r;
+case'var':if(!(n.name in vars))throw Error('Undeclared variable '+n.name+' (declare it above)');r={...vars[n.name]};vals[n.id]=r;return r;
+case'cast':{const a=ev(n.a);r=n.to==='int'?{t:'int',v:toInt(a.v)}:{t:'double',v:a.v};vals[n.id]=r;steps.push([n.id,'Cast '+fmt(a)+' to '+n.label.slice(1,-1)+' → <b>'+fmt(r)+'</b>'+(n.to==='int'&&a.t==='double'?' (fraction dropped)':'')]);return r}
+case'un':{const a=ev(n.a);if(n.op==='-')r={t:a.t,v:a.t==='int'?wrap(-a.v):-a.v};else if(n.op==='+')r=a;else if(n.op==='!')r={t:'int',v:a.v?0:1};else{if(a.t!=='int')throw Error('~ needs an integer operand');r={t:'int',v:~a.v}}vals[n.id]=r;steps.push([n.id,n.op+fmt(a)+' → <b>'+fmt(r)+'</b>']);return r}
+case'pre':case'post':{const v=vars[n.a.name];if(!v)throw Error('Undeclared variable '+n.a.name);const old={...v};const nv=v.t==='int'?wrap(v.v+(n.op==='++'?1:-1)):v.v+(n.op==='++'?1:-1);vars[n.a.name]={t:v.t,v:nv};r=n.type==='pre'?{t:v.t,v:nv}:old;vals[n.id]=r;
+steps.push([n.id,(n.type==='pre'?'Prefix '+n.op+n.a.name+': first change '+n.a.name+' to '+fmt(vars[n.a.name])+', the expression value is the <b>new</b> value <b>'+fmt(r)+'</b>':'Postfix '+n.a.name+n.op+': the expression value is the <b>old</b> value <b>'+fmt(r)+'</b>, then '+n.a.name+' becomes '+fmt(vars[n.a.name])),n.a.name]);return r}
+case'cond':{const c=ev(n.c);steps.push([n.id,'Condition '+fmt(c)+' is '+(c.v?'true (non-zero), so only the middle operand is evaluated':'false (zero), so only the last operand is evaluated')]);if(c.v){mark(n.b);r=ev(n.a)}else{mark(n.a);r=ev(n.b)}vals[n.id]=r;steps.push([n.id,'?: gives <b>'+fmt(r)+'</b>']);return r}
+case'comma':{ev(n.a);r=ev(n.b);vals[n.id]=r;steps.push([n.id,'Comma operator: left value discarded, result is the right value <b>'+fmt(r)+'</b>']);return r}
+case'asg':{const name=n.a.name;if(!(name in vars))throw Error('Undeclared variable '+name);let rv=ev(n.b);let nv;
+if(n.op!=='='){const cur=vars[name];nv=binop(n.op.slice(0,-1),cur,rv)}else nv=rv;
+const tgt=vars[name].t;const stored=tgt==='int'?{t:'int',v:toInt(nv.v)}:{t:'double',v:nv.v};vars[name]=stored;vals[n.a.id]=stored;vals[n.id]=stored;
+steps.push([n.id,(n.op==='='?'Assign':'Compound assignment '+name+' '+n.op+' '+fmt(rv)+' means '+name+' = '+name+' '+n.op.slice(0,-1)+' '+fmt(rv)+';')+' '+name+' ← <b>'+fmt(stored)+'</b>'+(tgt==='int'&&nv.t==='double'&&nv.v!==stored.v?' (converted to int, fraction dropped)':''),name]);return stored}
+case'bin':{if(n.op==='&&'||n.op==='||'){const a=ev(n.a);const short=(n.op==='&&'&&!a.v)||(n.op==='||'&&a.v);if(short){mark(n.b);r={t:'int',v:n.op==='||'?1:0};vals[n.id]=r;steps.push([n.id,'Left side is '+fmt(a)+', so '+n.op+' is already '+(r.v?'true':'false')+'. <b>Short-circuit:</b> the right side is not evaluated at all → <b>'+r.v+'</b>']);return r}
+const b=ev(n.b);r={t:'int',v:(b.v?1:0)};vals[n.id]=r;steps.push([n.id,fmt(a)+' '+n.op+' '+fmt(b)+' → <b>'+r.v+'</b>']);return r}
+const a=ev(n.a),b=ev(n.b);r=binop(n.op,a,b);vals[n.id]=r;let note='';
+if(n.op==='/'&&a.t==='int'&&b.t==='int')note=' (integer division: fraction thrown away)';
+if((a.t!==b.t)&&!['<<','>>'].includes(n.op))note+=' (int converted to double first)';
+steps.push([n.id,fmt(a)+' '+n.op+' '+fmt(b)+' → <b>'+fmt(r)+'</b>'+note]);return r}}}
+function mark(n){if(!n)return;skipped.add(n.id);mark(n.a);mark(n.b);mark(n.c)}
+function binop(op,a,b){const isD=a.t==='double'||b.t==='double';
+if(['%','<<','>>','&','|','^'].includes(op)&&isD)throw Error('invalid operands to binary '+op+' (have double): '+op+' works only on integers');
+switch(op){case'+':return isD?{t:'double',v:a.v+b.v}:{t:'int',v:wrap(a.v+b.v)};case'-':return isD?{t:'double',v:a.v-b.v}:{t:'int',v:wrap(a.v-b.v)};
+case'*':return isD?{t:'double',v:a.v*b.v}:{t:'int',v:wrap(Math.imul(a.v,b.v))};
+case'/':if(!isD&&b.v===0)throw Error('Integer division by zero: undefined behaviour (the program would crash)');return isD?{t:'double',v:a.v/b.v}:{t:'int',v:toInt(a.v/b.v)};
+case'%':if(b.v===0)throw Error('Remainder by zero: undefined behaviour');return{t:'int',v:a.v%b.v};
+case'<<':return{t:'int',v:wrap(a.v<<b.v)};case'>>':return{t:'int',v:a.v>>b.v};case'&':return{t:'int',v:a.v&b.v};case'|':return{t:'int',v:a.v|b.v};case'^':return{t:'int',v:a.v^b.v};
+case'<':return{t:'int',v:+(a.v<b.v)};case'<=':return{t:'int',v:+(a.v<=b.v)};case'>':return{t:'int',v:+(a.v>b.v)};case'>=':return{t:'int',v:+(a.v>=b.v)};case'==':return{t:'int',v:+(a.v===b.v)};case'!=':return{t:'int',v:+(a.v!==b.v)}}}
+const result=ev(root);return{steps,result,vals,skipped}}
+function ub(root){const mods={},reads={};function walk(n,seq){if(!n)return;if(n.type==='bin'&&(n.op==='&&'||n.op==='||'))return walk(n.a),walk(n.b);if(n.type==='cond'||n.type==='comma')return;
+if(n.type==='pre'||n.type==='post'){mods[n.a.name]=(mods[n.a.name]||0)+1;return}if(n.type==='asg'){mods[n.a.name]=(mods[n.a.name]||0)+1;if(n.op!=='=')reads[n.a.name]=(reads[n.a.name]||0);walk(n.b);return}
+if(n.type==='var'){reads[n.name]=(reads[n.name]||0)+1;return}walk(n.a);walk(n.b);walk(n.c)}walk(root);
+for(const v in mods){if(mods[v]>1||(reads[v]||0)>0)return v}return null}
+function parseVars(s){const vars={};s.split(';').forEach(d=>{d=d.trim();if(!d)return;const m=d.match(/^(int|double|float|char)\s+(.*)$/);if(!m)throw Error('Declare variables like: int a = 10, b = 3; double x = 2.5;');
+m[2].split(',').forEach(p=>{const mm=p.trim().match(/^(\w+)\s*=\s*(.+)$/);if(!mm)throw Error('Give every variable a value, e.g. int a = 10');let v=mm[2].trim();let num=/^'.'$/.test(v)?v.charCodeAt(1):Number(v);if(isNaN(num))throw Error('Bad value '+v);const t=m[1]==='double'||m[1]==='float'?'double':'int';vars[mm[1]]={t,v:t==='int'?toInt(num):num}})});return vars}
+const $=id=>document.getElementById(id);let S=null,k=0;
+function run(){$('everr').textContent='';try{const vars=parseVars($('evvars').value);const init=JSON.parse(JSON.stringify(vars));const root=strip(parse($('evexpr').value));const r=evaluate(root,vars);const u=ub(root);S={root,r,init,final:vars,u};k=0;$('evparen').textContent=paren(root,true);render()}catch(e){$('everr').textContent=e.message;S=null;$('evtree').innerHTML='';$('evstep').innerHTML='';$('evparen').textContent=''}}
+function layout(root){let x=0;const nodes=[];function go(n,d){const kids=[n.c,n.a,n.b].filter(Boolean);if(n.type==='cond'){kids.length=0;kids.push(n.c,n.a,n.b)}
+if(!kids.length){n.x=x++;}else{kids.forEach(c=>go(c,d+1));n.x=kids.reduce((s,c)=>s+c.x,0)/kids.length}n.d=d;n.kids=kids;nodes.push(n)}go(root,0);return{nodes,w:x}}
+function nlabel(n){switch(n.type){case'num':return n.txt;case'var':return n.name;case'cast':return n.label;case'un':return n.op;case'pre':return 'pre'+n.op;case'post':return 'post'+n.op;case'cond':return '?:';default:return n.op}}
+function render(){if(!S)return;const {root,r}=S;const L=layout(root);const done=new Set(r.steps.slice(0,k).map(s=>s[0]));const cur=k>0?r.steps[k-1][0]:null;
+const maxd=Math.max(...L.nodes.map(n=>n.d));const W=Math.max(320,L.w*74+40),H=(maxd+1)*74+30;const X=n=>30+n.x*74+18,Y=n=>24+n.d*74;
+let svg='';L.nodes.forEach(n=>n.kids.forEach(c=>{svg+='<line x1="'+X(n)+'" y1="'+(Y(n)+16)+'" x2="'+X(c)+'" y2="'+(Y(c)-16)+'" stroke="'+(r.skipped.has(c.id)?'#cfd5df':'#8b97ab')+'" stroke-width="1.6"'+(r.skipped.has(c.id)?' stroke-dasharray="4 4"':'')+'/>'}));
+L.nodes.forEach(n=>{const leaf=n.type==='num'||n.type==='var';const isDone=leaf||done.has(n.id);const sk=r.skipped.has(n.id);const isCur=n.id===cur;
+const fill=isCur?'#f5892a':sk?'#f5f7fa':leaf?'#eef2f8':isDone?'#1f3a68':'#ffffff';const tc=isCur?'#14213d':isDone&&!leaf?'#ffffff':sk?'#9aa5b8':'#14213d';
+svg+='<g><rect x="'+(X(n)-30)+'" y="'+(Y(n)-16)+'" width="60" height="32" rx="8" fill="'+fill+'" stroke="'+(sk?'#cfd5df':'#1f3a68')+'" stroke-width="1.5"/><text x="'+X(n)+'" y="'+(Y(n)+5)+'" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="600" fill="'+tc+'">'+SPL.esc(nlabel(n))+'</text>';
+let val=null;if(leaf&&n.type==='var')val=S.init[n.name];if(!leaf&&isDone)val=r.vals[n.id];if(val&&!sk)svg+='<text x="'+X(n)+'" y="'+(Y(n)+30)+'" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#c8640f" paint-order="stroke" stroke="#ffffff" stroke-width="4">= '+SPL.esc(fmt(val))+'</text>';if(sk)svg+='<text x="'+X(n)+'" y="'+(Y(n)+30)+'" text-anchor="middle" font-size="11" fill="#9aa5b8">skipped</text>';svg+='</g>'});
+const t=$('evtree');t.setAttribute('viewBox','0 0 '+W+' '+(H+10));t.setAttribute('width',W);t.setAttribute('height',H+10);t.innerHTML=svg;
+$('evcount').textContent='Step '+k+' of '+r.steps.length;
+let msg=k===0?'The tree shows how the operators group. Press <b>Next ▶</b> to evaluate one operator at a time (left operand first).':r.steps[k-1][1];
+if(k===r.steps.length)msg+='<br><b>Value of the whole expression: '+fmt(r.result)+'</b> ('+r.result.t+')';
+if(S.u)msg+='<br><span class="bad">Warning: '+S.u+' is modified and also used (or modified twice) in one expression. In C this is undefined behaviour; the result shown is only one possibility.</span>';
+$('evstep').innerHTML=msg;
+const changed=Object.keys(S.final).filter(v=>S.final[v].v!==S.init[v].v);
+$('evvarsout').innerHTML=k===r.steps.length&&changed.length?'<span class="lbl" style="font-family:var(--sans)">After the expression:</span> '+changed.map(v=>v+' = '+fmt(S.final[v])).join(', '):'';
+$('evprev').disabled=k===0;$('evfirst').disabled=k===0;$('evnext').disabled=k===r.steps.length}
+$('evnext').onclick=()=>{if(S&&k<S.r.steps.length){k++;render()}};$('evprev').onclick=()=>{if(S&&k>0){k--;render()}};$('evfirst').onclick=()=>{k=0;render()};$('evall').onclick=()=>{if(S){k=S.r.steps.length;render()}};
+$('evexpr').oninput=run;$('evvars').oninput=run;
+const EX=['a + b * 2 - a / b % 2','a / b','x * a / b','(double)a / b','a > b && m++ > 5','a < b && m++ > 5','y = m++','m = m++ + 1','a & 1 == 1','(a & 1) == 1','a += b *= 2','a > b ? a : b','!a || b','a << 2 | 1','-a / b'];
+$('evex').innerHTML='<span class="lbl">Try:</span>'+EX.map(e=>'<button class="chip">'+SPL.esc(e)+'</button>').join('');
+$('evex').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{let e=b.textContent;if(/\by\b/.test(e)&&!/\by\b/.test($('evvars').value))$('evvars').value='int a = 10, b = 3, m = 5, y = 0; double x = 2.5;';$('evexpr').value=e;run()});
+run();
+
+/* division table */
+function dv(){const a=parseInt($('dva').value||0),b=parseInt($('dvb').value||0);const rows=[['Expression','Types','Result']];
+const q=b?toInt(a/b):'error: division by zero';const m=b?a%b:'error';
+rows.push(['a / b','int / int',q],['a % b','int % int',m],['(float)a / b','float / int',b?(a/b).toFixed(6):'inf'],['a / (float)b','int / float',b?(a/b).toFixed(6):'inf'],['a / 2.0','int / double',(a/2).toFixed(6)],['(a / b) * b + a % b','check',b?q*b+m:'-']);
+$('dvt').innerHTML=rows.map((r,i)=>'<tr>'+r.map(c=>i?'<td>'+c+'</td>':'<th>'+c+'</th>').join('')+'</tr>').join('')}
+$('dva').oninput=dv;$('dvb').oninput=dv;dv();
+
+/* increment widget */
+function inc(stmt){const box=$('incsteps');let m=5,y;const steps=[];steps.push(['Before','m = 5','y = ?']);
+if(stmt==='y = m++;'){steps.push(['Read m','value used: 5','']);m=6;steps.push(['Increment m','m = 6','']);y=5}
+else if(stmt==='y = ++m;'){m=6;steps.push(['Increment m first','m = 6','']);steps.push(['Read m','value used: 6','']);y=6}
+else if(stmt==='y = m--;'){steps.push(['Read m','value used: 5','']);m=4;steps.push(['Decrement m','m = 4','']);y=5}
+else if(stmt==='y = --m;'){m=4;steps.push(['Decrement m first','m = 4','']);steps.push(['Read m','value used: 4','']);y=4}
+else{steps.push(['Read m (postfix)','value used: 5','']);m=6;steps.push(['Increment m','m = 6','']);steps.push(['Add 10','5 + 10 = 15','']);y=15}
+steps.push(['Assign y','m = '+m,'y = '+y]);
+box.innerHTML=steps.map((s,i)=>'<div class="card" style="margin:0;padding:10px 12px;'+(i===steps.length-1?'border-color:var(--accent);background:var(--hl2)':'')+'"><div class="lbl">'+(i+1)+'. '+s[0]+'</div><div class="mono" style="font-size:17px">'+s[1]+'</div><div class="mono" style="font-size:17px">'+s[2]+'</div></div>').join('')}
+document.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-inc]').forEach(x=>x.classList.remove('on'));b.classList.add('on');inc(b.dataset.inc)});inc('y = m++;');
+
+/* bitwise widget */
+let A=0b00001011,B=0b00000110,OP='&';const bops=['&','|','^','~','<<','>>'];
+$('bwops').innerHTML=bops.map(o=>'<button class="chip'+(o===OP?' on':'')+'" data-o="'+o+'">'+SPL.esc(o)+'</button>').join(' ');
+$('bwops').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{OP=b.dataset.o;$('bwops').querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));bw()});
+$('bwsh').oninput=bw;
+function row(lbl,v,click,hl){let s='<div style="display:flex;gap:4px;align-items:center;margin:4px 0"><span style="width:90px;font-size:14px;color:var(--muted)">'+lbl+'</span>';for(let i=7;i>=0;i--){const bit=(v>>i)&1;s+='<button '+(click?'data-b="'+click+'" data-i="'+i+'"':'disabled')+' style="width:32px;height:32px;border-radius:5px;border:1.5px solid var(--navy);font-family:var(--mono);font-size:15px;'+(bit?'background:'+(hl?'var(--accent)':'var(--navy)')+';color:'+(hl?'var(--ink)':'#fff'):'background:var(--bg);color:var(--ink)')+';cursor:'+(click?'pointer':'default')+'">'+bit+'</button>'}return s+'<span style="margin-left:10px;font-size:15px">= '+v+'</span></div>'}
+function bw(){const sh=Math.max(0,Math.min(7,+$('bwsh').value||0));let r,expr;
+if(OP==='&'){r=A&B;expr='a & b'}else if(OP==='|'){r=A|B;expr='a | b'}else if(OP==='^'){r=A^B;expr='a ^ b'}else if(OP==='~'){r=(~A)&255;expr='~a (8-bit unsigned char)'}else if(OP==='<<'){r=(A<<sh)&255;expr='a << '+sh}else{r=A>>sh;expr='a >> '+sh}
+$('bwgrid').innerHTML=row('a',A,'A')+(['&','|','^'].includes(OP)?row('b',B,'B'):'')+'<div style="border-top:2px solid var(--navy);width:380px;margin:4px 0"></div>'+row(expr.split(' (')[0],r,null,true);
+$('bwgrid').querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{const bit=1<<+b.dataset.i;if(b.dataset.b==='A')A^=bit;else B^=bit;bw()});
+let info={'&':'1 only where both bits are 1.','|':'1 where at least one bit is 1.','^':'1 where the bits differ.','~':'every bit flipped (shown for an 8-bit unsigned char).','<<':'bits move left; zeros come in from the right. Each step doubles the value (bits pushed out of 8 bits are lost here).','>>':'bits move right; each step halves the value (integer division by 2).'}[OP];
+$('bwinfo').innerHTML='<code>'+expr+'</code> = <b>'+r+'</b>: '+info}
+bw();
+
+/* precedence table */
+const PT=[[1,'++ -- (postfix), () [] . ->','postfix increment/decrement, function call, array subscript, member access','left to right'],[2,'++ -- (prefix), + - (unary), ! ~, (type), *, &, sizeof','prefix increment, unary plus/minus, logical and bitwise NOT, cast, dereference, address-of, size-of','right to left'],[3,'* / %','multiplication, division, remainder','left to right'],[4,'+ -','addition, subtraction','left to right'],[5,'<< >>','bitwise shift','left to right'],[6,'< <= > >=','relational','left to right'],[7,'== !=','equality','left to right'],[8,'&','bitwise AND','left to right'],[9,'^','bitwise XOR','left to right'],[10,'|','bitwise OR','left to right'],[11,'&&','logical AND','left to right'],[12,'||','logical OR','left to right'],[13,'?:','conditional (ternary)','right to left'],[14,'= += -= *= /= %= <<= >>= &= ^= |=','assignment','right to left'],[15,',','comma','left to right']];
+function pt(){const q=$('prq').value.trim().toLowerCase();$('prt').querySelector('tbody').innerHTML=PT.filter(r=>!q||r.join(' ').toLowerCase().includes(q)).map(r=>'<tr><td style="text-align:center">'+r[0]+'</td><td><code>'+SPL.esc(r[1])+'</code></td><td>'+r[2]+'</td><td>'+r[3]+'</td></tr>').join('')}
+$('prq').oninput=pt;pt();
+
+/* conversion ladder */
+const LAD=['char','short','int','unsigned int','long','unsigned long','float','double','long double'];
+$('ladder').innerHTML=LAD.map((t,i)=>'<span class="chip">'+t+'</span>'+(i<LAD.length-1?'<span style="color:var(--accent-ink)">→</span>':'')).join('')+'<span class="lbl" style="font-family:var(--sans)">&nbsp;lower to higher</span>';
+['cva','cvb'].forEach((id,j)=>{$(id).innerHTML=LAD.map(t=>'<option'+((j===0&&t==='int')||(j===1&&t==='float')?' selected':'')+'>'+t+'</option>').join('');$(id).onchange=cv});$('cvop').onchange=cv;
+function cv(){const a=$('cva').value,b=$('cvb').value,op=$('cvop').value;let ia=LAD.indexOf(a),ib=LAD.indexOf(b);let ra=Math.max(ia,ib,2);const res=LAD[ra];
+let s='<code>'+a+' '+op+' '+b+'</code> → result type <b>'+res+'</b>. ';
+if(ia<2&&ib<2)s+='char and short are first promoted to int (integer promotion). ';else if(ia!==ib)s+='The '+(ia<ib?a:b)+' operand is converted to '+res+' before the operation. ';
+if(op==='/'&&ra<6)s+='<span class="bad">Both are integers, so the division truncates.</span>';$('cvout').innerHTML=s}
+cv();
+})();
+</script>
+<h2 id="exercises">Exercises with solutions</h2><p>7 exercises on this lecture: 3 easy, 3 medium, 1 hard. Each is tagged with its course outcome (CO) and Bloom's cognitive level (BCL). Try it on paper or in Code::Blocks first, then open the solution and run it line by line. Every solution and every output quoted here was checked by compiling and running it with GCC.</p><div class="row" id="exfilter"><span class="lbl">Show:</span><button class="chip on" data-f="all">all</button><button class="chip" data-f="Easy">easy</button><button class="chip" data-f="Medium">medium</button><button class="chip" data-f="Hard">hard</button></div><section class="exq" id="ex1" data-level="Easy"><h3><span class="pnum">E1</span>Integer division, remainder and a cast</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Predict the output</span> <span class="tag">CO1 · BCL L-2 Understand</span></div><p>What does this program print?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int a = 17, b = 5;
+    printf(&quot;%d %d %d\n&quot;, a / b, a % b, -a / b);
+    printf(&quot;%.2f %.2f\n&quot;, (float)a / b, (float)(a / b));
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p>Integer division truncates toward zero. In the last <code>printf</code>, notice where the cast is applied in each expression.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><pre class="term">3 2 -3
+3.40 3.00</pre><p><code>17 / 5</code> is 3 and <code>17 % 5</code> is 2. <code>-a / b</code> truncates toward zero, giving −3. <code>(float)a / b</code> converts before dividing, giving 3.40; <code>(float)(a / b)</code> divides first (3) and then converts, giving 3.00.</p><div class="tv" data-tr="t02-e1"></div><script type="application/json" id="tr-t02-e1">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int a = 17, b = 5;\n    printf(\"%d %d %d\\n\", a / b, a % b, -a / b);\n    printf(\"%.2f %.2f\\n\", (float)a / b, (float)(a / b));\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int",0,0],["b","int",0,1]]]]},{"l":5,"f":[["main",5,[["a","int",0,2],["b","int",0,3]]]]},{"l":6,"f":[["main",6,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","3 2 -3\n"]]},{"l":7,"f":[["main",7,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","3.40 3.00\n"]]},{"l":8,"f":[["main",8,[["a","int",0,2],["b","int",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":17,"a":140737488314940},{"k":"i","v":5,"a":140737488314936}]},"out":"3 2 -3\n3.40 3.00\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex2" data-level="Easy"><h3><span class="pnum">E2</span>Precedence without brackets</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Predict the output</span> <span class="tag">CO1 · BCL L-2 Understand</span></div><p>Work out the value of each expression by hand, using the precedence table above.</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int r = 2 + 3 * 4 % 5 - 6 / 4;
+    int t = 10 &gt; 5 &gt; 2;
+    printf(&quot;%d %d\n&quot;, r, t);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>* / %</code> are done before <code>+ -</code>, left to right. A relational operator produces 0 or 1, which can be compared again.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>3 0</code>.</p><p><code>2 + 3 * 4 % 5 - 6 / 4</code> → <code>3 * 4</code> = 12 → <code>12 % 5</code> = 2 → <code>6 / 4</code> = 1 → 2 + 2 − 1 = 3.</p><p><code>10 &gt; 5 &gt; 2</code> is <code>(10 &gt; 5) &gt; 2</code> = <code>1 &gt; 2</code> = 0. It does not mean "5 is between 2 and 10"; that needs <code>10 &gt; 5 &amp;&amp; 5 &gt; 2</code>.</p><div class="tv" data-tr="t02-e2"></div><script type="application/json" id="tr-t02-e2">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int r = 2 + 3 * 4 % 5 - 6 / 4;\n    int t = 10 > 5 > 2;\n    printf(\"%d %d\\n\", r, t);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["r","int",0,0],["t","int",0,1]]]]},{"l":5,"f":[["main",5,[["r","int",0,2],["t","int",0,1]]]]},{"l":6,"f":[["main",6,[["r","int",0,2],["t","int",0,3]]]]},{"l":7,"f":[["main",7,[["r","int",0,2],["t","int",0,3]]]],"d":[["o","3 0\n"]]},{"l":8,"f":[["main",8,[["r","int",0,2],["t","int",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":3,"a":140737488314940},{"k":"i","v":0,"a":140737488314936}]},"out":"3 0\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex3" data-level="Medium"><h3><span class="pnum">E3</span>Prefix and postfix in expressions</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>Give the final values of <code>m</code>, <code>n</code>, <code>x</code> and <code>y</code>.</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int m = 5, n = 5, x, y;
+    x = m++ * 2;
+    y = ++n * 2;
+    printf(&quot;%d %d %d %d\n&quot;, m, n, x, y);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p>Postfix <code>m++</code> gives the old value to the expression; prefix <code>++n</code> gives the new one. Both variables end up incremented.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>6 6 10 12</code>. <code>x = m++ * 2</code> uses 5 (then m becomes 6), so x = 10. <code>y = ++n * 2</code> first makes n 6 and uses 6, so y = 12.</p><div class="tv" data-tr="t02-e3"></div><script type="application/json" id="tr-t02-e3">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int m = 5, n = 5, x, y;\n    x = m++ * 2;\n    y = ++n * 2;\n    printf(\"%d %d %d %d\\n\", m, n, x, y);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["m","int",0,0],["n","int",0,1],["x","int",0,2],["y","int",0,3]]]]},{"l":5,"f":[["main",5,[["m","int",0,4],["n","int",0,5],["x","int",0,2],["y","int",0,3]]]]},{"l":6,"f":[["main",6,[["m","int",0,6],["n","int",0,5],["x","int",0,7],["y","int",0,3]]]]},{"l":7,"f":[["main",7,[["m","int",0,6],["n","int",0,8],["x","int",0,7],["y","int",0,9]]]]},{"l":8,"f":[["main",8,[["m","int",0,6],["n","int",0,8],["x","int",0,7],["y","int",0,9]]]],"d":[["o","6 6 10 12\n"]]},{"l":9,"f":[["main",9,[["m","int",0,6],["n","int",0,8],["x","int",0,7],["y","int",0,9]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":32767,"a":140737488314932},{"k":"i","v":-136292928,"a":140737488314928},{"k":"i","v":5,"a":140737488314940},{"k":"i","v":5,"a":140737488314936},{"k":"i","v":6,"a":140737488314940},{"k":"i","v":10,"a":140737488314932},{"k":"i","v":6,"a":140737488314936},{"k":"i","v":12,"a":140737488314928}]},"out":"6 6 10 12\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex4" data-level="Medium"><h3><span class="pnum">E4</span>Short-circuit evaluation</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>Does <code>j</code> ever change? What is printed?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int i = 0, j = 5, k;
+    k = (i != 0) &amp;&amp; (++j &gt; 5);
+    printf(&quot;%d %d\n&quot;, k, j);
+    k = (i == 0) || (j++ &gt; 100);
+    printf(&quot;%d %d\n&quot;, k, j);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>&amp;&amp;</code> stops as soon as the left side is false; <code>||</code> stops as soon as the left side is true. A skipped right side is never evaluated, so its <code>++</code> never happens.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><pre class="term">0 5
+1 5</pre><p>In the first expression <code>i != 0</code> is false, so <code>++j</code> is skipped. In the second, <code>i == 0</code> is true, so <code>j++</code> is skipped. <code>j</code> stays 5. Type both expressions into the evaluator above to see the skipped branches.</p><div class="tv" data-tr="t02-e4"></div><script type="application/json" id="tr-t02-e4">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int i = 0, j = 5, k;\n    k = (i != 0) && (++j > 5);\n    printf(\"%d %d\\n\", k, j);\n    k = (i == 0) || (j++ > 100);\n    printf(\"%d %d\\n\", k, j);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["i","int",0,0],["j","int",0,1],["k","int",0,2]]]]},{"l":5,"f":[["main",5,[["i","int",0,3],["j","int",0,4],["k","int",0,2]]]]},{"l":6,"f":[["main",6,[["i","int",0,3],["j","int",0,4],["k","int",0,5]]]]},{"l":7,"f":[["main",7,[["i","int",0,3],["j","int",0,4],["k","int",0,5]]]],"d":[["o","0 5\n"]]},{"l":8,"f":[["main",8,[["i","int",0,3],["j","int",0,4],["k","int",0,6]]]]},{"l":9,"f":[["main",9,[["i","int",0,3],["j","int",0,4],["k","int",0,6]]]],"d":[["o","1 5\n"]]},{"l":10,"f":[["main",10,[["i","int",0,3],["j","int",0,4],["k","int",0,6]]]]}],"V":[{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":32767,"a":140737488314932},{"k":"i","v":0,"a":140737488314936},{"k":"i","v":5,"a":140737488314940},{"k":"i","v":0,"a":140737488314932},{"k":"i","v":1,"a":140737488314932}]},"out":"0 5\n1 5\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex5" data-level="Medium"><h3><span class="pnum">E5</span>Bitwise operators on 12 and 10</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO1 · BCL L-2 Understand</span></div><p>Write 12 and 10 in binary first, then compute each result.</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+int main()
+{
+    int a = 12, b = 10;
+    printf(&quot;%d %d %d %d %d\n&quot;, a &amp; b, a | b, a ^ b, a &lt;&lt; 2, a &gt;&gt; 1);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p>12 = 1100 and 10 = 1010. Shifting left by 2 multiplies by 4; shifting right by 1 halves.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>8 14 6 48 6</code>. 1100 &amp; 1010 = 1000 (8); 1100 | 1010 = 1110 (14); 1100 ^ 1010 = 0110 (6); 12 &lt;&lt; 2 = 48; 12 &gt;&gt; 1 = 6.</p><div class="tv" data-tr="t02-e5"></div><script type="application/json" id="tr-t02-e5">{"title":"Run it","code":"#include <stdio.h>\nint main()\n{\n    int a = 12, b = 10;\n    printf(\"%d %d %d %d %d\\n\", a & b, a | b, a ^ b, a << 2, a >> 1);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":4,"f":[["main",4,[["a","int",0,0],["b","int",0,1]]]]},{"l":5,"f":[["main",5,[["a","int",0,2],["b","int",0,3]]]]},{"l":6,"f":[["main",6,[["a","int",0,2],["b","int",0,3]]]],"d":[["o","8 14 6 48 6\n"]]},{"l":7,"f":[["main",7,[["a","int",0,2],["b","int",0,3]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":12,"a":140737488314940},{"k":"i","v":10,"a":140737488314936}]},"out":"8 14 6 48 6\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex6" data-level="Easy"><h3><span class="pnum">E6</span>Even or odd, positive or not, with ?: only</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Write a program</span> <span class="tag">CO2 · BCL L-3 Apply</span></div><p>Read an integer and print whether it is even or odd and whether it is positive or not, using the conditional operator instead of <code>if</code>. Input −7 should print <code>-7 is odd and not positive</code>.</p><details class="hint"><summary>Hint</summary><p><code>%s</code> can print a string chosen by <code>?:</code>, for example <code>(n % 2 == 0) ? "even" : "odd"</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>For −7, <code>-7 % 2</code> is −1, not 1, so test <code>n % 2 == 0</code> rather than <code>n % 2 == 1</code> when negative numbers are possible.</p><div class="tv" data-tr="t02-e6"></div><script type="application/json" id="tr-t02-e6">{"title":"Solution","code":"#include <stdio.h>\nint main()\n{\n    int n;\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", &n);\n    printf(\"%d is %s and %s\\n\", n,\n           (n % 2 == 0) ? \"even\" : \"odd\",\n           (n > 0) ? \"positive\" : \"not positive\");\n    return 0;\n}\n","inputs":[{"label":"-7","stdin":"-7\n","trace":{"steps":[{"l":5,"f":[["main",5,[["n","int",0,0]]]]},{"l":6,"f":[["main",6,[["n","int",0,0]]]],"d":[["o","Enter an integer: "]]},{"l":9,"f":[["main",9,[["n","int",0,1]]]],"d":[["i","-7\n"]]},{"l":7,"f":[["main",7,[["n","int",0,1]]]]},{"l":8,"f":[["main",8,[["n","int",0,1]]]]},{"l":7,"f":[["main",7,[["n","int",0,1]]]]},{"l":10,"f":[["main",10,[["n","int",0,1]]]],"d":[["o","-7 is odd and not positive\n"]]},{"l":11,"f":[["main",11,[["n","int",0,1]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-7,"a":140737488314940}]},"out":"Enter an integer: -7 is odd and not positive\n","trunc":false},{"label":"10","stdin":"10\n","trace":{"steps":[{"l":5,"f":[["main",5,[["n","int",0,0]]]]},{"l":6,"f":[["main",6,[["n","int",0,0]]]],"d":[["o","Enter an integer: "]]},{"l":9,"f":[["main",9,[["n","int",0,1]]]],"d":[["i","10\n"]]},{"l":7,"f":[["main",7,[["n","int",0,1]]]]},{"l":8,"f":[["main",8,[["n","int",0,1]]]]},{"l":7,"f":[["main",7,[["n","int",0,1]]]]},{"l":10,"f":[["main",10,[["n","int",0,1]]]],"d":[["o","10 is even and positive\n"]]},{"l":11,"f":[["main",11,[["n","int",0,1]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":10,"a":140737488314940}]},"out":"Enter an integer: 10 is even and positive\n","trunc":false},{"label":"0","stdin":"0\n","trace":{"steps":[{"l":5,"f":[["main",5,[["n","int",0,0]]]]},{"l":6,"f":[["main",6,[["n","int",0,0]]]],"d":[["o","Enter an integer: "]]},{"l":9,"f":[["main",9,[["n","int",0,1]]]],"d":[["i","0\n"]]},{"l":7,"f":[["main",7,[["n","int",0,1]]]]},{"l":8,"f":[["main",8,[["n","int",0,1]]]]},{"l":7,"f":[["main",7,[["n","int",0,1]]]]},{"l":10,"f":[["main",10,[["n","int",0,1]]]],"d":[["o","0 is even and not positive\n"]]},{"l":11,"f":[["main",11,[["n","int",0,1]]]]}],"V":[{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":0,"a":140737488314940}]},"out":"Enter an integer: 0 is even and not positive\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex7" data-level="Hard"><h3><span class="pnum">E7</span>An average that is always a whole number</h3><div class="extags"><span class="tag o">Hard</span> <span class="tag">Find the bug</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>For the scores 1, 2 and 2 this program prints <code>Average = 1.00</code> instead of 1.67. Explain why and fix it.</p>
+<pre class="code" data-hl>int a, b, c;
+float avg;
+scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+avg = (a + b + c) / 3;
+printf("Average = %.2f\n", avg);</pre><details class="hint"><summary>Hint</summary><p>Which type does <code>(a + b + c) / 3</code> have <i>before</i> it is stored in <code>avg</code>?</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>All operands are <code>int</code>, so the division is integer division: 5 / 3 = 1. Only then is 1 converted to <code>float</code> for the assignment. Make one operand floating point: <code>(a + b + c) / 3.0</code> or <code>(float)(a + b + c) / 3</code>.</p><div class="tv" data-tr="t02-e7"></div><script type="application/json" id="tr-t02-e7">{"title":"Fixed program","code":"#include <stdio.h>\nint main()\n{\n    int a, b, c;\n    float avg;\n    printf(\"Enter three scores: \");\n    scanf(\"%d%d%d\", &a, &b, &c);\n    avg = (a + b + c) / 3.0;\n    printf(\"Average = %.2f\\n\", avg);\n    return 0;\n}\n","inputs":[{"label":"1, 2, 2","stdin":"1 2 2\n","trace":{"steps":[{"l":6,"f":[["main",6,[["a","int",0,0],["b","int",0,1],["c","int",0,2],["avg","float",0,3]]]]},{"l":7,"f":[["main",7,[["a","int",0,0],["b","int",0,1],["c","int",0,2],["avg","float",0,3]]]],"d":[["o","Enter three scores: "]]},{"l":8,"f":[["main",8,[["a","int",0,4],["b","int",0,5],["c","int",0,6],["avg","float",0,3]]]],"d":[["i","1 2 2\n"]]},{"l":9,"f":[["main",9,[["a","int",0,4],["b","int",0,5],["c","int",0,6],["avg","float",0,7]]]]},{"l":10,"f":[["main",10,[["a","int",0,4],["b","int",0,5],["c","int",0,6],["avg","float",0,7]]]],"d":[["o","Average = 1.67\n"]]},{"l":11,"f":[["main",11,[["a","int",0,4],["b","int",0,5],["c","int",0,6],["avg","float",0,7]]]]}],"V":[{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":32767,"a":140737488314932},{"k":"i","v":-136292928,"a":140737488314928},{"k":"f","v":4.59163e-41,"a":140737488314940},{"k":"i","v":1,"a":140737488314936},{"k":"i","v":2,"a":140737488314932},{"k":"i","v":2,"a":140737488314928},{"k":"f","v":1.66667,"a":140737488314940}]},"out":"Enter three scores: Average = 1.67\n","trunc":false}]}</script></div></details></section><script>(function(){const f=document.getElementById("exfilter");if(!f)return;f.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{f.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".exq").forEach(s=>{s.hidden=b.dataset.f!=="all"&&s.dataset.level!==b.dataset.f})})})();</script><style>.exq{border-top:1px solid var(--line);padding:4px 0 10px}.exq h3{display:flex;gap:10px;align-items:baseline;font-size:19px;margin:18px 0 6px}.exq .pnum{font-family:var(--mono);background:var(--accent);color:var(--ink);border-radius:7px;padding:1px 8px;font-size:14px;flex:none}.extags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}</style><nav class="pager" aria-label="Lectures"><a href="01-intro-to-c.html"><small>← Lecture 01</small>Introduction to C Programming</a><a href="03-decision-making-branching.html" style="text-align:right"><small>Lecture 03 →</small>Decision Making and Branching</a></nav><footer class="foot">© 2026 Md Nazrul Islam <b>[NI]</b>. All rights reserved. Shared with students for study purposes only. Do not modify, republish or redistribute without the author's permission.</footer></main></div></body></html>

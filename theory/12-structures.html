@@ -1,0 +1,739 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="claude:viewport-fit-sides" content="cover"><title>Structures · Lecture 12 · Structured Programming</title><meta name="description" content="Defining struct types, member access with . and -&gt;, nesting, typedef, memory layout with padding, and passing structures to functions."><link rel="icon" href="data:image/webp;base64,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"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><style>/* Layout: sticky brand header, left section rail, wide main column; same visual system as nazrul-99.github.io/toc
+   (navy ink, orange accent, yellow highlight, IBM Plex). Deliberately single light theme for projectors. */
+:root{--ink:#14213d;--navy:#1f3a68;--accent:#f5892a;--accent-ink:#c8640f;--yellow:#f5f61c;--hl:#fff8b8;--hl2:#fffbe0;
+--line:#d9dee7;--soft:#f5f7fa;--soft2:#eef2f8;--muted:#5b6779;--green:#2e7d4f;--green-bg:#e6f4ea;--red:#b3261e;--red-bg:#fbe0e0;
+--bg:#ffffff;--term:#0f1b33;--term-ink:#e8edf5;--term-in:#ffb46b;--term-dim:#8fa0bd;
+--sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(90px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:var(--navy)}a:hover{color:var(--accent-ink)}
+code,.mono,kbd{font-family:var(--mono)}
+code{background:var(--soft2);border-radius:4px;padding:1px 5px;font-size:.9em}
+h1,h2,h3{text-wrap:balance;color:var(--navy);line-height:1.2}
+h1{font-size:32px;margin:0 0 6px}h2{font-size:24px;margin:34px 0 10px}h3{font-size:19px;margin:20px 0 8px}
+p,li{max-width:78ch}
+button{font:inherit;cursor:pointer;color:var(--ink)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;align-items:center;gap:14px 18px;flex-wrap:wrap;
+ padding-block:10px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));
+ border-bottom:6px solid;border-image:linear-gradient(90deg,var(--accent),var(--yellow)) 1}
+.ident{display:flex;align-items:center;gap:14px;margin-right:auto;min-width:0;text-decoration:none;color:inherit}
+.ident img{width:56px;height:56px;flex:none}
+.brand{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.brand b{font-size:20px;color:var(--navy)}.brand span{font-size:15px;color:var(--accent-ink);font-weight:600}
+.brand small{font-size:13px;color:var(--muted)}.brand small b{font-size:inherit;color:inherit}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav.tabs a{text-decoration:none;font-weight:600;font-size:15px;color:var(--navy);border:2px solid var(--line);border-radius:8px;padding:5px 12px}
+nav.tabs a:hover{border-color:var(--navy)}nav.tabs a.on{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* page layout */
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr)}
+aside.rail{border-right:1px solid var(--line);padding:14px 10px 40px;position:sticky;top:calc(82px + env(safe-area-inset-top,0px));height:calc(100vh - 82px - env(safe-area-inset-top,0px));overflow:auto}
+aside.rail .rh{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:8px 10px 6px}
+.navi{display:flex;gap:10px;width:100%;text-align:left;border:0;background:none;padding:6px 10px;border-radius:7px;color:var(--ink);font-size:15px;line-height:1.3;align-items:baseline;text-decoration:none}
+.navi:hover{background:var(--soft)}.navi.on{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.nid{font-family:var(--mono);font-weight:600;color:var(--accent-ink);min-width:30px;font-size:14px}
+main{padding-block:22px 60px;padding-left:max(30px,env(safe-area-inset-left,0px));padding-right:max(30px,env(safe-area-inset-right,0px));min-width:0;max-width:1240px;width:100%}
+.mainpad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.crumbs{font-size:14px;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
+.lead{font-size:19px;color:var(--ink);max-width:72ch}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+.pager a{text-decoration:none;border:2px solid var(--navy);border-radius:10px;padding:8px 14px;font-weight:600;max-width:48%}
+.pager a:hover{background:var(--navy);color:#fff}.pager small{display:block;font-weight:400;font-size:13px;opacity:.8}
+#navsel{display:none;font:inherit;font-size:16px;padding:6px;border:2px solid var(--navy);border-radius:8px;max-width:100%;margin:6px 0 12px;background:var(--bg);color:var(--ink)}
+footer.foot{color:var(--muted);font-size:14px;margin-top:36px;border-top:1px solid var(--line);padding-top:12px}
+
+/* building blocks */
+.btn{border:2px solid var(--navy);background:var(--bg);color:var(--navy);border-radius:8px;padding:5px 13px;font-weight:600;font-size:15px}
+.btn:hover:not(:disabled){background:var(--navy);color:#fff}.btn:disabled{opacity:.35;cursor:default}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--ink)}.btn.pri:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+.btn.sm{padding:2px 9px;font-size:14px}
+.chip{font-family:var(--mono);font-size:14px;border:1.5px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 9px;color:var(--ink)}
+.chip:hover{border-color:var(--navy)}.chip.on{background:var(--hl);border-color:var(--accent);font-weight:600}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0;background:var(--bg)}
+.idea{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:14px 0;max-width:80ch}
+.note{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit{background:#fdf0ef;border:1px solid #efb7b2;border-radius:8px;padding:10px 14px;margin:12px 0;max-width:86ch}
+.pit b:first-child,.note b:first-child{color:var(--navy)}
+.good{color:var(--green);font-weight:600}.bad{color:var(--red);font-weight:600}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}
+.tblwrap{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;font-size:16px}th,td{border:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft2);color:var(--navy)}
+pre.code{font-family:var(--mono);font-size:15px;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 14px;overflow-x:auto;line-height:1.5;margin:10px 0}
+.term{font-family:var(--mono);font-size:15px;background:var(--term);color:var(--term-ink);border-radius:8px;padding:10px 14px;white-space:pre-wrap;overflow-x:auto;margin:8px 0;min-height:44px;line-height:1.45}
+.term .in{color:var(--term-in);font-weight:600}
+details.hint{background:var(--hl2);border:1px solid #f0d37a;border-radius:8px;padding:8px 14px;margin:10px 0}
+details.hint summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details.sol{border:1px solid var(--line);border-radius:10px;margin:12px 0;background:var(--bg)}
+details.sol>summary{cursor:pointer;font-weight:600;color:var(--navy);padding:10px 14px;list-style:none;display:flex;gap:10px;align-items:center}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▸";color:var(--accent-ink);transition:transform .15s}
+details.sol[open]>summary::before{transform:rotate(90deg)}
+details.sol>.solbody{padding:0 14px 14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:1px 7px;background:var(--soft2);color:var(--navy)}
+.tag.o{background:#fde7d3;color:#8a4307}.tag.g{background:var(--green-bg);color:#1d5a37}
+input.field,select.field,textarea.field{font:inherit;font-size:16px;padding:5px 10px;border:2px solid var(--navy);border-radius:8px;background:var(--bg);color:var(--ink)}
+input.field.mono{font-family:var(--mono)}
+.row{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.lbl{color:var(--muted);font-size:14px}
+.widget{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:18px 0;background:var(--bg)}
+.widget>h3:first-child{margin-top:0}
+.wsub{color:var(--muted);font-size:15px;margin:-4px 0 12px}
+
+/* trace viewer */
+.tv{border:1px solid var(--line);border-radius:12px;margin:18px 0;background:var(--bg);overflow:hidden}
+.tv-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line)}
+.tv-title{font-weight:600;color:var(--navy);margin-right:auto;font-size:17px}
+.tv-inputs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tv-ctrl{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tv-ctrl input[type=range]{flex:1 1 160px;accent-color:var(--accent);min-width:120px}
+.tv-count{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:110px}
+.tv-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.tv-code{position:relative;border-right:1px solid var(--line);overflow:auto;max-height:560px;font-family:var(--mono);font-size:14.5px;line-height:1.55;padding:6px 0;counter-reset:ln}
+.tv-code .ln{display:flex;white-space:pre;padding-right:12px}
+.tv-code .ln i{font-style:normal;color:#9aa5b8;min-width:42px;text-align:right;padding-right:12px;user-select:none;flex:none}
+.tv-code .ln.prev{background:var(--green-bg)}
+.tv-code .ln.cur{background:var(--hl);box-shadow:inset 4px 0 0 var(--accent)}
+.tv-code .ln.cur i{color:var(--accent-ink);font-weight:700}
+.tv-mem{position:relative;overflow:auto;max-height:560px;padding:10px 12px}
+.tv-mem svg.arrows{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.tv-explain{padding:9px 14px;background:var(--hl2);border-top:1px solid #f0d37a;font-size:16px;min-height:42px}
+.tv-explain b{color:var(--navy)}
+.tv-out{padding:8px 14px 12px;border-top:1px solid var(--line)}
+.tv-out .term{margin:4px 0 0;max-height:220px;overflow:auto}
+.tv-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:0 14px 10px}
+.tv-legend span{display:inline-flex;gap:6px;align-items:center}.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.fr{border:1.5px solid var(--navy);border-radius:10px;margin:0 0 10px;background:var(--bg)}
+.fr.old{border-color:#b6c0cf;opacity:.92}
+.fr-h{display:flex;justify-content:space-between;gap:8px;background:var(--navy);color:#fff;font-weight:600;font-size:14px;padding:3px 10px;border-radius:8px 8px 0 0;font-family:var(--mono)}
+.fr.old .fr-h{background:#8b97ab}
+.fr-b{padding:6px 10px;display:flex;flex-direction:column;gap:6px}
+.var{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.vn{font-family:var(--mono);font-size:14px;min-width:64px;padding-top:4px;color:var(--ink)}
+.vn small{display:block;color:var(--muted);font-size:11.5px;line-height:1.2}
+.vb{font-family:var(--mono);font-size:15px;border:1.5px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--bg);min-width:38px;text-align:center;font-variant-numeric:tabular-nums}
+.vb.ptr{border-color:var(--accent);background:#fff4e8}
+.vb.null{color:var(--muted)}
+.vb.chg,.cell.chg{animation:flash 1s ease-out;border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+@keyframes flash{0%{background:var(--yellow)}100%{background:inherit}}
+.arr{display:flex;flex-wrap:wrap;gap:0}
+.cellw{display:flex;flex-direction:column;align-items:center}
+.cell{font-family:var(--mono);font-size:14.5px;border:1.5px solid var(--navy);min-width:36px;height:32px;padding:0 5px;display:flex;align-items:center;justify-content:center;margin-left:-1.5px;background:var(--bg);font-variant-numeric:tabular-nums}
+.cellw:first-child .cell{margin-left:0;border-radius:5px 0 0 5px}.cellw:last-child .cell{border-radius:0 5px 5px 0}
+.cell.nul{color:var(--muted);background:var(--soft)}
+.cell.tgt{background:#ffe4c7}
+.ci{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.grid2d{display:inline-grid;gap:0;border:1.5px solid var(--navy);border-radius:5px;overflow:hidden}
+.grid2d .g{font-family:var(--mono);font-size:13.5px;border:1px solid var(--line);min-width:34px;height:28px;display:flex;align-items:center;justify-content:center;padding:0 4px;background:var(--bg)}
+.grid2d .gh{background:var(--soft2);color:var(--muted);font-size:11px}
+.more{font-size:12px;color:var(--muted);align-self:center;padding-left:6px}
+.st{border:1.5px dashed var(--navy);border-radius:8px;padding:4px 8px;display:flex;flex-direction:column;gap:4px}
+.st .stn{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.addr{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.retchip{display:inline-block;background:var(--green-bg);color:#1d5a37;border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:14px;margin-left:6px}
+.tv-done{background:var(--green-bg)!important;border-top-color:#9fd1b0!important}
+.tv-opts{display:flex;gap:14px;align-items:center;font-size:14px;color:var(--muted)}
+.tv-opts label{display:inline-flex;gap:5px;align-items:center;cursor:pointer}
+
+@media (max-width:980px){header.top{position:relative;top:auto}html{scroll-padding-top:10px}.wrap{grid-template-columns:1fr}aside.rail{display:none}#navsel{display:block}main{padding-block:16px 50px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}}
+@media (max-width:860px){.tv-body{grid-template-columns:1fr}.tv-code{border-right:0;border-bottom:1px solid var(--line);max-height:340px}.tv-mem{max-height:none}}
+@media (max-width:560px){body{font-size:17px}h1{font-size:26px}.ident img{width:44px;height:44px}.brand b{font-size:17px}.brand small{display:none}
+ header.top{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}.pager a{max-width:100%}}
+</style><script>/* Structured Programming site: C syntax colouring, real-execution trace viewer, page chrome. */
+(function () {
+  'use strict';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- C syntax colouring ---------- */
+  const KW = new Set('auto break case char const continue default do double else enum extern float for goto if int long register return short signed sizeof static struct switch typedef union unsigned void volatile while'.split(' '));
+  const LIB = new Set('printf scanf gets fgets puts fputs getchar putchar strlen strcpy strcat strcmp strrev sqrt pow abs fabs ceil floor fmod log log10 exp sin cos tan atoi atof fopen fclose fgetc fputc fprintf fscanf malloc free isdigit isalpha isalnum islower isupper tolower toupper isspace main NULL EOF stdin stdout FILE'.split(' '));
+  function hl(line) {
+    let out = '', i = 0;
+    const n = line.length;
+    while (i < n) {
+      const c = line[i];
+      if (c === '/' && line[i + 1] === '/') { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '/' && line[i + 1] === '*') { let j = line.indexOf('*/', i + 2); j = j < 0 ? n : j + 2; out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      if (c === '*' && /^\s*\*(\s|\/|$)/.test(line) && i === line.search(/\S/)) { out += '<span style="color:#6a7a8f;font-style:italic">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '#' && line.slice(0, i).trim() === '') { out += '<span style="color:#8a4fb8">' + esc(line.slice(i)) + '</span>'; break; }
+      if (c === '"' || c === "'") {
+        let j = i + 1; while (j < n && line[j] !== c) { if (line[j] === '\\') j++; j++; }
+        out += '<span style="color:#0a7a4a">' + esc(line.slice(i, j + 1)) + '</span>'; i = j + 1; continue;
+      }
+      if (/[A-Za-z_]/.test(c)) {
+        let j = i; while (j < n && /\w/.test(line[j])) j++;
+        const w = line.slice(i, j);
+        if (KW.has(w)) out += '<span style="color:#1f3a68;font-weight:600">' + w + '</span>';
+        else if (LIB.has(w)) out += '<span style="color:#b35a00">' + w + '</span>';
+        else out += esc(w);
+        i = j; continue;
+      }
+      if (/[0-9]/.test(c)) { let j = i; while (j < n && /[0-9.xXa-fA-FuUlL]/.test(line[j])) j++; out += '<span style="color:#a3214a">' + esc(line.slice(i, j)) + '</span>'; i = j; continue; }
+      out += esc(c); i++;
+    }
+    return out;
+  }
+  window.SPL = window.SPL || {};
+  SPL.hl = hl;
+  SPL.esc = esc;
+  SPL.hlBlock = code => code.replace(/\n$/, '').split('\n').map(hl).join('\n');
+
+  /* ---------- value formatting ---------- */
+  function chr(v) {
+    const m = { 0: "'\\0'", 10: "'\\n'", 9: "'\\t'", 32: "' '", 13: "'\\r'" };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return "'" + String.fromCharCode(v) + "'";
+    return String(v);
+  }
+  function cellChar(v) {
+    const m = { 0: '\\0', 10: '\\n', 9: '\\t', 32: '␣' };
+    if (m[v] !== undefined) return m[v];
+    if (v > 32 && v < 127) return String.fromCharCode(v);
+    return '·';
+  }
+  function num(v) {
+    if (typeof v !== 'number') return String(v);
+    if (Number.isInteger(v) && Math.abs(v) < 1e15) return String(v);
+    let s = Number(v.toPrecision(6)).toString();
+    if (/e/.test(s)) s = v.toExponential(3);
+    return s;
+  }
+  const hex = a => '0x' + Number(a).toString(16);
+  SPL.fmt = { chr, num, hex };
+
+  function scal(v) {
+    if (v.k === 'c') return chr(v.v);
+    if (v.k === 'f') return num(v.v);
+    if (v.k === 'i') return v.s ? v.s : String(v.v);
+    if (v.k === 'p') return v.v === 0 ? 'NULL' : hex(v.v);
+    return String(v.v);
+  }
+
+  /* ---------- trace viewer ---------- */
+  function TraceViewer(el, data) {
+    this.el = el; this.data = data; this.ii = 0; this.si = 0; this.timer = null;
+    this.showAddr = el.dataset.addr === '1';
+    this.build();
+    this.load(0);
+  }
+  TraceViewer.prototype.build = function () {
+    const d = this.data, el = this.el;
+    const inputs = d.inputs.length > 1 || (d.inputs[0] && d.inputs[0].stdin)
+      ? '<div class="tv-inputs"><span class="lbl">Input:</span>' + d.inputs.map((inp, i) => '<button class="chip" data-i="' + i + '" title="' + esc(inp.stdin || 'no input') + '">' + esc(inp.label) + '</button>').join('') + '</div>' : '';
+    el.innerHTML =
+      '<div class="tv-head"><div class="tv-title">' + esc(d.title || 'Run it line by line') + '</div>' + inputs + '</div>' +
+      '<div class="tv-ctrl">' +
+      '<button class="btn sm" data-a="first" title="First step" aria-label="First step">⏮</button>' +
+      '<button class="btn sm" data-a="prev" title="Previous step (←)" aria-label="Previous step">◀ Back</button>' +
+      '<button class="btn sm pri" data-a="next" title="Next step (→)" aria-label="Next step">Next ▶</button>' +
+      '<button class="btn sm" data-a="last" title="Last step" aria-label="Last step">⏭</button>' +
+      '<button class="btn sm" data-a="play" aria-label="Play">▶▶ Play</button>' +
+      '<input type="range" min="0" value="0" aria-label="Step slider">' +
+      '<span class="tv-count"></span>' +
+      '<span class="tv-opts"><label><input type="checkbox" data-o="addr"' + (this.showAddr ? ' checked' : '') + '> addresses</label></span>' +
+      '</div>' +
+      '<div class="tv-body"><div class="tv-code" tabindex="0"></div><div class="tv-mem"></div></div>' +
+      '<div class="tv-explain"></div>' +
+      '<div class="tv-out"><span class="lbl">Console (output, with what the user typed in orange)</span><div class="term"></div></div>' +
+      '<div class="tv-legend"><span><i class="sw" style="background:var(--hl);border-color:var(--accent)"></i>line about to run</span><span><i class="sw" style="background:var(--green-bg)"></i>line that just ran</span><span><i class="sw" style="background:var(--yellow)"></i>value just changed</span><span><i class="sw" style="background:#fff4e8;border-color:var(--accent)"></i>pointer (arrow shows target)</span></div>';
+    this.$code = el.querySelector('.tv-code'); this.$mem = el.querySelector('.tv-mem');
+    this.$exp = el.querySelector('.tv-explain'); this.$term = el.querySelector('.term');
+    this.$range = el.querySelector('input[type=range]'); this.$count = el.querySelector('.tv-count');
+    const lines = d.code.replace(/\n$/, '').split('\n');
+    this.$code.innerHTML = lines.map((l, i) => '<div class="ln" data-l="' + (i + 1) + '"><i>' + (i + 1) + '</i><span>' + (hl(l) || ' ') + '</span></div>').join('');
+    el.querySelectorAll('.tv-inputs .chip').forEach(b => b.onclick = () => this.load(+b.dataset.i));
+    el.querySelectorAll('[data-a]').forEach(b => b.onclick = () => this.act(b.dataset.a));
+    this.$range.oninput = () => { this.stop(); this.go(+this.$range.value); };
+    el.querySelector('[data-o=addr]').onchange = e => { this.showAddr = e.target.checked; this.render(); };
+    el.addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT' && e.target.type !== 'range' && e.target.type !== 'checkbox') return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); this.act('next'); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); this.act('prev'); }
+    });
+    window.addEventListener('resize', () => this.drawArrows());
+  };
+  TraceViewer.prototype.load = function (ii) {
+    this.stop();
+    this.ii = ii;
+    const inp = this.data.inputs[ii];
+    this.el.querySelectorAll('.tv-inputs .chip').forEach(b => b.classList.toggle('on', +b.dataset.i === ii));
+    // rebuild cumulative state per step
+    const t = inp.trace, V = t.V;
+    let f = null, g = null, con = [];
+    this.states = t.steps.map(s => {
+      if (s.f) f = s.f;
+      if (s.g) g = s.g;
+      if (s.d) con = con.concat(s.d);
+      return { l: s.l, f, g, con, r: s.r };
+    });
+    this.V = V;
+    // how much of each big array is ever used: show that part (plus one cell) instead of a wall of garbage
+    const vis = {};
+    const seen = {};
+    const mark = (key, v, prevIdx) => {
+      if (!v || v.k !== 'a') return;
+      const o = prevIdx === undefined ? null : V[prevIdx];
+      const r = vis[key] || (vis[key] = [0, 0]);
+      v.it.forEach((x, i) => {
+        const ox = o && o.it ? o.it[i] : null;
+        if (x.k === 'a') {
+          x.it.forEach((y, j) => {
+            const oy = ox && ox.it ? ox.it[j] : null;
+            if (!oy || JSON.stringify(oy) !== JSON.stringify(y)) { if (o) { r[0] = Math.max(r[0], i + 1); r[1] = Math.max(r[1], j + 1); } }
+          });
+        } else if (o && JSON.stringify(ox) !== JSON.stringify(x)) r[0] = Math.max(r[0], i + 1);
+      });
+    };
+    this.states.forEach(s => {
+      s.f.forEach(fr => fr[2].forEach(v => { const key = fr[0] + ':' + v[0]; mark(key, V[v[3]], seen[key]); seen[key] = v[3]; }));
+    });
+    this.vis = vis;
+    this.$range.max = this.states.length; // last position = finished
+    this.go(0);
+  };
+  TraceViewer.prototype.act = function (a) {
+    if (a === 'play') { if (this.timer) this.stop(); else this.play(); return; }
+    this.stop();
+    const n = this.states.length;
+    if (a === 'first') this.go(0);
+    if (a === 'last') this.go(n);
+    if (a === 'next') this.go(Math.min(n, this.si + 1));
+    if (a === 'prev') this.go(Math.max(0, this.si - 1));
+  };
+  TraceViewer.prototype.play = function () {
+    const b = this.el.querySelector('[data-a=play]');
+    b.textContent = '❚❚ Pause';
+    if (this.si >= this.states.length) this.go(0);
+    this.timer = setInterval(() => {
+      if (this.si >= this.states.length) { this.stop(); return; }
+      this.go(this.si + 1);
+    }, 700);
+  };
+  TraceViewer.prototype.stop = function () {
+    if (this.timer) clearInterval(this.timer);
+    this.timer = null;
+    const b = this.el.querySelector('[data-a=play]');
+    if (b) b.textContent = '▶▶ Play';
+  };
+  TraceViewer.prototype.go = function (si) { this.si = si; this.render(); };
+
+  TraceViewer.prototype.render = function () {
+    const n = this.states.length, si = this.si, done = si >= n;
+    const st = done ? this.states[n - 1] : this.states[si];
+    const prevSt = si > 0 ? this.states[Math.min(si, n) - 1] : null;
+    const prevForDiff = done ? null : prevSt;
+    this.$range.value = si;
+    this.$count.textContent = done ? 'Finished' : 'Step ' + (si + 1) + ' of ' + n;
+    // code highlight
+    this.$code.querySelectorAll('.ln.cur,.ln.prev').forEach(x => x.classList.remove('cur', 'prev'));
+    if (!done) {
+      const cur = this.$code.querySelector('.ln[data-l="' + st.l + '"]');
+      if (cur) { cur.classList.add('cur'); this.scrollInto(cur); }
+    }
+    if (prevSt && (done || prevSt.l !== st.l)) {
+      const p = this.$code.querySelector('.ln[data-l="' + prevSt.l + '"]');
+      if (p) p.classList.add('prev');
+    }
+    // memory
+    this.renderMem(st, prevForDiff, done);
+    // console
+    const finalCon = done ? this.fullConsole() : st.con;
+    this.$term.innerHTML = finalCon.map(([k, s]) => k === 'i' ? '<span class="in">' + esc(s) + '</span>' : esc(s)).join('') || '<span style="color:var(--term-dim)">(nothing printed yet)</span>';
+    this.$term.scrollTop = this.$term.scrollHeight;
+    // explanation
+    this.$exp.classList.toggle('tv-done', done);
+    this.$exp.innerHTML = done ? '<b>Program finished.</b> The console shows the complete run. Press ⏮ or drag the slider to replay.' : this.explain(st, prevSt);
+    this.el.querySelector('[data-a=prev]').disabled = si === 0;
+    this.el.querySelector('[data-a=first]').disabled = si === 0;
+    this.el.querySelector('[data-a=next]').disabled = done;
+    this.el.querySelector('[data-a=last]').disabled = done;
+  };
+  TraceViewer.prototype.fullConsole = function () {
+    const t = this.data.inputs[this.ii].trace;
+    let con = [];
+    t.steps.forEach(s => { if (s.d) con = con.concat(s.d); });
+    return con;
+  };
+  TraceViewer.prototype.scrollInto = function (row) {
+    const c = this.$code, top = row.offsetTop, h = c.clientHeight;
+    if (top < c.scrollTop + 30 || top > c.scrollTop + h - 50) c.scrollTop = Math.max(0, top - h / 2);
+  };
+  TraceViewer.prototype.explain = function (st, prev) {
+    const parts = [];
+    const fnNow = st.f[st.f.length - 1][0];
+    if (!prev) {
+      parts.push('Execution starts in <b>main()</b>. The highlighted line ' + st.l + ' runs next.');
+      return parts.join(' ');
+    }
+    const pd = prev.f.length, cd = st.f.length;
+    if (cd > pd) {
+      const fr = st.f[cd - 1];
+      const args = fr[2].filter(v => v[2]).map(v => v[0] + ' = ' + this.short(this.V[v[3]]));
+      parts.push('<b>' + fr[0] + '()</b> is called' + (args.length ? ' with ' + args.join(', ') : '') + '. A new frame is pushed on the stack.');
+    } else if (st.r) {
+      parts.push('<b>' + st.r[0] + '()</b> returned' + (st.r[1] ? ' <span class="retchip">' + esc(this.short(st.r[1])) + '</span>' : ' (void)') + '; its frame is removed and control is back in <b>' + fnNow + '()</b>.');
+    }
+    // changed variables in the frames that exist in both
+    const ch = [];
+    const m = Math.min(pd, cd);
+    for (let i = 0; i < m; i++) {
+      if (st.f[i][0] !== prev.f[i][0]) continue;
+      const pv = {}; prev.f[i][2].forEach(v => pv[v[0]] = v[3]);
+      st.f[i][2].forEach(v => {
+        if (pv[v[0]] !== undefined && pv[v[0]] !== v[3]) ch.push('<code>' + esc(v[0]) + '</code> ' + this.delta(this.V[pv[v[0]]], this.V[v[3]]));
+      });
+    }
+    if (ch.length && cd <= pd) parts.push('Line ' + prev.l + ' changed ' + ch.slice(0, 4).join('; ') + (ch.length > 4 ? ' …' : '') + '.');
+    const newIn = st.con.length > prev.con.length ? st.con.slice(prev.con.length) : [];
+    if (newIn.some(x => x[0] === 'i')) parts.push('The program read the user\'s input.');
+    else if (newIn.some(x => x[0] === 'o')) parts.push('Something was printed to the console.');
+    if (!parts.length) parts.push(prev.l === st.l ? 'Line ' + st.l + ' runs again (loop test or next part of the line).' : 'Line ' + prev.l + ' ran; nothing visible changed.');
+    parts.push('<span class="lbl">Next: line ' + st.l + ' in ' + fnNow + '().</span>');
+    return parts.join(' ');
+  };
+  TraceViewer.prototype.short = function (v) {
+    if (!v) return '';
+    if (v.k === 'a') return '{' + v.it.slice(0, 6).map(x => this.short(x)).join(', ') + (v.n > 6 ? ', …' : '') + '}';
+    if (v.k === 's') return '{…}';
+    if (v.k === 'p') return v.to ? (v.to === 'NULL' ? 'NULL' : '&' + this.tname(v.to)) : scal(v);
+    return scal(v);
+  };
+  TraceViewer.prototype.tname = function (to) { return to.replace(/^(\d+|g):/, ''); };
+  TraceViewer.prototype.delta = function (a, b) {
+    if (a.k === 'a' && b.k === 'a') {
+      const idx = [];
+      b.it.forEach((x, i) => { if (JSON.stringify(x) !== JSON.stringify(a.it[i])) idx.push(i); });
+      if (idx.length === 1) { const i = idx[0]; return '[' + i + ']: ' + esc(this.short(a.it[i])) + ' → <b>' + esc(this.short(b.it[i])) + '</b>'; }
+      return '(' + idx.length + ' cells)';
+    }
+    if (a.k === 's') return '(a member changed)';
+    return esc(this.short(a)) + ' → <b>' + esc(this.short(b)) + '</b>';
+  };
+
+  TraceViewer.prototype.renderMem = function (st, prev, done) {
+    const V = this.V, sa = this.showAddr;
+    const prevMap = {};
+    if (prev) prev.f.forEach((fr, fi) => fr[2].forEach(v => prevMap[fi + ':' + fr[0] + ':' + v[0]] = v[3]));
+    const prevG = {};
+    if (prev && prev.g) prev.g.forEach(v => prevG[v[0]] = v[3]);
+    let html = '';
+    const self = this;
+    function varRow(path, v, val, changedFrom, fn) {
+      const name = v[0], type = v[1];
+      self._lim = fn ? self.vis[fn + ':' + name] : null;
+      let inner = self.valHTML(val, path, changedFrom === undefined ? null : V[changedFrom], true);
+      self._lim = null;
+      return '<div class="var"><div class="vn">' + esc(name) + '<small>' + esc(type) + (v[2] ? ' · parameter' : '') + '</small>' + (sa && val.a ? '<small class="addr">@' + hex(val.a) + '</small>' : '') + '</div>' + inner + '</div>';
+    }
+    if (st.g && st.g.length) {
+      html += '<div class="fr"><div class="fr-h"><span>global variables</span></div><div class="fr-b">' +
+        st.g.map(v => varRow('g:' + v[0], v, V[v[3]], prev && prevG[v[0]] !== undefined && prevG[v[0]] !== v[3] ? prevG[v[0]] : undefined)).join('') + '</div></div>';
+    }
+    const nf = st.f.length;
+    for (let fi = nf - 1; fi >= 0; fi--) {
+      const fr = st.f[fi];
+      const rows = fr[2].map(v => {
+        const k = fi + ':' + fr[0] + ':' + v[0];
+        const changed = prev && prevMap[k] !== undefined && prevMap[k] !== v[3] ? prevMap[k] : undefined;
+        return varRow(fi + ':' + v[0], v, V[v[3]], changed, fr[0]);
+      }).join('') || '<span class="lbl">no local variables</span>';
+      html += '<div class="fr' + (fi < nf - 1 ? ' old' : '') + '"><div class="fr-h"><span>' + esc(fr[0]) + '()' + (fi < nf - 1 ? ' — waiting at line ' + fr[1] : '') + '</span><span>' + (fi === nf - 1 ? 'active frame' : 'frame ' + (fi + 1)) + '</span></div><div class="fr-b">' + rows + '</div></div>';
+    }
+    html = '<div class="lbl" style="margin-bottom:6px">Stack (newest frame on top)</div>' + html;
+    this.$mem.innerHTML = html + '<svg class="arrows"></svg>';
+    this.drawArrows();
+  };
+  TraceViewer.prototype.valHTML = function (v, path, old, top) {
+    const self = this;
+    if (!v) return '<span class="vb">?</span>';
+    const chg = old && JSON.stringify(old) !== JSON.stringify(v);
+    if (v.k === 'a') {
+      const isChar = v.it.length && v.it[0].k === 'c';
+      if (v.it.length && v.it[0].k === 'a') {
+        // 2D array
+        const L = top && this._lim && this._lim[0] ? this._lim : null;
+        const rows = L ? Math.min(v.it.length, Math.max(L[0], 2)) : v.it.length;
+        const cols = L ? Math.min(v.it[0].it.length, Math.max(L[1], 2)) : v.it[0].it.length;
+        let g = '<div class="grid2d" data-p="' + esc(path) + '" style="grid-template-columns:auto repeat(' + cols + ',auto)"><div class="g gh"></div>';
+        for (let c = 0; c < cols; c++) g += '<div class="g gh">' + c + '</div>';
+        for (let r = 0; r < rows; r++) {
+          g += '<div class="g gh">' + r + '</div>';
+          for (let c = 0; c < cols; c++) {
+            const x = v.it[r].it[c], ox = old && old.it && old.it[r] && old.it[r].it ? old.it[r].it[c] : null;
+            const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+            g += '<div class="g cell' + (cc ? ' chg' : '') + '" style="margin:0;border-radius:0;height:28px;border-width:1px" data-p="' + esc(path + '[' + r + '][' + c + ']') + '">' + esc(x.k === 'c' ? cellChar(x.v) : scal(x)) + '</div>';
+          }
+        }
+        g += '</div>';
+        const more = (v.n > rows || v.it[0].n > cols) ? v.n + ' × ' + v.it[0].n : '';
+        return '<div>' + g + (more ? '<div class="more">declared size: ' + more + '; first ' + rows + '×' + cols + ' shown</div>' : '') + '</div>';
+      }
+      let s = '<div class="arr" data-p="' + esc(path) + '">';
+      const L1 = top && this._lim && v.it.length > 16 ? Math.min(v.it.length, Math.max(this._lim[0] + 1, 6)) : v.it.length;
+      v.it.slice(0, L1).forEach((x, i) => {
+        const ox = old && old.it ? old.it[i] : null;
+        const cc = ox && JSON.stringify(ox) !== JSON.stringify(x);
+        let txt, cls = 'cell';
+        if (x.k === 'c') { txt = cellChar(x.v); if (x.v === 0) cls += ' nul'; }
+        else if (x.k === 's') { txt = '{…}'; }
+        else txt = scal(x);
+        if (x.k === 'p') { cls += ' ptr'; txt = x.to ? (x.to === 'NULL' ? 'NULL' : '•') : scal(x); }
+        s += '<div class="cellw"><div class="' + cls + (cc ? ' chg' : '') + '" data-p="' + esc(path + '[' + i + ']') + '"' + (x.k === 'p' && x.to && x.to !== 'NULL' ? ' data-to="' + esc(x.to) + '"' : '') + (x.k === 'c' ? ' title="ASCII ' + x.v + '"' : '') + '>' + esc(txt) + '</div><span class="ci">' + i + '</span></div>';
+      });
+      if (v.n > L1) s += '<span class="more">… ' + (v.n - L1) + ' more not used in this run (size ' + v.n + ')</span>';
+      s += '</div>';
+      if (isChar) {
+        let str = '', i = 0;
+        while (i < v.it.length && v.it[i].v !== 0) { str += String.fromCharCode(v.it[i].v); i++; }
+        if (i >= L1 && i < v.it.length) { /* string longer than the shown part */ }
+        if (i < v.it.length) s += '<div class="lbl" style="font-size:12.5px">as a string: <code>"' + esc(str) + '"</code> (' + i + ' characters before \\0)</div>';
+      }
+      return '<div>' + s + '</div>';
+    }
+    if (v.k === 's') {
+      return '<div class="st" data-p="' + esc(path) + '"><span class="stn">' + esc(v.tn) + '</span>' + v.f.map(f => {
+        const ov = old && old.f ? (old.f.find(x => x[0] === f[0]) || [])[1] : null;
+        return '<div class="var"><div class="vn">.' + esc(f[0]) + '</div>' + self.valHTML(f[1], path + '.' + f[0], ov, false) + '</div>';
+      }).join('') + '</div>';
+    }
+    if (v.k === 'p') {
+      let label;
+      if (v.v === 0) label = 'NULL';
+      else if (/FILE/.test(v.tt || '')) label = '→ FILE stream (open file)';
+      else if (v.to) label = '→ ' + esc(this.tname(v.to));
+      else label = hex(v.v) + ' <span class="lbl" style="font-size:12px">(' + (this.looksGarbage(v.v) ? 'not set yet' : 'outside the variables shown') + ')</span>';
+      return '<span class="vb ptr' + (v.v === 0 ? ' null' : '') + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '"' + (v.to && v.to !== 'NULL' ? ' data-to="' + esc(v.to) + '"' : '') + ' title="holds address ' + hex(v.v) + '">' + label + (this.showAddr && v.v ? ' <span class="addr">' + hex(v.v) + '</span>' : '') + '</span>';
+    }
+    let txt = scal(v);
+    if (v.k === 'c') txt += ' <span class="lbl" style="font-size:12px">(' + v.v + ')</span>';
+    return '<span class="vb' + (chg ? ' chg' : '') + '" data-p="' + esc(path) + '">' + txt + '</span>';
+  };
+  TraceViewer.prototype.looksGarbage = function (a) { return a < 4096 || a > 0x7fffffffffff || a % 1 !== 0; };
+  TraceViewer.prototype.drawArrows = function () {
+    const mem = this.$mem, svg = mem.querySelector('svg.arrows');
+    if (!svg) return;
+    const ptrs = mem.querySelectorAll('[data-to]');
+    svg.setAttribute('width', mem.scrollWidth); svg.setAttribute('height', mem.scrollHeight);
+    mem.querySelectorAll('.cell.tgt').forEach(x => x.classList.remove('tgt'));
+    if (!ptrs.length) { svg.innerHTML = ''; return; }
+    const mr = mem.getBoundingClientRect();
+    const ox = mem.scrollLeft - mr.left, oy = mem.scrollTop - mr.top;
+    let out = '<defs><marker id="ah' + this.uid() + '" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#c8640f"/></marker></defs>';
+    const mid = 'ah' + this._uid;
+    ptrs.forEach(p => {
+      let to = p.dataset.to.replace(/\+\d+$/, '');
+      let t = mem.querySelector('[data-p="' + CSS.escape(to) + '"]');
+      if (!t) return;
+      if (t.classList.contains('cell')) t.classList.add('tgt');
+      const a = p.getBoundingClientRect(), b = t.getBoundingClientRect();
+      const x1 = a.right + ox, y1 = a.top + a.height / 2 + oy;
+      let x2 = b.left + ox + Math.min(14, b.width / 2), y2 = b.top + oy;
+      if (b.top > a.bottom) { y2 = b.top + oy; } else if (b.bottom < a.top) { y2 = b.bottom + oy; } else { x2 = b.left + ox; y2 = b.top + b.height / 2 + oy; }
+      const bend = Math.max(40, Math.abs(y2 - y1) * 0.3);
+      out += '<path d="M' + x1 + ',' + y1 + ' C' + (x1 + bend) + ',' + y1 + ' ' + (x2 + bend * 0.6) + ',' + (y2 + (y2 > y1 ? -30 : 30)) + ' ' + x2 + ',' + y2 + '" fill="none" stroke="#c8640f" stroke-width="2" marker-end="url(#' + mid + ')" opacity=".85"/>';
+    });
+    svg.innerHTML = out;
+  };
+  let UID = 0;
+  TraceViewer.prototype.uid = function () { if (!this._uid) this._uid = ++UID; return this._uid; };
+  SPL.TraceViewer = TraceViewer;
+
+  SPL.mountTraces = function (root) {
+    (root || document).querySelectorAll('.tv[data-tr]:not([data-mounted])').forEach(el => {
+      const src = document.getElementById('tr-' + el.dataset.tr);
+      if (!src) return;
+      const closed = el.closest('details:not([open])');
+      if (closed) return;
+      el.dataset.mounted = '1';
+      el._tv = new TraceViewer(el, JSON.parse(src.textContent));
+    });
+  };
+
+  /* ---------- page chrome ---------- */
+  function chrome() {
+    document.querySelectorAll('pre.code[data-hl]').forEach(p => { p.innerHTML = SPL.hlBlock(p.textContent); });
+    const sel = document.getElementById('navsel');
+    if (sel) sel.onchange = () => { if (sel.value) location.hash = sel.value; };
+    const links = [...document.querySelectorAll('aside.rail a.navi[href^="#"]')];
+    if (links.length && 'IntersectionObserver' in window) {
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const io = new IntersectionObserver(es => {
+        es.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(a => a.classList.remove('on'));
+            const a = map.get(e.target.id); if (a) a.classList.add('on');
+          }
+        });
+      }, { rootMargin: '-90px 0px -70% 0px' });
+      map.forEach((a, id) => { const s = document.getElementById(id); if (s) io.observe(s); });
+    }
+    SPL.mountTraces();
+    // re-draw arrows when a closed <details> opens
+    document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', () => { SPL.mountTraces(d); d.querySelectorAll('.tv').forEach(t => t._tv && t._tv.drawArrows()); }));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', chrome); else chrome();
+})();
+</script></head><body><header class="top"><a class="ident" href="../"><img alt="Southeast University logo" src="data:image/webp;base64,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"><span class="brand"><b>Structured Programming</b><span>Theory · Lecture 12</span><small>Prepared by: Md Nazrul Islam <b>[NI]</b>, Lecturer, Dept. of CSE, Southeast University</small></span></a><nav class="tabs" aria-label="Site"><a href="../">Home</a><a href="../theory/index.html" class="on">Theory</a><a href="../lab/index.html">Lab</a></nav></header><div class="wrap"><aside class="rail" aria-label="On this page"><div class="rh">Lecture 12</div><a class="navi" href="#what"><span class="nid">01</span><span class="nt">A type of your own</span></a><a class="navi" href="#layout"><span class="nid">02</span><span class="nt">What a structure looks like in memory</span></a><a class="navi" href="#access"><span class="nid">03</span><span class="nt">Accessing members: the dot operator</span></a><a class="navi" href="#nested"><span class="nid">04</span><span class="nt">Nested structures</span></a><a class="navi" href="#typedef"><span class="nid">05</span><span class="nt">typedef: a shorter name</span></a><a class="navi" href="#functions"><span class="nid">06</span><span class="nt">Structures and functions</span></a><a class="navi" href="#copy"><span class="nid">07</span><span class="nt">Copying and comparing</span></a><a class="navi" href="#videos"><span class="nid">08</span><span class="nt">Video summaries from the slides</span></a><a class="navi" href="#exercises"><span class="nid">09</span><span class="nt">Exercises with solutions</span></a></aside><main><div class="crumbs"><a href="../">Home</a> › <a href="index.html">Theory</a> › Lecture 12</div><h1>Structures</h1><p class="lead">A structure groups related values of different types under one name, such as a student's name, ID and major. It is the user-defined data type of C.</p><select id="navsel" aria-label="Jump to section"><option value="">Jump to…</option><option value="what">01 A type of your own</option><option value="layout">02 What a structure looks like in memory</option><option value="access">03 Accessing members: the dot operator</option><option value="nested">04 Nested structures</option><option value="typedef">05 typedef: a shorter name</option><option value="functions">06 Structures and functions</option><option value="copy">07 Copying and comparing</option><option value="videos">08 Video summaries from the slides</option><option value="exercises">09 Exercises with solutions</option></select>
+
+<h2 id="what">A type of your own</h2>
+<p>So far every variable used a built-in type such as <code>int</code>, <code>double</code> or <code>char</code>. A <b>structure</b> is a derived data type that collects related data items, called <b>members</b> (or components), which need not have the same type. An array holds many values of one type; a structure holds values of different types that belong together.</p>
+<div class="grid2">
+<div><b style="color:var(--navy)">Declaring the type</b>
+<pre class="code" data-hl>struct student          /* structure tag */
+{
+    char name[50];      /* members */
+    int studentID;
+    char major[20];
+};</pre></div>
+<div><b style="color:var(--navy)">Declaring variables of that type</b>
+<pre class="code" data-hl>struct student my_student;
+
+/* or both at once: */
+struct student
+{
+    char name[50];
+    int studentID;
+    char major[20];
+} my_student;</pre></div>
+</div>
+<p>A variable declaration needs the keyword <code>struct</code>, the tag, the variable names separated by commas, and a semicolon. The type declaration itself reserves no memory; each variable does.</p>
+
+<h2 id="layout">What a structure looks like in memory</h2>
+<p>The members are stored in the order they are declared. The compiler may insert unused <b>padding</b> bytes so that each member starts at an address suited to its type (an <code>int</code> at a multiple of 4, a <code>double</code> at a multiple of 8). So <code>sizeof</code> a structure can be larger than the sum of its members. The sizes and offsets below were measured with GCC on 64-bit Linux.</p>
+<div class="widget" id="sl">
+<div class="row" id="slpick"></div>
+<pre class="code" id="slcode" style="margin:8px 0"></pre>
+<div style="overflow-x:auto"><svg id="slsvg" style="display:block"></svg></div>
+<p id="slmsg" style="margin:6px 0 0"></p>
+</div>
+
+<h2 id="access">Accessing members: the dot operator</h2>
+<p>Each member is reached with the component selection operator <code>.</code>: <code>my_student.name</code>, <code>my_student.studentID</code>, <code>my_student.major</code>. A member is an ordinary variable of its own type, so <code>my_student.studentID = 10179;</code> and <code>scanf("%d", &amp;my_student.studentID);</code> work as usual.</p>
+<p>A structure can be initialised in its declaration, values in member order: <code>struct student my_student = {"Ahmad", 10179, "IT"};</code>.</p>
+<div class="tv" data-tr="t12-bd"></div><script type="application/json" id="tr-t12-bd">{"title":"Initialising a structure","code":"#include <stdio.h>\nstruct birthdate\n{\n    int month;\n    int day;\n    int year;\n};\nint main()\n{\n    struct birthdate Picasso = {10, 25, 1881};\n    printf(\"Picasso was born on %d/%d/%d\\n\", Picasso.day, Picasso.month, Picasso.year);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":10,"f":[["main",10,[["Picasso","struct birthdate",0,0]]]]},{"l":11,"f":[["main",11,[["Picasso","struct birthdate",0,1]]]]},{"l":12,"f":[["main",12,[["Picasso","struct birthdate",0,1]]]],"d":[["o","Picasso was born on 25/10/1881\n"]]},{"l":13,"f":[["main",13,[["Picasso","struct birthdate",0,1]]]]}],"V":[{"k":"s","f":[["month",{"k":"i","v":32767},0],["day",{"k":"i","v":-40104},4],["year",{"k":"i","v":32767},8]],"tn":"struct birthdate","a":140737488314916,"sz":12},{"k":"s","f":[["month",{"k":"i","v":10},0],["day",{"k":"i","v":25},4],["year",{"k":"i","v":1881},8]],"tn":"struct birthdate","a":140737488314916,"sz":12}]},"out":"Picasso was born on 25/10/1881\n","trunc":false}]}</script>
+<div class="tv" data-tr="t12-cx"></div><script type="application/json" id="tr-t12-cx">{"title":"Adding two complex numbers","code":"#include <stdio.h>\nstruct Complex\n{\n    int Real;\n    int Imaginary;\n};\nint main()\n{\n    struct Complex c1, c2, sum;\n    printf(\"Enter first complex number: \");\n    scanf(\"%d%d\", &c1.Real, &c1.Imaginary);\n    printf(\"Enter second complex number: \");\n    scanf(\"%d%d\", &c2.Real, &c2.Imaginary);\n    sum.Real = c1.Real + c2.Real;\n    sum.Imaginary = c1.Imaginary + c2.Imaginary;\n    printf(\"Result: %d+%di\\n\", sum.Real, sum.Imaginary);\n    return 0;\n}\n","inputs":[{"label":"(3+4i) + (1+2i)","stdin":"3 4\n1 2\n","trace":{"steps":[{"l":10,"f":[["main",10,[["c1","struct Complex",0,0],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]]},{"l":11,"f":[["main",11,[["c1","struct Complex",0,0],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]],"d":[["o","Enter first complex number: "]]},{"l":12,"f":[["main",12,[["c1","struct Complex",0,3],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]],"d":[["i","3 4\n"]]},{"l":13,"f":[["main",13,[["c1","struct Complex",0,3],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]],"d":[["o","Enter second complex number: "]]},{"l":14,"f":[["main",14,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,2]]]],"d":[["i","1 2\n"]]},{"l":15,"f":[["main",15,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,5]]]]},{"l":16,"f":[["main",16,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,6]]]]},{"l":17,"f":[["main",17,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,6]]]],"d":[["o","Result: 4+6i\n"]]},{"l":18,"f":[["main",18,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,6]]]]}],"V":[{"k":"s","f":[["Real",{"k":"i","v":-40104},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314920,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":-136292928},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314912,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":-134325520},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314904,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":3},0],["Imaginary",{"k":"i","v":4},4]],"tn":"struct Complex","a":140737488314920,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":1},0],["Imaginary",{"k":"i","v":2},4]],"tn":"struct Complex","a":140737488314912,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":4},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314904,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":4},0],["Imaginary",{"k":"i","v":6},4]],"tn":"struct Complex","a":140737488314904,"sz":8}]},"out":"Enter first complex number: Enter second complex number: Result: 4+6i\n","trunc":false},{"label":"(5-2i) + (-1+7i)","stdin":"5 -2\n-1 7\n","trace":{"steps":[{"l":10,"f":[["main",10,[["c1","struct Complex",0,0],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]]},{"l":11,"f":[["main",11,[["c1","struct Complex",0,0],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]],"d":[["o","Enter first complex number: "]]},{"l":12,"f":[["main",12,[["c1","struct Complex",0,3],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]],"d":[["i","5 -2\n"]]},{"l":13,"f":[["main",13,[["c1","struct Complex",0,3],["c2","struct Complex",0,1],["sum","struct Complex",0,2]]]],"d":[["o","Enter second complex number: "]]},{"l":14,"f":[["main",14,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,2]]]],"d":[["i","-1 7\n"]]},{"l":15,"f":[["main",15,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,5]]]]},{"l":16,"f":[["main",16,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,6]]]]},{"l":17,"f":[["main",17,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,6]]]],"d":[["o","Result: 4+5i\n"]]},{"l":18,"f":[["main",18,[["c1","struct Complex",0,3],["c2","struct Complex",0,4],["sum","struct Complex",0,6]]]]}],"V":[{"k":"s","f":[["Real",{"k":"i","v":-40104},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314920,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":-136292928},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314912,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":-134325520},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314904,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":5},0],["Imaginary",{"k":"i","v":-2},4]],"tn":"struct Complex","a":140737488314920,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":-1},0],["Imaginary",{"k":"i","v":7},4]],"tn":"struct Complex","a":140737488314912,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":4},0],["Imaginary",{"k":"i","v":32767},4]],"tn":"struct Complex","a":140737488314904,"sz":8},{"k":"s","f":[["Real",{"k":"i","v":4},0],["Imaginary",{"k":"i","v":5},4]],"tn":"struct Complex","a":140737488314904,"sz":8}]},"out":"Enter first complex number: Enter second complex number: Result: 4+5i\n","trunc":false}]}</script>
+
+<h2 id="nested">Nested structures</h2>
+<p>A member can itself be a structure. With <code>struct address { int houseNumber; char street[20]; int zipcode; };</code> the student type can hold a whole address:</p>
+<pre class="code" data-hl>struct student
+{
+    char name[50];
+    int studentID;
+    char major[20];
+    struct address addr;
+};</pre>
+<div class="widget">
+<p class="wsub">Build an access path. CQ from the slides: to store the full record of a student called Tom, declare <code>struct student Tom;</code> (not <code>struct address Tom;</code>, which holds only an address).</p>
+<div class="row"><span class="lbl">Access through</span><button class="chip on" data-via="var">the variable Tom</button><button class="chip" data-via="ptr">a pointer p = &amp;Tom</button></div>
+<div id="npath" class="row"></div>
+<p id="nout" class="mono" style="font-size:17px;margin:0"></p>
+</div>
+
+<h2 id="typedef">typedef: a shorter name</h2>
+<p><code>typedef</code> creates a synonym (alias) for an existing type. After <code>typedef struct student StudentData;</code> you can write <code>StudentData my_student;</code> instead of <code>struct student my_student;</code>, including in function parameters: <code>void display(StudentData s1);</code>.</p>
+<div class="tv" data-tr="t12-td"></div><script type="application/json" id="tr-t12-td">{"title":"typedef and a function that takes a structure","code":"#include <stdio.h>\n#include <string.h>\nstruct student\n{\n    char name[20];\n    int id;\n};\ntypedef struct student StudentData;\nvoid display(StudentData s1)\n{\n    printf(\"Name: %s\\n\", s1.name);\n    printf(\"ID: %d\\n\", s1.id);\n}\nint main(void)\n{\n    StudentData student1;\n    strcpy(student1.name, \"Ahmad\");\n    student1.id = 12345;\n    display(student1);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":17,"f":[["main",17,[["student1","StudentData",0,0]]]]},{"l":18,"f":[["main",18,[["student1","StudentData",0,1]]]]},{"l":19,"f":[["main",19,[["student1","StudentData",0,2]]]]},{"l":11,"f":[["main",19,[["student1","StudentData",0,2]]],["display",11,[["s1","StudentData",1,3]]]]},{"l":12,"f":[["main",19,[["student1","StudentData",0,2]]],["display",12,[["s1","StudentData",1,3]]]],"d":[["o","Name: Ahmad\n"]]},{"l":13,"f":[["main",19,[["student1","StudentData",0,2]]],["display",13,[["s1","StudentData",1,3]]]],"d":[["o","ID: 12345\n"]]},{"l":19,"f":[["main",19,[["student1","StudentData",0,2]]]],"r":["display",null]},{"l":20,"f":[["main",20,[["student1","StudentData",0,2]]]]},{"l":21,"f":[["main",21,[["student1","StudentData",0,2]]]]}],"V":[{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":32767},20]],"tn":"StudentData","a":140737488314896,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":65},{"k":"c","v":104},{"k":"c","v":109},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":32767},20]],"tn":"StudentData","a":140737488314896,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":65},{"k":"c","v":104},{"k":"c","v":109},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":12345},20]],"tn":"StudentData","a":140737488314896,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":65},{"k":"c","v":104},{"k":"c","v":109},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":12345},20]],"tn":"StudentData","a":140737488314864,"sz":24}]},"out":"Name: Ahmad\nID: 12345\n","trunc":false}]}</script>
+
+<h2 id="functions">Structures and functions</h2>
+<p><b>By value.</b> <code>display(student1);</code> copies the whole structure into the parameter. Changes inside the function affect only the copy. A function can also <b>return</b> a structure, which is copied back to the caller.</p>
+<p><b>By pointer.</b> <code>Read(&amp;student1);</code> passes the address, so the function works on the caller's structure. Through a pointer, members are reached with the arrow operator <code>-&gt;</code> (indirect component selection): <code>s1-&gt;id</code> means <code>(*s1).id</code>.</p>
+<div class="grid2" style="align-items:start">
+<div>
+<div class="tv" data-tr="t12-ret"></div><script type="application/json" id="tr-t12-ret">{"title":"A function that returns a structure","code":"#include <stdio.h>\nstruct student\n{\n    char name[20];\n    int id;\n};\nstruct student read(void)\n{\n    struct student s1;\n    printf(\"Enter name: \");\n    scanf(\"%19s\", s1.name);\n    printf(\"Enter ID: \");\n    scanf(\"%d\", &s1.id);\n    return s1;\n}\nint main(void)\n{\n    struct student student1;\n    student1 = read();\n    printf(\"Name: %s\\nID: %d\\n\", student1.name, student1.id);\n    return 0;\n}\n","inputs":[{"label":"Rafi, 2024","stdin":"Rafi\n2024\n","trace":{"steps":[{"l":19,"f":[["main",19,[["student1","struct student",0,0]]]]},{"l":10,"f":[["main",19,[["student1","struct student",0,0]]],["read",10,[["s1","struct student",0,1]]]]},{"l":11,"f":[["main",19,[["student1","struct student",0,0]]],["read",11,[["s1","struct student",0,1]]]],"d":[["o","Enter name: "]]},{"l":12,"f":[["main",19,[["student1","struct student",0,0]]],["read",12,[["s1","struct student",0,2]]]],"d":[["i","Rafi\n"]]},{"l":13,"f":[["main",19,[["student1","struct student",0,0]]],["read",13,[["s1","struct student",0,2]]]],"d":[["o","Enter ID: "]]},{"l":14,"f":[["main",19,[["student1","struct student",0,0]]],["read",14,[["s1","struct student",0,3]]]],"d":[["i","2024\n"]]},{"l":15,"f":[["main",19,[["student1","struct student",0,0]]],["read",15,[["s1","struct student",0,3]]]]},{"l":19,"f":[["main",19,[["student1","struct student",0,0]]]],"r":["read",{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-8},{"k":"c","v":97},{"k":"c","v":-1},{"k":"c","v":-1}],"es":1,"sz":20},0],["id",{"k":"i","v":2024},20]],"tn":"struct student"}]},{"l":20,"f":[["main",20,[["student1","struct student",0,4]]]]},{"l":21,"f":[["main",21,[["student1","struct student",0,4]]]],"d":[["o","Name: Rafi\nID: 2024\n"]]},{"l":22,"f":[["main",22,[["student1","struct student",0,4]]]]}],"V":[{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":32767},20]],"tn":"struct student","a":140737488314896,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":-64},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-8},{"k":"c","v":97},{"k":"c","v":-1},{"k":"c","v":-1}],"es":1,"sz":20},0],["id",{"k":"i","v":207},20]],"tn":"struct student","a":140737488314816,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-8},{"k":"c","v":97},{"k":"c","v":-1},{"k":"c","v":-1}],"es":1,"sz":20},0],["id",{"k":"i","v":207},20]],"tn":"struct student","a":140737488314816,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-8},{"k":"c","v":97},{"k":"c","v":-1},{"k":"c","v":-1}],"es":1,"sz":20},0],["id",{"k":"i","v":2024},20]],"tn":"struct student","a":140737488314816,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-8},{"k":"c","v":97},{"k":"c","v":-1},{"k":"c","v":-1}],"es":1,"sz":20},0],["id",{"k":"i","v":2024},20]],"tn":"struct student","a":140737488314896,"sz":24}]},"out":"Enter name: Enter ID: Name: Rafi\nID: 2024\n","trunc":false}]}</script>
+</div>
+<div>
+<div class="tv" data-tr="t12-byp"></div><script type="application/json" id="tr-t12-byp">{"title":"Passing a structure by pointer, using ->","code":"#include <stdio.h>\nstruct student\n{\n    char name[20];\n    int id;\n};\nvoid Read(struct student *s1)\n{\n    printf(\"Enter name: \");\n    scanf(\"%19s\", s1->name);\n    printf(\"Enter ID: \");\n    scanf(\"%d\", &s1->id);\n}\nint main(void)\n{\n    struct student student1;\n    Read(&student1);\n    printf(\"Name: %s\\nID: %d\\n\", student1.name, student1.id);\n    return 0;\n}\n","inputs":[{"label":"Rafi, 2024","stdin":"Rafi\n2024\n","trace":{"steps":[{"l":17,"f":[["main",17,[["student1","struct student",0,0]]]]},{"l":9,"f":[["main",17,[["student1","struct student",0,0]]],["Read",9,[["s1","struct student *",1,1]]]]},{"l":10,"f":[["main",17,[["student1","struct student",0,0]]],["Read",10,[["s1","struct student *",1,1]]]],"d":[["o","Enter name: "]]},{"l":11,"f":[["main",17,[["student1","struct student",0,2]]],["Read",11,[["s1","struct student *",1,1]]]],"d":[["i","Rafi\n"]]},{"l":12,"f":[["main",17,[["student1","struct student",0,2]]],["Read",12,[["s1","struct student *",1,1]]]],"d":[["o","Enter ID: "]]},{"l":13,"f":[["main",17,[["student1","struct student",0,3]]],["Read",13,[["s1","struct student *",1,1]]]],"d":[["i","2024\n"]]},{"l":18,"f":[["main",18,[["student1","struct student",0,3]]]],"r":["Read",null]},{"l":19,"f":[["main",19,[["student1","struct student",0,3]]]],"d":[["o","Name: Rafi\nID: 2024\n"]]},{"l":20,"f":[["main",20,[["student1","struct student",0,3]]]]}],"V":[{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":32767},20]],"tn":"struct student","a":140737488314880,"sz":24},{"k":"p","v":140737488314880,"tt":"struct student","ts":24,"a":140737488314856,"to":"0:student1.name[0]"},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":32767},20]],"tn":"struct student","a":140737488314880,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":2024},20]],"tn":"struct student","a":140737488314880,"sz":24}]},"out":"Enter name: Enter ID: Name: Rafi\nID: 2024\n","trunc":false}]}</script>
+</div>
+</div>
+<div class="note"><b>Input functions.</b> The slides read the name with <code>gets()</code>, which is unsafe and no longer part of C. These versions use <code>scanf("%19s", …)</code>, which reads one word of at most 19 characters into the 20-byte array; use <code>fgets(s1-&gt;name, 20, stdin)</code> for names with spaces. <code>void main(void)</code> in the slides is also replaced with the standard <code>int main(void)</code>.</div>
+
+<h2 id="copy">Copying and comparing</h2>
+<p>Two variables of the same structure type can be assigned: <code>person1 = person2;</code> copies every member. C has no comparison operators for structures, though:</p>
+<pre class="term">cmp.c:6:17: error: invalid operands to binary == (have 'struct student' and 'struct student')
+    6 |     if (person1 == person2)
+      |                 ^~</pre>
+<p>Compare the members one by one instead: <code>person1.id == person2.id &amp;&amp; strcmp(person1.name, person2.name) == 0</code>.</p>
+<div class="tv" data-tr="t12-cpy"></div><script type="application/json" id="tr-t12-cpy">{"title":"Copy with =, compare member by member","code":"#include <stdio.h>\n#include <string.h>\nstruct student\n{\n    char name[20];\n    int id;\n};\nint main(void)\n{\n    struct student person1 = {\"Ahmad\", 101}, person2;\n    person2 = person1;              /* copies every member */\n    person2.id = 102;\n    if (person1.id == person2.id && strcmp(person1.name, person2.name) == 0)\n        printf(\"same student\\n\");\n    else\n        printf(\"different students\\n\");\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":10,"f":[["main",10,[["person1","struct student",0,0],["person2","struct student",0,1]]]]},{"l":11,"f":[["main",11,[["person1","struct student",0,2],["person2","struct student",0,1]]]]},{"l":12,"f":[["main",12,[["person1","struct student",0,2],["person2","struct student",0,3]]]]},{"l":13,"f":[["main",13,[["person1","struct student",0,2],["person2","struct student",0,4]]]]},{"l":16,"f":[["main",16,[["person1","struct student",0,2],["person2","struct student",0,4]]]]},{"l":17,"f":[["main",17,[["person1","struct student",0,2],["person2","struct student",0,4]]]],"d":[["o","different students\n"]]},{"l":18,"f":[["main",18,[["person1","struct student",0,2],["person2","struct student",0,4]]]]}],"V":[{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-16},{"k":"c","v":90},{"k":"c","v":-2},{"k":"c","v":-9}],"es":1,"sz":20},0],["id",{"k":"i","v":32767},20]],"tn":"struct student","a":140737488314880,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["id",{"k":"i","v":0},20]],"tn":"struct student","a":140737488314848,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":65},{"k":"c","v":104},{"k":"c","v":109},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["id",{"k":"i","v":101},20]],"tn":"struct student","a":140737488314880,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":65},{"k":"c","v":104},{"k":"c","v":109},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["id",{"k":"i","v":101},20]],"tn":"struct student","a":140737488314848,"sz":24},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":65},{"k":"c","v":104},{"k":"c","v":109},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["id",{"k":"i","v":102},20]],"tn":"struct student","a":140737488314848,"sz":24}]},"out":"different students\n","trunc":false}]}</script>
+
+<h2 id="videos">Video summaries from the slides</h2>
+<ul><li>Structures in C: <a href="https://www.youtube.com/watch?v=3pFSbSVIwKU" target="_blank" rel="noopener">youtube.com/watch?v=3pFSbSVIwKU</a></li></ul>
+
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const L={
+'student':{size:76,code:'struct student {\n    char name[50];\n    int studentID;\n    char major[20];\n};',m:[['name',0,50,'char[50]'],['studentID',52,4,'int'],['major',56,20,'char[20]']]},
+'Complex':{size:8,code:'struct Complex {\n    int Real;\n    int Imaginary;\n};',m:[['Real',0,4,'int'],['Imaginary',4,4,'int']]},
+'birthdate':{size:12,code:'struct birthdate {\n    int month;\n    int day;\n    int year;\n};',m:[['month',0,4,'int'],['day',4,4,'int'],['year',8,4,'int']]},
+'char, int, char':{size:12,code:'struct padA {\n    char c;\n    int i;\n    char d;\n};',m:[['c',0,1,'char'],['i',4,4,'int'],['d',8,1,'char']]},
+'int, char, char':{size:8,code:'struct padB {\n    int i;\n    char c;\n    char d;\n};',m:[['i',0,4,'int'],['c',4,1,'char'],['d',5,1,'char']]},
+'char, double, int':{size:24,code:'struct mix {\n    char c;\n    double d;\n    int i;\n};',m:[['c',0,1,'char'],['d',8,8,'double'],['i',16,4,'int']]}};
+const COL=['#1f3a68','#c8640f','#2e7d4f','#8a4fb8'];let k='char, int, char';
+$('slpick').innerHTML=Object.keys(L).map(x=>'<button class="chip'+(x===k?' on':'')+'" data-k="'+x+'">'+x+'</button>').join('');
+$('slpick').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{k=b.dataset.k;$('slpick').querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));draw()});
+function draw(){const S=L[k];$('slcode').innerHTML=SPL.hlBlock(S.code);const BW=S.size>40?11:28;const W=S.size*BW+30,H=96;
+let s='<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#b6c0cf" stroke-width="2"/></pattern></defs>';
+for(let b=0;b<S.size;b++){const mem=S.m.findIndex(m=>b>=m[1]&&b<m[1]+m[2]);const x=15+b*BW;s+='<rect x="'+x+'" y="20" width="'+BW+'" height="34" fill="'+(mem<0?'url(#hatch)':COL[mem])+'" fill-opacity="'+(mem<0?1:.85)+'" stroke="#ffffff" stroke-width="1"/>';
+if(BW>=20||b%4===0)s+='<text x="'+(x+1)+'" y="70" font-size="10" font-family="IBM Plex Mono, monospace" fill="#5b6779">'+b+'</text>'}
+S.m.forEach((m,i)=>{const x=15+m[1]*BW;s+='<text x="'+(x+m[2]*BW/2)+'" y="14" text-anchor="middle" font-size="12" font-weight="600" font-family="IBM Plex Mono, monospace" fill="'+COL[i]+'">'+m[0]+'</text>'});
+s+='<text x="15" y="90" font-size="12" font-family="IBM Plex Sans, sans-serif" fill="#5b6779">byte offset · hatched = padding</text>';
+const e=$('slsvg');e.setAttribute('viewBox','0 0 '+W+' '+H);e.setAttribute('width',W);e.setAttribute('height',H);e.innerHTML=s;
+const sum=S.m.reduce((a,m)=>a+m[2],0);
+$('slmsg').innerHTML='Members: '+S.m.map((m,i)=>'<b style="color:'+COL[i]+'">'+m[0]+'</b> ('+m[3]+', offset '+m[1]+')').join(', ')+'. Members total '+sum+' bytes; <code>sizeof</code> = <b>'+S.size+'</b>'+(S.size>sum?', so '+(S.size-sum)+' bytes are padding.':', no padding.')+(k==='char, int, char'?' Reordering the members as int, char, char saves 4 bytes.':'')}
+draw();
+/* nested path */
+const tree={name:'char[50]',studentID:'int',major:'char[20]',addr:{houseNumber:'int',street:'char[20]',zipcode:'int'}};let via='var',path=[];
+function np(){let node=tree;path.forEach(p=>node=node[p]);const opts=typeof node==='object'?Object.keys(node):[];
+$('npath').innerHTML='<span class="lbl">Choose a member:</span>'+(opts.length?opts.map(o=>'<button class="chip" data-m="'+o+'">'+o+(typeof node[o]==='object'?' (struct address)':'')+'</button>').join(''):'<span class="lbl">this member is a '+node+'</span>')+(path.length?'<button class="btn sm" id="nback">◀ up</button>':'');
+$('npath').querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{let cur=tree;path.forEach(p=>cur=cur[p]);if(cur&&typeof cur==='object'&&b.dataset.m in cur){path.push(b.dataset.m);np()}});if($('nback'))$('nback').onclick=()=>{path.pop();np()};
+const first=via==='var'?'Tom':'p';let expr=first;path.forEach((p,i)=>{expr+=(i===0&&via==='ptr'?'->':'.')+p});
+let alt=via==='ptr'&&path.length?'   same as   (*p).'+path.join('.'):'';
+$('nout').innerHTML=SPL.esc(expr)+'<span class="lbl" style="font-family:var(--sans)">'+SPL.esc(alt)+(typeof node==='string'?'  : type '+node:'  : type struct '+(path.length?'address':'student'))+'</span>'}
+document.querySelectorAll('[data-via]').forEach(b=>b.onclick=()=>{via=b.dataset.via;document.querySelectorAll('[data-via]').forEach(x=>x.classList.toggle('on',x===b));np()});np();
+})();
+</script>
+<h2 id="exercises">Exercises with solutions</h2><p>7 exercises on this lecture: 2 easy, 4 medium, 1 hard. Each is tagged with its course outcome (CO) and Bloom's cognitive level (BCL). Try it on paper or in Code::Blocks first, then open the solution and run it line by line. Every solution and every output quoted here was checked by compiling and running it with GCC.</p><div class="row" id="exfilter"><span class="lbl">Show:</span><button class="chip on" data-f="all">all</button><button class="chip" data-f="Easy">easy</button><button class="chip" data-f="Medium">medium</button><button class="chip" data-f="Hard">hard</button></div><section class="exq" id="ex1" data-level="Easy"><h3><span class="pnum">E1</span>Structure assignment copies</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>Does changing <code>b</code> change <code>a</code>?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+struct point
+{
+    int x, y;
+};
+int main()
+{
+    struct point a = {2, 3}, b;
+    b = a;
+    b.x = 10;
+    printf(&quot;%d %d %d %d\n&quot;, a.x, a.y, b.x, b.y);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>b = a;</code> copies every member into b's own memory.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>2 3 10 3</code>. After the copy, a and b are separate structures; changing <code>b.x</code> leaves <code>a.x</code> at 2.</p><div class="tv" data-tr="t12-e1"></div><script type="application/json" id="tr-t12-e1">{"title":"Run it","code":"#include <stdio.h>\nstruct point\n{\n    int x, y;\n};\nint main()\n{\n    struct point a = {2, 3}, b;\n    b = a;\n    b.x = 10;\n    printf(\"%d %d %d %d\\n\", a.x, a.y, b.x, b.y);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":8,"f":[["main",8,[["a","struct point",0,0],["b","struct point",0,1]]]]},{"l":9,"f":[["main",9,[["a","struct point",0,2],["b","struct point",0,1]]]]},{"l":10,"f":[["main",10,[["a","struct point",0,2],["b","struct point",0,3]]]]},{"l":11,"f":[["main",11,[["a","struct point",0,2],["b","struct point",0,4]]]]},{"l":12,"f":[["main",12,[["a","struct point",0,2],["b","struct point",0,4]]]],"d":[["o","2 3 10 3\n"]]},{"l":13,"f":[["main",13,[["a","struct point",0,2],["b","struct point",0,4]]]]}],"V":[{"k":"s","f":[["x",{"k":"i","v":-40088},0],["y",{"k":"i","v":32767},4]],"tn":"struct point","a":140737488314936,"sz":8},{"k":"s","f":[["x",{"k":"i","v":-136292928},0],["y",{"k":"i","v":32767},4]],"tn":"struct point","a":140737488314928,"sz":8},{"k":"s","f":[["x",{"k":"i","v":2},0],["y",{"k":"i","v":3},4]],"tn":"struct point","a":140737488314936,"sz":8},{"k":"s","f":[["x",{"k":"i","v":2},0],["y",{"k":"i","v":3},4]],"tn":"struct point","a":140737488314928,"sz":8},{"k":"s","f":[["x",{"k":"i","v":10},0],["y",{"k":"i","v":3},4]],"tn":"struct point","a":140737488314928,"sz":8}]},"out":"2 3 10 3\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex2" data-level="Medium"><h3><span class="pnum">E2</span>Two deposit functions</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Predict the output</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>Only one of the two deposits reaches the account. Which one, and what is printed?</p><pre class="code" data-hl>#include &lt;stdio.h&gt;
+struct account
+{
+    int id;
+    float bal;
+};
+void dep1(struct account a, float m)
+{
+    a.bal += m;
+}
+void dep2(struct account *a, float m)
+{
+    a-&gt;bal += m;
+}
+int main()
+{
+    struct account s = {1, 100};
+    dep1(s, 50);
+    dep2(&amp;s, 25);
+    printf(&quot;%.1f\n&quot;, s.bal);
+    return 0;
+}</pre><details class="hint"><summary>Hint</summary><p><code>dep1</code> receives a copy of the structure; <code>dep2</code> receives its address.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>Output: <code>125.0</code>. <code>dep1</code> adds 50 to its own copy, which is lost on return. <code>dep2</code> works through the pointer (<code>a-&gt;bal</code>), so the 25 is added to <code>s</code>.</p><div class="tv" data-tr="t12-e2"></div><script type="application/json" id="tr-t12-e2">{"title":"Run it","code":"#include <stdio.h>\nstruct account\n{\n    int id;\n    float bal;\n};\nvoid dep1(struct account a, float m)\n{\n    a.bal += m;\n}\nvoid dep2(struct account *a, float m)\n{\n    a->bal += m;\n}\nint main()\n{\n    struct account s = {1, 100};\n    dep1(s, 50);\n    dep2(&s, 25);\n    printf(\"%.1f\\n\", s.bal);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":17,"f":[["main",17,[["s","struct account",0,0]]]]},{"l":18,"f":[["main",18,[["s","struct account",0,1]]]]},{"l":9,"f":[["main",18,[["s","struct account",0,1]]],["dep1",9,[["a","struct account",1,2],["m","float",1,3]]]]},{"l":10,"f":[["main",18,[["s","struct account",0,1]]],["dep1",10,[["a","struct account",1,4],["m","float",1,3]]]]},{"l":19,"f":[["main",19,[["s","struct account",0,1]]]],"r":["dep1",null]},{"l":13,"f":[["main",19,[["s","struct account",0,1]]],["dep2",13,[["a","struct account *",1,5],["m","float",1,6]]]]},{"l":14,"f":[["main",19,[["s","struct account",0,7]]],["dep2",14,[["a","struct account *",1,5],["m","float",1,6]]]]},{"l":20,"f":[["main",20,[["s","struct account",0,7]]]],"r":["dep2",null]},{"l":21,"f":[["main",21,[["s","struct account",0,7]]]],"d":[["o","125.0\n"]]},{"l":22,"f":[["main",22,[["s","struct account",0,7]]]]}],"V":[{"k":"s","f":[["id",{"k":"i","v":-40088},0],["bal",{"k":"f","v":4.59163e-41},4]],"tn":"struct account","a":140737488314936,"sz":8},{"k":"s","f":[["id",{"k":"i","v":1},0],["bal",{"k":"f","v":100.0},4]],"tn":"struct account","a":140737488314936,"sz":8},{"k":"s","f":[["id",{"k":"i","v":1},0],["bal",{"k":"f","v":100.0},4]],"tn":"struct account","a":140737488314904,"sz":8},{"k":"f","v":50.0,"a":140737488314900},{"k":"s","f":[["id",{"k":"i","v":1},0],["bal",{"k":"f","v":150.0},4]],"tn":"struct account","a":140737488314904,"sz":8},{"k":"p","v":140737488314936,"tt":"struct account","ts":8,"a":140737488314904,"to":"0:s.id"},{"k":"f","v":25.0,"a":140737488314900},{"k":"s","f":[["id",{"k":"i","v":1},0],["bal",{"k":"f","v":125.0},4]],"tn":"struct account","a":140737488314936,"sz":8}]},"out":"125.0\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex3" data-level="Easy"><h3><span class="pnum">E3</span>The student with the highest CGPA</h3><div class="extags"><span class="tag g">Easy</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Define <code>struct student</code> with a name, an ID and a CGPA. Read three students and print the one with the highest CGPA.</p><details class="hint"><summary>Hint</summary><p>Use an array <code>struct student s[3]</code>. Keep the index of the best student, starting from 0.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t12-e3"></div><script type="application/json" id="tr-t12-e3">{"title":"Solution","code":"#include <stdio.h>\nstruct student\n{\n    char name[30];\n    int id;\n    float cgpa;\n};\nint main()\n{\n    struct student s[3];\n    int i, best = 0;\n    for (i = 0; i < 3; i++)\n        scanf(\"%29s %d %f\", s[i].name, &s[i].id, &s[i].cgpa);\n    for (i = 1; i < 3; i++)\n        if (s[i].cgpa > s[best].cgpa)\n            best = i;\n    printf(\"Top: %s (ID %d), CGPA %.2f\\n\", s[best].name, s[best].id, s[best].cgpa);\n    return 0;\n}\n","inputs":[{"label":"three students","stdin":"Rafi 101 3.45\nNadia 102 3.90\nTanvir 103 3.72\n","trace":{"steps":[{"l":11,"f":[["main",11,[["s","struct student [3]",0,0],["i","int",0,1],["best","int",0,2]]]]},{"l":12,"f":[["main",12,[["s","struct student [3]",0,0],["i","int",0,1],["best","int",0,3]]]]},{"l":13,"f":[["main",13,[["s","struct student [3]",0,0],["i","int",0,4],["best","int",0,3]]]]},{"l":12,"f":[["main",12,[["s","struct student [3]",0,5],["i","int",0,4],["best","int",0,3]]]],"d":[["i","Rafi 101 3.45\n"]]},{"l":13,"f":[["main",13,[["s","struct student [3]",0,5],["i","int",0,6],["best","int",0,3]]]]},{"l":12,"f":[["main",12,[["s","struct student [3]",0,7],["i","int",0,6],["best","int",0,3]]]],"d":[["i","Nadia 102 3.90\n"]]},{"l":13,"f":[["main",13,[["s","struct student [3]",0,7],["i","int",0,8],["best","int",0,3]]]]},{"l":12,"f":[["main",12,[["s","struct student [3]",0,9],["i","int",0,8],["best","int",0,3]]]],"d":[["i","Tanvir 103 3.72\n"]]},{"l":14,"f":[["main",14,[["s","struct student [3]",0,9],["i","int",0,10],["best","int",0,3]]]]},{"l":15,"f":[["main",15,[["s","struct student [3]",0,9],["i","int",0,6],["best","int",0,3]]]]},{"l":16,"f":[["main",16,[["s","struct student [3]",0,9],["i","int",0,6],["best","int",0,3]]]]},{"l":14,"f":[["main",14,[["s","struct student [3]",0,9],["i","int",0,6],["best","int",0,11]]]]},{"l":15,"f":[["main",15,[["s","struct student [3]",0,9],["i","int",0,8],["best","int",0,11]]]]},{"l":14,"f":[["main",14,[["s","struct student [3]",0,9],["i","int",0,8],["best","int",0,11]]]]},{"l":17,"f":[["main",17,[["s","struct student [3]",0,9],["i","int",0,10],["best","int",0,11]]]]},{"l":18,"f":[["main",18,[["s","struct student [3]",0,9],["i","int",0,10],["best","int",0,11]]]],"d":[["o","Top: Nadia (ID 102), CGPA 3.90\n"]]},{"l":19,"f":[["main",19,[["s","struct student [3]",0,9],["i","int",0,10],["best","int",0,11]]]]}],"V":[{"k":"a","it":[{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":96},{"k":"c","v":16},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":32},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":6},32],["cgpa",{"k":"f","v":2.90069e-43},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":0},32],["cgpa",{"k":"f","v":0.0},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":-136292928},32],["cgpa",{"k":"f","v":4.59163e-41},36]],"tn":"struct student","sz":40}],"es":40,"a":140737488314816,"sz":120},{"k":"i","v":32767,"a":140737488314940},{"k":"i","v":-40088,"a":140737488314936},{"k":"i","v":0,"a":140737488314936},{"k":"i","v":0,"a":140737488314940},{"k":"a","it":[{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":32},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":101},32],["cgpa",{"k":"f","v":3.45},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":0},32],["cgpa",{"k":"f","v":0.0},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":-136292928},32],["cgpa",{"k":"f","v":4.59163e-41},36]],"tn":"struct student","sz":40}],"es":40,"a":140737488314816,"sz":120},{"k":"i","v":1,"a":140737488314940},{"k":"a","it":[{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":32},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":101},32],["cgpa",{"k":"f","v":3.45},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":78},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":105},{"k":"c","v":97},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":102},32],["cgpa",{"k":"f","v":3.9},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":-136292928},32],["cgpa",{"k":"f","v":4.59163e-41},36]],"tn":"struct student","sz":40}],"es":40,"a":140737488314816,"sz":120},{"k":"i","v":2,"a":140737488314940},{"k":"a","it":[{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":82},{"k":"c","v":97},{"k":"c","v":102},{"k":"c","v":105},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":32},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":101},32],["cgpa",{"k":"f","v":3.45},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":78},{"k":"c","v":97},{"k":"c","v":100},{"k":"c","v":105},{"k":"c","v":97},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":102},32],["cgpa",{"k":"f","v":3.9},36]],"tn":"struct student","sz":40},{"k":"s","f":[["name",{"k":"a","n":30,"it":[{"k":"c","v":84},{"k":"c","v":97},{"k":"c","v":110},{"k":"c","v":118},{"k":"c","v":105},{"k":"c","v":114},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":30},0],["id",{"k":"i","v":103},32],["cgpa",{"k":"f","v":3.72},36]],"tn":"struct student","sz":40}],"es":40,"a":140737488314816,"sz":120},{"k":"i","v":3,"a":140737488314940},{"k":"i","v":1,"a":140737488314936}]},"out":"Top: Nadia (ID 102), CGPA 3.90\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex4" data-level="Medium"><h3><span class="pnum">E4</span>Adding two times</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Define <code>struct time</code> with hours, minutes and seconds. Write <code>struct time addTime(struct time a, struct time b)</code> that carries seconds into minutes and minutes into hours.</p><details class="hint"><summary>Hint</summary><p>Add the seconds, then move <code>sec / 60</code> into the minutes and keep <code>sec % 60</code>. Do the same for minutes.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t12-e4"></div><script type="application/json" id="tr-t12-e4">{"title":"Solution","code":"#include <stdio.h>\nstruct time\n{\n    int h, m, s;\n};\nstruct time addTime(struct time a, struct time b)\n{\n    struct time r;\n    r.s = a.s + b.s;\n    r.m = a.m + b.m + r.s / 60;\n    r.s = r.s % 60;\n    r.h = a.h + b.h + r.m / 60;\n    r.m = r.m % 60;\n    return r;\n}\nint main()\n{\n    struct time t1 = {3, 15, 20}, t2 = {1, 50, 45}, t3;\n    t3 = addTime(t1, t2);\n    printf(\"%d:%02d:%02d + %d:%02d:%02d = %d:%02d:%02d\\n\",\n           t1.h, t1.m, t1.s, t2.h, t2.m, t2.s, t3.h, t3.m, t3.s);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":18,"f":[["main",18,[["t1","struct time",0,0],["t2","struct time",0,1],["t3","struct time",0,2]]]]},{"l":19,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]]]},{"l":9,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",9,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,7]]]]},{"l":10,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",10,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,8]]]]},{"l":11,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",11,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,9]]]]},{"l":12,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",12,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,10]]]]},{"l":13,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",13,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,11]]]]},{"l":14,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",14,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,12]]]]},{"l":15,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]],["addTime",15,[["a","struct time",1,5],["b","struct time",1,6],["r","struct time",0,12]]]]},{"l":19,"f":[["main",19,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,2]]]],"r":["addTime",{"k":"s","f":[["h",{"k":"i","v":5},0],["m",{"k":"i","v":6},4],["s",{"k":"i","v":5},8]],"tn":"struct time"}]},{"l":20,"f":[["main",20,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,13]]]]},{"l":20,"d":[["o","3:15:20 + 1:50:45 = 5:06:05\n"]]},{"l":22,"f":[["main",22,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,13]]]]},{"l":23,"f":[["main",23,[["t1","struct time",0,3],["t2","struct time",0,4],["t3","struct time",0,13]]]]}],"V":[{"k":"s","f":[["h",{"k":"i","v":32767},0],["m",{"k":"i","v":-40088},4],["s",{"k":"i","v":32767},8]],"tn":"struct time","a":140737488314932,"sz":12},{"k":"s","f":[["h",{"k":"i","v":-134325520},0],["m",{"k":"i","v":32767},4],["s",{"k":"i","v":-136292928},8]],"tn":"struct time","a":140737488314920,"sz":12},{"k":"s","f":[["h",{"k":"i","v":0},0],["m",{"k":"i","v":0},4],["s",{"k":"i","v":0},8]],"tn":"struct time","a":140737488314908,"sz":12},{"k":"s","f":[["h",{"k":"i","v":3},0],["m",{"k":"i","v":15},4],["s",{"k":"i","v":20},8]],"tn":"struct time","a":140737488314932,"sz":12},{"k":"s","f":[["h",{"k":"i","v":1},0],["m",{"k":"i","v":50},4],["s",{"k":"i","v":45},8]],"tn":"struct time","a":140737488314920,"sz":12},{"k":"s","f":[["h",{"k":"i","v":3},0],["m",{"k":"i","v":15},4],["s",{"k":"i","v":20},8]],"tn":"struct time","a":140737488314832,"sz":12},{"k":"s","f":[["h",{"k":"i","v":1},0],["m",{"k":"i","v":50},4],["s",{"k":"i","v":45},8]],"tn":"struct time","a":140737488314816,"sz":12},{"k":"s","f":[["h",{"k":"i","v":0},0],["m",{"k":"i","v":0},4],["s",{"k":"i","v":0},8]],"tn":"struct time","a":140737488314856,"sz":12},{"k":"s","f":[["h",{"k":"i","v":0},0],["m",{"k":"i","v":0},4],["s",{"k":"i","v":65},8]],"tn":"struct time","a":140737488314856,"sz":12},{"k":"s","f":[["h",{"k":"i","v":0},0],["m",{"k":"i","v":66},4],["s",{"k":"i","v":65},8]],"tn":"struct time","a":140737488314856,"sz":12},{"k":"s","f":[["h",{"k":"i","v":0},0],["m",{"k":"i","v":66},4],["s",{"k":"i","v":5},8]],"tn":"struct time","a":140737488314856,"sz":12},{"k":"s","f":[["h",{"k":"i","v":5},0],["m",{"k":"i","v":66},4],["s",{"k":"i","v":5},8]],"tn":"struct time","a":140737488314856,"sz":12},{"k":"s","f":[["h",{"k":"i","v":5},0],["m",{"k":"i","v":6},4],["s",{"k":"i","v":5},8]],"tn":"struct time","a":140737488314856,"sz":12},{"k":"s","f":[["h",{"k":"i","v":5},0],["m",{"k":"i","v":6},4],["s",{"k":"i","v":5},8]],"tn":"struct time","a":140737488314908,"sz":12}]},"out":"3:15:20 + 1:50:45 = 5:06:05\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex5" data-level="Medium"><h3><span class="pnum">E5</span>Inventory value</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Store three products, each with a name, a unit price and a quantity, in an array of structures. Print the value of each line and the total.</p><details class="hint"><summary>Hint</summary><p>Line value = price × quantity. Accumulate the total in a <code>float</code>.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t12-e5"></div><script type="application/json" id="tr-t12-e5">{"title":"Solution","code":"#include <stdio.h>\nstruct product\n{\n    char name[20];\n    float price;\n    int qty;\n};\nint main()\n{\n    struct product p[3] = {{\"Pen\", 10.0, 40}, {\"Notebook\", 55.5, 12}, {\"Calculator\", 850.0, 3}};\n    float total = 0, line;\n    int i;\n    for (i = 0; i < 3; i++)\n    {\n        line = p[i].price * p[i].qty;\n        total += line;\n        printf(\"%-10s %8.2f x %2d = %8.2f\\n\", p[i].name, p[i].price, p[i].qty, line);\n    }\n    printf(\"Total = %.2f\\n\", total);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":10,"f":[["main",10,[["p","struct product [3]",0,0],["total","float",0,1],["line","float",0,2],["i","int",0,3]]]]},{"l":11,"f":[["main",11,[["p","struct product [3]",0,4],["total","float",0,1],["line","float",0,2],["i","int",0,3]]]]},{"l":13,"f":[["main",13,[["p","struct product [3]",0,4],["total","float",0,5],["line","float",0,2],["i","int",0,3]]]]},{"l":15,"f":[["main",15,[["p","struct product [3]",0,4],["total","float",0,5],["line","float",0,2],["i","int",0,6]]]]},{"l":16,"f":[["main",16,[["p","struct product [3]",0,4],["total","float",0,5],["line","float",0,7],["i","int",0,6]]]]},{"l":17,"f":[["main",17,[["p","struct product [3]",0,4],["total","float",0,8],["line","float",0,7],["i","int",0,6]]]]},{"l":13,"f":[["main",13,[["p","struct product [3]",0,4],["total","float",0,8],["line","float",0,7],["i","int",0,6]]]],"d":[["o","Pen           10.00 x 40 =   400.00\n"]]},{"l":15,"f":[["main",15,[["p","struct product [3]",0,4],["total","float",0,8],["line","float",0,7],["i","int",0,9]]]]},{"l":16,"f":[["main",16,[["p","struct product [3]",0,4],["total","float",0,8],["line","float",0,10],["i","int",0,9]]]]},{"l":17,"f":[["main",17,[["p","struct product [3]",0,4],["total","float",0,11],["line","float",0,10],["i","int",0,9]]]]},{"l":13,"f":[["main",13,[["p","struct product [3]",0,4],["total","float",0,11],["line","float",0,10],["i","int",0,9]]]],"d":[["o","Notebook      55.50 x 12 =   666.00\n"]]},{"l":15,"f":[["main",15,[["p","struct product [3]",0,4],["total","float",0,11],["line","float",0,10],["i","int",0,12]]]]},{"l":16,"f":[["main",16,[["p","struct product [3]",0,4],["total","float",0,11],["line","float",0,13],["i","int",0,12]]]]},{"l":17,"f":[["main",17,[["p","struct product [3]",0,4],["total","float",0,14],["line","float",0,13],["i","int",0,12]]]]},{"l":13,"f":[["main",13,[["p","struct product [3]",0,4],["total","float",0,14],["line","float",0,13],["i","int",0,12]]]],"d":[["o","Calculator   850.00 x  3 =  2550.00\n"]]},{"l":19,"f":[["main",19,[["p","struct product [3]",0,4],["total","float",0,14],["line","float",0,13],["i","int",0,15]]]]},{"l":20,"f":[["main",20,[["p","struct product [3]",0,4],["total","float",0,14],["line","float",0,13],["i","int",0,15]]]],"d":[["o","Total = 3616.00\n"]]},{"l":21,"f":[["main",21,[["p","struct product [3]",0,4],["total","float",0,14],["line","float",0,13],["i","int",0,15]]]]}],"V":[{"k":"a","it":[{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":6},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":-49},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["price",{"k":"f","v":0.0},20],["qty",{"k":"i","v":0},24]],"tn":"struct product","sz":28},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["price",{"k":"f","v":0.0},20],["qty",{"k":"i","v":0},24]],"tn":"struct product","sz":28},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["price",{"k":"f","v":4.59163e-41},20],["qty",{"k":"i","v":-136292928},24]],"tn":"struct product","sz":28}],"es":28,"a":140737488314848,"sz":84},{"k":"f","v":4.59163e-41,"a":140737488314940},{"k":"f","v":4.59163e-41,"a":140737488314932},{"k":"i","v":-40088,"a":140737488314936},{"k":"a","it":[{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":80},{"k":"c","v":101},{"k":"c","v":110},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["price",{"k":"f","v":10.0},20],["qty",{"k":"i","v":40},24]],"tn":"struct product","sz":28},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":78},{"k":"c","v":111},{"k":"c","v":116},{"k":"c","v":101},{"k":"c","v":98},{"k":"c","v":111},{"k":"c","v":111},{"k":"c","v":107},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["price",{"k":"f","v":55.5},20],["qty",{"k":"i","v":12},24]],"tn":"struct product","sz":28},{"k":"s","f":[["name",{"k":"a","n":20,"it":[{"k":"c","v":67},{"k":"c","v":97},{"k":"c","v":108},{"k":"c","v":99},{"k":"c","v":117},{"k":"c","v":108},{"k":"c","v":97},{"k":"c","v":116},{"k":"c","v":111},{"k":"c","v":114},{"k":"c","v":0},{"k":"c","v":0}],"es":1,"sz":20},0],["price",{"k":"f","v":850.0},20],["qty",{"k":"i","v":3},24]],"tn":"struct product","sz":28}],"es":28,"a":140737488314848,"sz":84},{"k":"f","v":0.0,"a":140737488314940},{"k":"i","v":0,"a":140737488314936},{"k":"f","v":400.0,"a":140737488314932},{"k":"f","v":400.0,"a":140737488314940},{"k":"i","v":1,"a":140737488314936},{"k":"f","v":666.0,"a":140737488314932},{"k":"f","v":1066.0,"a":140737488314940},{"k":"i","v":2,"a":140737488314936},{"k":"f","v":2550.0,"a":140737488314932},{"k":"f","v":3616.0,"a":140737488314940},{"k":"i","v":3,"a":140737488314936}]},"out":"Pen           10.00 x 40 =   400.00\nNotebook      55.50 x 12 =   666.00\nCalculator   850.00 x  3 =  2550.00\nTotal = 3616.00\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex6" data-level="Hard"><h3><span class="pnum">E6</span>Adding fractions</h3><div class="extags"><span class="tag o">Hard</span> <span class="tag">Write a program</span> <span class="tag">CO3 · BCL L-3 Apply</span></div><p>Define <code>struct fraction { int num, den; };</code>. Write a function that adds two fractions and returns the result in lowest terms: 1/6 + 3/10 = 7/15.</p><details class="hint"><summary>Hint</summary><p>a/b + c/d = (ad + cb) / bd. Then divide the numerator and denominator by their GCD (Lecture 04 or 09).</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><div class="tv" data-tr="t12-e6"></div><script type="application/json" id="tr-t12-e6">{"title":"Solution","code":"#include <stdio.h>\nstruct fraction\n{\n    int num, den;\n};\nint gcd(int a, int b)\n{\n    while (b != 0)\n    {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return a;\n}\nstruct fraction add(struct fraction x, struct fraction y)\n{\n    struct fraction r;\n    int g;\n    r.num = x.num * y.den + y.num * x.den;\n    r.den = x.den * y.den;\n    g = gcd(r.num, r.den);\n    r.num /= g;\n    r.den /= g;\n    return r;\n}\nint main()\n{\n    struct fraction a = {1, 6}, b = {3, 10}, c;\n    c = add(a, b);\n    printf(\"%d/%d + %d/%d = %d/%d\\n\", a.num, a.den, b.num, b.den, c.num, c.den);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":29,"f":[["main",29,[["a","struct fraction",0,0],["b","struct fraction",0,1],["c","struct fraction",0,2]]]]},{"l":30,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]]]},{"l":20,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",20,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,7],["g","int",0,8]]]]},{"l":21,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",21,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,9],["g","int",0,8]]]]},{"l":22,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]]]},{"l":8,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",8,[["a","int",1,11],["b","int",1,12]]]]},{"l":10,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",10,[["a","int",1,11],["b","int",1,12],["r","int",0,13]]]]},{"l":11,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",11,[["a","int",1,11],["b","int",1,12],["r","int",0,14]]]]},{"l":12,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",12,[["a","int",1,15],["b","int",1,12],["r","int",0,14]]]]},{"l":8,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",8,[["a","int",1,15],["b","int",1,16]]]]},{"l":10,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",10,[["a","int",1,15],["b","int",1,16],["r","int",0,14]]]]},{"l":11,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",11,[["a","int",1,15],["b","int",1,16],["r","int",0,17]]]]},{"l":12,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",12,[["a","int",1,11],["b","int",1,16],["r","int",0,17]]]]},{"l":8,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",8,[["a","int",1,11],["b","int",1,18]]]]},{"l":10,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",10,[["a","int",1,11],["b","int",1,18],["r","int",0,17]]]]},{"l":11,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",11,[["a","int",1,11],["b","int",1,18],["r","int",0,19]]]]},{"l":12,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",12,[["a","int",1,20],["b","int",1,18],["r","int",0,19]]]]},{"l":8,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",8,[["a","int",1,20],["b","int",1,21]]]]},{"l":14,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",14,[["a","int",1,20],["b","int",1,21]]]]},{"l":15,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]],["gcd",15,[["a","int",1,20],["b","int",1,21]]]]},{"l":22,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",22,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,8]]]],"r":["gcd",{"k":"i","v":4}]},{"l":23,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",23,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,10],["g","int",0,22]]]]},{"l":24,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",24,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,23],["g","int",0,22]]]]},{"l":25,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",25,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,24],["g","int",0,22]]]]},{"l":26,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]],["add",26,[["x","struct fraction",1,5],["y","struct fraction",1,6],["r","struct fraction",0,24],["g","int",0,22]]]]},{"l":30,"f":[["main",30,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,2]]]],"r":["add",{"k":"s","f":[["num",{"k":"i","v":7},0],["den",{"k":"i","v":15},4]],"tn":"struct fraction"}]},{"l":31,"f":[["main",31,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,25]]]]},{"l":31,"d":[["o","1/6 + 3/10 = 7/15\n"]]},{"l":32,"f":[["main",32,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,25]]]]},{"l":33,"f":[["main",33,[["a","struct fraction",0,3],["b","struct fraction",0,4],["c","struct fraction",0,25]]]]}],"V":[{"k":"s","f":[["num",{"k":"i","v":-40088},0],["den",{"k":"i","v":32767},4]],"tn":"struct fraction","a":140737488314936,"sz":8},{"k":"s","f":[["num",{"k":"i","v":-136292928},0],["den",{"k":"i","v":32767},4]],"tn":"struct fraction","a":140737488314928,"sz":8},{"k":"s","f":[["num",{"k":"i","v":-134325520},0],["den",{"k":"i","v":32767},4]],"tn":"struct fraction","a":140737488314920,"sz":8},{"k":"s","f":[["num",{"k":"i","v":1},0],["den",{"k":"i","v":6},4]],"tn":"struct fraction","a":140737488314936,"sz":8},{"k":"s","f":[["num",{"k":"i","v":3},0],["den",{"k":"i","v":10},4]],"tn":"struct fraction","a":140737488314928,"sz":8},{"k":"s","f":[["num",{"k":"i","v":1},0],["den",{"k":"i","v":6},4]],"tn":"struct fraction","a":140737488314872,"sz":8},{"k":"s","f":[["num",{"k":"i","v":3},0],["den",{"k":"i","v":10},4]],"tn":"struct fraction","a":140737488314864,"sz":8},{"k":"s","f":[["num",{"k":"i","v":0},0],["den",{"k":"i","v":0},4]],"tn":"struct fraction","a":140737488314884,"sz":8},{"k":"i","v":0,"a":140737488314892},{"k":"s","f":[["num",{"k":"i","v":28},0],["den",{"k":"i","v":0},4]],"tn":"struct fraction","a":140737488314884,"sz":8},{"k":"s","f":[["num",{"k":"i","v":28},0],["den",{"k":"i","v":60},4]],"tn":"struct fraction","a":140737488314884,"sz":8},{"k":"i","v":28,"a":140737488314828},{"k":"i","v":60,"a":140737488314824},{"k":"i","v":32767,"a":140737488314844},{"k":"i","v":28,"a":140737488314844},{"k":"i","v":60,"a":140737488314828},{"k":"i","v":28,"a":140737488314824},{"k":"i","v":4,"a":140737488314844},{"k":"i","v":4,"a":140737488314824},{"k":"i","v":0,"a":140737488314844},{"k":"i","v":4,"a":140737488314828},{"k":"i","v":0,"a":140737488314824},{"k":"i","v":4,"a":140737488314892},{"k":"s","f":[["num",{"k":"i","v":7},0],["den",{"k":"i","v":60},4]],"tn":"struct fraction","a":140737488314884,"sz":8},{"k":"s","f":[["num",{"k":"i","v":7},0],["den",{"k":"i","v":15},4]],"tn":"struct fraction","a":140737488314884,"sz":8},{"k":"s","f":[["num",{"k":"i","v":7},0],["den",{"k":"i","v":15},4]],"tn":"struct fraction","a":140737488314920,"sz":8}]},"out":"1/6 + 3/10 = 7/15\n","trunc":false}]}</script></div></details></section><section class="exq" id="ex7" data-level="Medium"><h3><span class="pnum">E7</span>A dot where an arrow belongs</h3><div class="extags"><span class="tag ">Medium</span> <span class="tag">Find the bug</span> <span class="tag">CO4 · BCL L-4 Analyze</span></div><p>This function does not compile. Fix it in two different ways.</p>
+<pre class="code" data-hl>void show(struct point *p)
+{
+    printf("(%d, %d)\n", p.x, p.y);
+}</pre><details class="hint"><summary>Hint</summary><p><code>p</code> is a pointer, not a structure.</p></details><details class="sol"><summary>Solution</summary><div class="solbody"><p>GCC reports <i>'p' is a pointer; did you mean to use '-&gt;'?</i>. Members are reached through a pointer with the arrow, <code>p-&gt;x</code>, or by dereferencing first, <code>(*p).x</code>. The brackets are required, because <code>.</code> binds tighter than <code>*</code>: <code>*p.x</code> would mean <code>*(p.x)</code>.</p><div class="tv" data-tr="t12-e7"></div><script type="application/json" id="tr-t12-e7">{"title":"Fixed (both forms)","code":"#include <stdio.h>\nstruct point\n{\n    int x, y;\n};\nvoid show(struct point *p)\n{\n    printf(\"(%d, %d)\\n\", p->x, p->y);\n    printf(\"(%d, %d)\\n\", (*p).x, (*p).y);\n}\nint main()\n{\n    struct point a = {4, 7};\n    show(&a);\n    return 0;\n}\n","inputs":[{"label":"no input","stdin":"","trace":{"steps":[{"l":13,"f":[["main",13,[["a","struct point",0,0]]]]},{"l":14,"f":[["main",14,[["a","struct point",0,1]]]]},{"l":8,"f":[["main",14,[["a","struct point",0,1]]],["show",8,[["p","struct point *",1,2]]]]},{"l":9,"f":[["main",14,[["a","struct point",0,1]]],["show",9,[["p","struct point *",1,2]]]],"d":[["o","(4, 7)\n"]]},{"l":10,"f":[["main",14,[["a","struct point",0,1]]],["show",10,[["p","struct point *",1,2]]]],"d":[["o","(4, 7)\n"]]},{"l":15,"f":[["main",15,[["a","struct point",0,1]]]],"r":["show",null]},{"l":16,"f":[["main",16,[["a","struct point",0,1]]]]}],"V":[{"k":"s","f":[["x",{"k":"i","v":-40088},0],["y",{"k":"i","v":32767},4]],"tn":"struct point","a":140737488314936,"sz":8},{"k":"s","f":[["x",{"k":"i","v":4},0],["y",{"k":"i","v":7},4]],"tn":"struct point","a":140737488314936,"sz":8},{"k":"p","v":140737488314936,"tt":"struct point","ts":8,"a":140737488314904,"to":"0:a.x"}]},"out":"(4, 7)\n(4, 7)\n","trunc":false}]}</script></div></details></section><script>(function(){const f=document.getElementById("exfilter");if(!f)return;f.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{f.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===b));document.querySelectorAll(".exq").forEach(s=>{s.hidden=b.dataset.f!=="all"&&s.dataset.level!==b.dataset.f})})})();</script><style>.exq{border-top:1px solid var(--line);padding:4px 0 10px}.exq h3{display:flex;gap:10px;align-items:baseline;font-size:19px;margin:18px 0 6px}.exq .pnum{font-family:var(--mono);background:var(--accent);color:var(--ink);border-radius:7px;padding:1px 8px;font-size:14px;flex:none}.extags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}</style><nav class="pager" aria-label="Lectures"><a href="11-pointer-arithmetic-arrays.html"><small>← Lecture 11</small>Pointer Arithmetic, Arrays and Pointers</a><a href="13-file-management.html" style="text-align:right"><small>Lecture 13 →</small>File Management</a></nav><footer class="foot">© 2026 Md Nazrul Islam <b>[NI]</b>. All rights reserved. Shared with students for study purposes only. Do not modify, republish or redistribute without the author's permission.</footer></main></div></body></html>
